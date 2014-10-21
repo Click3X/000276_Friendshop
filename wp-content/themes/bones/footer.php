@@ -1,4 +1,23 @@
+			<?php 
+
+				$logo = get_field('logo', 'option');
+				$address = get_field('address', 'option');
+
+				if( !empty($logo) ): 
+
+					// vars
+					$logo_url = $logo['url'];
+
+				endif; 
+
+
+			?>			
+
+
 			<footer class="footer" role="contentinfo">
+
+
+			
 
 				<div id="inner-footer" class="wrap cf">
 
@@ -18,7 +37,30 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
+
+					<a href="<?php echo bloginfo('url'); ?>">
+
+						<img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" />
+
+					</a>
+
+					<?php echo $address ?>
+
+					<?php if(get_field('social_media', 'option')): ?>
+
+						<ul>
+
+						<?php while(has_sub_field('social_media', 'option')): ?>
+
+							<li>sub_field_1 = <?php the_sub_field('twitter'); ?>, sub_field_2 = <?php the_sub_field('facebook'); ?>, etc</li>
+
+						<?php endwhile; ?>
+
+						</ul>
+
+				<?php endif; ?>
+
 
 				</div>
 

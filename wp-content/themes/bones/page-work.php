@@ -1,15 +1,6 @@
 <?php
 /*
- Template Name: Custom Page Example
- *
- * This is your custom page template. You can create as many of these as you need.
- * Simply name is "page-whatever.php" and in add the "Template Name" title at the
- * top, the same way it is here.
- *
- * When you create your page, you can just select the template and viola, you have
- * a custom page template to call your very own. Your mother would be so proud.
- *
- * For more info: http://codex.wordpress.org/Page_Templates
+ Template Name: Work
 */
 ?>
 
@@ -19,13 +10,13 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<div id="main" class="m-all t-2of3 cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+<!-- 								<header class="article-header">
 
 									<h1 class="page-title"><?php the_title(); ?></h1>
 
@@ -34,12 +25,35 @@
 									</p>
 
 
-								</header>
+								</header> -->
 
 								<section class="entry-content cf" itemprop="articleBody">
+								<?php layerslider(1) ?>
+
+								<?php echo do_shortcode( 
+
+									'[tabby title="Creative Direction"]
+
+									Tabby ipsum dolor sit amet, kitty sunbathe dolor, feed me.
+
+									[tabby title="Featured Work"]
+
+									Lay down in your way catnip stuck in a tree, sunbathe kittens.
+
+									[tabby title="Friendshop Productions"]
+
+									sleep in the sink climb the curtains attack, give me fish.
+									[tabbyending]'
+
+
+								) ?>
+
+
+
 									<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+										// the_content();
+									// layerslider(1);
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
@@ -63,13 +77,13 @@
 								</section>
 
 
-								<footer class="article-footer">
+<!-- 								<footer class="article-footer">
 
                   <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
-								</footer>
+								</footer> -->
 
-								<?php comments_template(); ?>
+								<?php //comments_template(); ?>
 
 							</article>
 
