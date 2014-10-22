@@ -19,9 +19,9 @@
 
 			
 
-				<div id="inner-footer" class="wrap cf">
+				<div id="inner-footer" class="cf">
 
-					<nav role="navigation">
+<!-- 					<nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => '',                              // remove nav container
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
@@ -35,29 +35,49 @@
         			'depth' => 0,                                   // limit the depth of the nav
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
-					</nav>
+					</nav> -->
 
 					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p> -->
+					<div class="ftlogo-container">
+											
+						<a href="<?php echo bloginfo('url'); ?>">
 
-					<a href="<?php echo bloginfo('url'); ?>">
+							<img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" />
 
-						<img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" />
+						</a>
 
-					</a>
+					</div>
 
-					<?php echo $address ?>
+					<div class="ftaddress-container">
+
+						<?php echo $address ?>
+
+					</div>
 
 					<?php if(get_field('social_media', 'option')): ?>
+					
+						<div class="ftsocial-container">
+							<ul>
 
-						<ul>
+							<?php while(has_sub_field('social_media', 'option')): 
+								$sub_title = get_sub_field('title'); 
 
-						<?php while(has_sub_field('social_media', 'option')): ?>
+							if ($sub_title == 'Mail') { ?>
+								<li class="social">
+									<a href="<?php echo 'mailto:' . get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title;?>" class="<?php echo $sub_title; ?>"></a>
+								</li>
+							<?php } else { ?>
+									<li class="social"><a href="<?php echo get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title ;?>" class="<?php echo $sub_title; ?>"></a>
+									</li>
+							<?php } ?>
 
-							<li>sub_field_1 = <?php the_sub_field('twitter'); ?>, sub_field_2 = <?php the_sub_field('facebook'); ?>, etc</li>
+								
 
-						<?php endwhile; ?>
+							<?php endwhile; ?>
 
-						</ul>
+							</ul>
+
+						</div>
 
 				<?php endif; ?>
 

@@ -105,13 +105,42 @@ function loadGravatars() {
 /*
  * Put all your regular jQuery in here.
 */
+
+
+
 jQuery(document).ready(function($) {
+
+    var button = document.querySelector('.menu-icon');
+  button.addEventListener('click', function (){
+    button.classList.toggle('open');
+    $('nav').toggleClass('menu-display');
+        //     if($('nav').is(':hidden')){ // check to see if menu is hidden
+        //     $('nav').slideDown();}  // if so slide down
+        // else{$('nav').slideUp();} 
+  });
+
+// FREE MASON
+    $('.thumb-wrapper').freeMason({
+    contPadding : 0,     // Horizontal padding on container
+    thumbGutter : 15,     // Padding on thumbnails
+    speed       : '0.5s', // Animation speed
+    maxCols     : 3       // Maximum # of columns
+  });
 
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
   */
   loadGravatars();
+
+
+  // highlight selected menu item
+
+  var url = window.location;
+
+  $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
+
+  // $('a[href="'+url+'"]').parent('.sidebar li').children().addClass('sidebar-selected');
 
 
 }); /* end of as page load scripts */

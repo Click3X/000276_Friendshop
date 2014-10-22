@@ -55,6 +55,16 @@
 					<?php // bloginfo('description'); ?>
 
 
+
+
+
+
+					
+
+					<div class="menu-icon">
+					  <span></span>
+					</div>
+
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container

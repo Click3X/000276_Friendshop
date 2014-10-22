@@ -14,6 +14,77 @@
   font-style: normal;
 }
 
+/*
+  menu icon css3
+*/
+
+.menu-icon {
+  position: relative;
+  // top: 100px;
+  // display: block;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  /* to center */
+  margin: 0 auto;
+  float: none;
+  -webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: left;
+}
+
+.menu-icon > span {
+  position: absolute;
+  top: 44%;
+  display: block;
+  width: 100%;
+  height: 0.41em;
+  // margin-top: -0.5em;
+  // background-color: #e74c3c;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.menu-icon > span:before,
+.menu-icon > span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // background-color: #e74c3c;
+  background-color: black;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+.menu-icon > span:before {
+  -webkit-transform: translateY(-1em);
+	        transform: translateY(-1em);
+}
+
+.menu-icon > span:after {
+  -webkit-transform: translateY(1em);
+	        transform: translateY(1em);
+}
+
+/* OPENED */
+
+.menu-icon.open {
+  -webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.menu-icon.open > span:before {
+  -webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+
+.menu-icon.open > span:after {
+  -webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+
 
 #inner-header {
 	text-align: center;
@@ -21,11 +92,18 @@
 	background-color: transparent;
 }
 
+.menu-display {
+	display: block;
+	@include transition(all 0.3s ease-in-out);
+}
+
 nav {
 	display: inline-block;
+	// max-height: 500px;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	font-family: 'VerlagBold';
+	@include transition(all 0.3s ease-in-out);
 }
 
 nav li {
@@ -70,4 +148,211 @@ body {
 	
 	margin-right: -100px;
 	
+}
+
+// social links images
+#inner-footer {
+	text-align:center;
+	padding: 80px 20px;
+}
+
+.social {
+	float: left;
+	margin-right: 20px;
+}
+
+.ftlogo-container {
+	vertical-align: top;
+	margin-top: 50px;
+}
+
+.ftlogo-container, .ftaddress-container, .ftsocial-container {
+	display: inline-block;
+	
+	text-align: left;
+}
+
+.ftlogo-container, .ftaddress-container {
+	margin-right: 90px;
+}
+
+.social a {
+	width: 80px;
+	height:80px;
+	// background-size: 80px 80px;
+	display: inline-block;
+}
+
+.Tumblr {
+	background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
+	
+}
+
+.Facebook {
+	background-image: url(../../../../../img/Facebook.jpg);
+	
+}
+
+.Instagram {
+	background-image: url(../../../../../img/Instagram.jpg);
+	
+}
+
+.Map {
+	background-image: url(../../../../../img/Map.jpg);
+	
+}
+
+.Mail {
+	background-image: url(../../../../../img/E-mail.jpg);
+	
+}
+
+// ABOUT PAGE
+.content-container {
+	text-align: center;
+	padding: 25px 20px;
+	max-width: 1000px;
+
+	h1 {
+		color: #09dcff;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: $white;
+		text-align: left;
+		line-height: 2em;
+		font-size: 1.15em;
+	}
+}
+
+.about-container {
+	// padding: 20px;
+	background: rgba(0,0,0,0.5);
+}
+
+.inner-about-container {
+	max-width: 1000px;
+}
+
+// GALLARY
+.thumb-wrapper { margin: 0 auto; }
+
+.thumb-list {
+  position: relative;
+  list-style: none;
+  list-style-image: none; 
+}
+
+.thumb {
+  position: absolute;
+  overflow: hidden;
+  width: 225px; /* Set width */
+  height: 225px; /* Set height */
+}
+
+.thumb img { 
+  max-width: 100%;
+  height: auto;
+}
+
+// MAIN MENU
+.main-menu-selected {
+		background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  a {
+  	color: transparent !important;
+  }
+}
+
+// Footer 
+footer {
+	position: absolute; 
+	bottom:0;
+	width: 100%;
+}
+
+@media (max-width: 555px) {
+	.social a {
+		width: 55px;
+		height: 55px;
+		background-size: 55px 55px;
+	}
+
+	.ftlogo-container {
+		margin-right: 50px;
+	}
+
+	.ftaddress-container {
+		margin-right: 0px;
+	}
+
+}
+
+@media (max-width: 419px) {
+	.ftlogo-container {
+		margin-right: 20px;
+	}
+
+	.social {
+		margin-right: 10px;
+	}
+
+	#inner-footer {
+		padding: 80px 2px;
+	}
+}
+
+@media (max-width: 1480px) {
+	.menu-icon {
+		// display: inline-block;
+		float: right;
+	}
+
+	nav {
+		display: none;
+		// visibility: hidden;
+		// max-height: 0;
+		text-align: center;
+		margin-top: 60px;
+	}
+
+
+	// #menu-main-menu {
+	// 	max-height: 0;
+	// }
+
+	.logo-header {
+		width: 226px;
+		height: 40px;
+		background-size: 226px 40px;		
+		// float: left;
+		// margin-top: 5px;
+		top: 15px;
+		position: absolute;
+	}
+
+	.header {
+		background: white;
+		padding: 10px;
+	}
+
+	#inner-header {
+		text-align: left;
+	}
+}
+
+@media (min-width: 1481px) {
+	.menu-icon {
+		display: none;
+	}
+
+	// nav {
+	// 	display: none;
+	// }
 }

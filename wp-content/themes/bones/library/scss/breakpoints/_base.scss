@@ -22,6 +22,8 @@ body {
 	color: $text-color;
 	background-color: $gray;
   -webkit-font-smoothing: antialiased;
+  min-height: 2000px;
+  position: relative;
 }
 
 /********************
@@ -123,12 +125,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	font-family: 'VerlagBold';
 }
 
 h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
+	font-family: 'VerlagBold';
 }
 
 h3, .h3 {
