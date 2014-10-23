@@ -19,10 +19,10 @@
 define('DB_NAME', 'Friendshop');
 
 /** MySQL database username */
-define('DB_USER', 'friendshop');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'click3x22');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

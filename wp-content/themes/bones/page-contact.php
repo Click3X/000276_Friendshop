@@ -5,12 +5,14 @@
 ?>
 
 <?php get_header(); 
-	$title = get_field('title');
-	$profile = get_field('profile');
-	$content = get_field('content');
-	if( !empty($profile) ): 
+	$title1 = get_field('title1');
+	$title2 = get_field('title2');
+	$image = get_field('image');
+	$address = get_field('address');
+	// $contact_list = get_field('contact_list');
+	if( !empty($image) ): 
 
-		$profile_url = $profile['url'];
+		$image_url = $image['url'];
 
 	endif;
 
@@ -18,7 +20,7 @@
 
 			<div id="content" class="about-container">
 
-				<div id="inner-content" class="inner-about-container wrap cf ">
+				<div id="inner-content" class="inner-about-container inner-contact-container wrap cf ">
 
 						<div id="main" class="m-all cf" role="main">
 
@@ -41,11 +43,48 @@
 
 								<div class="content-container">
 
-								<img src="<?php echo $profile_url; ?>" alt="<?php echo "friendshop"; ?>" />
 
-								<h1><?php echo $title ?></h1>
-															
-								<p><?php echo $content ?></p>
+
+									<div class="contact-left">
+										<h1><?php echo $title1 ?></h1>
+
+										<?php echo $address ?>
+
+										<h1><?php echo $title2 ?></h1>
+
+										<?php if(get_field('contact_list')): ?>
+
+										<ul>
+											<?php while(has_sub_field('contact_list')): 
+												$sub_title = get_sub_field('title'); 
+												$sub_content = get_sub_field('content'); ?>
+
+											
+												<li>
+													<h3><?php echo $sub_title ?></h3>
+													<h4><?php echo $sub_content ?></h4>
+												</li>
+											
+
+												
+
+											<?php endwhile; ?>
+
+
+										</ul>
+
+										<?php endif; ?>
+																	
+										
+
+									</div>
+
+									<div class="contact-right">
+										<img src="<?php echo $image_url; ?>" alt="<?php echo "friendshop"; ?>" />
+									</div>
+								
+
+
 								
 
 								</div>
