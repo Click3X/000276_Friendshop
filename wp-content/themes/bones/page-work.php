@@ -30,23 +30,63 @@
 								<section class="entry-content cf" itemprop="articleBody">
 								<?php layerslider(1) ?>
 
-								<?php echo do_shortcode( 
+								<?php //echo //do_shortcode( 
 
-									'[tabby title="Creative Direction"]
+									// '[tabby title="Creative Direction"]
 
-									Tabby ipsum dolor sit amet, kitty sunbathe dolor, feed me.
+									// Tabby ipsum dolor sit amet, kitty sunbathe dolor, feed me.
 
-									[tabby title="Featured Work"]
+									// [tabby title="Featured Work"]
 
-									Lay down in your way catnip stuck in a tree, sunbathe kittens.
+									// Lay down in your way catnip stuck in a tree, sunbathe kittens.
 
-									[tabby title="Friendshop Productions"]
+									// [tabby title="Friendshop Productions"]
 
-									sleep in the sink climb the curtains attack, give me fish.
-									[tabbyending]'
+									// sleep in the sink climb the curtains attack, give me fish.
+									// [tabbyending]'
 
 
 								) ?>
+
+								<section class="thumb-wrapper">
+
+ 								<ul class="thumb-list video-list">
+								<?php if(get_field('video_list')): 
+
+								while(has_sub_field('video_list')): 
+
+									$hover_text1 = get_sub_field('hover-text1'); 
+									$hover_text2 = get_sub_field('hover-text2'); 
+
+									$poster = get_sub_field('poster');
+									if( !empty($poster) ): 
+
+										$poster_url = $poster['url'];
+
+									endif; ?>
+
+								
+  
+								  
+								    <li class="video-thumb thumb">
+								    	<div class="poster-container">
+								    		<img src="<?php echo $poster_url ?>" alt="Video">
+								    		<div class="poster-hover">
+								    			<h3><?php echo $hover_text1 ?></h3>
+								    			<h4><?php echo $hover_text2 ?></h4>
+								    		</div>
+								    	</div>
+								    </li>	
+								    	  
+
+								    <?php endwhile; ?>  
+								  </ul> 
+								  
+								
+
+								<?php endif; ?>
+
+								</section>
 
 
 

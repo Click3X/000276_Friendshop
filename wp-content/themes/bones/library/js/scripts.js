@@ -127,6 +127,9 @@ jQuery(document).ready(function($) {
     maxCols     : 3       // Maximum # of columns
   });
 
+// init fancybox
+$(".fancybox").fancybox();
+
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it

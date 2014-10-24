@@ -310,6 +310,11 @@ body {
   height: 225px; /* Set height */
 }
 
+.video-thumb {
+	width: 268px; /* Set width */
+	height: 168px; /* Set height */
+}
+
 .thumb img { 
   max-width: 100%;
   height: auto;
@@ -331,7 +336,7 @@ body {
 // Footer 
 footer {
 	position: absolute; 
-	bottom:0;
+	// bottom:0;
 	width: 100%;
 }
 
@@ -403,6 +408,48 @@ footer {
 	#inner-header {
 		text-align: left;
 	}
+}
+
+// WORK
+.poster-hover {
+	background: black;
+	opacity:0;
+	position: absolute;
+	border: 2px solid white;
+	color: white;
+	text-align: center;
+	top:0;
+	width: 268px;
+	height: 168px;
+	text-transform: uppercase;
+	@include transition(all 0.3s ease-in-out);
+
+	h3 {
+		margin: 0;
+		padding-top: 50px;
+	}
+
+	h4 {
+		margin: 0;
+	}
+}
+
+.video-list {
+	.poster-container {
+		position: relative;
+		cursor: pointer;
+	}
+
+	.poster-container:hover {
+
+		.poster-hover {
+			opacity: 0.7;
+
+		}
+		
+	}
+
+
 }
 
 @media (min-width: 1481px) {

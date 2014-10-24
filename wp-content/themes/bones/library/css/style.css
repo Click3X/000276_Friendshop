@@ -2473,12 +2473,20 @@ body {
 }
 
 /* line 313, ../scss/partials/_wen.scss */
+.video-thumb {
+  width: 268px;
+  /* Set width */
+  height: 168px;
+  /* Set height */
+}
+
+/* line 318, ../scss/partials/_wen.scss */
 .thumb img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 319, ../scss/partials/_wen.scss */
+/* line 324, ../scss/partials/_wen.scss */
 .main-menu-selected {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
   background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
@@ -2486,66 +2494,65 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 }
-/* line 326, ../scss/partials/_wen.scss */
+/* line 331, ../scss/partials/_wen.scss */
 .main-menu-selected a {
   color: transparent !important;
 }
 
-/* line 332, ../scss/partials/_wen.scss */
+/* line 337, ../scss/partials/_wen.scss */
 footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-  /* line 339, ../scss/partials/_wen.scss */
+  /* line 344, ../scss/partials/_wen.scss */
   .social a {
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
   }
 
-  /* line 345, ../scss/partials/_wen.scss */
+  /* line 350, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 50px;
   }
 
-  /* line 349, ../scss/partials/_wen.scss */
+  /* line 354, ../scss/partials/_wen.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
 @media (max-width: 419px) {
-  /* line 356, ../scss/partials/_wen.scss */
+  /* line 361, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 20px;
   }
 
-  /* line 360, ../scss/partials/_wen.scss */
+  /* line 365, ../scss/partials/_wen.scss */
   .social {
     margin-right: 10px;
   }
 
-  /* line 364, ../scss/partials/_wen.scss */
+  /* line 369, ../scss/partials/_wen.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 @media (max-width: 1480px) {
-  /* line 370, ../scss/partials/_wen.scss */
+  /* line 375, ../scss/partials/_wen.scss */
   .menu-icon {
     float: right;
   }
 
-  /* line 375, ../scss/partials/_wen.scss */
+  /* line 380, ../scss/partials/_wen.scss */
   nav {
     display: none;
     text-align: center;
     margin-top: 60px;
   }
 
-  /* line 388, ../scss/partials/_wen.scss */
+  /* line 393, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -2554,43 +2561,78 @@ footer {
     position: absolute;
   }
 
-  /* line 398, ../scss/partials/_wen.scss */
+  /* line 403, ../scss/partials/_wen.scss */
   .header {
     background: white;
     padding: 10px;
   }
 
-  /* line 403, ../scss/partials/_wen.scss */
+  /* line 408, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
+/* line 414, ../scss/partials/_wen.scss */
+.poster-hover {
+  background: black;
+  opacity: 0;
+  position: absolute;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  top: 0;
+  width: 268px;
+  height: 168px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 427, ../scss/partials/_wen.scss */
+.poster-hover h3 {
+  margin: 0;
+  padding-top: 50px;
+}
+/* line 432, ../scss/partials/_wen.scss */
+.poster-hover h4 {
+  margin: 0;
+}
+
+/* line 438, ../scss/partials/_wen.scss */
+.video-list .poster-container {
+  position: relative;
+  cursor: pointer;
+}
+/* line 445, ../scss/partials/_wen.scss */
+.video-list .poster-container:hover .poster-hover {
+  opacity: 0.7;
+}
+
 @media (min-width: 1481px) {
-  /* line 409, ../scss/partials/_wen.scss */
+  /* line 456, ../scss/partials/_wen.scss */
   .menu-icon {
     display: none;
   }
 }
 @media (max-width: 756px) {
-  /* line 415, ../scss/partials/_wen.scss */
+  /* line 462, ../scss/partials/_wen.scss */
   .contact-right img {
     width: 260px;
   }
 }
 @media (max-width: 560px) {
-  /* line 421, ../scss/partials/_wen.scss */
+  /* line 468, ../scss/partials/_wen.scss */
   .contact-right {
     float: none;
     text-align: center;
     margin-top: 50px;
   }
 
-  /* line 427, ../scss/partials/_wen.scss */
+  /* line 474, ../scss/partials/_wen.scss */
   .contact-left {
     float: none;
     text-align: center;
   }
-  /* line 431, ../scss/partials/_wen.scss */
+  /* line 478, ../scss/partials/_wen.scss */
   .contact-left p {
     text-align: center;
   }
