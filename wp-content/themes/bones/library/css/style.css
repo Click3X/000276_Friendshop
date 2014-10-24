@@ -2637,6 +2637,65 @@ footer {
     text-align: center;
   }
 }
+/* line 485, ../scss/partials/_wen.scss */
+.etabs {
+  margin: 0;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+}
+
+/* line 493, ../scss/partials/_wen.scss */
+.tab {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  background: transparent;
+  margin: 0 20px;
+}
+
+/* line 500, ../scss/partials/_wen.scss */
+.tab a {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-family: 'VerlagBold';
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 2em;
+  display: block;
+  padding: 0 10px;
+  outline: none;
+}
+
+/* line 512, ../scss/partials/_wen.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
+/* line 515, ../scss/partials/_wen.scss */
+.tab.active {
+  padding-top: 6px;
+  position: relative;
+  top: 1px;
+}
+
+/* line 522, ../scss/partials/_wen.scss */
+.tab a.active {
+  color: #09dcff;
+}
+
+/* line 526, ../scss/partials/_wen.scss */
+.tab-container .panel-container {
+  background: #fff;
+  border: solid #666 1px;
+  padding: 10px;
+  -moz-border-radius: 0 4px 4px 4px;
+  -webkit-border-radius: 0 4px 4px 4px;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

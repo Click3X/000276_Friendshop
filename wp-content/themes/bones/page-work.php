@@ -29,26 +29,14 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
 								<?php layerslider(1) ?>
-
-								<?php //echo //do_shortcode( 
-
-									// '[tabby title="Creative Direction"]
-
-									// Tabby ipsum dolor sit amet, kitty sunbathe dolor, feed me.
-
-									// [tabby title="Featured Work"]
-
-									// Lay down in your way catnip stuck in a tree, sunbathe kittens.
-
-									// [tabby title="Friendshop Productions"]
-
-									// sleep in the sink climb the curtains attack, give me fish.
-									// [tabbyending]'
-
-
-								//) ?>
-
-								<section class="thumb-wrapper">
+									<div id="tab-container" class="tab-container">
+									  <ul class='etabs'>
+								    <li class='tab'><a href="#tab1">Creative Direction</a></li>
+								    <li class='tab'><a href="#tab2">Featured Work</a></li>
+								    <li class='tab'><a href="#tab3">Friendshop Productions</a></li>
+									  </ul>
+									  <div id="tab1">
+									    <section class="thumb-wrapper">
 
  								<ul class="thumb-list video-list">
 								<?php if(get_field('video_list')): 
@@ -87,6 +75,19 @@
 								<?php endif; ?>
 
 								</section>
+									  </div>
+									  <div id="tab2">
+									    <h2>JS for these tabs</h2>
+									    <!-- content -->
+									  </div>
+									  <div id="tab3">
+									    <h2>CSS Styles for these tabs</h2>
+									    <!-- content -->
+									  </div>
+									</div>
+
+
+								
 
 
 

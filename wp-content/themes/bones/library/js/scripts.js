@@ -130,6 +130,9 @@ jQuery(document).ready(function($) {
 // init fancybox
 $(".fancybox").fancybox();
 
+// init tabs
+$('#tab-container').easytabs();
+
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
