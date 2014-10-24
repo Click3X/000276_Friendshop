@@ -46,7 +46,7 @@
 									// [tabbyending]'
 
 
-								) ?>
+								//) ?>
 
 								<section class="thumb-wrapper">
 
