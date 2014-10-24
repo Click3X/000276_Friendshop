@@ -1,0 +1,31 @@
+// CONTACT PAGE
+.page-id-11 {
+
+
+    .inner-about-container {
+        width:100%;
+        max-width:none;
+    }
+
+
+    .map, .city {
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:50%;
+    }
+
+    .map {
+        background-color:black;
+        padding-bottom: 60%;
+
+        @media(min-width: 600px) {
+            padding-bottom:377px;
+        }
+
+        @media(min-width: 980px) and (min-height: 800px) { 
+            padding-bottom:641.516px; 
+        }
+    }
+
+
+}

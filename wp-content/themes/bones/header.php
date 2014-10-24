@@ -30,6 +30,14 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+        <?php
+            // IF IS PAGE CONTACT, INCLUDE GOOGLE MAPS CODE
+            if(is_page(11)) {
+                include('php/google-maps.php');
+            }
+
+        ?>
+
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
