@@ -154,9 +154,6 @@ function bones_scripts_and_styles() {
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
 
-		//adding tabs js
-		wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
-
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
 
@@ -175,7 +172,6 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-js' );
 		wp_enqueue_script( 'freemason.min' );
 		wp_enqueue_script( 'fancybox-js' );
-		wp_enqueue_script( 'tab-js' );
 
 	}
 }

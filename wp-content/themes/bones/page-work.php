@@ -28,23 +28,32 @@
 								</header> -->
 
 								<section class="entry-content cf" itemprop="articleBody">
-								<?php //layerslider(1) ?>
+								<?php layerslider(1) ?>
+
+								<?php //echo //do_shortcode( 
+
+									// '[tabby title="Creative Direction"]
+
+									// Tabby ipsum dolor sit amet, kitty sunbathe dolor, feed me.
+
+									// [tabby title="Featured Work"]
+
+									// Lay down in your way catnip stuck in a tree, sunbathe kittens.
+
+									// [tabby title="Friendshop Productions"]
+
+									// sleep in the sink climb the curtains attack, give me fish.
+									// [tabbyending]'
 
 
-								<div id="tab-container" class="tab-container">
-								  <ul class='etabs'>
-								    <li class='tab'><a href="#tab1">Creative Direction</a></li>
-								    <li class='tab'><a href="#tab2">Featured Work</a></li>
-								    <li class='tab'><a href="#tab3">Friendshop Productions</a></li>
-								  </ul>
-								  <div id="tab1">
-								    <!-- content -->
-								    <section class="thumb-wrapper">
+								) ?>
+
+								<section class="thumb-wrapper">
 
  								<ul class="thumb-list video-list">
-								<?php if(get_field('video_list1')): 
+								<?php if(get_field('video_list')): 
 
-								while(has_sub_field('video_list1')): 
+								while(has_sub_field('video_list')): 
 
 									$hover_text1 = get_sub_field('hover-text1'); 
 									$hover_text2 = get_sub_field('hover-text2'); 
@@ -55,7 +64,10 @@
 										$poster_url = $poster['url'];
 
 									endif; ?>
-							  
+
+								
+  
+								  
 								    <li class="video-thumb thumb">
 								    	<div class="poster-container">
 								    		<img src="<?php echo $poster_url ?>" alt="Video">
@@ -69,96 +81,12 @@
 
 								    <?php endwhile; ?>  
 								  </ul> 
+								  
+								
 
 								<?php endif; ?>
 
 								</section>
-								  </div>
-
-								  <!-- TAB2 -->
-								  <div id="tab2">
-								    <!-- content -->
-<!-- 								<section class="thumb-wrapper">
-
- 								<ul class="thumb-list video-list">
-								<?php if(get_field('video_list2')): 
-
-								while(has_sub_field('video_list2')): 
-
-									$hover_text1 = get_sub_field('hover-text1'); 
-									$hover_text2 = get_sub_field('hover-text2'); 
-
-									$poster = get_sub_field('poster');
-									if( !empty($poster) ): 
-
-										$poster_url = $poster['url'];
-
-									endif; ?>
-							  
-								    <li class="video-thumb thumb">
-								    	<div class="poster-container">
-								    		<img src="<?php echo $poster_url ?>" alt="Video">
-								    		<div class="poster-hover">
-								    			<h3><?php echo $hover_text1 ?></h3>
-								    			<h4><?php echo $hover_text2 ?></h4>
-								    		</div>
-								    	</div>
-								    </li>	
-								    	  
-
-								    <?php endwhile; ?>  
-								  </ul> 
-
-								<?php endif; ?>
-
-								</section> -->
-								  </div>
-
-								  <!-- TAB 3 -->
-								  <div id="tab3">
-								    <!-- content -->
-<!-- 								<section class="thumb-wrapper">
-
- 								<ul class="thumb-list video-list">
-								<?php if(get_field('video_list3')): 
-
-								while(has_sub_field('video_list3')): 
-
-									$hover_text1 = get_sub_field('hover-text1'); 
-									$hover_text2 = get_sub_field('hover-text2'); 
-
-									$poster = get_sub_field('poster');
-									if( !empty($poster) ): 
-
-										$poster_url = $poster['url'];
-
-									endif; ?>
-							  
-								    <li class="video-thumb thumb">
-								    	<div class="poster-container">
-								    		<img src="<?php echo $poster_url ?>" alt="Video">
-								    		<div class="poster-hover">
-								    			<h3><?php echo $hover_text1 ?></h3>
-								    			<h4><?php echo $hover_text2 ?></h4>
-								    		</div>
-								    	</div>
-								    </li>	
-								    	  
-
-								    <?php endwhile; ?>  
-								  </ul> 
-
-								<?php endif; ?>
-
-								</section> -->
-								  </div>
-								</div>
-
-
-
-
-
-
 
 
 
