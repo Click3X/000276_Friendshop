@@ -1,7 +1,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
 <script>
-    var clickLatLong = new google.maps.LatLng(40.741244, -73.991320),
+    var clickLatLong = new google.maps.LatLng(40.740339, -73.993118),
     map,
     mapOptions,
     marker;
