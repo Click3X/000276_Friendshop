@@ -16,7 +16,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'Friendshop');
+// define('DB_NAME', 'Friendshop');
+define('DB_NAME', 'friend');
 
 /** MySQL database username */
 define('DB_USER', 'root');
