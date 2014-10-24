@@ -2694,33 +2694,30 @@ footer {
   padding: 10px;
   -moz-border-radius: 0 4px 4px 4px;
   -webkit-border-radius: 0 4px 4px 4px;
-<<<<<<< HEAD
-=======
 }
 
-/* line 5, ../scss/partials/_google-map.scss */
+/* line 11, ../scss/partials/_google-map.scss */
 .page-id-11 .map, .page-id-11 .city {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
 }
-/* line 11, ../scss/partials/_google-map.scss */
+/* line 17, ../scss/partials/_google-map.scss */
 .page-id-11 .map {
   background-color: black;
   padding-bottom: 60%;
 }
 @media (min-width: 600px) {
-  /* line 11, ../scss/partials/_google-map.scss */
+  /* line 17, ../scss/partials/_google-map.scss */
   .page-id-11 .map {
     padding-bottom: 377px;
   }
 }
 @media (min-width: 980px) and (min-height: 800px) {
-  /* line 11, ../scss/partials/_google-map.scss */
+  /* line 17, ../scss/partials/_google-map.scss */
   .page-id-11 .map {
     padding-bottom: 641.516px;
   }
->>>>>>> 81f536e562d6c4f40b8c886e6df2b8b16e05732b
 }
 
 /*********************

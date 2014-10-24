@@ -68,8 +68,6 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in base.scss
 @import "breakpoints/base";
 
-
-
 // CUSTOM STYLES
 // the grid
 @import "partials/_wen";
@@ -77,11 +75,9 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 
 // CONTACT PAGE
 // google maps
-<<<<<<< HEAD
-// @import "pages/contact/_google-map";
-=======
+
 @import "partials/_google-map";
->>>>>>> 81f536e562d6c4f40b8c886e6df2b8b16e05732b
+
 
 /*********************
 LARGER MOBILE DEVICES

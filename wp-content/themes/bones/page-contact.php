@@ -5,11 +5,11 @@
 ?>
 
 <?php get_header(); 
+
 	$title1 = get_field('title1');
 	$title2 = get_field('title2');
 	$image = get_field('image');
 	$address = get_field('address');
-	// $contact_list = get_field('contact_list');
 	if( !empty($image) ): 
 
 		$image_url = $image['url'];
@@ -18,137 +18,68 @@
 
 ?>
 
-			<div id="content" class="about-container">
+<div id="content" class="about-container">
 
-				<div id="inner-content" class="inner-about-container inner-contact-container wrap cf ">
+	<div id="inner-content" class="inner-about-container inner-contact-container wrap cf ">
 
-						<div id="main" class="m-all cf" role="main">
+		<div id="main" class="m-all cf" role="main">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!-- 								<header class="article-header">
+				<section class="entry-content cf" itemprop="articleBody">
 
-									<h1 class="page-title"><?php the_title(); ?></h1>
+					<div class="content-container">
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
+						<div class="contact-left">
+							<h1><?php echo $title1 ?></h1>
 
+							<?php echo $address ?>
 
-								</header> -->
+							<h1><?php echo $title2 ?></h1>
 
-								<section class="entry-content cf" itemprop="articleBody">
+							<?php if(get_field('contact_list')): ?>
 
-								<div class="content-container">
+							<ul>
+								<?php while(has_sub_field('contact_list')): 
+									$sub_title = get_sub_field('title'); 
+									$sub_content = get_sub_field('content'); ?>
 
+									<li>
+										<h3><?php echo $sub_title ?></h3>
+										<h4><?php echo $sub_content ?></h4>
+									</li>
 
+								<?php endwhile; ?>
 
-									<div class="contact-left">
-										<h1><?php echo $title1 ?></h1>
-
-										<?php echo $address ?>
-
-										<h1><?php echo $title2 ?></h1>
-
-										<?php if(get_field('contact_list')): ?>
-
-										<ul>
-											<?php while(has_sub_field('contact_list')): 
-												$sub_title = get_sub_field('title'); 
-												$sub_content = get_sub_field('content'); ?>
-
-											
-												<li>
-													<h3><?php echo $sub_title ?></h3>
-													<h4><?php echo $sub_content ?></h4>
-												</li>
-											
-
-												
-
-											<?php endwhile; ?>
-
-
-										</ul>
-
-										<?php endif; ?>
-																	
-										
-
-									</div>
-
-									<div class="contact-right">
-										<img src="<?php echo $image_url; ?>" alt="<?php echo "friendshop"; ?>" />
-									</div>
-								
-
-
-								
-
-								</div>
-
-									<?php
-										// the content (pretty self explanatory huh)
-										// the_content();
-									// layerslider(1);
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section>
-
-
-<!-- 								<footer class="article-footer">
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer> -->
-
-								<?php //comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
+							</ul>
 
 							<?php endif; ?>
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<div class="contact-right">
+							<img src="<?php echo $image_url; ?>" alt="<?php echo "friendshop"; ?>" />
+						</div>
 
-				</div>
+					</div>
 
-			</div>
+				</section>
 
+			</article>
+
+			<?php endwhile;?>
+
+			<?php endif; ?>
+
+		</div>
+
+	</div>
+
+	<!-- GOOGLE MAP -->
+	<div id="map-canvas" class="map"></div>
+
+</div>
 
 <?php get_footer(); ?>
