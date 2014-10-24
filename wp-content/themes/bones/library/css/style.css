@@ -2639,8 +2639,7 @@ footer {
     text-align: center;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 /* line 485, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
@@ -2698,7 +2697,7 @@ footer {
   padding: 10px;
   -moz-border-radius: 0 4px 4px 4px;
   -webkit-border-radius: 0 4px 4px 4px;
-=======
+
 /* line 5, ../scss/pages/contact/_google-map.scss */
 .page-id-11 .inner-about-container {
   width: 100%;
@@ -2726,11 +2725,7 @@ footer {
   .page-id-11 .map {
     padding-bottom: 641.516px;
   }
->>>>>>> FETCH_HEAD
-}
 
-=======
->>>>>>> parent of 48c3aa8... tab & grid testing
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
