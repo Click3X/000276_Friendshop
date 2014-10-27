@@ -8,9 +8,9 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-						<div id="main" class="m-all t-2of3 cf" role="main">
+						<div id="main" class="m-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -28,7 +28,7 @@
 								</header> -->
 
 								<section class="entry-content cf" itemprop="articleBody">
-								<?php layerslider(1) ?>
+								<?php //layerslider(1) ?>
 									<div id="tab-container" class="tab-container">
 									  <ul class='etabs'>
 								    <li class='tab'><a href="#tab1">Creative Direction</a></li>

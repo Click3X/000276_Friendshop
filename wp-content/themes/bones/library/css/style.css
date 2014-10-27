@@ -2637,7 +2637,7 @@ footer {
     text-align: center;
   }
 }
-/* line 485, ../scss/partials/_wen.scss */
+/* line 487, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
   padding: 6px;
@@ -2647,7 +2647,7 @@ footer {
   text-align: center;
 }
 
-/* line 493, ../scss/partials/_wen.scss */
+/* line 495, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2656,7 +2656,7 @@ footer {
   margin: 0 20px;
 }
 
-/* line 500, ../scss/partials/_wen.scss */
+/* line 502, ../scss/partials/_wen.scss */
 .tab a {
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -2670,24 +2670,24 @@ footer {
   outline: none;
 }
 
-/* line 512, ../scss/partials/_wen.scss */
+/* line 514, ../scss/partials/_wen.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
-/* line 515, ../scss/partials/_wen.scss */
+/* line 517, ../scss/partials/_wen.scss */
 .tab.active {
   padding-top: 6px;
   position: relative;
   top: 1px;
 }
 
-/* line 522, ../scss/partials/_wen.scss */
+/* line 524, ../scss/partials/_wen.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 526, ../scss/partials/_wen.scss */
+/* line 528, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2696,6 +2696,33 @@ footer {
   -webkit-border-radius: 0 4px 4px 4px;
 }
 
+@media (max-width: 835px) {
+  /* line 533, ../scss/partials/_wen.scss */
+  .etabs {
+    border-top: 3px solid #b4e458;
+    border-bottom: 3px solid #b4e458;
+  }
+
+  /* line 539, ../scss/partials/_wen.scss */
+  .tab {
+    display: block;
+  }
+
+  /* line 543, ../scss/partials/_wen.scss */
+  .tab a {
+    color: #767676;
+  }
+
+  /* line 547, ../scss/partials/_wen.scss */
+  .tab a:hover {
+    color: #b4e458;
+  }
+
+  /* line 551, ../scss/partials/_wen.scss */
+  .tab a.active {
+    color: #b4e458;
+  }
+}
 /* line 11, ../scss/partials/_google-map.scss */
 .page-id-11 .map, .page-id-11 .city {
   background-repeat: no-repeat;
