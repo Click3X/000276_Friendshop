@@ -567,32 +567,75 @@ margin: auto;
 }
 }
 
-	// .grid{
-	// 	width: 100%;
-	// }
+// RAINBOW GLASS
+ @-webkit-keyframes super-rainbow {
+    0% {
+        background: #bb2030;
+    }
+    20% {
+        background: #e0793c;
+    }
+    40% {
+        background: #e6cf47;
+    }
+  
+    60% {
+        background: #8cc453;
+    }
+   
+    70% {
+        background: #19a486;
+    }
+   
+    80% {
+        background: #0c6faf;
+    }
+  
+    90% {
+        background: #500cad;
+    }
+   
+    100% {
+        background: #ad0c6b;
+    }
+}
+@-moz-keyframes super-rainbow {
+    0% {
+        background: #bb2030;
+    }
+    20% {
+        background: #e0793c;
+    }
+    40% {
+        background: #e6cf47;
+    }
+  
+    60% {
+        background: #8cc453;
+    }
+   
+    70% {
+        background: #19a486;
+    }
+   
+    80% {
+        background: #0c6faf;
+    }
+  
+    90% {
+        background: #500cad;
+    }
+   
+    100% {
+        background: #ad0c6b;
+    }
 
-	// .grid ul{
-	// 	list-style-type: none;
-	// 	padding: 0px;
-	// 	margin: 0px;
-	// }
+}
 
-	// .grid ul li{
-	// 	list-style-type: none;
-	// 	float: left;
-	// 	padding: 0px;
-	// 	margin: -0.2px -0.2px;
-	// 	width: 20%;
-	// 	-webkit-transition:all 0.2s ease;
-	// 	-moz-transition:all 0.2s ease;
-	// 	-o-transition:all 0.2s ease;
-	// 	-ms-transition:all 0.2s ease;
-	// 	transition:all 0.2s ease;
-	// 	white-space: nowrap;
-	// }
+#permanent {
+    font-size:24px;
+    -webkit-animation: super-rainbow 5s infinite linear;
+    -moz-animation: super-rainbow 5s infinite linear;
+}
 
-	// .grid ul li img{
-	// 	width: 100%;
-	// 	float: left;
-	// }
 	

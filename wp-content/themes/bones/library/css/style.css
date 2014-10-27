@@ -2739,6 +2739,65 @@ footer {
     color: #b4e458;
   }
 }
+@-webkit-keyframes super-rainbow {
+  0% {
+    background: #bb2030;
+  }
+  20% {
+    background: #e0793c;
+  }
+  40% {
+    background: #e6cf47;
+  }
+  60% {
+    background: #8cc453;
+  }
+  70% {
+    background: #19a486;
+  }
+  80% {
+    background: #0c6faf;
+  }
+  90% {
+    background: #500cad;
+  }
+  100% {
+    background: #ad0c6b;
+  }
+}
+@-moz-keyframes super-rainbow {
+  0% {
+    background: #bb2030;
+  }
+  20% {
+    background: #e0793c;
+  }
+  40% {
+    background: #e6cf47;
+  }
+  60% {
+    background: #8cc453;
+  }
+  70% {
+    background: #19a486;
+  }
+  80% {
+    background: #0c6faf;
+  }
+  90% {
+    background: #500cad;
+  }
+  100% {
+    background: #ad0c6b;
+  }
+}
+/* line 635, ../scss/partials/_wen.scss */
+#permanent {
+  font-size: 24px;
+  -webkit-animation: super-rainbow 5s infinite linear;
+  -moz-animation: super-rainbow 5s infinite linear;
+}
+
 /* line 4, ../scss/partials/_google-map.scss */
 .page-id-11 .map, .page-id-11 .city {
   background-repeat: no-repeat;
