@@ -101,6 +101,14 @@ function loadGravatars() {
 	}
 } // end function
 
+// freewall
+// $(function(){
+
+
+// var wall = new freewall("#freewall-container");
+// wall.fitWidth();
+
+// });
 
 /*
  * Put all your regular jQuery in here.
@@ -134,14 +142,16 @@ $(".fancybox").fancybox();
 $('#tab-container').easytabs();
 
 // init grid
-// var minWidth = 250;
-//     $(window).resize($.debounce(250,function(){
+// var minWidth = 300;
+//     $(window).resize($.debounce(300,function(){
 //       var w = $(window).width();
 //       var numberOfItems = parseInt(w/minWidth);
 //       var itemWidthinPercentage = 100/numberOfItems;
 //       $(".grid ul li").css({width:itemWidthinPercentage+"%"});
 //     }));
 //     $(window).trigger("resize"); 
+
+
 
   /*
    * Let's fire off the gravatar function
