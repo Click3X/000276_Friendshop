@@ -1,0 +1,29 @@
+// FOOTER
+* { margin: 0; }
+
+html, body { height: 100%; }
+
+.footer { position: static; }
+
+#container { 
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -430px;
+
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+
+.footer, #container:after { height: 430px; }
+
+@media(min-width:400px) {
+    #container { margin-bottom: -366px; }
+    .footer, #container:after { height: 366px; }
+}
+
+@media(min-width:1040px) {
+    #container { margin-bottom: -270px;}
+    .footer, #container:after { height: 270px; }
+}

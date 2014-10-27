@@ -73,10 +73,12 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "partials/_wen";
 
 
+// --------------CHARLES STYLES------------------
 // CONTACT PAGE
 // google maps
-
-@import "partials/_google-map";
+@import "partials/google-map";
+// FOOTER
+@import "partials/footer";
 
 
 /*********************
