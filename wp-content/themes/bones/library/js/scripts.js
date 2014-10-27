@@ -120,18 +120,28 @@ jQuery(document).ready(function($) {
   });
 
 // FREE MASON
-    $('.thumb-wrapper').freeMason({
-    contPadding : 0,     // Horizontal padding on container
-    thumbGutter : 15,     // Padding on thumbnails
-    speed       : '0.5s', // Animation speed
-    maxCols     : 3       // Maximum # of columns
-  });
+  //   $('.thumb-wrapper').freeMason({
+  //   contPadding : 0,     // Horizontal padding on container
+  //   thumbGutter : 15,     // Padding on thumbnails
+  //   speed       : '0.5s', // Animation speed
+  //   maxCols     : 3       // Maximum # of columns
+  // });
 
 // init fancybox
 $(".fancybox").fancybox();
 
 // init tabs
 $('#tab-container').easytabs();
+
+// init grid
+// var minWidth = 250;
+//     $(window).resize($.debounce(250,function(){
+//       var w = $(window).width();
+//       var numberOfItems = parseInt(w/minWidth);
+//       var itemWidthinPercentage = 100/numberOfItems;
+//       $(".grid ul li").css({width:itemWidthinPercentage+"%"});
+//     }));
+//     $(window).trigger("resize"); 
 
   /*
    * Let's fire off the gravatar function

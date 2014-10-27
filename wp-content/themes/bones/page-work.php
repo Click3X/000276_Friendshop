@@ -36,7 +36,50 @@
 								    <li class='tab'><a href="#tab3">Friendshop Productions</a></li>
 									  </ul>
 									  <div id="tab1">
-									    <section class="thumb-wrapper">
+
+<!-- 									  	<section>
+ 								<ul>
+								<?php if(get_field('video_list')): 
+
+								while(has_sub_field('video_list')): 
+
+									$hover_text1 = get_sub_field('hover-text1'); 
+									$hover_text2 = get_sub_field('hover-text2'); 
+
+									$poster = get_sub_field('poster');
+									if( !empty($poster) ): 
+
+										$poster_url = $poster['url'];
+
+									endif; ?>
+
+								
+  
+								  
+								    <li class="video-thumb">
+								    	<div class="poster-container">
+								    		<img src="<?php echo $poster_url ?>" alt="Video">
+								    		<div class="poster-hover">
+								    			<h3><?php echo $hover_text1 ?></h3>
+								    			<h4><?php echo $hover_text2 ?></h4>
+								    		</div>
+								    	</div>
+								    </li>	
+								    	  
+
+								    <?php endwhile; ?>  
+								  </ul> 
+								  
+								
+
+								<?php endif; ?>
+								</section> -->
+
+
+
+
+
+<!-- 									    <section class="thumb-wrapper">
 
  								<ul class="thumb-list video-list">
 								<?php if(get_field('video_list')): 
@@ -74,7 +117,17 @@
 
 								<?php endif; ?>
 
-								</section>
+								</section> -->
+
+
+
+
+
+
+
+
+
+
 									  </div>
 									  <div id="tab2">
 									    <h2>JS for these tabs</h2>
