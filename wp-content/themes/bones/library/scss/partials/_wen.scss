@@ -117,8 +117,8 @@ nav a {
 }
 
 nav a:hover {
-	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -324,8 +324,9 @@ body {
 
 // MAIN MENU
 .main-menu-selected {
-		background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+	// background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -340,6 +341,13 @@ footer {
 	position: absolute; 
 	// bottom:0;
 	width: 100%;
+}
+
+@media (max-width: 1159px) {
+	nav li {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 555px) {
@@ -373,7 +381,9 @@ footer {
 	}
 }
 
-@media (max-width: 1480px) {
+// MAIN TOP MENU
+
+@media (max-width: 767px) {
 	.menu-icon {
 		// display: inline-block;
 		float: right;
@@ -466,7 +476,7 @@ margin: auto;
 
 }
 
-@media (min-width: 1481px) {
+@media (min-width: 768px) {
 	.menu-icon {
 		display: none;
 	}
@@ -638,4 +648,25 @@ margin: auto;
     -moz-animation: super-rainbow 5s infinite linear;
 }
 
-	
+// FOOTER RAINBOW
+
+#transition img {
+     background-position: 0 0;
+     background-size: 200% 100%;
+     background-color: red;
+     background-image: -webkit-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+     background-image:    -moz-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b); 
+     background-image:     -ms-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+     background-image:      -o-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+     background-image:         linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+     
+ -moz-transition: all 0.3s ease-out;  /* FF4+ */
+   -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+  -ms-transition: all 0.3s ease-out;  /* IE10? */
+      transition: all 0.3s ease-out;  
+}
+
+#transition img:hover {
+     background-position: -100% 100%;    
+}

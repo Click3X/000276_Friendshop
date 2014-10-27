@@ -2263,8 +2263,8 @@ nav a {
 
 /* line 119, ../scss/partials/_wen.scss */
 nav a:hover {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-  background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
+  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -2489,71 +2489,78 @@ body {
 
 /* line 326, ../scss/partials/_wen.scss */
 .main-menu-selected {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-  background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
+  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-/* line 333, ../scss/partials/_wen.scss */
+/* line 334, ../scss/partials/_wen.scss */
 .main-menu-selected a {
   color: transparent !important;
 }
 
-/* line 339, ../scss/partials/_wen.scss */
+/* line 340, ../scss/partials/_wen.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
+@media (max-width: 1159px) {
+  /* line 347, ../scss/partials/_wen.scss */
+  nav li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 @media (max-width: 555px) {
-  /* line 346, ../scss/partials/_wen.scss */
+  /* line 354, ../scss/partials/_wen.scss */
   .social a {
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
   }
 
-  /* line 352, ../scss/partials/_wen.scss */
+  /* line 360, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 50px;
   }
 
-  /* line 356, ../scss/partials/_wen.scss */
+  /* line 364, ../scss/partials/_wen.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
 @media (max-width: 419px) {
-  /* line 363, ../scss/partials/_wen.scss */
+  /* line 371, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 20px;
   }
 
-  /* line 367, ../scss/partials/_wen.scss */
+  /* line 375, ../scss/partials/_wen.scss */
   .social {
     margin-right: 10px;
   }
 
-  /* line 371, ../scss/partials/_wen.scss */
+  /* line 379, ../scss/partials/_wen.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
-@media (max-width: 1480px) {
-  /* line 377, ../scss/partials/_wen.scss */
+@media (max-width: 767px) {
+  /* line 387, ../scss/partials/_wen.scss */
   .menu-icon {
     float: right;
   }
 
-  /* line 382, ../scss/partials/_wen.scss */
+  /* line 392, ../scss/partials/_wen.scss */
   nav {
     display: none;
     text-align: center;
     margin-top: 60px;
   }
 
-  /* line 395, ../scss/partials/_wen.scss */
+  /* line 405, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -2562,18 +2569,18 @@ footer {
     position: absolute;
   }
 
-  /* line 405, ../scss/partials/_wen.scss */
+  /* line 415, ../scss/partials/_wen.scss */
   .header {
     background: white;
     padding: 10px;
   }
 
-  /* line 410, ../scss/partials/_wen.scss */
+  /* line 420, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
-/* line 416, ../scss/partials/_wen.scss */
+/* line 426, ../scss/partials/_wen.scss */
 .poster-hover {
   background: black;
   opacity: 0;
@@ -2588,14 +2595,14 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 429, ../scss/partials/_wen.scss */
+/* line 439, ../scss/partials/_wen.scss */
 .poster-hover h3 {
   margin: 0;
   padding-top: 50px;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-/* line 436, ../scss/partials/_wen.scss */
+/* line 446, ../scss/partials/_wen.scss */
 .poster-hover h4 {
   margin: 0;
   font-weight: 500;
@@ -2603,57 +2610,57 @@ footer {
   letter-spacing: 0.1em;
 }
 
-/* line 444, ../scss/partials/_wen.scss */
+/* line 454, ../scss/partials/_wen.scss */
 .video-list {
   text-align: center;
   max-width: 1000px;
   margin: auto;
 }
-/* line 449, ../scss/partials/_wen.scss */
+/* line 459, ../scss/partials/_wen.scss */
 .video-list .poster-container {
   position: relative;
   cursor: pointer;
 }
-/* line 453, ../scss/partials/_wen.scss */
+/* line 463, ../scss/partials/_wen.scss */
 .video-list .poster-container img {
   margin: 0;
 }
-/* line 460, ../scss/partials/_wen.scss */
+/* line 470, ../scss/partials/_wen.scss */
 .video-list .poster-container:hover .poster-hover {
   opacity: 0.7;
 }
 
-@media (min-width: 1481px) {
-  /* line 470, ../scss/partials/_wen.scss */
+@media (min-width: 768px) {
+  /* line 480, ../scss/partials/_wen.scss */
   .menu-icon {
     display: none;
   }
 }
 @media (max-width: 756px) {
-  /* line 476, ../scss/partials/_wen.scss */
+  /* line 486, ../scss/partials/_wen.scss */
   .contact-right img {
     width: 260px;
   }
 }
 @media (max-width: 560px) {
-  /* line 482, ../scss/partials/_wen.scss */
+  /* line 492, ../scss/partials/_wen.scss */
   .contact-right {
     float: none;
     text-align: center;
     margin-top: 50px;
   }
 
-  /* line 488, ../scss/partials/_wen.scss */
+  /* line 498, ../scss/partials/_wen.scss */
   .contact-left {
     float: none;
     text-align: center;
   }
-  /* line 492, ../scss/partials/_wen.scss */
+  /* line 502, ../scss/partials/_wen.scss */
   .contact-left p {
     text-align: center;
   }
 }
-/* line 501, ../scss/partials/_wen.scss */
+/* line 511, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
   padding: 6px;
@@ -2663,7 +2670,7 @@ footer {
   text-align: center;
 }
 
-/* line 509, ../scss/partials/_wen.scss */
+/* line 519, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2672,7 +2679,7 @@ footer {
   margin: 0 20px;
 }
 
-/* line 516, ../scss/partials/_wen.scss */
+/* line 526, ../scss/partials/_wen.scss */
 .tab a {
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -2686,24 +2693,24 @@ footer {
   outline: none;
 }
 
-/* line 528, ../scss/partials/_wen.scss */
+/* line 538, ../scss/partials/_wen.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
-/* line 531, ../scss/partials/_wen.scss */
+/* line 541, ../scss/partials/_wen.scss */
 .tab.active {
   padding-top: 6px;
   position: relative;
   top: 1px;
 }
 
-/* line 538, ../scss/partials/_wen.scss */
+/* line 548, ../scss/partials/_wen.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 542, ../scss/partials/_wen.scss */
+/* line 552, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2713,28 +2720,28 @@ footer {
 }
 
 @media (max-width: 835px) {
-  /* line 547, ../scss/partials/_wen.scss */
+  /* line 557, ../scss/partials/_wen.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 553, ../scss/partials/_wen.scss */
+  /* line 563, ../scss/partials/_wen.scss */
   .tab {
     display: block;
   }
 
-  /* line 557, ../scss/partials/_wen.scss */
+  /* line 567, ../scss/partials/_wen.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 561, ../scss/partials/_wen.scss */
+  /* line 571, ../scss/partials/_wen.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 565, ../scss/partials/_wen.scss */
+  /* line 575, ../scss/partials/_wen.scss */
   .tab a.active {
     color: #b4e458;
   }
@@ -2791,11 +2798,37 @@ footer {
     background: #ad0c6b;
   }
 }
-/* line 635, ../scss/partials/_wen.scss */
+/* line 645, ../scss/partials/_wen.scss */
 #permanent {
   font-size: 24px;
   -webkit-animation: super-rainbow 5s infinite linear;
   -moz-animation: super-rainbow 5s infinite linear;
+}
+
+/* line 653, ../scss/partials/_wen.scss */
+#transition img {
+  background-position: 0 0;
+  background-size: 200% 100%;
+  background-color: red;
+  background-image: -webkit-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -moz-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -ms-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -o-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  -moz-transition: all 0.3s ease-out;
+  /* FF4+ */
+  -o-transition: all 0.3s ease-out;
+  /* Opera 10.5+ */
+  -webkit-transition: all 0.3s ease-out;
+  /* Saf3.2+, Chrome */
+  -ms-transition: all 0.3s ease-out;
+  /* IE10? */
+  transition: all 0.3s ease-out;
+}
+
+/* line 670, ../scss/partials/_wen.scss */
+#transition img:hover {
+  background-position: -100% 100%;
 }
 
 /* line 4, ../scss/partials/_google-map.scss */
