@@ -284,10 +284,32 @@ footer {
 }
 
 // TABS
-.work-tabs-container {
+// .work-tabs-container 
+#work-ul {
     background: rgba(0, 0, 0, 0.5);
     border-top: 1px solid #838383;
     border-bottom: 1px solid #838383;
+    margin-bottom: 31px;
+    
+    &:before {
+        content:"";
+        position: absolute;
+        display: block;
+        height: 30px;
+        width:100%;
+        left:0;
+        background: rgba(0, 0, 0, 0.5);
+        border-top: 1px solid #838383;
+        border-bottom: 1px solid #838383;
+        z-index: -1;
+        @media(max-width: 835px) { display: none; }
+    }
+
+    @media(min-width: 834px) {
+        background: none;
+        border-top:0;
+        border-bottom:0;
+    }
 }
 
 .etabs { 

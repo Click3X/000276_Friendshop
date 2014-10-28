@@ -35,7 +35,7 @@
 									<div id="tab-container" class="tab-container">
 
 										<!-- <div class="work-tabs-container cf"> -->
-											<ul class='etabs work-tabs cf'>
+											<ul id="work-ul" class='etabs work-tabs cf'>
 												<?php if(get_field('tabs')): 
 
 													while(has_sub_field('tabs')): 
