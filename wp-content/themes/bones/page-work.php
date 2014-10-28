@@ -16,17 +16,6 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!-- 								<header class="article-header">
-
-									<h1 class="page-title"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-
-								</header> -->
-
 								<section class="entry-content cf" itemprop="articleBody">
 								<?php //layerslider(1) ?>
 									<div id="tab-container" class="tab-container">
@@ -35,108 +24,125 @@
 								    <li class='tab'><a href="#tab2">Featured Work</a></li>
 								    <li class='tab'><a href="#tab3">Friendshop Productions</a></li>
 									  </ul>
+
+									  <!-- TAB 1 -->
 									  <div id="tab1">
 
-<!-- 									  	<section>
- 								<ul>
-								<?php if(get_field('video_list')): 
+										<section>
 
-								while(has_sub_field('video_list')): 
+		 								<ul class="video-list">
 
-									$hover_text1 = get_sub_field('hover-text1'); 
-									$hover_text2 = get_sub_field('hover-text2'); 
+										<?php if(get_field('video_list')): 
 
-									$poster = get_sub_field('poster');
-									if( !empty($poster) ): 
+										while(has_sub_field('video_list')): 
 
-										$poster_url = $poster['url'];
+											$hover_text1 = get_sub_field('hover-text1'); 
+											$hover_text2 = get_sub_field('hover-text2'); 
 
-									endif; ?>
+											$poster = get_sub_field('poster');
+											if( !empty($poster) ): 
 
-								
-  
-								  
-								    <li class="video-thumb">
-								    	<div class="poster-container">
-								    		<img src="<?php echo $poster_url ?>" alt="Video">
-								    		<div class="poster-hover">
-								    			<h3><?php echo $hover_text1 ?></h3>
-								    			<h4><?php echo $hover_text2 ?></h4>
-								    		</div>
-								    	</div>
-								    </li>	
-								    	  
+												$poster_url = $poster['url'];
 
-								    <?php endwhile; ?>  
-								  </ul> 
-								  
-								
+											endif; ?>
+										  
+										    <li class="video-thumb">
+										    	<div class="poster-container">
+										    		<img src="<?php echo $poster_url ?>" alt="Video">
+										    		<div class="poster-hover">
+										    			<h3><?php echo $hover_text1 ?></h3>
+										    			<h4><?php echo $hover_text2 ?></h4>
+										    		</div>
+										    	</div>
+										    </li>	
+										    	  
 
-								<?php endif; ?>
-								</section> -->
+										    <?php endwhile; ?>  
+										  </ul> 
 
-
-
-
-
-<!-- 									    <section class="thumb-wrapper">
-
- 								<ul class="thumb-list video-list">
-								<?php if(get_field('video_list')): 
-
-								while(has_sub_field('video_list')): 
-
-									$hover_text1 = get_sub_field('hover-text1'); 
-									$hover_text2 = get_sub_field('hover-text2'); 
-
-									$poster = get_sub_field('poster');
-									if( !empty($poster) ): 
-
-										$poster_url = $poster['url'];
-
-									endif; ?>
-
-								
-  
-								  
-								    <li class="video-thumb thumb">
-								    	<div class="poster-container">
-								    		<img src="<?php echo $poster_url ?>" alt="Video">
-								    		<div class="poster-hover">
-								    			<h3><?php echo $hover_text1 ?></h3>
-								    			<h4><?php echo $hover_text2 ?></h4>
-								    		</div>
-								    	</div>
-								    </li>	
-								    	  
-
-								    <?php endwhile; ?>  
-								  </ul> 
-								  
-								
-
-								<?php endif; ?>
-
-								</section> -->
-
-
-
-
-
-
-
-
-
+										<?php endif; ?>
+										</section>
 
 									  </div>
+
+									  <!-- TAB 2 -->
 									  <div id="tab2">
-									    <h2>JS for these tabs</h2>
-									    <!-- content -->
+
+										<section>
+		 								<ul class="video-list">
+										<?php if(get_field('video_list2')): 
+
+										while(has_sub_field('video_list2')): 
+
+											$hover_text1 = get_sub_field('hover-text1'); 
+											$hover_text2 = get_sub_field('hover-text2'); 
+
+											$poster = get_sub_field('poster');
+											if( !empty($poster) ): 
+
+												$poster_url = $poster['url'];
+
+											endif; ?>
+
+										
+		  
+										  
+										    <li class="video-thumb">
+										    	<div class="poster-container">
+										    		<img src="<?php echo $poster_url ?>" alt="Video">
+										    		<div class="poster-hover">
+										    			<h3><?php echo $hover_text1 ?></h3>
+										    			<h4><?php echo $hover_text2 ?></h4>
+										    		</div>
+										    	</div>
+										    </li>	
+										    	  
+
+										    <?php endwhile; ?>  
+										  </ul> 
+
+										<?php endif; ?>
+										</section>
+
 									  </div>
+
+									  <!-- TAB 3 -->
 									  <div id="tab3">
-									    <h2>CSS Styles for these tabs</h2>
-									    <!-- content -->
+
+									  	<section>
+			 								<ul class="video-list">
+											<?php if(get_field('video_list3')): 
+
+											while(has_sub_field('video_list3')): 
+
+												$hover_text1 = get_sub_field('hover-text1'); 
+												$hover_text2 = get_sub_field('hover-text2'); 
+
+												$poster = get_sub_field('poster');
+												if( !empty($poster) ): 
+
+													$poster_url = $poster['url'];
+
+												endif; ?>
+											  
+											    <li class="video-thumb">
+											    	<div class="poster-container">
+											    		<img src="<?php echo $poster_url ?>" alt="Video">
+											    		<div class="poster-hover">
+											    			<h3><?php echo $hover_text1 ?></h3>
+											    			<h4><?php echo $hover_text2 ?></h4>
+											    		</div>
+											    	</div>
+											    </li>	
+											    	  
+											    <?php endwhile; ?>  
+											  </ul> 
+
+											<?php endif; ?>
+										</section>
+
 									  </div>
+
 									</div>
 
 
@@ -170,14 +176,6 @@
 									?>
 								</section>
 
-
-<!-- 								<footer class="article-footer">
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer> -->
-
-								<?php //comments_template(); ?>
 
 							</article>
 

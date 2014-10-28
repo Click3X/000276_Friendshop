@@ -14,7 +14,7 @@
 			<div id="inner-footer" class="cf">
 
 
-				<div class="ftlogo-container">
+				<div class="ftlogo-container" id="transition">
 					<a href="<?php echo bloginfo('url'); ?>">
 						<img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" />
 					</a>
