@@ -2926,16 +2926,28 @@ nav li {
 /* line 84, ../scss/partials/_mobile-menu.scss */
 nav a {
   -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+/* line 87, ../scss/partials/_mobile-menu.scss */
+nav a:hover {
+  color: #ffffff;
+}
+
+/* line 94, ../scss/partials/_mobile-menu.scss */
+#menu-main-menu .current-menu-item a {
+  color: white;
 }
 
 @media (max-width: 767px) {
-  /* line 109, ../scss/partials/_mobile-menu.scss */
+  /* line 110, ../scss/partials/_mobile-menu.scss */
   .menu-icon {
     float: right;
   }
 
-  /* line 111, ../scss/partials/_mobile-menu.scss */
+  /* line 112, ../scss/partials/_mobile-menu.scss */
   nav {
     display: none;
     text-align: center;
@@ -2943,24 +2955,24 @@ nav a {
   }
 }
 @media (min-width: 768px) {
-  /* line 119, ../scss/partials/_mobile-menu.scss */
+  /* line 120, ../scss/partials/_mobile-menu.scss */
   .menu-icon {
     display: none;
   }
 
-  /* line 121, ../scss/partials/_mobile-menu.scss */
+  /* line 122, ../scss/partials/_mobile-menu.scss */
   nav {
     margin-top: 6px;
   }
 
-  /* line 123, ../scss/partials/_mobile-menu.scss */
+  /* line 124, ../scss/partials/_mobile-menu.scss */
   #menu-main-menu {
     position: relative;
     width: 90%;
     margin: 0 auto;
     max-width: 850px;
   }
-  /* line 129, ../scss/partials/_mobile-menu.scss */
+  /* line 130, ../scss/partials/_mobile-menu.scss */
   #menu-main-menu li {
     width: 20%;
     margin-left: 0;
