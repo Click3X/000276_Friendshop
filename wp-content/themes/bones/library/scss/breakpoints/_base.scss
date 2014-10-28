@@ -80,29 +80,29 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 
-a, a:visited {
-	color: $link-color;
+// a, a:visited {
+// 	color: $link-color;
 
-	/* on hover */
-	&:hover, &:focus {
-		color: $link-hover;
-	}
+// 	/* on hover */
+// 	&:hover, &:focus {
+// 		color: $link-hover;
+// 	}
 
-	/* on click */
-	&:active {
+// 	/* on click */
+// 	&:active {
 
-	}
+// 	}
 
-	/* mobile tap color */
-	&:link {
-		/*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
-	}
-}
+// 	/* mobile tap color */
+// 	&:link {
+// 		/*
+// 		this highlights links on iPhones/iPads.
+// 		so it basically works like the :hover selector
+// 		for mobile devices.
+// 		*/
+// 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+// 	}
+// }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
