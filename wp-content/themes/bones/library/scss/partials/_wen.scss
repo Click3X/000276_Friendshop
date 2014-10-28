@@ -14,109 +14,6 @@
   font-style: normal;
 }
 
-/*
-  menu icon css3
-*/
-
-.menu-icon {
-    position: relative;
-    width: 3em;
-    height: 3em;
-    cursor: pointer;
-    /* to center */
-    margin: 0 auto;
-    float: none;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    text-align: left;
-}
-
-.menu-icon > span {
-  position: absolute;
-  top: 44%;
-  display: block;
-  width: 100%;
-  height: 0.41em;
-  background-color: black;
-  border-radius: 3px;
-}
-
-.menu-icon > span:before,
-.menu-icon > span:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  border-radius: 3px;
-  -webkit-transition: all 0.3s;
-	        transition: all 0.3s;
-}
-
-.menu-icon > span:before {
-  -webkit-transform: translateY(-1em);
-	        transform: translateY(-1em);
-}
-
-.menu-icon > span:after {
-  -webkit-transform: translateY(1em);
-	        transform: translateY(1em);
-}
-
-/* OPENED */
-
-.menu-icon.open {
-  -webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
-}
-
-.menu-icon.open > span:before {
-  -webkit-transform: rotate(90deg);
-	        transform: rotate(90deg);
-}
-
-.menu-icon.open > span:after {
-  -webkit-transform: rotate(90deg);
-	        transform: rotate(90deg);
-}
-
-
-#inner-header {
-	text-align: center;
-	background-color: transparent;
-}
-
-.menu-display {
-	display: block;
-	@include transition(all 0.3s ease-in-out);
-}
-
-nav {
-	display: inline-block;
-	// max-height: 500px;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	font-family: 'VerlagBold';
-	@include transition(all 0.3s ease-in-out);
-}
-
-nav li {
-	margin-left: 2em;
-	margin-right: 2em;
-}
-
-nav a {
-	@include transition(all 0.3s ease-in-out);
-}
-
-nav a:hover {
-	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-	background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
 body {
 	background-color: black;
 	background: url(../../../../../img/bg.jpg) center center repeat-y;
@@ -133,28 +30,16 @@ body {
 	background-color: rgba(0,0,0,0.5);
 }
 
-.ls-nav-prev {
-	margin-left: -100px;
-}
-
-.ls-nav-next {
-	margin-right: -100px;
-}
+.ls-nav-prev { margin-left: -100px; }
+.ls-nav-next { margin-right: -100px; }
 
 // CONTACT
 .contact-left, .contact-right {
 	text-align: left;
-	h1,h3,h4 {
-		margin:0;
-	}
 
-	h1 {
-		font-size: 1.9em;
-	}
-
-	h3,h4 {
-		color: $white;
-	}
+	h1,h3,h4 { margin:0; }
+	h1 { font-size: 1.9em; }
+	h3,h4 { color: $white; }
 
 	img {
 		vertical-align: bottom;
@@ -164,9 +49,7 @@ body {
 	ul {
 		margin: 0;
 
-		li {
-			margin: 10px 0;
-		}
+		li { margin: 10px 0; }
 
 		h3 {
 			font-size: 1.1em;
@@ -185,18 +68,9 @@ body {
 	}
 }
 
-.contact-left {
-	float: left;
-}
-
-.contact-right {
-	float: right;
-	
-}
-
-.inner-contact-container {
-	padding-top: 50px;
-}
+.contact-left { float: left; }
+.contact-right { float: right; }
+.inner-contact-container { padding-top: 50px; }
 
 // social links images
 #inner-footer {
@@ -229,30 +103,11 @@ body {
 	display: inline-block;
 }
 
-.Tumblr {
-	background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
-	
-}
-
-.Facebook {
-	background-image: url(../../../../../img/Facebook.jpg);
-	
-}
-
-.Instagram {
-	background-image: url(../../../../../img/Instagram.jpg);
-	
-}
-
-.Map {
-	background-image: url(../../../../../img/Map.jpg);
-	
-}
-
-.Mail {
-	background-image: url(../../../../../img/E-mail.jpg);
-	
-}
+.Tumblr { background: url(../../../../../img/Tumblr.jpg) center center no-repeat; }
+.Facebook { background-image: url(../../../../../img/Facebook.jpg); }
+.Instagram { background-image: url(../../../../../img/Instagram.jpg); }
+.Map { background-image: url(../../../../../img/Map.jpg); }
+.Mail { background-image: url(../../../../../img/E-mail.jpg); }
 
 // ABOUT PAGE
 .content-container {
@@ -273,14 +128,8 @@ body {
 	}
 }
 
-.about-container {
-	// padding: 20px;
-	background: rgba(0,0,0,0.5);
-}
-
-.inner-about-container {
-	max-width: 1000px;
-}
+.about-container { background: rgba(0,0,0,0.5); }
+.inner-about-container { max-width: 1000px; }
 
 // GALLARY
 .thumb-wrapper { margin: 0 auto; }
@@ -329,13 +178,6 @@ footer {
 	width: 100%;
 }
 
-@media (max-width: 1159px) {
-	nav li {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
 @media (max-width: 555px) {
 	.social a {
 		width: 55px;
@@ -367,19 +209,7 @@ footer {
 	}
 }
 
-// MAIN TOP MENU
-
 @media (max-width: 767px) {
-	.menu-icon {
-		float: right;
-	}
-
-	nav {
-		display: none;
-		text-align: center;
-		margin-top: 60px;
-	}
-
 	.logo-header {
 		width: 226px;
 		height: 40px;
@@ -389,7 +219,7 @@ footer {
 	}
 
 	.header {
-		background: white;
+		background: #000000;
 		padding: 10px;
 	}
 
@@ -450,12 +280,6 @@ footer {
 	}
 }
 
-@media (min-width: 768px) {
-	.menu-icon {
-		display: none;
-	}
-}
-
 @media (max-width: 756px) {
 	.contact-right img {
 		width: 260px;
@@ -478,8 +302,6 @@ footer {
 		}
 	}
 }
-
-
 
 // TABS
 .etabs { 
@@ -513,11 +335,9 @@ footer {
 	color: #09dcff;
 }
 .tab.active { 
-	// background: #fff; 
 	padding-top: 6px; 
 	position: relative; 
 	top: 1px; 
-	// border-color: #666; 
 }
 .tab a.active { 
 	color: #09dcff;
@@ -583,71 +403,26 @@ footer {
 
 // RAINBOW GLASS
  @-webkit-keyframes super-rainbow {
-    0% {
-        background: #bb2030;
-    }
-    20% {
-        background: #e0793c;
-    }
-    40% {
-        background: #e6cf47;
-    }
-  
-    60% {
-        background: #8cc453;
-    }
-   
-    70% {
-        background: #19a486;
-    }
-   
-    80% {
-        background: #0c6faf;
-    }
-  
-    90% {
-        background: #500cad;
-    }
-   
-    100% {
-        background: #ad0c6b;
-    }
+    0% { background: #bb2030; }
+    20% { background: #e0793c; }
+    40% { background: #e6cf47; }
+    60% { background: #8cc453; }
+    70% { background: #19a486; }
+    80% { background: #0c6faf; }
+    90% { background: #500cad; }
+    100% { background: #ad0c6b; }
 }
 
 @-moz-keyframes super-rainbow {
-    0% {
-        background: #bb2030;
-    }
-    20% {
-        background: #e0793c;
-    }
-    40% {
-        background: #e6cf47;
-    }
-  
-    60% {
-        background: #8cc453;
-    }
-   
-    70% {
-        background: #19a486;
-    }
-   
-    80% {
-        background: #0c6faf;
-    }
-  
-    90% {
-        background: #500cad;
-    }
-   
-    100% {
-        background: #ad0c6b;
-    }
-
+    0% { background: #bb2030; }
+    20% { background: #e0793c; }
+    40% { background: #e6cf47; }
+    60% { background: #8cc453; }
+    70% { background: #19a486; }
+    80% { background: #0c6faf; }
+    90% { background: #500cad; }
+    100% { background: #ad0c6b; }
 }
-
-
 
 #permanent {
     font-size:24px;
@@ -656,7 +431,6 @@ footer {
 }
 
 // FOOTER RAINBOW
-
 #transition img {
      background-position: 0 0;
      background-size: 200% 100%;
@@ -667,13 +441,11 @@ footer {
      background-image:      -o-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
      background-image:         linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
      
- -moz-transition: all 0.3s ease-out;  /* FF4+ */
-   -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
--webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
-  -ms-transition: all 0.3s ease-out;  /* IE10? */
+    -moz-transition: all 0.3s ease-out;  /* FF4+ */
+    -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+    -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+    -ms-transition: all 0.3s ease-out;  /* IE10? */
       transition: all 0.3s ease-out;  
 }
 
-#transition img:hover {
-     background-position: -100% 100%;    
-}
+#transition img:hover { background-position: -100% 100%; }
