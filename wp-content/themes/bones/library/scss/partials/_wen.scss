@@ -285,10 +285,11 @@ footer {
 
 // TABS
 .work-tabs-container {
-    background: rgba(0, 0, 0, 0.6);
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #838383;
 }
+
 .etabs { 
 	margin:0 auto; 
     padding:0;
@@ -313,7 +314,7 @@ footer {
 }
 
 .tab a { 
-	font-size: 0.7em;
+	font-size: 0.75em;
     padding-top: 1px;
 	font-family: 'VerlagBold'; 
 	color: $white;

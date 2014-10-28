@@ -34,7 +34,7 @@
 
 									<div id="tab-container" class="tab-container">
 
-										<div class="work-tabs-container cf">
+										<!-- <div class="work-tabs-container cf"> -->
 											<ul class='etabs work-tabs cf'>
 												<?php if(get_field('tabs')): 
 
@@ -58,7 +58,7 @@
 													<?php endwhile; ?>  
 												<?php endif; ?>
 											</ul>
-										</div>
+										<!-- </div> -->
 
 										<!-- TAB 1 -->
 										<div id="tab1">
