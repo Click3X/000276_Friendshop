@@ -314,11 +314,12 @@ footer {
 
 .tab a { 
 	font-size: 0.7em;
+    padding-top: 1px;
 	font-family: 'VerlagBold'; 
 	color: $white;
 	text-transform: uppercase;
 	text-decoration: none;
-    line-height: 24px;
+    line-height:30px;
 	display: block; 
 	outline: none; 
     font-weight: 500;
