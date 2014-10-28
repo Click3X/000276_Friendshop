@@ -2393,221 +2393,227 @@ footer {
 /* line 287, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
-  padding: 6px;
+  padding: 0;
   background: rgba(0, 0, 0, 0.6);
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   text-align: center;
 }
 
-/* line 296, ../scss/partials/_wen.scss */
+/* line 297, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
-  *display: inline;
   background: transparent;
-  margin: 0 20px;
 }
 
-/* line 304, ../scss/partials/_wen.scss */
+@media (min-width: 836px) {
+  /* line 305, ../scss/partials/_wen.scss */
+  .work-tabs .tab {
+    width: 33.33333%;
+    display: block;
+    float: left;
+  }
+}
+/* line 312, ../scss/partials/_wen.scss */
 .tab a {
   font-size: 0.8em;
   font-family: 'VerlagBold';
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 1.8em;
+  line-height: 24px;
   display: block;
-  padding: 0 20px;
   outline: none;
-  font-weight: 900;
+  font-weight: 500;
 }
-/* line 316, ../scss/partials/_wen.scss */
-.tab a:hover {
-  color: #09dcff;
-}
-
-/* line 319, ../scss/partials/_wen.scss */
-.tab a:hover {
-  color: #09dcff;
-}
-
 /* line 323, ../scss/partials/_wen.scss */
-.tab.active {
-  padding-top: 6px;
-  position: relative;
-  top: 1px;
+.tab a:hover {
+  color: #09dcff;
 }
 
-/* line 329, ../scss/partials/_wen.scss */
+/* line 326, ../scss/partials/_wen.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
+/* line 327, ../scss/partials/_wen.scss */
+.tab.active {
+  position: relative;
+}
+
+/* line 328, ../scss/partials/_wen.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 333, ../scss/partials/_wen.scss */
+/* line 329, ../scss/partials/_wen.scss */
 .tab-gallery a:hover {
   color: #ffdd44;
 }
 
-/* line 337, ../scss/partials/_wen.scss */
+/* line 330, ../scss/partials/_wen.scss */
 .tab-gallery a.active {
   color: #ffdd44;
 }
 
-/* line 341, ../scss/partials/_wen.scss */
+/* line 332, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
   padding: 10px;
-  -moz-border-radius: 0 4px 4px 4px;
   -webkit-border-radius: 0 4px 4px 4px;
+  -moz-border-radius: 0 4px 4px 4px;
+  -o-border-radius: 0 4px 4px 4px;
+  -ms-border-radius: 0 4px 4px 4px;
+  border-radius: 0 4px 4px 4px;
 }
 
 @media (max-width: 835px) {
-  /* line 350, ../scss/partials/_wen.scss */
+  /* line 340, ../scss/partials/_wen.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 355, ../scss/partials/_wen.scss */
+  /* line 345, ../scss/partials/_wen.scss */
   .tab {
     display: block;
   }
 
-  /* line 356, ../scss/partials/_wen.scss */
+  /* line 346, ../scss/partials/_wen.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 357, ../scss/partials/_wen.scss */
+  /* line 347, ../scss/partials/_wen.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 358, ../scss/partials/_wen.scss */
+  /* line 348, ../scss/partials/_wen.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 361, ../scss/partials/_wen.scss */
+/* line 355, ../scss/partials/_wen.scss */
 .grid {
   width: 100%;
 }
 
-/* line 363, ../scss/partials/_wen.scss */
+/* line 357, ../scss/partials/_wen.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 369, ../scss/partials/_wen.scss */
+/* line 363, ../scss/partials/_wen.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
   padding: 0px;
   margin: -0.2px -0.2px;
   width: 20%;
+  white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  white-space: nowrap;
 }
 
-/* line 383, ../scss/partials/_wen.scss */
+/* line 374, ../scss/partials/_wen.scss */
 .grid ul li img {
   width: 100%;
   float: left;
 }
 
 @-webkit-keyframes super-rainbow {
-  /* line 391, ../scss/partials/_wen.scss */
+  /* line 381, ../scss/partials/_wen.scss */
   0% {
     background: #bb2030;
   }
 
-  /* line 392, ../scss/partials/_wen.scss */
+  /* line 382, ../scss/partials/_wen.scss */
   20% {
     background: #e0793c;
   }
 
-  /* line 393, ../scss/partials/_wen.scss */
+  /* line 383, ../scss/partials/_wen.scss */
   40% {
     background: #e6cf47;
   }
 
-  /* line 394, ../scss/partials/_wen.scss */
+  /* line 384, ../scss/partials/_wen.scss */
   60% {
     background: #8cc453;
   }
 
-  /* line 395, ../scss/partials/_wen.scss */
+  /* line 385, ../scss/partials/_wen.scss */
   70% {
     background: #19a486;
   }
 
-  /* line 396, ../scss/partials/_wen.scss */
+  /* line 386, ../scss/partials/_wen.scss */
   80% {
     background: #0c6faf;
   }
 
-  /* line 397, ../scss/partials/_wen.scss */
+  /* line 387, ../scss/partials/_wen.scss */
   90% {
     background: #500cad;
   }
 
-  /* line 398, ../scss/partials/_wen.scss */
+  /* line 388, ../scss/partials/_wen.scss */
   100% {
     background: #ad0c6b;
   }
 }
 
 @-moz-keyframes super-rainbow {
-  /* line 402, ../scss/partials/_wen.scss */
+  /* line 392, ../scss/partials/_wen.scss */
   0% {
     background: #bb2030;
   }
 
-  /* line 403, ../scss/partials/_wen.scss */
+  /* line 393, ../scss/partials/_wen.scss */
   20% {
     background: #e0793c;
   }
 
-  /* line 404, ../scss/partials/_wen.scss */
+  /* line 394, ../scss/partials/_wen.scss */
   40% {
     background: #e6cf47;
   }
 
-  /* line 405, ../scss/partials/_wen.scss */
+  /* line 395, ../scss/partials/_wen.scss */
   60% {
     background: #8cc453;
   }
 
-  /* line 406, ../scss/partials/_wen.scss */
+  /* line 396, ../scss/partials/_wen.scss */
   70% {
     background: #19a486;
   }
 
-  /* line 407, ../scss/partials/_wen.scss */
+  /* line 397, ../scss/partials/_wen.scss */
   80% {
     background: #0c6faf;
   }
 
-  /* line 408, ../scss/partials/_wen.scss */
+  /* line 398, ../scss/partials/_wen.scss */
   90% {
     background: #500cad;
   }
 
-  /* line 409, ../scss/partials/_wen.scss */
+  /* line 399, ../scss/partials/_wen.scss */
   100% {
     background: #ad0c6b;
   }
 }
 
-/* line 412, ../scss/partials/_wen.scss */
+/* line 402, ../scss/partials/_wen.scss */
 #permanent {
   display: inline-block;
   font-size: 24px;
@@ -2615,7 +2621,7 @@ footer {
   -moz-animation: super-rainbow 5s infinite linear;
 }
 
-/* line 420, ../scss/partials/_wen.scss */
+/* line 410, ../scss/partials/_wen.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -2636,7 +2642,7 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 437, ../scss/partials/_wen.scss */
+/* line 427, ../scss/partials/_wen.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }

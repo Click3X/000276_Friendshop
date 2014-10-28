@@ -286,7 +286,8 @@ footer {
 // TABS
 .etabs { 
 	margin: 0; 
-	padding: 6px;; 
+	// padding: 6px;
+    padding:0;
 	background: rgba(0,0,0,0.6);
 	border-top: 1px solid #aaa;
 	border-bottom: 1px solid #aaa;
@@ -296,9 +297,16 @@ footer {
 .tab { 
 	display: inline-block; 
 	zoom:1; 
-	*display:inline; 
+	// *display:inline; 
 	background: transparent; 
-	margin: 0 20px;
+}
+
+@media(min-width: 836px) {
+    .work-tabs .tab { 
+        width: 33.33333%;
+        display: block;
+        float: left;
+    }
 }
 
 .tab a { 
@@ -307,43 +315,25 @@ footer {
 	color: $white;
 	text-transform: uppercase;
 	text-decoration: none;
-	line-height: 1.8em; 
+    line-height: 24px;
 	display: block; 
-	padding: 0 20px; 
 	outline: none; 
-	font-weight: 900;
+    font-weight: 500;
 
     &:hover { color: #09dcff; }
 }
 
-.tab a:hover { 
-	color: $tab-blue;
-}
-
-.tab.active { 
-	padding-top: 6px; 
-	position: relative; 
-	top: 1px; 
-}
-
-.tab a.active { 
-	color: $tab-blue;
-}
-
-.tab-gallery a:hover{
-	color: $tab-yellow;
-}
-
-.tab-gallery a.active{
-	color: $tab-yellow;
-}
+.tab a:hover { color: $tab-blue; }
+.tab.active { position: relative; }
+.tab a.active { color: $tab-blue; }
+.tab-gallery a:hover{ color: $tab-yellow; }
+.tab-gallery a.active{ color: $tab-yellow; }
 
 .tab-container .panel-container { 
 	background: #fff; 
     border: solid #666 1px; 
     padding: 10px; 
-    -moz-border-radius: 0 4px 4px 4px; 
-    -webkit-border-radius: 0 4px 4px 4px; 
+    @include prefix(border-radius, 0 4px 4px 4px);
 }
 
 @media (max-width: 835px) {
@@ -356,6 +346,10 @@ footer {
 	.tab a { color: #767676; }
 	.tab a:hover { color: $light-green; }
 	.tab a.active {  color: $light-green; }
+}
+
+@media (min-width: 836px) {
+
 }
 
 .grid{ width: 100%; }
@@ -372,19 +366,15 @@ footer {
 	padding: 0px;
 	margin: -0.2px -0.2px;
 	width: 20%;
-	-webkit-transition:all 0.2s ease;
-	-moz-transition:all 0.2s ease;
-	-o-transition:all 0.2s ease;
-	-ms-transition:all 0.2s ease;
-	transition:all 0.2s ease;
 	white-space: nowrap;
+
+    @include prefix(transition, all 0.2s ease);
 }
 
 .grid ul li img {
 	width: 100%;
 	float: left;
 }
-
 
 // RAINBOW GLASS
  @-webkit-keyframes super-rainbow {

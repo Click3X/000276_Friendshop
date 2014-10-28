@@ -33,172 +33,149 @@
 								</div> -->
 
 									<div id="tab-container" class="tab-container">
-									  <ul class='etabs'>
-									  	<?php if(get_field('tabs')): 
 
-										while(has_sub_field('tabs')): 
+										<div class="word-tabs-container cf">
+											<ul class='etabs work-tabs cf'>
+												<?php if(get_field('tabs')): 
 
-											$tab1 = get_sub_field('tab1'); 
-											$tab2 = get_sub_field('tab2'); 
-											$tab3 = get_sub_field('tab3'); 
-										?>
-										<?php if (is_page(4)) { ?>									    
-									    	<li class='tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
-									    	<li class='tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
-									    	<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+													while(has_sub_field('tabs')): 
 
-									    <?php } elseif (is_page(6)) { ?>
-									    	<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
-									    	<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
-									    	<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
-									    <?php } ?>
+														$tab1 = get_sub_field('tab1'); 
+														$tab2 = get_sub_field('tab2'); 
+														$tab3 = get_sub_field('tab3'); 
+														?>
 
-									    <?php endwhile; ?>  
-									    <?php endif; ?>
-									  </ul>
+													<?php if (is_page(4)) { ?>									    
+														<li class='tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+														<li class='tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+														<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
 
-									  <!-- TAB 1 -->
-									  <div id="tab1">
+													<?php } elseif (is_page(6)) { ?>
+														<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+														<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+														<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+													<?php } ?>
+													<?php endwhile; ?>  
+												<?php endif; ?>
+											</ul>
+										</div>
 
-										<section>
+										<!-- TAB 1 -->
+										<div id="tab1">
+											<section>
+				 								<ul class="video-list">
 
-		 								<ul class="video-list">
+												<?php if(get_field('video_list1')): 
 
-										<?php if(get_field('video_list1')): 
+												while(has_sub_field('video_list1')): 
 
-										while(has_sub_field('video_list1')): 
+													$hover_text1 = get_sub_field('hover-text1'); 
+													$hover_text2 = get_sub_field('hover-text2'); 
 
-											$hover_text1 = get_sub_field('hover-text1'); 
-											$hover_text2 = get_sub_field('hover-text2'); 
+													$poster = get_sub_field('poster');
+													if( !empty($poster) ): 
 
-											$poster = get_sub_field('poster');
-											if( !empty($poster) ): 
+														$poster_url = $poster['url'];
 
-												$poster_url = $poster['url'];
+													endif; ?>
+												  
+												    <li class="video-thumb">
+												    	<div class="poster-container">
+												    		<img src="<?php echo $poster_url ?>" alt="Video">
+												    		<div class="poster-hover">
+												    			<h3><?php echo $hover_text1 ?></h3>
+												    			<h4><?php echo $hover_text2 ?></h4>
+												    		</div>
+												    	</div>
+												    </li>	
+												    	  
 
-											endif; ?>
-										  
-										    <li class="video-thumb">
-										    	<div class="poster-container">
-										    		<img src="<?php echo $poster_url ?>" alt="Video">
-										    		<div class="poster-hover">
-										    			<h3><?php echo $hover_text1 ?></h3>
-										    			<h4><?php echo $hover_text2 ?></h4>
-										    		</div>
-										    	</div>
-										    </li>	
-										    	  
+												    <?php endwhile; ?>  
+												  </ul> 
 
-										    <?php endwhile; ?>  
-										  </ul> 
+												<?php endif; ?>
+											</section>
+										  </div>
 
-										<?php endif; ?>
-										</section>
+										<!-- TAB 2 -->
+										<div id="tab2">
+											<section>
+			 								
+			 									<ul class="video-list">
+												<?php if(get_field('video_list2')): 
 
-									  </div>
+													while(has_sub_field('video_list2')): 
 
-									  <!-- TAB 2 -->
-									  <div id="tab2">
+														$hover_text1 = get_sub_field('hover-text1'); 
+														$hover_text2 = get_sub_field('hover-text2'); 
 
-										<section>
-		 								<ul class="video-list">
-										<?php if(get_field('video_list2')): 
+														$poster = get_sub_field('poster');
+														if( !empty($poster) ): 
 
-										while(has_sub_field('video_list2')): 
+															$poster_url = $poster['url'];
 
-											$hover_text1 = get_sub_field('hover-text1'); 
-											$hover_text2 = get_sub_field('hover-text2'); 
+														endif; ?>
+												    <li class="video-thumb">
+												    	<div class="poster-container">
+												    		<img src="<?php echo $poster_url ?>" alt="Video">
+												    		<div class="poster-hover">
+												    			<h3><?php echo $hover_text1 ?></h3>
+												    			<h4><?php echo $hover_text2 ?></h4>
+												    		</div>
+												    	</div>
+												    </li>	
 
-											$poster = get_sub_field('poster');
-											if( !empty($poster) ): 
-
-												$poster_url = $poster['url'];
-
-											endif; ?>
-
-										
-		  
-										  
-										    <li class="video-thumb">
-										    	<div class="poster-container">
-										    		<img src="<?php echo $poster_url ?>" alt="Video">
-										    		<div class="poster-hover">
-										    			<h3><?php echo $hover_text1 ?></h3>
-										    			<h4><?php echo $hover_text2 ?></h4>
-										    		</div>
-										    	</div>
-										    </li>	
-										    	  
-
-										    <?php endwhile; ?>  
-										  </ul> 
-
-										<?php endif; ?>
-										</section>
-
-									  </div>
-
-									  <!-- TAB 3 -->
-									  <div id="tab3">
-
-									  	<section>
-			 								<ul class="video-list">
-											<?php if(get_field('video_list3')): 
-
-											while(has_sub_field('video_list3')): 
-
-												$hover_text1 = get_sub_field('hover-text1'); 
-												$hover_text2 = get_sub_field('hover-text2'); 
-
-												$poster = get_sub_field('poster');
-												if( !empty($poster) ): 
-
-													$poster_url = $poster['url'];
-
-												endif; ?>
-											  
-											    <li class="video-thumb">
-											    	<div class="poster-container">
-											    		<img src="<?php echo $poster_url ?>" alt="Video">
-											    		<div class="poster-hover">
-											    			<h3><?php echo $hover_text1 ?></h3>
-											    			<h4><?php echo $hover_text2 ?></h4>
-											    		</div>
-											    	</div>
-											    </li>	
-											    	  
 											    <?php endwhile; ?>  
 											  </ul> 
 
 											<?php endif; ?>
-										</section>
+											</section>
 
-									  </div>
+										</div>
 
-									</div>
+										<!-- TAB 3 -->
+										<div id="tab3">
+										  	<section>
+				 								<ul class="video-list">
+												<?php if(get_field('video_list3')): 
 
+												while(has_sub_field('video_list3')): 
 
-								
+													$hover_text1 = get_sub_field('hover-text1'); 
+													$hover_text2 = get_sub_field('hover-text2'); 
 
+													$poster = get_sub_field('poster');
+													if( !empty($poster) ): 
 
+														$poster_url = $poster['url'];
+
+													endif; ?>
+												  
+												    <li class="video-thumb">
+												    	<div class="poster-container">
+												    		<img src="<?php echo $poster_url ?>" alt="Video">
+												    		<div class="poster-hover">
+												    			<h3><?php echo $hover_text1 ?></h3>
+												    			<h4><?php echo $hover_text2 ?></h4>
+												    		</div>
+												    	</div>
+												    </li>	
+												    	  
+												    <?php endwhile; ?>  
+												  </ul> 
+
+												<?php endif; ?>
+											</section>
+
+										  </div>
+
+										</div>
 
 									<?php
 										// the content (pretty self explanatory huh)
 										// the_content();
-									// layerslider(1);
+										// layerslider(1);
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
 										wp_link_pages( array(
 											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
 											'after'       => '</div>',
@@ -207,7 +184,6 @@
 										) );
 									?>
 								</section>
-
 
 							</article>
 
