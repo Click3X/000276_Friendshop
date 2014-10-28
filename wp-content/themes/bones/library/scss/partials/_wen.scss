@@ -38,7 +38,10 @@ body {
 	text-align: left;
 
 	h1,h3,h4 { margin:0; }
-	h1 { font-size: 1.9em; }
+	h1 { 
+        font-size: 2.35em; 
+        margin-bottom: .175em;
+    }
 	h3,h4 { color: $white; }
 
 	img {
@@ -52,19 +55,21 @@ body {
 		li { margin: 10px 0; }
 
 		h3 {
-			font-size: 1.1em;
-			font-weight: 700;
+            font-size: 1em;
+            font-weight: 900;
+            line-height: 1.1em;
 		}
 
 		h4 {
 			font-size: 1em;
-			font-weight: 500;
+            font-weight: 700;
 		}
 	}
 
 	p {
 		line-height: 1.4em !important;
 		font-size: 1em !important;
+        margin: 0 0 2.4em;
 	}
 }
 
@@ -114,7 +119,6 @@ body {
 	max-width: 1000px;
 
 	h1 {
-		// color: #09dcff;
         color: #10a1a4;
 		text-transform: uppercase;
 	}
@@ -122,8 +126,6 @@ body {
 	p {
 		color: $white;
 		text-align: left;
-		// line-height: 2em;
-		// font-size: 1.15em;
         line-height: 1.9em;
         font-size: 1.25em;
         font-weight: 600;
@@ -138,16 +140,21 @@ body {
 .thumb-wrapper { margin: 0 auto; }
 
 .thumb-list {
-  position: relative;
-  list-style: none;
-  list-style-image: none; 
+    position: relative;
+    list-style: none;
+    list-style-image: none; 
+    margin-top: 12px;
+
+    @media(min-width: 768px) {
+        margin-top:0;
+    }
 }
 
 .thumb {
   position: absolute;
   overflow: hidden;
-  width: 290px; /* Set width */
-  height: 290px; /* Set height */
+  width: 295px; /* Set width */
+  height: 295px; /* Set height */
 }
 
 .video-thumb {
@@ -158,8 +165,8 @@ body {
 }
 
 .thumb img { 
-  width: 290px; /* Set width */
-  height: 290px; /* Set height */
+    width: 295px;
+    height: 295px;
 }
 
 // Footer 

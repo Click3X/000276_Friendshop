@@ -17,32 +17,30 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content cf thumb-wrapper" itemprop="articleBody">
 
- 								<section class="thumb-wrapper">
+ 								<!-- <section class="thumb-wrapper"> -->
 
- 								<ul class="thumb-list">
-								<?php if(get_field('gallery_list')): 
+	 								<ul class="thumb-list">
+									<?php if(get_field('gallery_list')): 
 
-								while(has_sub_field('gallery_list')): 
+									while(has_sub_field('gallery_list')): 
 
-									$sub_title = get_sub_field('title'); 
+										$sub_title = get_sub_field('title'); 
 
-									$gif = get_sub_field('gif');
-									if( !empty($gif) ): 
+										$gif = get_sub_field('gif');
+										if( !empty($gif) ): 
 
-										$gif_url = $gif['url'];
+											$gif_url = $gif['url'];
 
-									endif; ?>
-								  
-								    <li class="thumb"><img src="<?php echo $gif_url ?>" alt="Thumb"></li>  
+										endif; ?>
+									  
+									    <li class="thumb"><img src="<?php echo $gif_url ?>" alt="Thumb"></li>  
 
-								    <?php endwhile; ?>  
-								  </ul> 
-								  
-								
+									    <?php endwhile; ?>  
+									  </ul> 
 
-								<?php endif; ?>
+									<?php endif; ?>
 
 								</section>
 
