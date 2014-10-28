@@ -118,7 +118,8 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
-    var button = document.querySelector('.menu-icon');
+  // MOBILE MENU
+  var button = document.querySelector('.menu-icon');
   button.addEventListener('click', function (){
     button.classList.toggle('open');
     $('nav').toggleClass('menu-display');
@@ -127,29 +128,35 @@ jQuery(document).ready(function($) {
         // else{$('nav').slideUp();} 
   });
 
+<<<<<<< HEAD
 // FREE MASON
     $('.thumb-wrapper').freeMason({
     contPadding : 0,     // Horizontal padding on container
+=======
+  // FREE MASON
+  $('.thumb-wrapper').freeMason({
+    contPadding : 20,     // Horizontal padding on container
+>>>>>>> FETCH_HEAD
     thumbGutter : 15,     // Padding on thumbnails
     speed       : '0.5s', // Animation speed
     maxCols     : 3       // Maximum # of columns
   });
 
-// init fancybox
-$(".fancybox").fancybox();
+  // init fancybox
+  $(".fancybox").fancybox();
 
-// init tabs
-$('#tab-container').easytabs();
+  // init tabs
+  $('#tab-container').easytabs();
 
-// init grid
-// var minWidth = 300;
-//     $(window).resize($.debounce(300,function(){
-//       var w = $(window).width();
-//       var numberOfItems = parseInt(w/minWidth);
-//       var itemWidthinPercentage = 100/numberOfItems;
-//       $(".grid ul li").css({width:itemWidthinPercentage+"%"});
-//     }));
-//     $(window).trigger("resize"); 
+  // init grid
+  // var minWidth = 300;
+  //     $(window).resize($.debounce(300,function(){
+  //       var w = $(window).width();
+  //       var numberOfItems = parseInt(w/minWidth);
+  //       var itemWidthinPercentage = 100/numberOfItems;
+  //       $(".grid ul li").css({width:itemWidthinPercentage+"%"});
+  //     }));
+  //     $(window).trigger("resize"); 
 
 
 
