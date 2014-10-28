@@ -2928,27 +2928,6 @@ nav a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 87, ../scss/partials/_mobile-menu.scss */
-nav a:hover {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-/* line 97, ../scss/partials/_mobile-menu.scss */
-.main-menu-selected {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-/* line 104, ../scss/partials/_mobile-menu.scss */
-.main-menu-selected a {
-  color: transparent !important;
-}
 
 @media (max-width: 767px) {
   /* line 109, ../scss/partials/_mobile-menu.scss */

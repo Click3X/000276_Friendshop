@@ -242,7 +242,7 @@ NAVIGATION STYLES
   has the possibility of being a mobile device.
   */
 }
-/* line 71, ../scss/breakpoints/_768up.scss */
+/* line 72, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;
@@ -361,6 +361,12 @@ be seen on the Desktop.
 /* line 12, ../scss/breakpoints/_1030up.scss */
 .wrap {
   width: 1240px;
+}
+
+/* line 33, ../scss/ie.scss */
+#menu-main-menu {
+  width: 850px;
+  margin: 0 auto;
 }
 
 /*

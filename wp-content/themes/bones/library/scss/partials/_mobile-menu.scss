@@ -84,25 +84,25 @@ nav li {
 nav a {
     @include transition(all 0.3s ease-in-out);
     
-    &:hover {
-        background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-        background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-        color:transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-    }
+    // &:hover {
+    //     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+    //     background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+    //     color:transparent;
+    //     -webkit-background-clip: text;
+    //     background-clip: text;
+    // }
 }
 
 // MAIN MENU
-.main-menu-selected {
-    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-    background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+// .main-menu-selected {
+//     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+//     background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
+//     color:transparent;
+//     -webkit-background-clip: text;
+//     background-clip: text;
 
-    a { color: transparent !important; }
-}
+//     a { color: transparent !important; }
+// }
 
 // MAIN TOP MENU
 @media (max-width: 767px) {
