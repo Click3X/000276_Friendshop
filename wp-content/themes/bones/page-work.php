@@ -34,7 +34,7 @@
 
 									<div id="tab-container" class="tab-container">
 
-										<div class="word-tabs-container cf">
+										<div class="work-tabs-container cf">
 											<ul class='etabs work-tabs cf'>
 												<?php if(get_field('tabs')): 
 

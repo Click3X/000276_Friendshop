@@ -284,14 +284,17 @@ footer {
 }
 
 // TABS
+.work-tabs-container {
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
 .etabs { 
-	margin: 0; 
-	// padding: 6px;
+	margin:0 auto; 
     padding:0;
-	background: rgba(0,0,0,0.6);
-	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
 	text-align: center;
+    width:100%;
+    max-width: 850px;
 }
 
 .tab { 
@@ -310,7 +313,7 @@ footer {
 }
 
 .tab a { 
-	font-size: 0.8em;
+	font-size: 0.7em;
 	font-family: 'VerlagBold'; 
 	color: $white;
 	text-transform: uppercase;
