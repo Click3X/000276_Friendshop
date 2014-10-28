@@ -294,8 +294,8 @@ body {
 .thumb {
   position: absolute;
   overflow: hidden;
-  width: 225px; /* Set width */
-  height: 225px; /* Set height */
+  width: 290px; /* Set width */
+  height: 290px; /* Set height */
 }
 
 .video-thumb {
@@ -306,8 +306,10 @@ body {
 }
 
 .thumb img { 
-  max-width: 100%;
-  height: auto;
+  // max-width: 100%;
+  // height: auto;
+  width: 290px; /* Set width */
+  height: 290px; /* Set height */
 }
 
 // MAIN MENU
