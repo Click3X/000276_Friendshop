@@ -16,15 +16,13 @@
 
 body {
 	background-color: black;
-	// background: url(../../../../../img/bg.jpg) center top repeat-y;
     background: url(../../../../../img/bg.jpg) center top;
 	background-size: cover;
 }
 
 .logo-header {
 	background: url(../../../../../img/fs-logo.png) center center no-repeat;
-    // height: 140px;
-    height: 128px;
+    height: 124px;
 }
 
 .ls-nav-prev, .ls-nav-next {
@@ -116,15 +114,19 @@ body {
 	max-width: 1000px;
 
 	h1 {
-		color: #09dcff;
+		// color: #09dcff;
+        color: #10a1a4;
 		text-transform: uppercase;
 	}
 
 	p {
 		color: $white;
 		text-align: left;
-		line-height: 2em;
-		font-size: 1.15em;
+		// line-height: 2em;
+		// font-size: 1.15em;
+        line-height: 1.9em;
+        font-size: 1.25em;
+        font-weight: 600;
 	}
 }
 
