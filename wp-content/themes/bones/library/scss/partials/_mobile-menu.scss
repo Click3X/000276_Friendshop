@@ -64,7 +64,8 @@
 nav {
     display:block;
     font-size: 1rem;
-    font-weight: 700;
+    // font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: 'VerlagBold';
     @include transition(all 0.3s ease-in-out);
