@@ -2609,12 +2609,13 @@ footer {
 
 /* line 412, ../scss/partials/_wen.scss */
 #permanent {
+  display: inline-block;
   font-size: 24px;
   -webkit-animation: super-rainbow 5s infinite linear;
   -moz-animation: super-rainbow 5s infinite linear;
 }
 
-/* line 419, ../scss/partials/_wen.scss */
+/* line 420, ../scss/partials/_wen.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -2635,7 +2636,7 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 436, ../scss/partials/_wen.scss */
+/* line 437, ../scss/partials/_wen.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }
