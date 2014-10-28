@@ -142,6 +142,9 @@ jQuery(document).ready(function($) {
   // init tabs
   $('#tab-container').easytabs();
 
+  // init carousel
+  $('#slider-stage').carousel('#previous', '#next');
+
   // init grid
   // var minWidth = 300;
   //     $(window).resize($.debounce(300,function(){

@@ -336,7 +336,7 @@ footer {
 	font-weight: 900;
 }
 .tab a:hover { 
-	color: #09dcff;
+	color: $tab-blue;
 }
 .tab.active { 
 	padding-top: 6px; 
@@ -344,7 +344,15 @@ footer {
 	top: 1px; 
 }
 .tab a.active { 
-	color: #09dcff;
+	color: $tab-blue;
+}
+
+.tab-gallery a:hover{
+	color: $tab-yellow;
+}
+
+.tab-gallery a.active{
+	color: $tab-yellow;
 }
 
 .tab-container .panel-container { 

@@ -2578,6 +2578,16 @@ footer {
 }
 
 /* line 350, ../scss/partials/_wen.scss */
+.tab-gallery a:hover {
+  color: #ffdd44;
+}
+
+/* line 354, ../scss/partials/_wen.scss */
+.tab-gallery a.active {
+  color: #ffdd44;
+}
+
+/* line 358, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2587,45 +2597,45 @@ footer {
 }
 
 @media (max-width: 835px) {
-  /* line 355, ../scss/partials/_wen.scss */
+  /* line 363, ../scss/partials/_wen.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 360, ../scss/partials/_wen.scss */
+  /* line 368, ../scss/partials/_wen.scss */
   .tab {
     display: block;
   }
 
-  /* line 364, ../scss/partials/_wen.scss */
+  /* line 372, ../scss/partials/_wen.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 368, ../scss/partials/_wen.scss */
+  /* line 376, ../scss/partials/_wen.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 372, ../scss/partials/_wen.scss */
+  /* line 380, ../scss/partials/_wen.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 378, ../scss/partials/_wen.scss */
+/* line 386, ../scss/partials/_wen.scss */
 .grid {
   width: 100%;
 }
 
-/* line 382, ../scss/partials/_wen.scss */
+/* line 390, ../scss/partials/_wen.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 388, ../scss/partials/_wen.scss */
+/* line 396, ../scss/partials/_wen.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
@@ -2640,7 +2650,7 @@ footer {
   white-space: nowrap;
 }
 
-/* line 402, ../scss/partials/_wen.scss */
+/* line 410, ../scss/partials/_wen.scss */
 .grid ul li img {
   width: 100%;
   float: left;
@@ -2698,14 +2708,14 @@ footer {
     background: #ad0c6b;
   }
 }
-/* line 431, ../scss/partials/_wen.scss */
+/* line 439, ../scss/partials/_wen.scss */
 #permanent {
   font-size: 24px;
   -webkit-animation: super-rainbow 5s infinite linear;
   -moz-animation: super-rainbow 5s infinite linear;
 }
 
-/* line 438, ../scss/partials/_wen.scss */
+/* line 446, ../scss/partials/_wen.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -2726,9 +2736,125 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 455, ../scss/partials/_wen.scss */
+/* line 463, ../scss/partials/_wen.scss */
 #transition img:hover {
   background-position: -100% 100%;
+}
+
+/* line 1, ../scss/partials/_carousel-editors.scss */
+#slider-stage {
+  width: 248px;
+  overflow: hidden;
+  height: 175px;
+  margin-left: 1px;
+  float: left;
+  position: relative;
+}
+
+/*#slider-buttons {
+	width: 296px;
+	margin: 0 auto;
+	position:relative;
+	height:20px;
+}*/
+/* line 15, ../scss/partials/_carousel-editors.scss */
+#slider-list {
+  width: 2000px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  left: 0px;
+  position: absolute;
+}
+
+/* line 23, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-right: 8px;
+  float: left;
+  width: 120px;
+  height: 140px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* line 39, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme span.nameVignette {
+  position: absolute;
+  left: 4px;
+  bottom: 0px;
+  color: #a0a09b;
+  padding: 3px;
+  font-size: 10px;
+}
+
+/* line 47, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme:hover span.nameVignette {
+  color: #494947;
+}
+
+/* line 50, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme span.changeTheme {
+  background: #363636;
+  color: #FFD200;
+  display: none;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  height: 16px;
+  left: 0px;
+  padding: 4px 0 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0px;
+  width: 120px;
+}
+
+/* line 66, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme:hover span.changeTheme {
+  display: block;
+}
+
+/* line 69, ../scss/partials/_carousel-editors.scss */
+#sliderBloc {
+  height: 145px;
+  /*margin:0 auto;*/
+  width: 294px;
+  overflow: hidden;
+}
+
+/* line 75, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#previous, #sliderBloc a#next {
+  background: url(fleche-carrousel-gauche.png) no-repeat left top;
+  float: left;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 55px 2px 0 0;
+}
+
+/* line 84, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#next {
+  background: url(fleche-carrousel-droite.png) no-repeat left top;
+  margin: 55px 0 0 2px;
+}
+
+/* line 88, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#previous:hover, #sliderBloc a#next:hover {
+  background-position: left -20px;
+}
+
+/* line 91, ../scss/partials/_carousel-editors.scss */
+.demo {
+  background: #F3F2DA none repeat scroll 0 0;
+  padding: 0 1em 1em;
 }
 
 /* line 4, ../scss/partials/_google-map.scss */

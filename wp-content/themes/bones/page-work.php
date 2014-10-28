@@ -18,11 +18,43 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
 								<?php //layerslider(1) ?>
+
+
+								<!-- SELECT PLAYERS -->
+<!-- 								<div id="sliderBloc">
+									<a id="previous">Previous</a>
+									<div style="" id="slider-stage">
+										<div style="width: 512px;" id="slider-list">
+											<a class="theme"><img src="theme1.png" alt="Periscope angels " height="120" width="120" /><span class="nameVignette">Periscope angels </span><span class="changeTheme">changer le thème</span></a>
+											<a class="theme"><img src="theme2.jpg" alt="ice-cream mountains" height="120" width="120" /><span class="nameVignette">ice-cream mountains</span><span class="changeTheme">changer le thème</span></a>
+										</div>
+									</div>
+									<a id="next">Next</a>
+								</div> -->
+
 									<div id="tab-container" class="tab-container">
 									  <ul class='etabs'>
-								    <li class='tab'><a href="#tab1">Creative Direction</a></li>
-								    <li class='tab'><a href="#tab2">Featured Work</a></li>
-								    <li class='tab'><a href="#tab3">Friendshop Productions</a></li>
+									  	<?php if(get_field('tabs')): 
+
+										while(has_sub_field('tabs')): 
+
+											$tab1 = get_sub_field('tab1'); 
+											$tab2 = get_sub_field('tab2'); 
+											$tab3 = get_sub_field('tab3'); 
+										?>
+										<?php if (is_page(4)) { ?>									    
+									    	<li class='tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+									    	<li class='tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+									    	<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+
+									    <?php } elseif (is_page(6)) { ?>
+									    	<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+									    	<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+									    	<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+									    <?php } ?>
+
+									    <?php endwhile; ?>  
+									    <?php endif; ?>
 									  </ul>
 
 									  <!-- TAB 1 -->
@@ -32,9 +64,9 @@
 
 		 								<ul class="video-list">
 
-										<?php if(get_field('video_list')): 
+										<?php if(get_field('video_list1')): 
 
-										while(has_sub_field('video_list')): 
+										while(has_sub_field('video_list1')): 
 
 											$hover_text1 = get_sub_field('hover-text1'); 
 											$hover_text2 = get_sub_field('hover-text2'); 

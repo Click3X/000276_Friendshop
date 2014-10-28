@@ -140,6 +140,9 @@ function bones_scripts_and_styles() {
 		// fancybox style sheet
 		wp_register_style( 'fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.fancybox.css', array(), '' );
 
+		// carousel style sheet
+		wp_register_style( 'carousel-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.infinite-carousel.css', array(), '' );
+
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		  wp_enqueue_script( 'comment-reply' );
@@ -157,6 +160,9 @@ function bones_scripts_and_styles() {
 		//adding tabs js
 		wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
 
+		// adding infinite carousel js
+		wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.infinite-carousel.js', array( 'jquery' ), '', true );
+
 		// // adding responsive grid js
 		// wp_register_script( 'grid-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ba-throttle-debounce.min.js', array( 'jquery' ), '', true );
 
@@ -168,6 +174,9 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
+		wp_enqueue_style( 'fancybox-stylesheet' );
+		wp_enqueue_style( 'carousel-stylesheet' );
+
 
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
@@ -182,6 +191,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'freemason.min' );
 		wp_enqueue_script( 'fancybox-js' );
 		wp_enqueue_script( 'tab-js' );
+		wp_enqueue_script( 'carousel-js' );
 		// wp_enqueue_script( 'grid-js' );
 		// wp_enqueue_script( 'freewall-js' );
 
