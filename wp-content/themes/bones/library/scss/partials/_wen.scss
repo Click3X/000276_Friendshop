@@ -129,6 +129,7 @@ body {
 
 .about-container { background: rgba(0,0,0,0.5); }
 .inner-about-container { max-width: 1000px; }
+.inner-gallery-container {margin: auto;}
 
 // GALLARY
 .thumb-wrapper { margin: 0 auto; }
@@ -222,14 +223,15 @@ footer {
 		margin: 0;
 		padding-top: 50px;
 		font-weight: 700;
-		letter-spacing: 0.1em;
+		font-size: 1em;
+		font-family: 'VerlagBold';
 	}
 
 	h4 {
-		margin: 0;
-		font-weight: 500;
-		font-size: 0.9em;
-		letter-spacing: 0.1em;
+		margin: 5px 0 0 0;
+		font-weight: 700;
+		font-size: 0.75em;
+		font-family: 'VerlagBold';
 	}
 }
 
@@ -289,20 +291,18 @@ footer {
 }
 
 .tab a { 
-	font-size: 1em;
-	letter-spacing: 0.1em;
+	font-size: 0.8em;
 	font-family: 'VerlagBold'; 
 	color: $white;
 	text-transform: uppercase;
 	text-decoration: none;
-	line-height: 2em; 
+	line-height: 1.8em; 
 	display: block; 
-	padding: 0 10px; 
+	padding: 0 20px; 
 	outline: none; 
+	font-weight: 900;
 
-    &:hover { 
-        color: #09dcff;
-    }
+    &:hover { color: #09dcff; }
 }
 
 .tab.active { 

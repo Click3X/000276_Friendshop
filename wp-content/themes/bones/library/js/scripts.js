@@ -128,7 +128,6 @@ jQuery(document).ready(function($) {
         // else{$('nav').slideUp();} 
   });
 
-
   // FREE MASON
   $('.thumb-wrapper').freeMason({
     contPadding : 0,     // Horizontal padding on container

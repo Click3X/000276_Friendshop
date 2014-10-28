@@ -2335,19 +2335,24 @@ body {
   max-width: 1000px;
 }
 
-/* line 134, ../scss/partials/_wen.scss */
+/* line 132, ../scss/partials/_wen.scss */
+.inner-gallery-container {
+  margin: auto;
+}
+
+/* line 135, ../scss/partials/_wen.scss */
 .thumb-wrapper {
   margin: 0 auto;
 }
 
-/* line 136, ../scss/partials/_wen.scss */
+/* line 137, ../scss/partials/_wen.scss */
 .thumb-list {
   position: relative;
   list-style: none;
   list-style-image: none;
 }
 
-/* line 142, ../scss/partials/_wen.scss */
+/* line 143, ../scss/partials/_wen.scss */
 .thumb {
   position: absolute;
   overflow: hidden;
@@ -2357,7 +2362,7 @@ body {
   /* Set height */
 }
 
-/* line 149, ../scss/partials/_wen.scss */
+/* line 150, ../scss/partials/_wen.scss */
 .video-thumb {
   width: 268px;
   /* Set width */
@@ -2367,7 +2372,7 @@ body {
   margin: 10px 8px;
 }
 
-/* line 156, ../scss/partials/_wen.scss */
+/* line 157, ../scss/partials/_wen.scss */
 .thumb img {
   width: 290px;
   /* Set width */
@@ -2375,48 +2380,48 @@ body {
   /* Set height */
 }
 
-/* line 162, ../scss/partials/_wen.scss */
+/* line 163, ../scss/partials/_wen.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-  /* line 168, ../scss/partials/_wen.scss */
+  /* line 169, ../scss/partials/_wen.scss */
   .social a {
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
   }
 
-  /* line 174, ../scss/partials/_wen.scss */
+  /* line 175, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 50px;
   }
 
-  /* line 178, ../scss/partials/_wen.scss */
+  /* line 179, ../scss/partials/_wen.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
 @media (max-width: 419px) {
-  /* line 185, ../scss/partials/_wen.scss */
+  /* line 186, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 20px;
   }
 
-  /* line 186, ../scss/partials/_wen.scss */
+  /* line 187, ../scss/partials/_wen.scss */
   .social {
     margin-right: 10px;
   }
 
-  /* line 187, ../scss/partials/_wen.scss */
+  /* line 188, ../scss/partials/_wen.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 @media (max-width: 767px) {
-  /* line 191, ../scss/partials/_wen.scss */
+  /* line 192, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -2425,18 +2430,18 @@ footer {
     position: absolute;
   }
 
-  /* line 199, ../scss/partials/_wen.scss */
+  /* line 200, ../scss/partials/_wen.scss */
   .header {
     background: #000000;
     padding: 10px;
   }
 
-  /* line 204, ../scss/partials/_wen.scss */
+  /* line 205, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
-/* line 208, ../scss/partials/_wen.scss */
+/* line 209, ../scss/partials/_wen.scss */
 .poster-hover {
   background: black;
   opacity: 0;
@@ -2451,66 +2456,67 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 221, ../scss/partials/_wen.scss */
+/* line 222, ../scss/partials/_wen.scss */
 .poster-hover h3 {
   margin: 0;
   padding-top: 50px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 1em;
+  font-family: 'VerlagBold';
 }
-/* line 228, ../scss/partials/_wen.scss */
+/* line 230, ../scss/partials/_wen.scss */
 .poster-hover h4 {
-  margin: 0;
-  font-weight: 500;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
+  margin: 5px 0 0 0;
+  font-weight: 700;
+  font-size: 0.75em;
+  font-family: 'VerlagBold';
 }
 
-/* line 236, ../scss/partials/_wen.scss */
+/* line 238, ../scss/partials/_wen.scss */
 .video-list {
   text-align: center;
   max-width: 1000px;
   margin: auto;
 }
-/* line 241, ../scss/partials/_wen.scss */
+/* line 243, ../scss/partials/_wen.scss */
 .video-list .poster-container {
   position: relative;
   cursor: pointer;
 }
-/* line 245, ../scss/partials/_wen.scss */
+/* line 247, ../scss/partials/_wen.scss */
 .video-list .poster-container img {
   margin: 0;
 }
-/* line 250, ../scss/partials/_wen.scss */
+/* line 252, ../scss/partials/_wen.scss */
 .video-list .poster-container:hover .poster-hover {
   opacity: 0.7;
 }
 
 @media (max-width: 756px) {
-  /* line 255, ../scss/partials/_wen.scss */
+  /* line 257, ../scss/partials/_wen.scss */
   .contact-right img {
     width: 260px;
   }
 }
 @media (max-width: 560px) {
-  /* line 259, ../scss/partials/_wen.scss */
+  /* line 261, ../scss/partials/_wen.scss */
   .contact-right {
     float: none;
     text-align: center;
     margin-top: 50px;
   }
 
-  /* line 265, ../scss/partials/_wen.scss */
+  /* line 267, ../scss/partials/_wen.scss */
   .contact-left {
     float: none;
     text-align: center;
   }
-  /* line 269, ../scss/partials/_wen.scss */
+  /* line 271, ../scss/partials/_wen.scss */
   .contact-left p {
     text-align: center;
   }
 }
-/* line 274, ../scss/partials/_wen.scss */
+/* line 276, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
   padding: 6px;
@@ -2520,7 +2526,7 @@ footer {
   text-align: center;
 }
 
-/* line 283, ../scss/partials/_wen.scss */
+/* line 285, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2529,20 +2535,20 @@ footer {
   margin: 0 20px;
 }
 
-/* line 291, ../scss/partials/_wen.scss */
+/* line 293, ../scss/partials/_wen.scss */
 .tab a {
-  font-size: 1em;
-  letter-spacing: 0.1em;
+  font-size: 0.8em;
   font-family: 'VerlagBold';
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 2em;
+  line-height: 1.8em;
   display: block;
-  padding: 0 10px;
+  padding: 0 20px;
   outline: none;
+  font-weight: 900;
 }
-/* line 303, ../scss/partials/_wen.scss */
+/* line 305, ../scss/partials/_wen.scss */
 .tab a:hover {
   color: #09dcff;
 }
