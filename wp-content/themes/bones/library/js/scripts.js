@@ -127,6 +127,11 @@ jQuery(document).ready(function($) {
     event.preventDefault();
   });
 
+  // TAKE OFF 300 MS MOBILE DELAY ON MENU BUTTON
+  $(function() {
+    FastClick.attach('.menu-icon');
+  });
+
   // FREE MASON
   $('.thumb-wrapper').freeMason({
     contPadding : 0,     // Horizontal padding on container
