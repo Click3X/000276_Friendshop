@@ -120,12 +120,16 @@ jQuery(document).ready(function($) {
 
   // MOBILE MENU
   var button = document.querySelector('.menu-icon');
-  button.addEventListener('click', function (){
+  button.addEventListener('click', function (event) {
     button.classList.toggle('open');
     $('nav').toggleClass('menu-display');
-        //     if($('nav').is(':hidden')){ // check to see if menu is hidden
-        //     $('nav').slideDown();}  // if so slide down
-        // else{$('nav').slideUp();} 
+    event.stopPropagation();
+    event.preventDefault();
+  });
+
+  // TAKE OFF 300 MS MOBILE DELAY ON MENU BUTTON
+  $(function() {
+    FastClick.attach('.menu-icon');
   });
 
   // FREE MASON

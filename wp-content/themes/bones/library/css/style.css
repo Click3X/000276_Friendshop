@@ -2164,158 +2164,158 @@ body {
 /* line 23, ../scss/partials/_wen.scss */
 .logo-header {
   background: url(../../../../../img/fs-logo.png) center center no-repeat;
-  height: 160px;
+  height: 128px;
 }
 
-/* line 28, ../scss/partials/_wen.scss */
+/* line 29, ../scss/partials/_wen.scss */
 .ls-nav-prev, .ls-nav-next {
   border: 1px solid #3b3c46 !important;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 33, ../scss/partials/_wen.scss */
+/* line 34, ../scss/partials/_wen.scss */
 .ls-nav-prev {
   margin-left: -100px;
 }
 
-/* line 34, ../scss/partials/_wen.scss */
+/* line 35, ../scss/partials/_wen.scss */
 .ls-nav-next {
   margin-right: -100px;
 }
 
-/* line 37, ../scss/partials/_wen.scss */
+/* line 38, ../scss/partials/_wen.scss */
 .contact-left, .contact-right {
   text-align: left;
 }
-/* line 40, ../scss/partials/_wen.scss */
+/* line 41, ../scss/partials/_wen.scss */
 .contact-left h1, .contact-left h3, .contact-left h4, .contact-right h1, .contact-right h3, .contact-right h4 {
   margin: 0;
 }
-/* line 41, ../scss/partials/_wen.scss */
+/* line 42, ../scss/partials/_wen.scss */
 .contact-left h1, .contact-right h1 {
   font-size: 1.9em;
 }
-/* line 42, ../scss/partials/_wen.scss */
+/* line 43, ../scss/partials/_wen.scss */
 .contact-left h3, .contact-left h4, .contact-right h3, .contact-right h4 {
   color: #fff;
 }
-/* line 44, ../scss/partials/_wen.scss */
+/* line 45, ../scss/partials/_wen.scss */
 .contact-left img, .contact-right img {
   vertical-align: bottom;
   margin: 0;
 }
-/* line 49, ../scss/partials/_wen.scss */
+/* line 50, ../scss/partials/_wen.scss */
 .contact-left ul, .contact-right ul {
   margin: 0;
 }
-/* line 52, ../scss/partials/_wen.scss */
+/* line 53, ../scss/partials/_wen.scss */
 .contact-left ul li, .contact-right ul li {
   margin: 10px 0;
 }
-/* line 54, ../scss/partials/_wen.scss */
+/* line 55, ../scss/partials/_wen.scss */
 .contact-left ul h3, .contact-right ul h3 {
   font-size: 1.1em;
   font-weight: 700;
 }
-/* line 59, ../scss/partials/_wen.scss */
+/* line 60, ../scss/partials/_wen.scss */
 .contact-left ul h4, .contact-right ul h4 {
   font-size: 1em;
   font-weight: 500;
 }
-/* line 65, ../scss/partials/_wen.scss */
+/* line 66, ../scss/partials/_wen.scss */
 .contact-left p, .contact-right p {
   line-height: 1.4em !important;
   font-size: 1em !important;
 }
 
-/* line 71, ../scss/partials/_wen.scss */
+/* line 72, ../scss/partials/_wen.scss */
 .contact-left {
   float: left;
 }
 
-/* line 72, ../scss/partials/_wen.scss */
+/* line 73, ../scss/partials/_wen.scss */
 .contact-right {
   float: right;
 }
 
-/* line 73, ../scss/partials/_wen.scss */
+/* line 74, ../scss/partials/_wen.scss */
 .inner-contact-container {
   padding-top: 50px;
 }
 
-/* line 76, ../scss/partials/_wen.scss */
+/* line 77, ../scss/partials/_wen.scss */
 #inner-footer {
   text-align: center;
   padding: 80px 20px;
 }
 
-/* line 81, ../scss/partials/_wen.scss */
+/* line 82, ../scss/partials/_wen.scss */
 .social {
   float: left;
   margin-right: 20px;
 }
 
-/* line 86, ../scss/partials/_wen.scss */
+/* line 87, ../scss/partials/_wen.scss */
 .ftlogo-container {
   vertical-align: top;
   margin-top: 50px;
 }
 
-/* line 91, ../scss/partials/_wen.scss */
+/* line 92, ../scss/partials/_wen.scss */
 .ftlogo-container, .ftaddress-container, .ftsocial-container {
   display: inline-block;
   text-align: left;
 }
 
-/* line 96, ../scss/partials/_wen.scss */
+/* line 97, ../scss/partials/_wen.scss */
 .ftlogo-container, .ftaddress-container {
   margin-right: 90px;
 }
 
-/* line 100, ../scss/partials/_wen.scss */
+/* line 99, ../scss/partials/_wen.scss */
 .social a {
   width: 80px;
   height: 80px;
   display: inline-block;
 }
 
-/* line 106, ../scss/partials/_wen.scss */
+/* line 105, ../scss/partials/_wen.scss */
 .Tumblr {
   background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
 }
 
-/* line 107, ../scss/partials/_wen.scss */
+/* line 106, ../scss/partials/_wen.scss */
 .Facebook {
   background-image: url(../../../../../img/Facebook.jpg);
 }
 
-/* line 108, ../scss/partials/_wen.scss */
+/* line 107, ../scss/partials/_wen.scss */
 .Instagram {
   background-image: url(../../../../../img/Instagram.jpg);
 }
 
-/* line 109, ../scss/partials/_wen.scss */
+/* line 108, ../scss/partials/_wen.scss */
 .Map {
   background-image: url(../../../../../img/Map.jpg);
 }
 
-/* line 110, ../scss/partials/_wen.scss */
+/* line 109, ../scss/partials/_wen.scss */
 .Mail {
   background-image: url(../../../../../img/E-mail.jpg);
 }
 
-/* line 113, ../scss/partials/_wen.scss */
+/* line 112, ../scss/partials/_wen.scss */
 .content-container {
   text-align: center;
   padding: 25px 20px;
   max-width: 1000px;
 }
-/* line 118, ../scss/partials/_wen.scss */
+/* line 117, ../scss/partials/_wen.scss */
 .content-container h1 {
   color: #09dcff;
   text-transform: uppercase;
 }
-/* line 123, ../scss/partials/_wen.scss */
+/* line 122, ../scss/partials/_wen.scss */
 .content-container p {
   color: #fff;
   text-align: left;
@@ -2323,34 +2323,34 @@ body {
   font-size: 1.15em;
 }
 
-/* line 131, ../scss/partials/_wen.scss */
+/* line 130, ../scss/partials/_wen.scss */
 .about-container {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* line 132, ../scss/partials/_wen.scss */
+/* line 131, ../scss/partials/_wen.scss */
 .inner-about-container {
   max-width: 1000px;
 }
 
-/* line 133, ../scss/partials/_wen.scss */
+/* line 132, ../scss/partials/_wen.scss */
 .inner-gallery-container {
   margin: auto;
 }
 
-/* line 136, ../scss/partials/_wen.scss */
+/* line 135, ../scss/partials/_wen.scss */
 .thumb-wrapper {
   margin: 0 auto;
 }
 
-/* line 138, ../scss/partials/_wen.scss */
+/* line 137, ../scss/partials/_wen.scss */
 .thumb-list {
   position: relative;
   list-style: none;
   list-style-image: none;
 }
 
-/* line 144, ../scss/partials/_wen.scss */
+/* line 143, ../scss/partials/_wen.scss */
 .thumb {
   position: absolute;
   overflow: hidden;
@@ -2360,7 +2360,7 @@ body {
   /* Set height */
 }
 
-/* line 151, ../scss/partials/_wen.scss */
+/* line 150, ../scss/partials/_wen.scss */
 .video-thumb {
   width: 268px;
   /* Set width */
@@ -2370,7 +2370,7 @@ body {
   margin: 10px 8px;
 }
 
-/* line 158, ../scss/partials/_wen.scss */
+/* line 157, ../scss/partials/_wen.scss */
 .thumb img {
   width: 290px;
   /* Set width */
@@ -2378,61 +2378,48 @@ body {
   /* Set height */
 }
 
-/* line 166, ../scss/partials/_wen.scss */
-.main-menu-selected {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-/* line 173, ../scss/partials/_wen.scss */
-.main-menu-selected a {
-  color: transparent !important;
-}
-
-/* line 179, ../scss/partials/_wen.scss */
+/* line 163, ../scss/partials/_wen.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-  /* line 185, ../scss/partials/_wen.scss */
+  /* line 169, ../scss/partials/_wen.scss */
   .social a {
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
   }
 
-  /* line 191, ../scss/partials/_wen.scss */
+  /* line 175, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 50px;
   }
 
-  /* line 195, ../scss/partials/_wen.scss */
+  /* line 179, ../scss/partials/_wen.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
 @media (max-width: 419px) {
-  /* line 202, ../scss/partials/_wen.scss */
+  /* line 186, ../scss/partials/_wen.scss */
   .ftlogo-container {
     margin-right: 20px;
   }
 
-  /* line 206, ../scss/partials/_wen.scss */
+  /* line 187, ../scss/partials/_wen.scss */
   .social {
     margin-right: 10px;
   }
 
-  /* line 210, ../scss/partials/_wen.scss */
+  /* line 188, ../scss/partials/_wen.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 @media (max-width: 767px) {
-  /* line 216, ../scss/partials/_wen.scss */
+  /* line 192, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -2441,18 +2428,18 @@ footer {
     position: absolute;
   }
 
-  /* line 224, ../scss/partials/_wen.scss */
+  /* line 200, ../scss/partials/_wen.scss */
   .header {
     background: #000000;
     padding: 10px;
   }
 
-  /* line 229, ../scss/partials/_wen.scss */
+  /* line 205, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
-/* line 235, ../scss/partials/_wen.scss */
+/* line 209, ../scss/partials/_wen.scss */
 .poster-hover {
   background: black;
   opacity: 0;
@@ -2467,7 +2454,7 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 248, ../scss/partials/_wen.scss */
+/* line 222, ../scss/partials/_wen.scss */
 .poster-hover h3 {
   margin: 0;
   padding-top: 50px;
@@ -2475,7 +2462,7 @@ footer {
   font-size: 1em;
   font-family: 'VerlagBold';
 }
-/* line 256, ../scss/partials/_wen.scss */
+/* line 230, ../scss/partials/_wen.scss */
 .poster-hover h4 {
   margin: 5px 0 0 0;
   font-weight: 700;
@@ -2483,51 +2470,51 @@ footer {
   font-family: 'VerlagBold';
 }
 
-/* line 264, ../scss/partials/_wen.scss */
+/* line 238, ../scss/partials/_wen.scss */
 .video-list {
   text-align: center;
   max-width: 1000px;
   margin: auto;
 }
-/* line 269, ../scss/partials/_wen.scss */
+/* line 243, ../scss/partials/_wen.scss */
 .video-list .poster-container {
   position: relative;
   cursor: pointer;
 }
-/* line 273, ../scss/partials/_wen.scss */
+/* line 247, ../scss/partials/_wen.scss */
 .video-list .poster-container img {
   margin: 0;
 }
-/* line 280, ../scss/partials/_wen.scss */
+/* line 252, ../scss/partials/_wen.scss */
 .video-list .poster-container:hover .poster-hover {
   opacity: 0.7;
 }
 
 @media (max-width: 756px) {
-  /* line 288, ../scss/partials/_wen.scss */
+  /* line 257, ../scss/partials/_wen.scss */
   .contact-right img {
     width: 260px;
   }
 }
 @media (max-width: 560px) {
-  /* line 294, ../scss/partials/_wen.scss */
+  /* line 261, ../scss/partials/_wen.scss */
   .contact-right {
     float: none;
     text-align: center;
     margin-top: 50px;
   }
 
-  /* line 300, ../scss/partials/_wen.scss */
+  /* line 267, ../scss/partials/_wen.scss */
   .contact-left {
     float: none;
     text-align: center;
   }
-  /* line 304, ../scss/partials/_wen.scss */
+  /* line 271, ../scss/partials/_wen.scss */
   .contact-left p {
     text-align: center;
   }
 }
-/* line 311, ../scss/partials/_wen.scss */
+/* line 276, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0;
   padding: 6px;
@@ -2537,7 +2524,7 @@ footer {
   text-align: center;
 }
 
-/* line 319, ../scss/partials/_wen.scss */
+/* line 285, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2546,7 +2533,7 @@ footer {
   margin: 0 20px;
 }
 
-/* line 326, ../scss/partials/_wen.scss */
+/* line 293, ../scss/partials/_wen.scss */
 .tab a {
   font-size: 0.8em;
   font-family: 'VerlagBold';
@@ -2559,35 +2546,39 @@ footer {
   outline: none;
   font-weight: 900;
 }
-
-/* line 338, ../scss/partials/_wen.scss */
+/* line 305, ../scss/partials/_wen.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
-/* line 341, ../scss/partials/_wen.scss */
+/* line 308, ../scss/partials/_wen.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
+/* line 312, ../scss/partials/_wen.scss */
 .tab.active {
   padding-top: 6px;
   position: relative;
   top: 1px;
 }
 
-/* line 346, ../scss/partials/_wen.scss */
+/* line 318, ../scss/partials/_wen.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 350, ../scss/partials/_wen.scss */
+/* line 322, ../scss/partials/_wen.scss */
 .tab-gallery a:hover {
   color: #ffdd44;
 }
 
-/* line 354, ../scss/partials/_wen.scss */
+/* line 326, ../scss/partials/_wen.scss */
 .tab-gallery a.active {
   color: #ffdd44;
 }
 
-/* line 358, ../scss/partials/_wen.scss */
+/* line 330, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2597,45 +2588,45 @@ footer {
 }
 
 @media (max-width: 835px) {
-  /* line 363, ../scss/partials/_wen.scss */
+  /* line 339, ../scss/partials/_wen.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 368, ../scss/partials/_wen.scss */
+  /* line 344, ../scss/partials/_wen.scss */
   .tab {
     display: block;
   }
 
-  /* line 372, ../scss/partials/_wen.scss */
+  /* line 345, ../scss/partials/_wen.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 376, ../scss/partials/_wen.scss */
+  /* line 346, ../scss/partials/_wen.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 380, ../scss/partials/_wen.scss */
+  /* line 347, ../scss/partials/_wen.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 386, ../scss/partials/_wen.scss */
+/* line 350, ../scss/partials/_wen.scss */
 .grid {
   width: 100%;
 }
 
-/* line 390, ../scss/partials/_wen.scss */
+/* line 352, ../scss/partials/_wen.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 396, ../scss/partials/_wen.scss */
+/* line 358, ../scss/partials/_wen.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
@@ -2650,7 +2641,7 @@ footer {
   white-space: nowrap;
 }
 
-/* line 410, ../scss/partials/_wen.scss */
+/* line 372, ../scss/partials/_wen.scss */
 .grid ul li img {
   width: 100%;
   float: left;
@@ -2708,14 +2699,14 @@ footer {
     background: #ad0c6b;
   }
 }
-/* line 439, ../scss/partials/_wen.scss */
+/* line 401, ../scss/partials/_wen.scss */
 #permanent {
   font-size: 24px;
   -webkit-animation: super-rainbow 5s infinite linear;
   -moz-animation: super-rainbow 5s infinite linear;
 }
 
-/* line 446, ../scss/partials/_wen.scss */
+/* line 408, ../scss/partials/_wen.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -2736,7 +2727,7 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 463, ../scss/partials/_wen.scss */
+/* line 425, ../scss/partials/_wen.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }
@@ -2944,12 +2935,15 @@ html, body {
   /* to center */
   margin: 0 auto;
   float: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   text-align: left;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-/* line 15, ../scss/partials/_mobile-menu.scss */
+/* line 14, ../scss/partials/_mobile-menu.scss */
 .menu-icon > span {
   position: absolute;
   top: 44%;
@@ -2960,7 +2954,7 @@ html, body {
   border-radius: 3px;
 }
 
-/* line 25, ../scss/partials/_mobile-menu.scss */
+/* line 24, ../scss/partials/_mobile-menu.scss */
 .menu-icon > span:before,
 .menu-icon > span:after {
   content: "";
@@ -2970,106 +2964,132 @@ html, body {
   background-color: #ffffff;
   border-radius: 3px;
   -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-/* line 37, ../scss/partials/_mobile-menu.scss */
+/* line 35, ../scss/partials/_mobile-menu.scss */
 .menu-icon > span:before {
   -webkit-transform: translateY(-1em);
+  -moz-transform: translateY(-1em);
+  -o-transform: translateY(-1em);
+  -ms-transform: translateY(-1em);
   transform: translateY(-1em);
 }
 
-/* line 42, ../scss/partials/_mobile-menu.scss */
+/* line 39, ../scss/partials/_mobile-menu.scss */
 .menu-icon > span:after {
   -webkit-transform: translateY(1em);
+  -moz-transform: translateY(1em);
+  -o-transform: translateY(1em);
+  -ms-transform: translateY(1em);
   transform: translateY(1em);
 }
 
 /* OPENED */
-/* line 49, ../scss/partials/_mobile-menu.scss */
+/* line 45, ../scss/partials/_mobile-menu.scss */
 .menu-icon.open {
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 54, ../scss/partials/_mobile-menu.scss */
+/* line 49, ../scss/partials/_mobile-menu.scss */
+.menu-icon.open > span:after,
 .menu-icon.open > span:before {
   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-/* line 59, ../scss/partials/_mobile-menu.scss */
-.menu-icon.open > span:after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-/* line 65, ../scss/partials/_mobile-menu.scss */
+/* line 54, ../scss/partials/_mobile-menu.scss */
 #inner-header {
   text-align: center;
   background-color: transparent;
 }
 
-/* line 70, ../scss/partials/_mobile-menu.scss */
+/* line 59, ../scss/partials/_mobile-menu.scss */
 .menu-display {
   display: block;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-/* line 75, ../scss/partials/_mobile-menu.scss */
+/* line 64, ../scss/partials/_mobile-menu.scss */
 nav {
-  display: inline-block;
-  font-size: 1.5em;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
   font-family: 'VerlagBold';
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-/* line 83, ../scss/partials/_mobile-menu.scss */
+/* line 73, ../scss/partials/_mobile-menu.scss */
 nav li {
   margin-left: 2em;
   margin-right: 2em;
 }
 
-/* line 88, ../scss/partials/_mobile-menu.scss */
+/* line 78, ../scss/partials/_mobile-menu.scss */
 nav a {
   -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-/* line 92, ../scss/partials/_mobile-menu.scss */
+/* line 81, ../scss/partials/_mobile-menu.scss */
 nav a:hover {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  background-image: gradient(linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455), color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #ffffff;
 }
 
-@media (min-width: 768px) {
-  /* line 102, ../scss/partials/_mobile-menu.scss */
-  .menu-icon {
-    display: none;
-  }
+/* line 85, ../scss/partials/_mobile-menu.scss */
+#menu-main-menu .current-menu-item a {
+  color: white;
 }
+
 @media (max-width: 767px) {
-  /* line 108, ../scss/partials/_mobile-menu.scss */
+  /* line 90, ../scss/partials/_mobile-menu.scss */
   .menu-icon {
     float: right;
   }
 
-  /* line 112, ../scss/partials/_mobile-menu.scss */
+  /* line 92, ../scss/partials/_mobile-menu.scss */
   nav {
     display: none;
     text-align: center;
     margin-top: 60px;
   }
 }
-@media (max-width: 1159px) {
-  /* line 120, ../scss/partials/_mobile-menu.scss */
-  nav li {
+@media (min-width: 768px) {
+  /* line 100, ../scss/partials/_mobile-menu.scss */
+  .menu-icon {
+    display: none;
+  }
+
+  /* line 102, ../scss/partials/_mobile-menu.scss */
+  nav {
+    margin-top: 6px;
+  }
+
+  /* line 104, ../scss/partials/_mobile-menu.scss */
+  #menu-main-menu {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+  /* line 110, ../scss/partials/_mobile-menu.scss */
+  #menu-main-menu li {
+    width: 20%;
     margin-left: 0;
     margin-right: 0;
   }

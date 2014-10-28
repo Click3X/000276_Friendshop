@@ -22,7 +22,8 @@ body {
 
 .logo-header {
 	background: url(../../../../../img/fs-logo.png) center center no-repeat;
-	height: 160px;
+    // height: 140px;
+    height: 128px;
 }
 
 .ls-nav-prev, .ls-nav-next {
@@ -93,9 +94,7 @@ body {
 	text-align: left;
 }
 
-.ftlogo-container, .ftaddress-container {
-	margin-right: 90px;
-}
+.ftlogo-container, .ftaddress-container { margin-right: 90px; }
 
 .social a {
 	width: 80px;
@@ -156,23 +155,8 @@ body {
 }
 
 .thumb img { 
-  // max-width: 100%;
-  // height: auto;
   width: 290px; /* Set width */
   height: 290px; /* Set height */
-}
-
-// MAIN MENU
-.main-menu-selected {
-	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-	background-image: gradient( linear, left top, right top, color-stop(0, #bc2131), color-stop(0.15, #bc2131), color-stop(0.2, #e17c3c), color-stop(0.3, #e5c345), color-stop(0.45, #9bcb52), color-stop(0.6, #3b9455),color-stop(0.75, #10aa98), color-stop(0.9, #1191ba), color-stop(1, #0b68ab) );
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    a {
-    	color: transparent !important;
-    }
 }
 
 // Footer 
@@ -199,17 +183,9 @@ footer {
 }
 
 @media (max-width: 419px) {
-	.ftlogo-container {
-		margin-right: 20px;
-	}
-
-	.social {
-		margin-right: 10px;
-	}
-
-	#inner-footer {
-		padding: 80px 2px;
-	}
+	.ftlogo-container { margin-right: 20px; }
+	.social { margin-right: 10px; }
+	#inner-footer { padding: 80px 2px; }
 }
 
 @media (max-width: 767px) {
@@ -226,9 +202,7 @@ footer {
 		padding: 10px;
 	}
 
-	#inner-header {
-		text-align: left;
-	}
+	#inner-header { text-align: left; }
 }
 
 // WORK
@@ -270,24 +244,17 @@ footer {
 		position: relative;
 		cursor: pointer;
 
-		img {
-			margin: 0;
-		}
+		img { margin: 0; }
+
 	}
 
 	.poster-container:hover {
-
-		.poster-hover {
-			opacity: 0.7;
-
-		}
+		.poster-hover { opacity: 0.7; }
 	}
 }
 
 @media (max-width: 756px) {
-	.contact-right img {
-		width: 260px;
-	}
+	.contact-right img { width: 260px; }
 }
 
 @media (max-width: 560px) {
@@ -301,9 +268,7 @@ footer {
 		float: none;
 		text-align: center;
 
-		p {
-			text-align: center;
-		}
+		p { text-align: center; }
 	}
 }
 
@@ -316,6 +281,7 @@ footer {
 	border-bottom: 1px solid #aaa;
 	text-align: center;
 }
+
 .tab { 
 	display: inline-block; 
 	zoom:1; 
@@ -323,6 +289,7 @@ footer {
 	background: transparent; 
 	margin: 0 20px;
 }
+
 .tab a { 
 	font-size: 0.8em;
 	font-family: 'VerlagBold'; 
@@ -334,15 +301,20 @@ footer {
 	padding: 0 20px; 
 	outline: none; 
 	font-weight: 900;
+
+    &:hover { color: #09dcff; }
 }
+
 .tab a:hover { 
 	color: $tab-blue;
 }
+
 .tab.active { 
 	padding-top: 6px; 
 	position: relative; 
 	top: 1px; 
 }
+
 .tab a.active { 
 	color: $tab-blue;
 }
@@ -356,7 +328,11 @@ footer {
 }
 
 .tab-container .panel-container { 
-	background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; 
+	background: #fff; 
+    border: solid #666 1px; 
+    padding: 10px; 
+    -moz-border-radius: 0 4px 4px 4px; 
+    -webkit-border-radius: 0 4px 4px 4px; 
 }
 
 @media (max-width: 835px) {
@@ -365,35 +341,21 @@ footer {
 		border-bottom: 3px solid $light-green;
 	}
 
-	.tab {
-		display: block;
-	}
-
-	.tab a {
-		color: #767676;
-	}
-
-	.tab a:hover {
-		color: $light-green;
-	}
-
-	.tab a.active { 
-		color: $light-green;
-    }
+	.tab { display: block; }
+	.tab a { color: #767676; }
+	.tab a:hover { color: $light-green; }
+	.tab a.active {  color: $light-green; }
 }
 
+.grid{ width: 100%; }
 
-.grid{
-	width: 100%;
-}
-
-.grid ul{
+.grid ul { 
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
 }
 
-.grid ul li{
+.grid ul li {
 	list-style-type: none;
 	float: left;
 	padding: 0px;
@@ -407,7 +369,7 @@ footer {
 	white-space: nowrap;
 }
 
-.grid ul li img{
+.grid ul li img {
 	width: 100%;
 	float: left;
 }
