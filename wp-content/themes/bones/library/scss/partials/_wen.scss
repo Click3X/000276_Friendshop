@@ -531,54 +531,54 @@ footer {
 
 @media (max-width: 835px) {
 	.etabs {
-		border-top: 3px solid $light-green;
-		border-bottom: 3px solid $light-green;
-		// margin: 0 10px;
-	}
+			border-top: 3px solid $light-green;
+			border-bottom: 3px solid $light-green;
+			// margin: 0 10px;
+		}
 
-	.tab {
-		display: block;
-	}
+		.tab {
+			display: block;
+		}
 
-	.tab a {
-		color: #767676;
-	}
+		.tab a {
+			color: #767676;
+		}
 
-	.tab a:hover {
-		color: $light-green;
-	}
+		.tab a:hover {
+			color: $light-green;
+		}
 
-	.tab a.active { 
-		color: $light-green;
+		.tab a.active { 
+			color: $light-green;
+	}
 }
+
+.grid{
+	width: 100%;
 }
 
-	.grid{
-		width: 100%;
-	}
+.grid ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
 
-	.grid ul{
-		list-style-type: none;
-		padding: 0px;
-		margin: 0px;
-	}
+.grid ul li{
+	list-style-type: none;
+	float: left;
+	padding: 0px;
+	margin: -0.2px -0.2px;
+	width: 20%;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+	white-space: nowrap;
+}
 
-	.grid ul li{
-		list-style-type: none;
-		float: left;
-		padding: 0px;
-		margin: -0.2px -0.2px;
-		width: 20%;
-		-webkit-transition:all 0.2s ease;
-		-moz-transition:all 0.2s ease;
-		-o-transition:all 0.2s ease;
-		-ms-transition:all 0.2s ease;
-		transition:all 0.2s ease;
-		white-space: nowrap;
-	}
+.grid ul li img{
+	width: 100%;
+	float: left;
+}
 
-	.grid ul li img{
-		width: 100%;
-		float: left;
-	}
-	
