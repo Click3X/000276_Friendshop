@@ -1,7 +1,10 @@
 // FOOTER
 * { margin: 0; }
 
-html, body { height: 100%; }
+html, body { 
+    height: 100%; 
+    overflow-x:hidden;
+}
 
 .footer { position: static; }
 
