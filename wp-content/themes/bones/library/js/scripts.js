@@ -118,6 +118,15 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
+  // init carousel
+  //$('#slider-stage').carousel('#previous', '#next');
+
+      $(".carousel-no-style").jCarouselLite({
+        btnNext: ".next-no-style",
+    btnPrev: ".prev-no-style",
+    visible: 2
+    });
+
   // MOBILE MENU
   var button = document.querySelector('.menu-icon');
   button.addEventListener('click', function (event) {
@@ -144,10 +153,14 @@ jQuery(document).ready(function($) {
   $(".fancybox").fancybox();
 
   // init tabs
-  $('#tab-container').easytabs();
+  // $('#tab-container').easytabs();
 
-  // init carousel
-  $('#slider-stage').carousel('#previous', '#next');
+
+
+  // init carousel2
+  // $(function() {
+
+// });
 
   // init grid
   // var minWidth = 300;

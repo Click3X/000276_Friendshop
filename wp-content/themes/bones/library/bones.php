@@ -157,11 +157,14 @@ function bones_scripts_and_styles() {
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
 
+		// adding carousel js
+		wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jCarouselLite.js', array( 'jquery' ), '', true );
+
 		//adding tabs js
-		wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
+		// wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
 
 		// adding infinite carousel js
-		wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.infinite-carousel.js', array( 'jquery' ), '', true );
+		wp_register_script( 'infinite-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.infinite-carousel.js', array( 'jquery' ), '', true );
 
 		// // adding responsive grid js
 		// wp_register_script( 'grid-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.ba-throttle-debounce.min.js', array( 'jquery' ), '', true );
@@ -198,6 +201,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'fancybox-js' );
 		wp_enqueue_script( 'tab-js' );
 		wp_enqueue_script( 'carousel-js' );
+		wp_enqueue_script( 'infinite-js' );
 		// wp_enqueue_script( 'grid-js' );
 		// wp_enqueue_script( 'freewall-js' );
 
