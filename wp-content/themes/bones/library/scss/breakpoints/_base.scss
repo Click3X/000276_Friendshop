@@ -15,14 +15,7 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
-html, body {
-	width:100%;
-	
-	overflow-y: scroll;
-	overflow-x: hidden; 
-	-webkit-overflow-scrolling: touch;
-}
-
+// html, 
 body {
 	font-family: "VerlagBook";
 	font-size: 100%;
@@ -32,7 +25,10 @@ body {
   	-webkit-font-smoothing: antialiased;
   	position: relative;
 
-  	// min-width: 300px;
+	width:100%;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	-webkit-overflow-scrolling: touch;
 }
 
 /*********************
