@@ -558,6 +558,11 @@ footer {
         cursor: pointer;
         @include transition(all 0.3s ease-in-out);
     }
+
+    p {
+        text-align: center;
+        font-family: 'VT323';
+    }
     
 }
 .player1 div {
