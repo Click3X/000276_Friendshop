@@ -56,11 +56,6 @@
     background-color: transparent;
 }
 
-.menu-display {
-    // display: block;
-    @include transition(all 0.3s ease-in-out);
-}
-
 nav {
 
     display:block;
@@ -73,16 +68,7 @@ nav {
 }
 
 
-// CHARLES NEW NAV STYLES
-#menu-main-menu {
-    @media(max-width: 768px) {
-        background: black;
-        width:100%;
-        position: absolute;
-        left: 0;
-        padding-bottom: 9px;
-    }
-}
+
 
 
 nav a {
@@ -97,12 +83,15 @@ nav a {
 
 // MAIN TOP MENU
 @media (max-width: 767px) {
-    .menu-icon { float: right; }
+    .menu-icon { 
+        float: right; 
+        z-index: 10;
+    }
 
     nav {
         // display: none;
         text-align: center;
-        margin-top: 60px;
+        margin-top:50px;
     }
 }
 
@@ -122,5 +111,44 @@ nav a {
             margin-left: 0;
             margin-right: 0;
         }
+    }
+}
+
+// CHARLES NEW NAV STYLES
+#menu-main-menu {
+    @media(max-width: 768px) {
+        background: black;
+        width:100%;
+        padding-bottom:10px;
+        padding-top: 10px;
+
+        position: absolute;
+        left: 0;
+        transform: translateY(-350px);
+        z-index: 1;
+        @include prefix(transform, translateZ(1));
+        @include prefix(transform, translateY(-350px));
+        @include prefix(transition, all .3s ease-in-out);
+    }
+}
+
+.menu-display > #menu-main-menu {
+    // display: block;
+    @include prefix(transform, translateY(0px));
+    @include transition(all 0.3s ease-in-out);
+}
+
+@media (max-width: 767px) {
+    nav[role="navigation"]:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0px;
+        background:#000;
+        height: 68px;
+        z-index: 4;
+        @include prefix(transform, translateZ(4));
     }
 }
