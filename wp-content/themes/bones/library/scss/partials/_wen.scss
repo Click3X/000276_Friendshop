@@ -399,6 +399,14 @@ footer {
     }
 }
 
+.tab-container .etabs,
+.work-tabs.etabs {
+    padding:8px 0;
+    @media(min-width: 834px) {
+        padding:0;
+    }
+}
+
 .etabs { 
 	margin:0 auto; 
     padding:0;
@@ -542,3 +550,34 @@ footer {
 }
 
 #transition img:hover { background-position: -100% 100%; }
+
+.mixedContent {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 12px;
+    position: relative;
+
+    h2 { 
+        text-align: center; 
+        text-transform: uppercase;
+        color:white;
+    }
+
+    .prev-no-style,
+    .next-no-style {
+        position: absolute;
+        top:0; bottom:0; 
+        margin:auto;
+        width: 44px;
+        height: 44px;
+    }
+
+    .prev-no-style {
+        left:0;
+    }
+
+    .next-no-style {
+        right:0;
+    }
+
+}
