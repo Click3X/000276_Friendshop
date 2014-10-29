@@ -8,7 +8,9 @@ html, body { height: 100%; }
 #container { 
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -430px;
+    margin-bottom: -350px;
+    // PREVENT FUNKY OVERFLOW ON IOS
+    overflow-x: hidden;
 
     &:after {
         content: "";
@@ -16,11 +18,21 @@ html, body { height: 100%; }
     }
 }
 
-.footer, #container:after { height: 430px; }
+.footer, #container:after { height: 350px; }
 
 @media(min-width:400px) {
-    #container { margin-bottom: -366px; }
-    .footer, #container:after { height: 366px; }
+    #container { margin-bottom: -334px; }
+    .footer, #container:after { height: 334px; }
+}
+
+@media(min-width:400px) {
+    #container { margin-bottom: -350px; }
+    .footer, #container:after { height: 350px; }
+}
+
+@media(min-width:556px) {
+    #container { margin-bottom: -359px; }
+    .footer, #container:after { height: 359px; }
 }
 
 @media(min-width:1040px) {
@@ -31,5 +43,16 @@ html, body { height: 100%; }
     .footer, #container:after { 
         // height: 270px; 
         height: 322px; 
+    }
+}
+
+
+// TEMP CODE TO LIMIT NUMBER OF SOCIAL LINKS
+// DELETE BEFORE PRODUCTIONS!!@!!!!!
+.ftsocial-container {
+    ul {
+        li:last-of-type {
+            display: none;
+        }
     }
 }
