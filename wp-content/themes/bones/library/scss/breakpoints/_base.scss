@@ -15,6 +15,11 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
+html, body {
+	width:100%;
+	overflow-x:hidden;
+}
+
 body {
 	font-family: "VerlagBook";
 	font-size: 100%;
@@ -24,7 +29,7 @@ body {
   	-webkit-font-smoothing: antialiased;
   	position: relative;
 
-  	min-width: 300px;
+  	// min-width: 300px;
 }
 
 /*********************
