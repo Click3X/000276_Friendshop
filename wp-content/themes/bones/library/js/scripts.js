@@ -171,9 +171,9 @@ jQuery(document).ready(function($) {
   });
 
   // TAKE OFF 300 MS MOBILE DELAY ON MENU BUTTON
-  $(function() {
-    FastClick.attach('.menu-icon');
-  });
+  // $(function() {
+  //   FastClick.attach('.menu-icon');
+  // });
 
   // FREE MASON
   $('.thumb-wrapper').freeMason({
