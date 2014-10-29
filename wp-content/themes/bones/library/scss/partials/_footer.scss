@@ -24,6 +24,12 @@ html, body { height: 100%; }
 }
 
 @media(min-width:1040px) {
-    #container { margin-bottom: -270px;}
-    .footer, #container:after { height: 270px; }
+    #container { 
+        // margin-bottom: -270px;
+        margin-bottom: -322px;
+    }
+    .footer, #container:after { 
+        // height: 270px; 
+        height: 322px; 
+    }
 }

@@ -23,6 +23,8 @@ body {
 	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	position: relative;
+
+  	min-width: 300px;
 }
 
 /*********************
@@ -32,6 +34,20 @@ LAYOUT & GRID STYLES
 .wrap {
 	width: 96%;
 	margin: 0 auto;
+}
+
+@media(max-width: 480px) {
+	ul, li, .entry-content p {
+		line-height: 25px;
+	    font-size: 16px;
+	}
+}
+
+@media(min-width: 481px) {
+	.entry-content p {
+    	line-height: 1.9em;
+		font-size: 1.25em;
+    }
 }
 
 
@@ -47,21 +63,36 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size:2.8em;
-	margin: .4em 0 .2em;
+	// font-size:2.8em;
+	// margin: .4em 0 .2em;
 	font-weight: 700;
 	line-height: 1em;
 	font-family: 'VerlagBold';
+
+	font-size:30px;
+    margin-top:14px;
+    margin-bottom:14px;
+
+    @media(min-width: 481px) {
+    	font-size:2.8em;
+		margin: .4em 0 .2em;
+    }
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
 	margin-bottom: 0.375em;
 	font-family: 'VerlagBold';
+	
+	font-size:26px;
+	@media(min-width: 481px) {
+		font-size: 1.75em;
+		line-height: 1.4em;
+	}
 }
 
-h3, .h3 { font-size: 1.125em; }
+h3, .h3 { 
+	font-size: 1.125em; 
+}
 
 h4, .h4 {
 	font-size: 1.1em;
