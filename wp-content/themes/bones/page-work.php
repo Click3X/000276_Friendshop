@@ -23,18 +23,18 @@
 								<!-- SELECT PLAYERS -->
 								<div class="mixedContent player-select-container">
 									<h2>Player Select</h2>
-								<button class="prev-no-style">&laquo;</button>
-								<button class="next-no-style">&raquo;</button>
+								<button class="prev-no-style">&#10094;</button>
+								<button class="next-no-style">&#10095;</button>
 
-								<div class="carousel-no-style" style="margin: auto">
+								<div class="carousel-no-style" style="margin: auto; overflow: hidden;">
 								    <ul>
-								        <li class="player1" style="width:350px; height:400px;">
+								        <li class="player1">
 								        	
 								        	<div></div>
 								        	<p>Ben</p>
 
 								        </li>
-								        <li class="player2" style="width:350px; height:400px;">
+								        <li class="player2">
 								        	<div></div>
 								        	<p>Tim</p>
 								        </li>

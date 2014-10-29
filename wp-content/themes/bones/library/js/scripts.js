@@ -118,14 +118,48 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
-  // init carousel
-  //$('#slider-stage').carousel('#previous', '#next');
+  // var visNumber = 2;
 
-      $(".carousel-no-style").jCarouselLite({
-        btnNext: ".next-no-style",
+  // $(window).resize(function() {
+
+  //     var windowWidth = $(this).width();
+
+  //     if (windowWidth < 768) {
+  //       visNumber = 1;
+
+  //     } else {
+  //       visNumber = 2;
+  //     }
+
+  //       $(".carousel-no-style").jCarouselLite({
+  //       btnNext: ".next-no-style",
+  //       btnPrev: ".prev-no-style",
+  //       visible: visNumber
+  //       });
+
+  //     // alert(visNumber);
+
+  // });
+
+  $(".carousel-no-style").jCarouselLite({
+    btnNext: ".next-no-style",
     btnPrev: ".prev-no-style",
-    visible: 2
-    });
+    visible: 2,
+    //autoCSS: false,
+    autoWidth: true,
+  responsive: true
+  });
+
+//   $('.carousel-no-style').on('refreshCarousel', function() {
+//   // do something
+//           $(".carousel-no-style").jCarouselLite({
+//         btnNext: ".next-no-style",
+//         btnPrev: ".prev-no-style",
+//         visible: 1
+//         });
+// });
+
+
 
   // MOBILE MENU
   var button = document.querySelector('.menu-icon');

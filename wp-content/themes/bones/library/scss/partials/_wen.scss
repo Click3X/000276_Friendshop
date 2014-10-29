@@ -570,9 +570,27 @@ footer {
 }
 
 .player1, .player2 {
+
+    width:320px; 
+    height:400px;
+
+    // @media (max-width: 700px) {
+    //     width: 220px; 
+    //     height: 300px; 
+    // }
+
     div {
         cursor: pointer;
+        width: 255px; 
+        height: 334px; 
+        background-size: 255px 334px;
         @include transition(all 0.3s ease-in-out);
+
+        // @media (max-width: 700px) {
+        //     width: 177px; 
+        //     height: 237px; 
+        //     background-size: 177px 237px;
+        // }
     }
 
     p {
@@ -582,24 +600,28 @@ footer {
     }
     
 }
-.player1 div {
-    margin: auto; background: url(Ben-BnW.png) center center no-repeat; width: 255px; height: 334px; background-size: 255px 334px;
+
+.player1 {
 
 
-    &:hover {
-        background: url(Ben-Color.png) center center no-repeat;
+    div {
+        margin: auto; 
+        background: url(Ben-BnW.png) center center no-repeat; 
+
+        &:hover {
+            background: url(Ben-Color.png) center center no-repeat;
+        }
     }
 }
 
-.player2 div {
-    margin: auto; 
-    background: url(Tim-BnW.png) center center no-repeat; 
-    width: 255px; 
-    height: 334px; 
-    background-size: 255px 334px;
+.player2 {
+    div {
+        margin: auto; 
+        background: url(Tim-BnW.png) center center no-repeat; 
 
-    &:hover {
+        &:hover {
         background: url(Tim-Color.png) center center no-repeat;
+        }
     }
 }
 
@@ -620,16 +642,22 @@ footer {
         position: absolute;
         top:0; bottom:0; 
         margin:auto;
-        width: 44px;
-        height: 44px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        background-color: rgba(0,0,0,0.5);
+        border: 1px solid #aaa;
+        padding: 6px;
+        outline: none;
+        z-index: 1;
     }
 
     .prev-no-style {
-        left:0;
+        left:2px;
     }
 
     .next-no-style {
-        right:0;
+        right:2px;
     }
 
 }
