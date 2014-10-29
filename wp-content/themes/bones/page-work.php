@@ -28,31 +28,23 @@
 
 								<div class="carousel-no-style" style="margin: auto">
 								    <ul>
-								        <li style="width:350px; height:334px;">
-								        	<img src="Ben-Color.png" style="margin: auto">
-								        	<div>Ben</div>
+								        <li class="player1" style="width:350px; height:370px;">
+								        	
+								        	<div></div>
+								        	<p>Ben</p>
 
 								        </li>
-								        <li style="width:350px; height:334px;">
-								        	<img src="Tim-Color.png" style="margin: auto">
-								        	<div>Tim</div>
+								        <li class="player2" style="width:350px; height:370px;">
+								        	<div></div>
+								        	<p>Tim</p>
 								        </li>
-								        <!-- <li style="width:300px; height:334px;"><img src="3.jpg"></li> -->
+								      
 
 								    </ul>
 								</div>
 								</div>
 
-<!-- 											<div id="sliderBloc">
-				<a id="previous">Previous</a>
-				<div style="" id="slider-stage">
-					<div style="width: 512px;" id="slider-list">
-						<a class="theme"><img src="demo_files/theme1.png" alt="Periscope angels " height="120" width="120" /><span class="nameVignette">Periscope angels </span><span class="changeTheme">changer le thème</span></a>
-						<a class="theme"><img src="demo_files/theme2.jpg" alt="ice-cream mountains" height="120" width="120" /><span class="nameVignette">ice-cream mountains</span><span class="changeTheme">changer le thème</span></a>
-					</div>
-				</div>
-				<a id="next">Next</a>
-			</div> -->
+
 
 									<div id="tab-container" class="tab-container">
 

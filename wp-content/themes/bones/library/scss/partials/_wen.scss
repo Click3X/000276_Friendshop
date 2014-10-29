@@ -551,6 +551,36 @@ footer {
 
 #transition img:hover { background-position: -100% 100%; }
 
+
+// SELECTING PLAYER
+.player1, .player2 {
+    div {
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+    }
+    
+}
+.player1 div {
+    margin: auto; background: url(Ben-BnW.png) center center no-repeat; width: 255px; height: 334px; background-size: 255px 334px;
+
+
+    &:hover {
+        background: url(Ben-Color.png) center center no-repeat;
+    }
+}
+
+.player2 div {
+    margin: auto; 
+    background: url(Tim-BnW.png) center center no-repeat; 
+    width: 255px; 
+    height: 334px; 
+    background-size: 255px 334px;
+
+    &:hover {
+        background: url(Tim-Color.png) center center no-repeat;
+    }
+}
+
 .mixedContent {
     max-width: 1000px;
     width: 100%;
@@ -581,3 +611,4 @@ footer {
     }
 
 }
+
