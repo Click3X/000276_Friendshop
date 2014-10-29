@@ -553,6 +553,22 @@ footer {
 
 
 // SELECTING PLAYER
+.player-select-container {
+
+    h2, p {
+        font-family: 'VT323';
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+        // -webkit-text-stroke: 2px black;
+    }
+
+    h2 {
+        font-size: 2.3em;
+    }
+
+}
+
 .player1, .player2 {
     div {
         cursor: pointer;
@@ -560,8 +576,9 @@ footer {
     }
 
     p {
-        text-align: center;
-        font-family: 'VT323';
+        text-align: center;       
+        font-size: 2.5em;
+        
     }
     
 }

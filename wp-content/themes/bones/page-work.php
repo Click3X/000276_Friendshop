@@ -21,20 +21,20 @@
 
 
 								<!-- SELECT PLAYERS -->
-								<div class="mixedContent">
+								<div class="mixedContent player-select-container">
 									<h2>Player Select</h2>
 								<button class="prev-no-style">&laquo;</button>
 								<button class="next-no-style">&raquo;</button>
 
 								<div class="carousel-no-style" style="margin: auto">
 								    <ul>
-								        <li class="player1" style="width:350px; height:370px;">
+								        <li class="player1" style="width:350px; height:400px;">
 								        	
 								        	<div></div>
 								        	<p>Ben</p>
 
 								        </li>
-								        <li class="player2" style="width:350px; height:370px;">
+								        <li class="player2" style="width:350px; height:400px;">
 								        	<div></div>
 								        	<p>Tim</p>
 								        </li>

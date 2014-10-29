@@ -1634,6 +1634,7 @@ POSTS & CONTENT STYLES
 }
 
 /* end .hentry */
+/* line 191, ../scss/breakpoints/_base.scss */
 .single-title,
 .page-title,
 .entry-title {
@@ -1716,7 +1717,7 @@ POSTS & CONTENT STYLES
   height: auto;
   display: block;
 }
-/* line 270, ../scss/breakpoints/_base.scss */
+/* line 266, ../scss/breakpoints/_base.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -1760,6 +1761,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
+/* line 310, ../scss/breakpoints/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0;
@@ -2807,19 +2809,31 @@ footer {
   background-position: -100% 100%;
 }
 
-/* line 557, ../scss/partials/_wen.scss */
+/* line 558, ../scss/partials/_wen.scss */
+.player-select-container h2, .player-select-container p {
+  font-family: 'VT323';
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/* line 566, ../scss/partials/_wen.scss */
+.player-select-container h2 {
+  font-size: 2.3em;
+}
+
+/* line 573, ../scss/partials/_wen.scss */
 .player1 div, .player2 div {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 562, ../scss/partials/_wen.scss */
+/* line 578, ../scss/partials/_wen.scss */
 .player1 p, .player2 p {
   text-align: center;
-  font-family: 'VT323';
+  font-size: 2.5em;
 }
 
-/* line 568, ../scss/partials/_wen.scss */
+/* line 585, ../scss/partials/_wen.scss */
 .player1 div {
   margin: auto;
   background: url(Ben-BnW.png) center center no-repeat;
@@ -2827,12 +2841,12 @@ footer {
   height: 334px;
   background-size: 255px 334px;
 }
-/* line 572, ../scss/partials/_wen.scss */
+/* line 589, ../scss/partials/_wen.scss */
 .player1 div:hover {
   background: url(Ben-Color.png) center center no-repeat;
 }
 
-/* line 577, ../scss/partials/_wen.scss */
+/* line 594, ../scss/partials/_wen.scss */
 .player2 div {
   margin: auto;
   background: url(Tim-BnW.png) center center no-repeat;
@@ -2840,25 +2854,25 @@ footer {
   height: 334px;
   background-size: 255px 334px;
 }
-/* line 584, ../scss/partials/_wen.scss */
+/* line 601, ../scss/partials/_wen.scss */
 .player2 div:hover {
   background: url(Tim-Color.png) center center no-repeat;
 }
 
-/* line 589, ../scss/partials/_wen.scss */
+/* line 606, ../scss/partials/_wen.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 12px;
   position: relative;
 }
-/* line 595, ../scss/partials/_wen.scss */
+/* line 612, ../scss/partials/_wen.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 601, ../scss/partials/_wen.scss */
+/* line 618, ../scss/partials/_wen.scss */
 .mixedContent .prev-no-style,
 .mixedContent .next-no-style {
   position: absolute;
@@ -2868,11 +2882,11 @@ footer {
   width: 44px;
   height: 44px;
 }
-/* line 610, ../scss/partials/_wen.scss */
+/* line 627, ../scss/partials/_wen.scss */
 .mixedContent .prev-no-style {
   left: 0;
 }
-/* line 614, ../scss/partials/_wen.scss */
+/* line 631, ../scss/partials/_wen.scss */
 .mixedContent .next-no-style {
   right: 0;
 }
