@@ -2061,8 +2061,6 @@ FOOTER STYLES
 /* line 17, ../scss/partials/_wen.scss */
 body {
   background-color: black;
-  background: url(../../../../../img/bg.jpg) center top;
-  background-size: cover;
 }
 
 /* line 23, ../scss/partials/_wen.scss */
@@ -3381,6 +3379,1869 @@ svg {
   height: auto;
   /*   max-height:184px; */
   width: 100%;
+}
+
+/* line 2, ../scss/partials/_fractal.scss */
+body {
+  background: #000;
+}
+
+/* line 6, ../scss/partials/_fractal.scss */
+.fractal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: rotate 20000ms linear infinite;
+  animation: rotate 20000ms linear infinite;
+  z-index: -1;
+  -webkit-transform: translateZ(-1);
+  -moz-transform: translateZ(-1);
+  -o-transform: translateZ(-1);
+  -ms-transform: translateZ(-1);
+  transform: translateZ(-1);
+}
+
+/* line 21, ../scss/partials/_fractal.scss */
+.part {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  margin: -7.5em;
+  border-radius: 100%;
+  width: 15em;
+  height: 15em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2) inset;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: scale 8000ms linear infinite;
+  animation: scale 8000ms linear infinite;
+}
+
+/* line 37, ../scss/partials/_fractal.scss */
+.part:nth-child(1) {
+  top: 0em;
+  left: 0.1em;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 42, ../scss/partials/_fractal.scss */
+.part:nth-child(2) {
+  top: 0.04207em;
+  left: 0.02702em;
+  background: rgba(255, 253, 253, 0.1);
+}
+
+/* line 47, ../scss/partials/_fractal.scss */
+.part:nth-child(3) {
+  top: 0em;
+  left: 0em;
+  background: rgba(255, 251, 251, 0.1);
+}
+
+/* line 52, ../scss/partials/_fractal.scss */
+.part:nth-child(4) {
+  top: -0.00706em;
+  left: 0.0495em;
+  background: rgba(255, 250, 249, 0.1);
+}
+
+/* line 57, ../scss/partials/_fractal.scss */
+.part:nth-child(5) {
+  top: 0.07568em;
+  left: 0.06536em;
+  background: rgba(255, 249, 247, 0.1);
+}
+
+/* line 62, ../scss/partials/_fractal.scss */
+.part:nth-child(6) {
+  top: 0.14384em;
+  left: -0.04255em;
+  background: rgba(255, 248, 245, 0.1);
+}
+
+/* line 67, ../scss/partials/_fractal.scss */
+.part:nth-child(7) {
+  top: 0.05588em;
+  left: -0.19203em;
+  background: rgba(255, 247, 243, 0.1);
+}
+
+/* line 72, ../scss/partials/_fractal.scss */
+.part:nth-child(8) {
+  top: -0.16425em;
+  left: -0.18848em;
+  background: rgba(255, 246, 241, 0.1);
+}
+
+/* line 77, ../scss/partials/_fractal.scss */
+.part:nth-child(9) {
+  top: -0.29681em;
+  left: 0.04365em;
+  background: rgba(255, 245, 239, 0.1);
+}
+
+/* line 82, ../scss/partials/_fractal.scss */
+.part:nth-child(10) {
+  top: -0.14424em;
+  left: 0.3189em;
+  background: rgba(255, 245, 237, 0.1);
+}
+
+/* line 87, ../scss/partials/_fractal.scss */
+.part:nth-child(11) {
+  top: 0.21761em;
+  left: 0.33563em;
+  background: rgba(255, 245, 235, 0.1);
+}
+
+/* line 92, ../scss/partials/_fractal.scss */
+.part:nth-child(12) {
+  top: 0.45em;
+  left: -0.00199em;
+  background: rgba(255, 245, 233, 0.1);
+}
+
+/* line 97, ../scss/partials/_fractal.scss */
+.part:nth-child(13) {
+  top: 0.26829em;
+  left: -0.42193em;
+  background: rgba(255, 245, 231, 0.1);
+}
+
+/* line 102, ../scss/partials/_fractal.scss */
+.part:nth-child(14) {
+  top: -0.23109em;
+  left: -0.4991em;
+  background: rgba(255, 246, 229, 0.1);
+}
+
+/* line 107, ../scss/partials/_fractal.scss */
+.part:nth-child(15) {
+  top: -0.59436em;
+  left: -0.08204em;
+  background: rgba(255, 247, 227, 0.1);
+}
+
+/* line 112, ../scss/partials/_fractal.scss */
+.part:nth-child(16) {
+  top: -0.42269em;
+  left: 0.4938em;
+  background: rgba(255, 248, 225, 0.1);
+}
+
+/* line 117, ../scss/partials/_fractal.scss */
+.part:nth-child(17) {
+  top: 0.20153em;
+  left: 0.67036em;
+  background: rgba(255, 249, 223, 0.1);
+}
+
+/* line 122, ../scss/partials/_fractal.scss */
+.part:nth-child(18) {
+  top: 0.72105em;
+  left: 0.20637em;
+  background: rgba(255, 250, 221, 0.1);
+}
+
+/* line 127, ../scss/partials/_fractal.scss */
+.part:nth-child(19) {
+  top: 0.60079em;
+  left: -0.52825em;
+  background: rgba(255, 251, 219, 0.1);
+}
+
+/* line 132, ../scss/partials/_fractal.scss */
+.part:nth-child(20) {
+  top: -0.1274em;
+  left: -0.8404em;
+  background: rgba(255, 253, 217, 0.1);
+}
+
+/* line 137, ../scss/partials/_fractal.scss */
+.part:nth-child(21) {
+  top: -0.82165em;
+  left: -0.36727em;
+  background: rgba(255, 255, 215, 0.1);
+}
+
+/* line 142, ../scss/partials/_fractal.scss */
+.part:nth-child(22) {
+  top: -0.79482em;
+  left: 0.52034em;
+  background: rgba(253, 255, 213, 0.1);
+}
+
+/* line 147, ../scss/partials/_fractal.scss */
+.part:nth-child(23) {
+  top: 0.00885em;
+  left: 0.99996em;
+  background: rgba(251, 255, 211, 0.1);
+}
+
+/* line 152, ../scss/partials/_fractal.scss */
+.part:nth-child(24) {
+  top: 0.88853em;
+  left: 0.55947em;
+  background: rgba(248, 255, 209, 0.1);
+}
+
+/* line 157, ../scss/partials/_fractal.scss */
+.part:nth-child(25) {
+  top: 0.99614em;
+  left: -0.4666em;
+  background: rgba(245, 255, 207, 0.1);
+}
+
+/* line 162, ../scss/partials/_fractal.scss */
+.part:nth-child(26) {
+  top: 0.1522em;
+  left: -1.13988em;
+  background: rgba(243, 255, 205, 0.1);
+}
+
+/* line 167, ../scss/partials/_fractal.scss */
+.part:nth-child(27) {
+  top: -0.91507em;
+  left: -0.7763em;
+  background: rgba(239, 255, 203, 0.1);
+}
+
+/* line 172, ../scss/partials/_fractal.scss */
+.part:nth-child(28) {
+  top: -1.19547em;
+  left: 0.36517em;
+  background: rgba(236, 255, 201, 0.1);
+}
+
+/* line 177, ../scss/partials/_fractal.scss */
+.part:nth-child(29) {
+  top: -0.35218em;
+  left: 1.25139em;
+  background: rgba(233, 255, 199, 0.1);
+}
+
+/* line 182, ../scss/partials/_fractal.scss */
+.part:nth-child(30) {
+  top: 0.89591em;
+  left: 1.00988em;
+  background: rgba(229, 255, 197, 0.1);
+}
+
+/* line 187, ../scss/partials/_fractal.scss */
+.part:nth-child(31) {
+  top: 1.38324em;
+  left: -0.21595em;
+  background: rgba(225, 255, 195, 0.1);
+}
+
+/* line 192, ../scss/partials/_fractal.scss */
+.part:nth-child(32) {
+  top: 0.58585em;
+  left: -1.32638em;
+  background: rgba(221, 255, 193, 0.1);
+}
+
+/* line 197, ../scss/partials/_fractal.scss */
+.part:nth-child(33) {
+  top: -0.82714em;
+  left: -1.25134em;
+  background: rgba(217, 255, 191, 0.1);
+}
+
+/* line 202, ../scss/partials/_fractal.scss */
+.part:nth-child(34) {
+  top: -1.54986em;
+  left: 0.02058em;
+  background: rgba(212, 255, 189, 0.1);
+}
+
+/* line 207, ../scss/partials/_fractal.scss */
+.part:nth-child(35) {
+  top: -0.84653em;
+  left: 1.35771em;
+  background: rgba(207, 255, 187, 0.1);
+}
+
+/* line 212, ../scss/partials/_fractal.scss */
+.part:nth-child(36) {
+  top: 0.7065em;
+  left: 1.49109em;
+  background: rgba(203, 255, 185, 0.1);
+}
+
+/* line 217, ../scss/partials/_fractal.scss */
+.part:nth-child(37) {
+  top: 1.68602em;
+  left: 0.21754em;
+  background: rgba(197, 255, 183, 0.1);
+}
+
+/* line 222, ../scss/partials/_fractal.scss */
+.part:nth-child(38) {
+  top: 1.12619em;
+  left: -1.33947em;
+  background: rgba(192, 255, 181, 0.1);
+}
+
+/* line 227, ../scss/partials/_fractal.scss */
+.part:nth-child(39) {
+  top: -0.53346em;
+  left: -1.71913em;
+  background: rgba(187, 255, 179, 0.1);
+}
+
+/* line 232, ../scss/partials/_fractal.scss */
+.part:nth-child(40) {
+  top: -1.78302em;
+  left: -0.49329em;
+  background: rgba(181, 255, 177, 0.1);
+}
+
+/* line 237, ../scss/partials/_fractal.scss */
+.part:nth-child(41) {
+  top: -1.41572em;
+  left: 1.26718em;
+  background: rgba(175, 255, 175, 0.1);
+}
+
+/* line 242, ../scss/partials/_fractal.scss */
+.part:nth-child(42) {
+  top: 0.30931em;
+  left: 1.92531em;
+  background: rgba(173, 255, 177, 0.1);
+}
+
+/* line 247, ../scss/partials/_fractal.scss */
+.part:nth-child(43) {
+  top: 1.83304em;
+  left: 0.79997em;
+  background: rgba(171, 255, 179, 0.1);
+}
+
+/* line 252, ../scss/partials/_fractal.scss */
+.part:nth-child(44) {
+  top: 1.70514em;
+  left: -1.13798em;
+  background: rgba(169, 255, 182, 0.1);
+}
+
+/* line 257, ../scss/partials/_fractal.scss */
+.part:nth-child(45) {
+  top: -0.03717em;
+  left: -2.09967em;
+  background: rgba(167, 255, 185, 0.1);
+}
+
+/* line 262, ../scss/partials/_fractal.scss */
+.part:nth-child(46) {
+  top: -1.82944em;
+  left: -1.12944em;
+  background: rgba(165, 255, 187, 0.1);
+}
+
+/* line 267, ../scss/partials/_fractal.scss */
+.part:nth-child(47) {
+  top: -1.98393em;
+  left: 0.95079em;
+  background: rgba(163, 255, 191, 0.1);
+}
+
+/* line 272, ../scss/partials/_fractal.scss */
+.part:nth-child(48) {
+  top: -0.27804em;
+  left: 2.23275em;
+  background: rgba(161, 255, 194, 0.1);
+}
+
+/* line 277, ../scss/partials/_fractal.scss */
+.part:nth-child(49) {
+  top: 1.76699em;
+  left: 1.47233em;
+  background: rgba(159, 255, 197, 0.1);
+}
+
+/* line 282, ../scss/partials/_fractal.scss */
+.part:nth-child(50) {
+  top: 2.24132em;
+  left: -0.70639em;
+  background: rgba(157, 255, 201, 0.1);
+}
+
+/* line 287, ../scss/partials/_fractal.scss */
+.part:nth-child(51) {
+  top: 0.6297em;
+  left: -2.31592em;
+  background: rgba(155, 255, 205, 0.1);
+}
+
+/* line 292, ../scss/partials/_fractal.scss */
+.part:nth-child(52) {
+  top: -1.64206em;
+  left: -1.81828em;
+  background: rgba(153, 255, 209, 0.1);
+}
+
+/* line 297, ../scss/partials/_fractal.scss */
+.part:nth-child(53) {
+  top: -2.46657em;
+  left: 0.40748em;
+  background: rgba(151, 255, 213, 0.1);
+}
+
+/* line 302, ../scss/partials/_fractal.scss */
+.part:nth-child(54) {
+  top: -1.00961em;
+  left: 2.34162em;
+  background: rgba(149, 255, 218, 0.1);
+}
+
+/* line 307, ../scss/partials/_fractal.scss */
+.part:nth-child(55) {
+  top: 1.45285em;
+  left: 2.15621em;
+  background: rgba(147, 255, 223, 0.1);
+}
+
+/* line 312, ../scss/partials/_fractal.scss */
+.part:nth-child(56) {
+  top: 2.64935em;
+  left: -0.05864em;
+  background: rgba(145, 255, 228, 0.1);
+}
+
+/* line 317, ../scss/partials/_fractal.scss */
+.part:nth-child(57) {
+  top: 1.40819em;
+  left: -2.30369em;
+  background: rgba(143, 255, 233, 0.1);
+}
+
+/* line 322, ../scss/partials/_fractal.scss */
+.part:nth-child(58) {
+  top: -1.19945em;
+  left: -2.47463em;
+  background: rgba(141, 255, 238, 0.1);
+}
+
+/* line 327, ../scss/partials/_fractal.scss */
+.part:nth-child(59) {
+  top: -2.78004em;
+  left: -0.3337em;
+  background: rgba(139, 255, 243, 0.1);
+}
+
+/* line 332, ../scss/partials/_fractal.scss */
+.part:nth-child(60) {
+  top: -1.8147em;
+  left: 2.19758em;
+  background: rgba(137, 255, 249, 0.1);
+}
+
+/* line 337, ../scss/partials/_fractal.scss */
+.part:nth-child(61) {
+  top: 0.88395em;
+  left: 2.762em;
+  background: rgba(135, 255, 255, 0.1);
+}
+
+/* line 342, ../scss/partials/_fractal.scss */
+.part:nth-child(62) {
+  top: 2.85005em;
+  left: 0.7614em;
+  background: rgba(133, 249, 255, 0.1);
+}
+
+/* line 347, ../scss/partials/_fractal.scss */
+.part:nth-child(63) {
+  top: 2.21754em;
+  left: -2.02052em;
+  background: rgba(131, 243, 255, 0.1);
+}
+
+/* line 352, ../scss/partials/_fractal.scss */
+.part:nth-child(64) {
+  top: -0.51043em;
+  left: -3.00698em;
+  background: rgba(129, 236, 255, 0.1);
+}
+
+/* line 357, ../scss/partials/_fractal.scss */
+.part:nth-child(65) {
+  top: -2.85208em;
+  left: -1.21476em;
+  background: rgba(127, 229, 255, 0.1);
+}
+
+/* line 362, ../scss/partials/_fractal.scss */
+.part:nth-child(66) {
+  top: -2.60451em;
+  left: 1.77173em;
+  background: rgba(125, 223, 255, 0.1);
+}
+
+/* line 367, ../scss/partials/_fractal.scss */
+.part:nth-child(67) {
+  top: 0.08496em;
+  left: 3.19887em;
+  background: rgba(123, 215, 255, 0.1);
+}
+
+/* line 372, ../scss/partials/_fractal.scss */
+.part:nth-child(68) {
+  top: 2.78044em;
+  left: 1.68275em;
+  background: rgba(121, 208, 255, 0.1);
+}
+
+/* line 377, ../scss/partials/_fractal.scss */
+.part:nth-child(69) {
+  top: 2.96316em;
+  left: -1.45247em;
+  background: rgba(119, 201, 255, 0.1);
+}
+
+/* line 382, ../scss/partials/_fractal.scss */
+.part:nth-child(70) {
+  top: 0.38453em;
+  left: -3.32786em;
+  background: rgba(117, 193, 255, 0.1);
+}
+
+/* line 387, ../scss/partials/_fractal.scss */
+.part:nth-child(71) {
+  top: -2.63123em;
+  left: -2.15329em;
+  background: rgba(115, 185, 255, 0.1);
+}
+
+/* line 392, ../scss/partials/_fractal.scss */
+.part:nth-child(72) {
+  top: -3.28114em;
+  left: 1.06613em;
+  background: rgba(113, 177, 255, 0.1);
+}
+
+/* line 397, ../scss/partials/_fractal.scss */
+.part:nth-child(73) {
+  top: -0.88838em;
+  left: 3.38538em;
+  background: rgba(111, 169, 255, 0.1);
+}
+
+/* line 402, ../scss/partials/_fractal.scss */
+.part:nth-child(74) {
+  top: 2.40254em;
+  left: 2.61348em;
+  background: rgba(109, 160, 255, 0.1);
+}
+
+/* line 407, ../scss/partials/_fractal.scss */
+.part:nth-child(75) {
+  top: 3.54653em;
+  left: -0.61818em;
+  background: rgba(107, 151, 255, 0.1);
+}
+
+/* line 412, ../scss/partials/_fractal.scss */
+.part:nth-child(76) {
+  top: 1.4154em;
+  left: -3.36439em;
+  background: rgba(105, 143, 255, 0.1);
+}
+
+/* line 417, ../scss/partials/_fractal.scss */
+.part:nth-child(77) {
+  top: -2.0946em;
+  left: -3.05003em;
+  background: rgba(103, 133, 255, 0.1);
+}
+
+/* line 422, ../scss/partials/_fractal.scss */
+.part:nth-child(78) {
+  top: -3.7482em;
+  left: 0.11616em;
+  background: rgba(101, 124, 255, 0.1);
+}
+
+/* line 427, ../scss/partials/_fractal.scss */
+.part:nth-child(79) {
+  top: -1.95312em;
+  left: 3.25965em;
+  background: rgba(99, 115, 255, 0.1);
+}
+
+/* line 432, ../scss/partials/_fractal.scss */
+.part:nth-child(80) {
+  top: 1.70983em;
+  left: 3.44949em;
+  background: rgba(97, 105, 255, 0.1);
+}
+
+/* line 437, ../scss/partials/_fractal.scss */
+.part:nth-child(81) {
+  top: 3.87617em;
+  left: 0.43051em;
+  background: rgba(95, 95, 255, 0.1);
+}
+
+/* line 442, ../scss/partials/_fractal.scss */
+.part:nth-child(82) {
+  top: 2.48806em;
+  left: -3.06791em;
+  background: rgba(101, 93, 255, 0.1);
+}
+
+/* line 447, ../scss/partials/_fractal.scss */
+.part:nth-child(83) {
+  top: -1.25292em;
+  left: -3.79871em;
+  background: rgba(107, 91, 255, 0.1);
+}
+
+/* line 452, ../scss/partials/_fractal.scss */
+.part:nth-child(84) {
+  top: -3.92188em;
+  left: -1.01064em;
+  background: rgba(114, 89, 255, 0.1);
+}
+
+/* line 457, ../scss/partials/_fractal.scss */
+.part:nth-child(85) {
+  top: -3.00608em;
+  left: 2.7881em;
+  background: rgba(121, 87, 255, 0.1);
+}
+
+/* line 462, ../scss/partials/_fractal.scss */
+.part:nth-child(86) {
+  top: 0.73071em;
+  left: 4.08516em;
+  background: rgba(128, 85, 255, 0.1);
+}
+
+/* line 467, ../scss/partials/_fractal.scss */
+.part:nth-child(87) {
+  top: 3.87853em;
+  left: 1.61153em;
+  background: rgba(135, 83, 255, 0.1);
+}
+
+/* line 472, ../scss/partials/_fractal.scss */
+.part:nth-child(88) {
+  top: 3.49273em;
+  left: -2.42144em;
+  background: rgba(142, 81, 255, 0.1);
+}
+
+/* line 477, ../scss/partials/_fractal.scss */
+.part:nth-child(89) {
+  top: -0.15221em;
+  left: -4.29731em;
+  background: rgba(149, 79, 255, 0.1);
+}
+
+/* line 482, ../scss/partials/_fractal.scss */
+.part:nth-child(90) {
+  top: -3.7413em;
+  left: -2.21927em;
+  background: rgba(157, 77, 255, 0.1);
+}
+
+/* line 487, ../scss/partials/_fractal.scss */
+.part:nth-child(91) {
+  top: -3.93359em;
+  left: 1.97152em;
+  background: rgba(165, 75, 255, 0.1);
+}
+
+/* line 492, ../scss/partials/_fractal.scss */
+.part:nth-child(92) {
+  top: -0.47164em;
+  left: 4.42494em;
+  background: rgba(173, 73, 255, 0.1);
+}
+
+/* line 497, ../scss/partials/_fractal.scss */
+.part:nth-child(93) {
+  top: 3.5076em;
+  left: 2.819em;
+  background: rgba(181, 71, 255, 0.1);
+}
+
+/* line 502, ../scss/partials/_fractal.scss */
+.part:nth-child(94) {
+  top: 4.31468em;
+  left: -1.4443em;
+  background: rgba(190, 69, 255, 0.1);
+}
+
+/* line 507, ../scss/partials/_fractal.scss */
+.part:nth-child(95) {
+  top: 1.12816em;
+  left: -4.45951em;
+  background: rgba(199, 67, 255, 0.1);
+}
+
+/* line 512, ../scss/partials/_fractal.scss */
+.part:nth-child(96) {
+  top: -3.17717em;
+  left: -3.39531em;
+  background: rgba(208, 65, 255, 0.1);
+}
+
+/* line 517, ../scss/partials/_fractal.scss */
+.part:nth-child(97) {
+  top: -4.62286em;
+  left: 0.84802em;
+  background: rgba(217, 63, 255, 0.1);
+}
+
+/* line 522, ../scss/partials/_fractal.scss */
+.part:nth-child(98) {
+  top: -1.80314em;
+  left: 4.39445em;
+  background: rgba(226, 61, 255, 0.1);
+}
+
+/* line 527, ../scss/partials/_fractal.scss */
+.part:nth-child(99) {
+  top: 2.75223em;
+  left: 3.93258em;
+  background: rgba(235, 59, 255, 0.1);
+}
+
+/* line 532, ../scss/partials/_fractal.scss */
+.part:nth-child(100) {
+  top: 4.84615em;
+  left: -0.19313em;
+  background: rgba(245, 57, 255, 0.1);
+}
+
+/* line 537, ../scss/partials/_fractal.scss */
+.part:nth-child(101) {
+  top: 2.48119em;
+  left: -4.22536em;
+  background: rgba(255, 55, 255, 0.1);
+}
+
+/* line 542, ../scss/partials/_fractal.scss */
+.part:nth-child(102) {
+  top: -2.23753em;
+  left: -4.41542em;
+  background: rgba(255, 53, 245, 0.1);
+}
+
+/* line 547, ../scss/partials/_fractal.scss */
+.part:nth-child(103) {
+  top: -4.97413em;
+  left: -0.50793em;
+  background: rgba(255, 51, 235, 0.1);
+}
+
+/* line 552, ../scss/partials/_fractal.scss */
+.part:nth-child(104) {
+  top: -3.14609em;
+  left: 3.95027em;
+  background: rgba(255, 49, 224, 0.1);
+}
+
+/* line 557, ../scss/partials/_fractal.scss */
+.part:nth-child(105) {
+  top: 1.64027em;
+  left: 4.82903em;
+  background: rgba(255, 47, 213, 0.1);
+}
+
+/* line 562, ../scss/partials/_fractal.scss */
+.part:nth-child(106) {
+  top: 4.99826em;
+  left: 1.24094em;
+  background: rgba(255, 45, 202, 0.1);
+}
+
+/* line 567, ../scss/partials/_fractal.scss */
+.part:nth-child(107) {
+  top: 3.78114em;
+  left: -3.56973em;
+  background: rgba(255, 43, 191, 0.1);
+}
+
+/* line 572, ../scss/partials/_fractal.scss */
+.part:nth-child(108) {
+  top: -0.9701em;
+  left: -5.15959em;
+  background: rgba(255, 41, 180, 0.1);
+}
+
+/* line 577, ../scss/partials/_fractal.scss */
+.part:nth-child(109) {
+  top: -4.91214em;
+  left: -1.9902em;
+  background: rgba(255, 39, 169, 0.1);
+}
+
+/* line 582, ../scss/partials/_fractal.scss */
+.part:nth-child(110) {
+  top: -4.36957em;
+  left: 3.08696em;
+  background: rgba(255, 37, 157, 0.1);
+}
+
+/* line 587, ../scss/partials/_fractal.scss */
+.part:nth-child(111) {
+  top: 0.23891em;
+  left: 5.39471em;
+  background: rgba(255, 35, 145, 0.1);
+}
+
+/* line 592, ../scss/partials/_fractal.scss */
+.part:nth-child(112) {
+  top: 4.71181em;
+  left: 2.73887em;
+  background: rgba(255, 33, 133, 0.1);
+}
+
+/* line 597, ../scss/partials/_fractal.scss */
+.part:nth-child(113) {
+  top: 4.89498em;
+  left: -2.50783em;
+  background: rgba(255, 31, 121, 0.1);
+}
+
+/* line 602, ../scss/partials/_fractal.scss */
+.part:nth-child(114) {
+  top: 0.53936em;
+  left: -5.52373em;
+  background: rgba(255, 29, 108, 0.1);
+}
+
+/* line 607, ../scss/partials/_fractal.scss */
+.part:nth-child(115) {
+  top: -4.39589em;
+  left: -3.46932em;
+  background: rgba(255, 27, 95, 0.1);
+}
+
+/* line 612, ../scss/partials/_fractal.scss */
+.part:nth-child(116) {
+  top: -5.34171em;
+  left: 1.84083em;
+  background: rgba(255, 25, 82, 0.1);
+}
+
+/* line 617, ../scss/partials/_fractal.scss */
+.part:nth-child(117) {
+  top: -1.34897em;
+  left: 5.53808em;
+  background: rgba(255, 23, 69, 0.1);
+}
+
+/* line 622, ../scss/partials/_fractal.scss */
+.part:nth-child(118) {
+  top: 3.96576em;
+  left: 4.16356em;
+  background: rgba(255, 21, 56, 0.1);
+}
+
+/* line 627, ../scss/partials/_fractal.scss */
+.part:nth-child(119) {
+  top: 5.69532em;
+  left: -1.09695em;
+  background: rgba(255, 19, 43, 0.1);
+}
+
+/* line 632, ../scss/partials/_fractal.scss */
+.part:nth-child(120) {
+  top: 2.17271em;
+  left: -5.43156em;
+  background: rgba(255, 17, 29, 0.1);
+}
+
+/* line 637, ../scss/partials/_fractal.scss */
+.part:nth-child(121) {
+  top: -3.42561em;
+  left: -4.80367em;
+  background: rgba(255, 15, 15, 0.1);
+}
+
+/* line 642, ../scss/partials/_fractal.scss */
+.part:nth-child(122) {
+  top: -5.94295em;
+  left: 0.28955em;
+  background: rgba(255, 25, 13, 0.1);
+}
+
+/* line 647, ../scss/partials/_fractal.scss */
+.part:nth-child(123) {
+  top: -2.99228em;
+  left: 5.2006em;
+  background: rgba(255, 35, 11, 0.1);
+}
+
+/* line 652, ../scss/partials/_fractal.scss */
+.part:nth-child(124) {
+  top: 2.78242em;
+  left: 5.37221em;
+  background: rgba(255, 46, 9, 0.1);
+}
+
+/* line 657, ../scss/partials/_fractal.scss */
+.part:nth-child(125) {
+  top: 6.07369em;
+  left: 0.56593em;
+  background: rgba(255, 57, 7, 0.1);
+}
+
+/* line 662, ../scss/partials/_fractal.scss */
+.part:nth-child(126) {
+  top: 3.78865em;
+  left: -4.84444em;
+  background: rgba(255, 68, 5, 0.1);
+}
+
+/* line 667, ../scss/partials/_fractal.scss */
+.part:nth-child(127) {
+  top: -2.04594em;
+  left: -5.8527em;
+  background: rgba(255, 79, 3, 0.1);
+}
+
+/* line 672, ../scss/partials/_fractal.scss */
+.part:nth-child(128) {
+  top: -6.07894em;
+  left: -1.45224em;
+  background: rgba(255, 90, 1, 0.1);
+}
+
+/* line 677, ../scss/partials/_fractal.scss */
+.part:nth-child(129) {
+  top: -4.54254em;
+  left: 4.36524em;
+  background: rgba(254, 102, 0, 0.1);
+}
+
+/* line 682, ../scss/partials/_fractal.scss */
+.part:nth-child(130) {
+  top: 1.22856em;
+  left: 6.23002em;
+  background: rgba(252, 113, 0, 0.1);
+}
+
+/* line 687, ../scss/partials/_fractal.scss */
+.part:nth-child(131) {
+  top: 5.95268em;
+  left: 2.35066em;
+  background: rgba(250, 125, 0, 0.1);
+}
+
+/* line 692, ../scss/partials/_fractal.scss */
+.part:nth-child(132) {
+  top: 5.23484em;
+  left: -3.76815em;
+  background: rgba(248, 136, 0, 0.1);
+}
+
+/* line 697, ../scss/partials/_fractal.scss */
+.part:nth-child(133) {
+  top: -0.34504em;
+  left: -6.49084em;
+  background: rgba(246, 148, 0, 0.1);
+}
+
+/* line 702, ../scss/partials/_fractal.scss */
+.part:nth-child(134) {
+  top: -5.69173em;
+  left: -3.24141em;
+  background: rgba(244, 159, 0, 0.1);
+}
+
+/* line 707, ../scss/partials/_fractal.scss */
+.part:nth-child(135) {
+  top: -5.8471em;
+  left: 3.06127em;
+  background: rgba(242, 169, 0, 0.1);
+}
+
+/* line 712, ../scss/partials/_fractal.scss */
+.part:nth-child(136) {
+  top: -0.58765em;
+  left: 6.62398em;
+  background: rgba(240, 180, 0, 0.1);
+}
+
+/* line 717, ../scss/partials/_fractal.scss */
+.part:nth-child(137) {
+  top: 5.2959em;
+  left: 4.10407em;
+  background: rgba(238, 190, 0, 0.1);
+}
+
+/* line 722, ../scss/partials/_fractal.scss */
+.part:nth-child(138) {
+  top: 6.36197em;
+  left: -2.25562em;
+  background: rgba(236, 201, 0, 0.1);
+}
+
+/* line 727, ../scss/partials/_fractal.scss */
+.part:nth-child(139) {
+  top: 1.55076em;
+  left: -6.62081em;
+  background: rgba(234, 211, 0, 0.1);
+}
+
+/* line 732, ../scss/partials/_fractal.scss */
+.part:nth-child(140) {
+  top: -4.76815em;
+  left: -4.91805em;
+  background: rgba(232, 220, 0, 0.1);
+}
+
+/* line 737, ../scss/partials/_fractal.scss */
+.part:nth-child(141) {
+  top: -6.76365em;
+  left: 1.36491em;
+  background: rgba(230, 230, 0, 0.1);
+}
+
+/* line 742, ../scss/partials/_fractal.scss */
+.part:nth-child(142) {
+  top: -2.52404em;
+  left: 6.47547em;
+  background: rgba(217, 228, 0, 0.1);
+}
+
+/* line 747, ../scss/partials/_fractal.scss */
+.part:nth-child(143) {
+  top: 4.11457em;
+  left: 5.66307em;
+  background: rgba(203, 226, 0, 0.1);
+}
+
+/* line 752, ../scss/partials/_fractal.scss */
+.part:nth-child(144) {
+  top: 7.03833em;
+  left: -0.40539em;
+  background: rgba(190, 224, 0, 0.1);
+}
+
+/* line 757, ../scss/partials/_fractal.scss */
+.part:nth-child(145) {
+  top: 3.48625em;
+  left: -6.18515em;
+  background: rgba(178, 222, 0, 0.1);
+}
+
+/* line 762, ../scss/partials/_fractal.scss */
+.part:nth-child(146) {
+  top: -3.34438em;
+  left: -6.31962em;
+  background: rgba(165, 220, 0, 0.1);
+}
+
+/* line 767, ../scss/partials/_fractal.scss */
+.part:nth-child(147) {
+  top: -7.17458em;
+  left: -0.60451em;
+  background: rgba(153, 218, 0, 0.1);
+}
+
+/* line 772, ../scss/partials/_fractal.scss */
+.part:nth-child(148) {
+  top: -4.41557em;
+  left: 5.75024em;
+  background: rgba(140, 216, 0, 0.1);
+}
+
+/* line 777, ../scss/partials/_fractal.scss */
+.part:nth-child(149) {
+  top: 2.46983em;
+  left: 6.86949em;
+  background: rgba(128, 214, 0, 0.1);
+}
+
+/* line 782, ../scss/partials/_fractal.scss */
+.part:nth-child(150) {
+  top: 7.16367em;
+  left: 1.6445em;
+  background: rgba(117, 212, 0, 0.1);
+}
+
+/* line 787, ../scss/partials/_fractal.scss */
+.part:nth-child(151) {
+  top: 5.29009em;
+  left: -5.17446em;
+  background: rgba(105, 210, 0, 0.1);
+}
+
+/* line 792, ../scss/partials/_fractal.scss */
+.part:nth-child(152) {
+  top: -1.50602em;
+  left: -7.29619em;
+  background: rgba(94, 208, 0, 0.1);
+}
+
+/* line 797, ../scss/partials/_fractal.scss */
+.part:nth-child(153) {
+  top: -6.9999em;
+  left: -2.69283em;
+  background: rgba(82, 206, 0, 0.1);
+}
+
+/* line 802, ../scss/partials/_fractal.scss */
+.part:nth-child(154) {
+  top: -6.08832em;
+  left: 4.46484em;
+  background: rgba(71, 204, 0, 0.1);
+}
+
+/* line 807, ../scss/partials/_fractal.scss */
+.part:nth-child(155) {
+  top: 0.47059em;
+  left: 7.58542em;
+  background: rgba(61, 202, 0, 0.1);
+}
+
+/* line 812, ../scss/partials/_fractal.scss */
+.part:nth-child(156) {
+  top: 6.68084em;
+  left: 3.72678em;
+  background: rgba(50, 200, 0, 0.1);
+}
+
+/* line 817, ../scss/partials/_fractal.scss */
+.part:nth-child(157) {
+  top: 6.78974em;
+  left: -3.63172em;
+  background: rgba(40, 198, 0, 0.1);
+}
+
+/* line 822, ../scss/partials/_fractal.scss */
+.part:nth-child(158) {
+  top: 0.6165em;
+  left: -7.72544em;
+  background: rgba(29, 196, 0, 0.1);
+}
+
+/* line 827, ../scss/partials/_fractal.scss */
+.part:nth-child(159) {
+  top: -6.20743em;
+  left: -4.72312em;
+  background: rgba(19, 194, 0, 0.1);
+}
+
+/* line 832, ../scss/partials/_fractal.scss */
+.part:nth-child(160) {
+  top: -7.37523em;
+  left: 2.68858em;
+  background: rgba(10, 192, 0, 0.1);
+}
+
+/* line 837, ../scss/partials/_fractal.scss */
+.part:nth-child(161) {
+  top: -1.73346em;
+  left: 7.70747em;
+  background: rgba(0, 190, 0, 0.1);
+}
+
+/* line 842, ../scss/partials/_fractal.scss */
+.part:nth-child(162) {
+  top: 5.58414em;
+  left: 5.65861em;
+  background: rgba(0, 188, 9, 0.1);
+}
+
+/* line 847, ../scss/partials/_fractal.scss */
+.part:nth-child(163) {
+  top: 7.8276em;
+  left: -1.65186em;
+  background: rgba(0, 186, 19, 0.1);
+}
+
+/* line 852, ../scss/partials/_fractal.scss */
+.part:nth-child(164) {
+  top: 2.85703em;
+  left: -7.52595em;
+  background: rgba(0, 184, 28, 0.1);
+}
+
+/* line 857, ../scss/partials/_fractal.scss */
+.part:nth-child(165) {
+  top: -4.81896em;
+  left: -6.51058em;
+  background: rgba(0, 182, 36, 0.1);
+}
+
+/* line 862, ../scss/partials/_fractal.scss */
+.part:nth-child(166) {
+  top: -8.13205em;
+  left: 0.54065em;
+  background: rgba(0, 180, 45, 0.1);
+}
+
+/* line 867, ../scss/partials/_fractal.scss */
+.part:nth-child(167) {
+  top: -3.96299em;
+  left: 7.17877em;
+  background: rgba(0, 178, 53, 0.1);
+}
+
+/* line 872, ../scss/partials/_fractal.scss */
+.part:nth-child(168) {
+  top: 3.92329em;
+  left: 7.25743em;
+  background: rgba(0, 176, 62, 0.1);
+}
+
+/* line 877, ../scss/partials/_fractal.scss */
+.part:nth-child(169) {
+  top: 8.27654em;
+  left: 0.62363em;
+  background: rgba(0, 174, 70, 0.1);
+}
+
+/* line 882, ../scss/partials/_fractal.scss */
+.part:nth-child(170) {
+  top: 5.0267em;
+  left: -6.66744em;
+  background: rgba(0, 172, 77, 0.1);
+}
+
+/* line 887, ../scss/partials/_fractal.scss */
+.part:nth-child(171) {
+  top: -2.91186em;
+  left: -7.87916em;
+  background: rgba(0, 170, 85, 0.1);
+}
+
+/* line 892, ../scss/partials/_fractal.scss */
+.part:nth-child(172) {
+  top: -8.25219em;
+  left: -1.81764em;
+  background: rgba(0, 168, 92, 0.1);
+}
+
+/* line 897, ../scss/partials/_fractal.scss */
+.part:nth-child(173) {
+  top: -6.0236em;
+  left: 5.99718em;
+  background: rgba(0, 166, 100, 0.1);
+}
+
+/* line 902, ../scss/partials/_fractal.scss */
+.part:nth-child(174) {
+  top: 1.80243em;
+  left: 8.35786em;
+  background: rgba(0, 164, 107, 0.1);
+}
+
+/* line 907, ../scss/partials/_fractal.scss */
+.part:nth-child(175) {
+  top: 8.05357em;
+  left: 3.01661em;
+  background: rgba(0, 162, 113, 0.1);
+}
+
+/* line 912, ../scss/partials/_fractal.scss */
+.part:nth-child(176) {
+  top: 6.92981em;
+  left: -5.17689em;
+  background: rgba(0, 160, 120, 0.1);
+}
+
+/* line 917, ../scss/partials/_fractal.scss */
+.part:nth-child(177) {
+  top: -0.61554em;
+  left: -8.6782em;
+  background: rgba(0, 158, 126, 0.1);
+}
+
+/* line 922, ../scss/partials/_fractal.scss */
+.part:nth-child(178) {
+  top: -7.67891em;
+  left: -4.19486em;
+  background: rgba(0, 156, 133, 0.1);
+}
+
+/* line 927, ../scss/partials/_fractal.scss */
+.part:nth-child(179) {
+  top: -7.72266em;
+  left: 4.21906em;
+  background: rgba(0, 154, 139, 0.1);
+}
+
+/* line 932, ../scss/partials/_fractal.scss */
+.part:nth-child(180) {
+  top: -0.62589em;
+  left: 8.82784em;
+  background: rgba(0, 152, 144, 0.1);
+}
+
+/* line 937, ../scss/partials/_fractal.scss */
+.part:nth-child(181) {
+  top: 7.13026em;
+  left: 5.32629em;
+  background: rgba(0, 150, 150, 0.1);
+}
+
+/* line 942, ../scss/partials/_fractal.scss */
+.part:nth-child(182) {
+  top: 8.38124em;
+  left: -3.13964em;
+  background: rgba(0, 141, 148, 0.1);
+}
+
+/* line 947, ../scss/partials/_fractal.scss */
+.part:nth-child(183) {
+  top: 1.89703em;
+  left: -8.7978em;
+  background: rgba(0, 131, 146, 0.1);
+}
+
+/* line 952, ../scss/partials/_fractal.scss */
+.part:nth-child(184) {
+  top: -6.41356em;
+  left: -6.38504em;
+  background: rgba(0, 122, 144, 0.1);
+}
+
+/* line 957, ../scss/partials/_fractal.scss */
+.part:nth-child(185) {
+  top: -8.88692em;
+  left: 1.95773em;
+  background: rgba(0, 114, 142, 0.1);
+}
+
+/* line 962, ../scss/partials/_fractal.scss */
+.part:nth-child(186) {
+  top: -3.17158em;
+  left: 8.58275em;
+  background: rgba(0, 105, 140, 0.1);
+}
+
+/* line 967, ../scss/partials/_fractal.scss */
+.part:nth-child(187) {
+  top: 5.53862em;
+  left: 7.346em;
+  background: rgba(0, 97, 138, 0.1);
+}
+
+/* line 972, ../scss/partials/_fractal.scss */
+.part:nth-child(188) {
+  top: 9.22383em;
+  left: -0.69529em;
+  background: rgba(0, 88, 136, 0.1);
+}
+
+/* line 977, ../scss/partials/_fractal.scss */
+.part:nth-child(189) {
+  top: 4.42237em;
+  left: -8.18124em;
+  background: rgba(0, 80, 134, 0.1);
+}
+
+/* line 982, ../scss/partials/_fractal.scss */
+.part:nth-child(190) {
+  top: -4.51902em;
+  left: -8.18541em;
+  background: rgba(0, 73, 132, 0.1);
+}
+
+/* line 987, ../scss/partials/_fractal.scss */
+.part:nth-child(191) {
+  top: -9.37931em;
+  left: -0.62328em;
+  background: rgba(0, 65, 130, 0.1);
+}
+
+/* line 992, ../scss/partials/_fractal.scss */
+.part:nth-child(192) {
+  top: -5.62189em;
+  left: 7.59585em;
+  background: rgba(0, 58, 128, 0.1);
+}
+
+/* line 997, ../scss/partials/_fractal.scss */
+.part:nth-child(193) {
+  top: 3.37191em;
+  left: 8.88145em;
+  background: rgba(0, 50, 126, 0.1);
+}
+
+/* line 1002, ../scss/partials/_fractal.scss */
+.part:nth-child(194) {
+  top: 9.34426em;
+  left: 1.97162em;
+  background: rgba(0, 43, 124, 0.1);
+}
+
+/* line 1007, ../scss/partials/_fractal.scss */
+.part:nth-child(195) {
+  top: 6.74291em;
+  left: -6.83324em;
+  background: rgba(0, 37, 122, 0.1);
+}
+
+/* line 1012, ../scss/partials/_fractal.scss */
+.part:nth-child(196) {
+  top: -2.11774em;
+  left: -9.41476em;
+  background: rgba(0, 30, 120, 0.1);
+}
+
+/* line 1017, ../scss/partials/_fractal.scss */
+.part:nth-child(197) {
+  top: -9.11344em;
+  left: -3.32192em;
+  background: rgba(0, 24, 118, 0.1);
+}
+
+/* line 1022, ../scss/partials/_fractal.scss */
+.part:nth-child(198) {
+  top: -7.75911em;
+  left: 5.90413em;
+  background: rgba(0, 17, 116, 0.1);
+}
+
+/* line 1027, ../scss/partials/_fractal.scss */
+.part:nth-child(199) {
+  top: 0.77987em;
+  left: 9.76892em;
+  background: rgba(0, 11, 114, 0.1);
+}
+
+/* line 1032, ../scss/partials/_fractal.scss */
+.part:nth-child(200) {
+  top: 8.68572em;
+  left: 4.64551em;
+  background: rgba(0, 6, 112, 0.1);
+}
+
+/* line 1037, ../scss/partials/_fractal.scss */
+.part:nth-child(201) {
+  top: 8.64564em;
+  left: -4.82316em;
+  background: rgba(0, 0, 110, 0.1);
+}
+
+/* line 1042, ../scss/partials/_fractal.scss */
+.part:nth-child(202) {
+  top: 0.61581em;
+  left: -9.93093em;
+  background: rgba(5, 0, 108, 0.1);
+}
+
+/* line 1047, ../scss/partials/_fractal.scss */
+.part:nth-child(203) {
+  top: -8.06418em;
+  left: -5.91345em;
+  background: rgba(11, 0, 106, 0.1);
+}
+
+/* line 1052, ../scss/partials/_fractal.scss */
+.part:nth-child(204) {
+  top: -9.37976em;
+  left: 3.60868em;
+  background: rgba(16, 0, 104, 0.1);
+}
+
+/* line 1057, ../scss/partials/_fractal.scss */
+.part:nth-child(205) {
+  top: -2.04142em;
+  left: 9.89154em;
+  background: rgba(20, 0, 102, 0.1);
+}
+
+/* line 1062, ../scss/partials/_fractal.scss */
+.part:nth-child(206) {
+  top: 7.25621em;
+  left: 7.09718em;
+  background: rgba(25, 0, 100, 0.1);
+}
+
+/* line 1067, ../scss/partials/_fractal.scss */
+.part:nth-child(207) {
+  top: 9.94135em;
+  left: -2.28246em;
+  background: rgba(29, 0, 98, 0.1);
+}
+
+/* line 1072, ../scss/partials/_fractal.scss */
+.part:nth-child(208) {
+  top: 3.46763em;
+  left: -9.64562em;
+  background: rgba(34, 0, 96, 0.1);
+}
+
+/* line 1077, ../scss/partials/_fractal.scss */
+.part:nth-child(209) {
+  top: -6.2734em;
+  left: -8.16912em;
+  background: rgba(38, 0, 94, 0.1);
+}
+
+/* line 1082, ../scss/partials/_fractal.scss */
+.part:nth-child(210) {
+  top: -10.31343em;
+  left: 0.86929em;
+  background: rgba(41, 0, 92, 0.1);
+}
+
+/* line 1087, ../scss/partials/_fractal.scss */
+.part:nth-child(211) {
+  top: -4.86427em;
+  left: 9.19233em;
+  background: rgba(45, 0, 90, 0.1);
+}
+
+/* line 1092, ../scss/partials/_fractal.scss */
+.part:nth-child(212) {
+  top: 5.13145em;
+  left: 9.10334em;
+  background: rgba(48, 0, 88, 0.1);
+}
+
+/* line 1097, ../scss/partials/_fractal.scss */
+.part:nth-child(213) {
+  top: 10.48264em;
+  left: 0.60346em;
+  background: rgba(52, 0, 86, 0.1);
+}
+
+/* line 1102, ../scss/partials/_fractal.scss */
+.part:nth-child(214) {
+  top: 6.20098em;
+  left: -8.53524em;
+  background: rgba(55, 0, 84, 0.1);
+}
+
+/* line 1107, ../scss/partials/_fractal.scss */
+.part:nth-child(215) {
+  top: -3.84991em;
+  left: -9.87614em;
+  background: rgba(57, 0, 82, 0.1);
+}
+
+/* line 1112, ../scss/partials/_fractal.scss */
+.part:nth-child(216) {
+  top: -10.43962em;
+  left: -2.1064em;
+  background: rgba(60, 0, 80, 0.1);
+}
+
+/* line 1117, ../scss/partials/_fractal.scss */
+.part:nth-child(217) {
+  top: -7.44783em;
+  left: 7.68244em;
+  background: rgba(62, 0, 78, 0.1);
+}
+
+/* line 1122, ../scss/partials/_fractal.scss */
+.part:nth-child(218) {
+  top: 2.45188em;
+  left: 10.46665em;
+  background: rgba(65, 0, 76, 0.1);
+}
+
+/* line 1127, ../scss/partials/_fractal.scss */
+.part:nth-child(219) {
+  top: 10.17926em;
+  left: 3.60868em;
+  background: rgba(67, 0, 74, 0.1);
+}
+
+/* line 1132, ../scss/partials/_fractal.scss */
+.part:nth-child(220) {
+  top: 8.576em;
+  left: -6.64641em;
+  background: rgba(68, 0, 72, 0.1);
+}
+
+/* line 1137, ../scss/partials/_fractal.scss */
+.part:nth-child(221) {
+  top: -0.96355em;
+  left: -10.85733em;
+  background: rgba(70, 0, 70, 0.1);
+}
+
+/* line 1142, ../scss/partials/_fractal.scss */
+.part:nth-child(222) {
+  top: -9.70103em;
+  left: -5.07863em;
+  background: rgba(68, 0, 65, 0.1);
+}
+
+/* line 1147, ../scss/partials/_fractal.scss */
+.part:nth-child(223) {
+  top: -9.55846em;
+  left: 5.44388em;
+  background: rgba(66, 0, 59, 0.1);
+}
+
+/* line 1152, ../scss/partials/_fractal.scss */
+.part:nth-child(224) {
+  top: -0.58624em;
+  left: 11.03444em;
+  background: rgba(64, 0, 54, 0.1);
+}
+
+/* line 1157, ../scss/partials/_fractal.scss */
+.part:nth-child(225) {
+  top: 9.00899em;
+  left: 6.48445em;
+  background: rgba(62, 0, 50, 0.1);
+}
+
+/* line 1162, ../scss/partials/_fractal.scss */
+.part:nth-child(226) {
+  top: 10.37056em;
+  left: -4.09561em;
+  background: rgba(60, 0, 45, 0.1);
+}
+
+/* line 1167, ../scss/partials/_fractal.scss */
+.part:nth-child(227) {
+  top: 2.16657em;
+  left: -10.98845em;
+  background: rgba(58, 0, 41, 0.1);
+}
+
+/* line 1172, ../scss/partials/_fractal.scss */
+.part:nth-child(228) {
+  top: -8.11191em;
+  left: -7.79483em;
+  background: rgba(56, 0, 36, 0.1);
+}
+
+/* line 1177, ../scss/partials/_fractal.scss */
+.part:nth-child(229) {
+  top: -10.99064em;
+  left: 2.62599em;
+  background: rgba(54, 0, 32, 0.1);
+}
+
+/* line 1182, ../scss/partials/_fractal.scss */
+.part:nth-child(230) {
+  top: -3.74507em;
+  left: 10.71433em;
+  background: rgba(52, 0, 29, 0.1);
+}
+
+/* line 1187, ../scss/partials/_fractal.scss */
+.part:nth-child(231) {
+  top: 7.02313em;
+  left: 8.97973em;
+  background: rgba(50, 0, 25, 0.1);
+}
+
+/* line 1192, ../scss/partials/_fractal.scss */
+.part:nth-child(232) {
+  top: 11.40058em;
+  left: -1.06263em;
+  background: rgba(48, 0, 22, 0.1);
+}
+
+/* line 1197, ../scss/partials/_fractal.scss */
+.part:nth-child(233) {
+  top: 5.28858em;
+  left: -10.2118em;
+  background: rgba(46, 0, 18, 0.1);
+}
+
+/* line 1202, ../scss/partials/_fractal.scss */
+.part:nth-child(234) {
+  top: -5.76044em;
+  left: -10.01099em;
+  background: rgba(44, 0, 15, 0.1);
+}
+
+/* line 1207, ../scss/partials/_fractal.scss */
+.part:nth-child(235) {
+  top: -11.58627em;
+  left: -0.56415em;
+  background: rgba(42, 0, 13, 0.1);
+}
+
+/* line 1212, ../scss/partials/_fractal.scss */
+.part:nth-child(236) {
+  top: -6.76383em;
+  left: 9.48541em;
+  background: rgba(40, 0, 10, 0.1);
+}
+
+/* line 1217, ../scss/partials/_fractal.scss */
+.part:nth-child(237) {
+  top: 4.34576em;
+  left: 10.86298em;
+  background: rgba(38, 0, 8, 0.1);
+}
+
+/* line 1222, ../scss/partials/_fractal.scss */
+.part:nth-child(238) {
+  top: 11.538em;
+  left: 2.22192em;
+  background: rgba(36, 0, 5, 0.1);
+}
+
+/* line 1227, ../scss/partials/_fractal.scss */
+.part:nth-child(239) {
+  top: 8.13818em;
+  left: -8.54459em;
+  background: rgba(34, 0, 3, 0.1);
+}
+
+/* line 1232, ../scss/partials/_fractal.scss */
+.part:nth-child(240) {
+  top: -2.80478em;
+  left: -11.51328em;
+  background: rgba(32, 0, 2, 0.1);
+}
+
+/* line 1237, ../scss/partials/_fractal.scss */
+.part:nth-child(241) {
+  top: -11.2508em;
+  left: -3.8768em;
+  background: rgba(30, 0, 0, 0.1);
+}
+
+/* line 1242, ../scss/partials/_fractal.scss */
+.part:nth-child(242) {
+  top: -9.38029em;
+  left: 7.40355em;
+  background: rgba(28, 1, 0, 0.1);
+}
+
+/* line 1247, ../scss/partials/_fractal.scss */
+.part:nth-child(243) {
+  top: 1.16654em;
+  left: 11.94316em;
+  background: rgba(26, 3, 0, 0.1);
+}
+
+/* line 1252, ../scss/partials/_fractal.scss */
+.part:nth-child(244) {
+  top: 10.72461em;
+  left: 5.4941em;
+  background: rgba(24, 4, 0, 0.1);
+}
+
+/* line 1257, ../scss/partials/_fractal.scss */
+.part:nth-child(245) {
+  top: 10.46089em;
+  left: -6.0811em;
+  background: rgba(22, 4, 0, 0.1);
+}
+
+/* line 1262, ../scss/partials/_fractal.scss */
+.part:nth-child(246) {
+  top: 0.53718em;
+  left: -12.13812em;
+  background: rgba(20, 5, 0, 0.1);
+}
+
+/* line 1267, ../scss/partials/_fractal.scss */
+.part:nth-child(247) {
+  top: -9.96447em;
+  left: -7.03913em;
+  background: rgba(18, 5, 0, 0.1);
+}
+
+/* line 1272, ../scss/partials/_fractal.scss */
+.part:nth-child(248) {
+  top: -11.35339em;
+  left: 4.60033em;
+  background: rgba(16, 6, 0, 0.1);
+}
+
+/* line 1277, ../scss/partials/_fractal.scss */
+.part:nth-child(249) {
+  top: -2.27245em;
+  left: 12.08826em;
+  background: rgba(14, 6, 0, 0.1);
+}
+
+/* line 1282, ../scss/partials/_fractal.scss */
+.part:nth-child(250) {
+  top: 8.98047em;
+  left: 8.47784em;
+  background: rgba(12, 5, 0, 0.1);
+}
+
+/* line 1287, ../scss/partials/_fractal.scss */
+.part:nth-child(251) {
+  top: 12.03455em;
+  left: -2.98825em;
+  background: rgba(10, 5, 0, 0.1);
+}
+
+/* line 1292, ../scss/partials/_fractal.scss */
+.part:nth-child(252) {
+  top: 4.00384em;
+  left: -11.78863em;
+  background: rgba(8, 4, 0, 0.1);
+}
+
+/* line 1297, ../scss/partials/_fractal.scss */
+.part:nth-child(253) {
+  top: -7.78765em;
+  left: -9.77765em;
+  background: rgba(6, 4, 0, 0.1);
+}
+
+/* line 1302, ../scss/partials/_fractal.scss */
+.part:nth-child(254) {
+  top: -12.48504em;
+  left: 1.27528em;
+  background: rgba(4, 3, 0, 0.1);
+}
+
+/* line 1307, ../scss/partials/_fractal.scss */
+.part:nth-child(255) {
+  top: -5.69519em;
+  left: 11.23943em;
+  background: rgba(2, 1, 0, 0.1);
+}
+
+@-webkit-keyframes scale {
+  /* line 1314, ../scss/partials/_fractal.scss */
+  50% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+}
+
+@keyframes scale {
+  /* line 1321, ../scss/partials/_fractal.scss */
+  50% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+}
+
+@-webkit-keyframes rotate {
+  /* line 1327, ../scss/partials/_fractal.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  /* line 1335, ../scss/partials/_fractal.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
 
 /*********************

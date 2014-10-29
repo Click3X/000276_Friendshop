@@ -50,6 +50,10 @@
 
 	<body <?php body_class(); ?>>
 
+        <?php 
+            include('php/html5demos/fractal.php');
+        ?>
+
 		<div id="container">
 
 			<header class="header" role="banner">
