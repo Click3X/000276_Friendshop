@@ -86,6 +86,10 @@ body {
     width: 100%;
     max-width: 1000px;
     margin:0 auto;
+
+    // @media(min-width: 768px) {
+    //     padding: 80px 0;        
+    // }
 }
 
 .social {
@@ -103,6 +107,13 @@ body {
     display: block;
     float: left;
     margin: 0 8px;
+}
+
+@media(max-width: 480px) {
+    .ftlogo-container,
+    .ftaddress-container {
+        margin-bottom: 8px;
+    }
 }
 
 .ftaddress-container {
@@ -123,17 +134,18 @@ body {
     @media(min-width:481px) {
         margin-left: 50px;
     }
+    @media(min-width: 872px) {
+        margin-top:0;
+    }
     @media(min-width:950px) {
         float:right; 
         margin-left: 8px;
-        margin-top:0;
     }
 }
 
 .ftlogo-container, .ftaddress-container { 
-    // margin-right: 90px; 
     margin-right:0;
-   margin-left:8px;
+    margin-left:10px;
 
     @media(min-width:481px) {
         margin-left: 50px;
@@ -244,9 +256,14 @@ footer {
 
 }
 
+#inner-footer { 
+    padding: 60px 2px; 
+    @media(min-width:481px) {
+        padding: 80px 2px;
+    }
+}
 @media (max-width: 419px) {
 	.social { margin-right: 10px; }
-	#inner-footer { padding: 80px 2px; }
 }
 
 @media (max-width: 767px) {

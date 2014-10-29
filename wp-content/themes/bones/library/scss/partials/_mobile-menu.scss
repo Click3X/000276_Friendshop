@@ -57,11 +57,12 @@
 }
 
 .menu-display {
-    display: block;
+    // display: block;
     @include transition(all 0.3s ease-in-out);
 }
 
 nav {
+
     display:block;
     font-size: 1rem;
     // font-weight: 700;
@@ -71,10 +72,18 @@ nav {
     @include transition(all 0.3s ease-in-out);
 }
 
-nav li {
-    margin-left: 2em;
-    margin-right: 2em;
+
+// CHARLES NEW NAV STYLES
+#menu-main-menu {
+    @media(max-width: 768px) {
+        background: black;
+        width:100%;
+        position: absolute;
+        left: 0;
+        padding-bottom: 9px;
+    }
 }
+
 
 nav a {
     @include prefix(transition, all 0.3s ease-in-out);
@@ -91,7 +100,7 @@ nav a {
     .menu-icon { float: right; }
 
     nav {
-        display: none;
+        // display: none;
         text-align: center;
         margin-top: 60px;
     }
