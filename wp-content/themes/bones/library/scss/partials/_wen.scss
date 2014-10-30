@@ -452,7 +452,7 @@ footer {
     line-height:30px;
 	display: block; 
 	outline: none; 
-    font-weight: 500;
+    font-weight: 700;
 
     &:hover { color: #09dcff; }
 }
@@ -579,14 +579,15 @@ footer {
 .player-select-container {
 
     h2, p {
-        font-family: 'VT323';
+        // font-family: 'VT323';
+        font-family: 'Press Start 2P', cursive;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
         text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 
     h2 {
-        font-size: 2.5em;
+        font-size: 1.6em;
         // -webkit-animation: flashingtext 0.3s infinite linear;
         // animation: flashingtext 0.3s infinite linear;
     }
@@ -652,7 +653,7 @@ footer {
 
     p {
         text-align: center;       
-        font-size: 2.5em;
+        font-size: 1.3em;
         line-height: 1em;
         margin: 0;
         
@@ -692,6 +693,8 @@ footer {
     width: 100%;
     margin: 0 auto 12px;
     position: relative;
+    max-height: 500px;
+    overflow-y: hidden; 
 
     h2 { 
         text-align: center; 

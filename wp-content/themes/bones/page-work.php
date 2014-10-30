@@ -22,6 +22,7 @@
 
 
 								<!-- SELECT PLAYERS -->
+								<?php if (is_page(6)) { ?>	
 								<div class="mixedContent player-select-container">
 									<h2 class="players-title">Player Select</h2>
 									<button class="prev">&#10094;</button>
@@ -46,7 +47,7 @@
 									    </ul>
 									</div>
 								</div>
-
+								<?php } ?>
 
 									<div id="tab-container" class="tab-container">
 										

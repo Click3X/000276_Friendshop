@@ -2630,7 +2630,7 @@ footer {
   line-height: 30px;
   display: block;
   outline: none;
-  font-weight: 500;
+  font-weight: 700;
 }
 /* line 457, ../scss/partials/_wen.scss */
 .tab a:hover {
@@ -2824,42 +2824,42 @@ footer {
 
 /* line 581, ../scss/partials/_wen.scss */
 .player-select-container h2, .player-select-container p {
-  font-family: 'VT323';
+  font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-/* line 588, ../scss/partials/_wen.scss */
+/* line 589, ../scss/partials/_wen.scss */
 .player-select-container h2 {
-  font-size: 2.5em;
+  font-size: 1.6em;
 }
-/* line 594, ../scss/partials/_wen.scss */
+/* line 595, ../scss/partials/_wen.scss */
 .player-select-container p {
   color: #ffba2c;
 }
 
-/* line 600, ../scss/partials/_wen.scss */
+/* line 601, ../scss/partials/_wen.scss */
 .players-title {
   color: white;
 }
 
-/* line 602, ../scss/partials/_wen.scss */
+/* line 603, ../scss/partials/_wen.scss */
 .players-title.blinking {
   color: #ffba2c;
 }
 
-/* line 605, ../scss/partials/_wen.scss */
+/* line 606, ../scss/partials/_wen.scss */
 .float-top, .float-bottom {
   visibility: hidden;
 }
 
-/* line 609, ../scss/partials/_wen.scss */
+/* line 610, ../scss/partials/_wen.scss */
 .player1, .player2 {
   cursor: pointer;
   width: 320px;
   height: 440px;
 }
-/* line 616, ../scss/partials/_wen.scss */
+/* line 617, ../scss/partials/_wen.scss */
 .player1:hover .float-top, .player2:hover .float-top {
   visibility: visible;
   position: relative;
@@ -2867,7 +2867,7 @@ footer {
   -webkit-animation: floatTop 0.3s infinite  normal ease-out;
   animation: floatTop 0.3s infinite  normal ease-out;
 }
-/* line 624, ../scss/partials/_wen.scss */
+/* line 625, ../scss/partials/_wen.scss */
 .player1:hover .float-bottom, .player2:hover .float-bottom {
   visibility: visible;
   position: relative;
@@ -2875,7 +2875,7 @@ footer {
   -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
   animation: floatBottom 0.3s infinite  normal ease-out;
 }
-/* line 639, ../scss/partials/_wen.scss */
+/* line 640, ../scss/partials/_wen.scss */
 .player1 div, .player2 div {
   width: 255px;
   height: 334px;
@@ -2883,48 +2883,50 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 653, ../scss/partials/_wen.scss */
+/* line 654, ../scss/partials/_wen.scss */
 .player1 p, .player2 p {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 1.3em;
   line-height: 1em;
   margin: 0;
 }
 
-/* line 664, ../scss/partials/_wen.scss */
+/* line 665, ../scss/partials/_wen.scss */
 .player1 div {
   margin: auto;
   background: url(Ben-BnW.png) center center no-repeat;
 }
-/* line 670, ../scss/partials/_wen.scss */
+/* line 671, ../scss/partials/_wen.scss */
 .player1:hover div {
   background: url(Ben-Color-New.png) center center no-repeat;
 }
 
-/* line 678, ../scss/partials/_wen.scss */
+/* line 679, ../scss/partials/_wen.scss */
 .player2 div {
   margin: auto;
   background: url(Tim-BnW.png) center center no-repeat;
 }
-/* line 684, ../scss/partials/_wen.scss */
+/* line 685, ../scss/partials/_wen.scss */
 .player2:hover div {
   background: url(Tim-Color-New.png) center center no-repeat;
 }
 
-/* line 690, ../scss/partials/_wen.scss */
+/* line 691, ../scss/partials/_wen.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 12px;
   position: relative;
+  max-height: 500px;
+  overflow-y: hidden;
 }
-/* line 696, ../scss/partials/_wen.scss */
+/* line 699, ../scss/partials/_wen.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 702, ../scss/partials/_wen.scss */
+/* line 705, ../scss/partials/_wen.scss */
 .mixedContent .prev,
 .mixedContent .next {
   position: absolute;
@@ -2940,11 +2942,11 @@ footer {
   outline: none;
   z-index: 1;
 }
-/* line 717, ../scss/partials/_wen.scss */
+/* line 720, ../scss/partials/_wen.scss */
 .mixedContent .prev {
   left: 2px;
 }
-/* line 721, ../scss/partials/_wen.scss */
+/* line 724, ../scss/partials/_wen.scss */
 .mixedContent .next {
   right: 2px;
 }

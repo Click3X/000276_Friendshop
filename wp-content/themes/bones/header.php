@@ -22,6 +22,7 @@
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->

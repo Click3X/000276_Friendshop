@@ -186,7 +186,7 @@ jQuery(document).ready(function($) {
   $(".fancybox").fancybox();
 
   // init tabs
-  // $('#tab-container').easytabs();
+  $('#tab-container').easytabs();
 
 
 
