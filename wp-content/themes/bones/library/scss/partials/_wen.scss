@@ -14,11 +14,10 @@
   font-style: normal;
 }
 
-// ORIGINAL GIF
 body {
 	background-color: black;
-    background: url(../../../../../img/bg.jpg) center top;
-	background-size: cover;
+ //    background: url(../../../../../img/bg.jpg) center top;
+	// background-size: cover;
 }
 
 .logo-header {
@@ -555,21 +554,15 @@ footer {
 
 // SELECTING PLAYER
 
-@keyframes flashingtext {
-    0%   {color: white;}
-    // 25%  {color: #ffba2c;}
-    // 50%  {color: white;}
-    // 99% {color: white};
-    100% {color: #ffba2c;}
-}
+// @keyframes flashingtext {
+//     0%   {color: white;}
+//     100% {color: #ffba2c;}
+// }
 
-@-webkit-keyframes flashingtext {
-    0%   {color: white;}
-    // 1% {color: #ffba2c;}
-    // 25%  {color: #ffba2c;}
-    100%  {color: #ffba2c;}
-    // 100% {color: #ffba2c;}
-}
+// @-webkit-keyframes flashingtext {
+//     0%   {color: white;}
+//     100%  {color: #ffba2c;}
+// }
 
 .player-select-container {
 
@@ -582,8 +575,8 @@ footer {
 
     h2 {
         font-size: 2.5em;
-        -webkit-animation: flashingtext 0.08s infinite linear;
-        animation: flashingtext 0.08s infinite linear;
+        // -webkit-animation: flashingtext 0.3s infinite linear;
+        // animation: flashingtext 0.3s infinite linear;
     }
 
     p {
@@ -592,9 +585,9 @@ footer {
 
 }
 
-// .players-title { color: white; }
+.players-title { color: white; }
 
-// .players-title.blinking { color: #ffba2c; }
+.players-title.blinking { color: #ffba2c; }
 
 
 
@@ -667,8 +660,8 @@ footer {
         color:white;
     }
 
-    .prev-no-style,
-    .next-no-style {
+    .prev,
+    .next {
         position: absolute;
         top:0; bottom:0; 
         margin:auto;
@@ -682,11 +675,11 @@ footer {
         z-index: 1;
     }
 
-    .prev-no-style {
+    .prev {
         left:2px;
     }
 
-    .next-no-style {
+    .next {
         right:2px;
     }
 

@@ -2056,111 +2056,109 @@ FOOTER STYLES
   font-weight: normal;
   font-style: normal;
 }
-/* line 18, ../scss/partials/_wen.scss */
+/* line 17, ../scss/partials/_wen.scss */
 body {
   background-color: black;
-  background: url(../../../../../img/bg.jpg) center top;
-  background-size: cover;
 }
 
-/* line 24, ../scss/partials/_wen.scss */
+/* line 23, ../scss/partials/_wen.scss */
 .logo-header {
   background: url(../../../../../img/fs-logo.png) center center no-repeat;
   height: 124px;
 }
 
-/* line 29, ../scss/partials/_wen.scss */
+/* line 28, ../scss/partials/_wen.scss */
 .ls-nav-prev, .ls-nav-next {
   border: 1px solid #3b3c46 !important;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 34, ../scss/partials/_wen.scss */
+/* line 33, ../scss/partials/_wen.scss */
 .ls-nav-prev {
   margin-left: -100px;
 }
 
-/* line 35, ../scss/partials/_wen.scss */
+/* line 34, ../scss/partials/_wen.scss */
 .ls-nav-next {
   margin-right: -100px;
 }
 
-/* line 38, ../scss/partials/_wen.scss */
+/* line 37, ../scss/partials/_wen.scss */
 .contact-left, .contact-right {
   text-align: left;
 }
-/* line 41, ../scss/partials/_wen.scss */
+/* line 40, ../scss/partials/_wen.scss */
 .contact-left h1, .contact-left h3, .contact-left h4, .contact-right h1, .contact-right h3, .contact-right h4 {
   margin: 0;
 }
-/* line 42, ../scss/partials/_wen.scss */
+/* line 41, ../scss/partials/_wen.scss */
 .contact-left h1, .contact-right h1 {
   font-size: 2.35em;
   margin-bottom: .175em;
 }
-/* line 46, ../scss/partials/_wen.scss */
+/* line 45, ../scss/partials/_wen.scss */
 .contact-left h3, .contact-left h4, .contact-right h3, .contact-right h4 {
   color: #fff;
 }
-/* line 48, ../scss/partials/_wen.scss */
+/* line 47, ../scss/partials/_wen.scss */
 .contact-left img, .contact-right img {
   vertical-align: bottom;
   margin: 0;
 }
-/* line 53, ../scss/partials/_wen.scss */
+/* line 52, ../scss/partials/_wen.scss */
 .contact-left ul, .contact-right ul {
   margin: 0;
 }
-/* line 56, ../scss/partials/_wen.scss */
+/* line 55, ../scss/partials/_wen.scss */
 .contact-left ul li, .contact-right ul li {
   margin: 10px 0;
 }
-/* line 58, ../scss/partials/_wen.scss */
+/* line 57, ../scss/partials/_wen.scss */
 .contact-left ul h3, .contact-right ul h3 {
   font-size: 1em;
   font-weight: 900;
   line-height: 1.1em;
 }
-/* line 64, ../scss/partials/_wen.scss */
+/* line 63, ../scss/partials/_wen.scss */
 .contact-left ul h4, .contact-right ul h4 {
   font-size: 1em;
   font-weight: 700;
 }
-/* line 70, ../scss/partials/_wen.scss */
+/* line 69, ../scss/partials/_wen.scss */
 .contact-left p, .contact-right p {
   line-height: 1.4em !important;
   font-size: 1em !important;
   margin: 0 0 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 70, ../scss/partials/_wen.scss */
+  /* line 69, ../scss/partials/_wen.scss */
   .contact-left p, .contact-right p {
     margin: 0 0 2.4em;
   }
 }
 
-/* line 81, ../scss/partials/_wen.scss */
+/* line 80, ../scss/partials/_wen.scss */
 .contact-left {
   float: left;
 }
 
-/* line 82, ../scss/partials/_wen.scss */
+/* line 81, ../scss/partials/_wen.scss */
 .contact-right {
   float: right;
 }
 
-/* line 83, ../scss/partials/_wen.scss */
+/* line 82, ../scss/partials/_wen.scss */
 .inner-contact-container {
   padding-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 83, ../scss/partials/_wen.scss */
+  /* line 82, ../scss/partials/_wen.scss */
   .inner-contact-container {
     padding-top: 50px;
   }
 }
 
-/* line 92, ../scss/partials/_wen.scss */
+/* line 91, ../scss/partials/_wen.scss */
 #inner-footer {
   text-align: center;
   padding: 80px 0;
@@ -2169,19 +2167,19 @@ body {
   margin: 0 auto;
 }
 
-/* line 100, ../scss/partials/_wen.scss */
+/* line 99, ../scss/partials/_wen.scss */
 .social {
   float: left;
   margin-right: 20px;
 }
 
-/* line 105, ../scss/partials/_wen.scss */
+/* line 104, ../scss/partials/_wen.scss */
 .ftlogo-container {
   vertical-align: top;
   margin-top: 50px;
 }
 
-/* line 110, ../scss/partials/_wen.scss */
+/* line 109, ../scss/partials/_wen.scss */
 .ftlogo-container, .ftaddress-container, .ftsocial-container {
   text-align: left;
   display: block;
@@ -2190,107 +2188,107 @@ body {
 }
 
 @media (max-width: 480px) {
-  /* line 118, ../scss/partials/_wen.scss */
+  /* line 117, ../scss/partials/_wen.scss */
   .ftlogo-container,
   .ftaddress-container {
     margin-bottom: 8px;
   }
 }
-/* line 124, ../scss/partials/_wen.scss */
+/* line 123, ../scss/partials/_wen.scss */
 .ftaddress-container {
   float: left;
   width: 100%;
 }
 @media (min-width: 481px) {
-  /* line 124, ../scss/partials/_wen.scss */
+  /* line 123, ../scss/partials/_wen.scss */
   .ftaddress-container {
     float: left;
     width: auto;
   }
 }
 
-/* line 134, ../scss/partials/_wen.scss */
+/* line 133, ../scss/partials/_wen.scss */
 .ftsocial-container {
   float: left;
   margin-top: 16px;
   margin-left: 8px;
 }
 @media (min-width: 481px) {
-  /* line 134, ../scss/partials/_wen.scss */
+  /* line 133, ../scss/partials/_wen.scss */
   .ftsocial-container {
     margin-left: 50px;
   }
 }
 @media (min-width: 872px) {
-  /* line 134, ../scss/partials/_wen.scss */
+  /* line 133, ../scss/partials/_wen.scss */
   .ftsocial-container {
     margin-top: 0;
   }
 }
 @media (min-width: 950px) {
-  /* line 134, ../scss/partials/_wen.scss */
+  /* line 133, ../scss/partials/_wen.scss */
   .ftsocial-container {
     float: right;
     margin-left: 8px;
   }
 }
 
-/* line 151, ../scss/partials/_wen.scss */
+/* line 150, ../scss/partials/_wen.scss */
 .ftlogo-container, .ftaddress-container {
   margin-right: 0;
   margin-left: 10px;
 }
 @media (min-width: 481px) {
-  /* line 151, ../scss/partials/_wen.scss */
+  /* line 150, ../scss/partials/_wen.scss */
   .ftlogo-container, .ftaddress-container {
     margin-left: 50px;
   }
 }
 
-/* line 160, ../scss/partials/_wen.scss */
+/* line 159, ../scss/partials/_wen.scss */
 .ftsocial-container ul {
   margin: 0;
 }
 
-/* line 162, ../scss/partials/_wen.scss */
+/* line 161, ../scss/partials/_wen.scss */
 .social a {
   width: 80px;
   height: 80px;
   display: inline-block;
 }
 
-/* line 168, ../scss/partials/_wen.scss */
+/* line 167, ../scss/partials/_wen.scss */
 .Tumblr {
   background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
 }
 
-/* line 169, ../scss/partials/_wen.scss */
+/* line 168, ../scss/partials/_wen.scss */
 .Facebook {
   background-image: url(../../../../../img/Facebook.jpg);
 }
 
-/* line 170, ../scss/partials/_wen.scss */
+/* line 169, ../scss/partials/_wen.scss */
 .Instagram {
   background-image: url(../../../../../img/Instagram.jpg);
 }
 
-/* line 171, ../scss/partials/_wen.scss */
+/* line 170, ../scss/partials/_wen.scss */
 .Map {
   background-image: url(../../../../../img/Map.jpg);
 }
 
-/* line 172, ../scss/partials/_wen.scss */
+/* line 171, ../scss/partials/_wen.scss */
 .Mail {
   background-image: url(../../../../../img/E-mail.jpg);
 }
 
-/* line 175, ../scss/partials/_wen.scss */
+/* line 174, ../scss/partials/_wen.scss */
 .content-container {
   text-align: center;
   padding: 12px 8px;
   max-width: 1000px;
 }
-/* line 180, ../scss/partials/_wen.scss */
+/* line 179, ../scss/partials/_wen.scss */
 .content-container h1 {
   color: #10a1a4;
   text-transform: uppercase;
@@ -2298,7 +2296,7 @@ body {
   margin-top: 14px;
   margin-bottom: 14px;
 }
-/* line 188, ../scss/partials/_wen.scss */
+/* line 187, ../scss/partials/_wen.scss */
 .content-container p {
   color: #fff;
   text-align: left;
@@ -2307,12 +2305,12 @@ body {
   font-weight: 600;
 }
 @media (min-width: 481px) {
-  /* line 197, ../scss/partials/_wen.scss */
+  /* line 196, ../scss/partials/_wen.scss */
   .content-container p {
     line-height: 1.9em;
     font-size: 1.25em;
   }
-  /* line 202, ../scss/partials/_wen.scss */
+  /* line 201, ../scss/partials/_wen.scss */
   .content-container h1 {
     margin-top: .2em;
     margin-bottom: .2em;
@@ -2320,33 +2318,33 @@ body {
   }
 }
 @media (min-width: 768px) {
-  /* line 175, ../scss/partials/_wen.scss */
+  /* line 174, ../scss/partials/_wen.scss */
   .content-container {
     padding: 25px 20px;
   }
 }
 
-/* line 214, ../scss/partials/_wen.scss */
+/* line 213, ../scss/partials/_wen.scss */
 .about-container {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* line 215, ../scss/partials/_wen.scss */
+/* line 214, ../scss/partials/_wen.scss */
 .inner-about-container {
   max-width: 1000px;
 }
 
-/* line 216, ../scss/partials/_wen.scss */
+/* line 215, ../scss/partials/_wen.scss */
 .inner-gallery-container {
   margin: auto;
 }
 
-/* line 219, ../scss/partials/_wen.scss */
+/* line 218, ../scss/partials/_wen.scss */
 .thumb-wrapper {
   margin: 0 auto;
 }
 
-/* line 221, ../scss/partials/_wen.scss */
+/* line 220, ../scss/partials/_wen.scss */
 .thumb-list {
   position: relative;
   list-style: none;
@@ -2354,13 +2352,13 @@ body {
   margin-top: 12px;
 }
 @media (min-width: 768px) {
-  /* line 221, ../scss/partials/_wen.scss */
+  /* line 220, ../scss/partials/_wen.scss */
   .thumb-list {
     margin-top: 0;
   }
 }
 
-/* line 230, ../scss/partials/_wen.scss */
+/* line 229, ../scss/partials/_wen.scss */
 .thumb {
   position: absolute;
   overflow: hidden;
@@ -2370,7 +2368,7 @@ body {
   /* Set height */
 }
 
-/* line 237, ../scss/partials/_wen.scss */
+/* line 236, ../scss/partials/_wen.scss */
 .video-thumb {
   width: 268px;
   /* Set width */
@@ -2380,50 +2378,50 @@ body {
   margin: 6px 7px;
 }
 
-/* line 244, ../scss/partials/_wen.scss */
+/* line 243, ../scss/partials/_wen.scss */
 .thumb img {
   width: 295px;
   height: 295px;
 }
 
-/* line 250, ../scss/partials/_wen.scss */
+/* line 249, ../scss/partials/_wen.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-  /* line 256, ../scss/partials/_wen.scss */
+  /* line 255, ../scss/partials/_wen.scss */
   .social a {
     width: 55px;
     height: 55px;
     background-size: 55px 55px;
   }
 
-  /* line 262, ../scss/partials/_wen.scss */
+  /* line 261, ../scss/partials/_wen.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
-/* line 266, ../scss/partials/_wen.scss */
+/* line 265, ../scss/partials/_wen.scss */
 #inner-footer {
   padding: 60px 2px;
 }
 @media (min-width: 481px) {
-  /* line 266, ../scss/partials/_wen.scss */
+  /* line 265, ../scss/partials/_wen.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 
 @media (max-width: 419px) {
-  /* line 273, ../scss/partials/_wen.scss */
+  /* line 272, ../scss/partials/_wen.scss */
   .social {
     margin-right: 10px;
   }
 }
 @media (max-width: 767px) {
-  /* line 277, ../scss/partials/_wen.scss */
+  /* line 276, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -2433,7 +2431,7 @@ footer {
     z-index: 10;
   }
 
-  /* line 286, ../scss/partials/_wen.scss */
+  /* line 285, ../scss/partials/_wen.scss */
   .header {
     background: #000000;
     padding: 10px;
@@ -2446,12 +2444,12 @@ footer {
     transform: translateZ(5);
   }
 
-  /* line 295, ../scss/partials/_wen.scss */
+  /* line 294, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
-/* line 299, ../scss/partials/_wen.scss */
+/* line 298, ../scss/partials/_wen.scss */
 .poster-hover {
   background: black;
   opacity: 0;
@@ -2466,7 +2464,7 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 312, ../scss/partials/_wen.scss */
+/* line 311, ../scss/partials/_wen.scss */
 .poster-hover h3 {
   margin: 0;
   padding-top: 50px;
@@ -2474,7 +2472,7 @@ footer {
   font-size: 1em;
   font-family: 'VerlagBold';
 }
-/* line 320, ../scss/partials/_wen.scss */
+/* line 319, ../scss/partials/_wen.scss */
 .poster-hover h4 {
   margin: 5px 0 0 0;
   font-weight: 700;
@@ -2482,71 +2480,71 @@ footer {
   font-family: 'VerlagBold';
 }
 
-/* line 328, ../scss/partials/_wen.scss */
+/* line 327, ../scss/partials/_wen.scss */
 .video-list {
   text-align: center;
   max-width: 1000px;
   margin: auto;
 }
-/* line 333, ../scss/partials/_wen.scss */
+/* line 332, ../scss/partials/_wen.scss */
 .video-list .poster-container {
   position: relative;
   cursor: pointer;
 }
-/* line 337, ../scss/partials/_wen.scss */
+/* line 336, ../scss/partials/_wen.scss */
 .video-list .poster-container img {
   margin: 0;
 }
-/* line 342, ../scss/partials/_wen.scss */
+/* line 341, ../scss/partials/_wen.scss */
 .video-list .poster-container:hover .poster-hover {
   opacity: 0.7;
 }
 
 @media (max-width: 756px) {
-  /* line 347, ../scss/partials/_wen.scss */
+  /* line 346, ../scss/partials/_wen.scss */
   .contact-right img {
     width: 260px;
   }
 }
 @media (max-width: 560px) {
-  /* line 350, ../scss/partials/_wen.scss */
+  /* line 349, ../scss/partials/_wen.scss */
   .page-id-11 .hentry {
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 356, ../scss/partials/_wen.scss */
+  /* line 355, ../scss/partials/_wen.scss */
   .contact-right {
     display: none;
   }
 }
 @media (max-width: 560px) {
-  /* line 360, ../scss/partials/_wen.scss */
+  /* line 359, ../scss/partials/_wen.scss */
   .contact-right {
     float: none;
     text-align: center;
     margin-top: 50px;
   }
 
-  /* line 366, ../scss/partials/_wen.scss */
+  /* line 365, ../scss/partials/_wen.scss */
   .contact-left {
     float: none;
     text-align: center;
   }
-  /* line 370, ../scss/partials/_wen.scss */
+  /* line 369, ../scss/partials/_wen.scss */
   .contact-left p {
     text-align: center;
   }
 }
-/* line 376, ../scss/partials/_wen.scss */
+/* line 375, ../scss/partials/_wen.scss */
 #work-ul {
   background: rgba(0, 0, 0, 0.5);
   border-top: 1px solid #838383;
   border-bottom: 1px solid #838383;
   margin-bottom: 31px;
 }
-/* line 382, ../scss/partials/_wen.scss */
+/* line 381, ../scss/partials/_wen.scss */
 #work-ul:before {
   content: "";
   position: absolute;
@@ -2560,13 +2558,13 @@ footer {
   z-index: -1;
 }
 @media (max-width: 835px) {
-  /* line 382, ../scss/partials/_wen.scss */
+  /* line 381, ../scss/partials/_wen.scss */
   #work-ul:before {
     display: none;
   }
 }
 @media (min-width: 834px) {
-  /* line 376, ../scss/partials/_wen.scss */
+  /* line 375, ../scss/partials/_wen.scss */
   #work-ul {
     background: none;
     border-top: 0;
@@ -2574,20 +2572,20 @@ footer {
   }
 }
 
-/* line 403, ../scss/partials/_wen.scss */
+/* line 402, ../scss/partials/_wen.scss */
 .tab-container .etabs,
 .work-tabs.etabs {
   padding: 8px 0;
 }
 @media (min-width: 834px) {
-  /* line 403, ../scss/partials/_wen.scss */
+  /* line 402, ../scss/partials/_wen.scss */
   .tab-container .etabs,
   .work-tabs.etabs {
     padding: 0;
   }
 }
 
-/* line 411, ../scss/partials/_wen.scss */
+/* line 410, ../scss/partials/_wen.scss */
 .etabs {
   margin: 0 auto;
   padding: 0;
@@ -2596,7 +2594,7 @@ footer {
   max-width: 850px;
 }
 
-/* line 419, ../scss/partials/_wen.scss */
+/* line 418, ../scss/partials/_wen.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2604,14 +2602,14 @@ footer {
 }
 
 @media (min-width: 836px) {
-  /* line 427, ../scss/partials/_wen.scss */
+  /* line 426, ../scss/partials/_wen.scss */
   .work-tabs .tab {
     width: 33.33333%;
     display: block;
     float: left;
   }
 }
-/* line 434, ../scss/partials/_wen.scss */
+/* line 433, ../scss/partials/_wen.scss */
 .tab a {
   font-size: 0.75em;
   padding-top: 1px;
@@ -2624,37 +2622,37 @@ footer {
   outline: none;
   font-weight: 500;
 }
-/* line 446, ../scss/partials/_wen.scss */
+/* line 445, ../scss/partials/_wen.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
+/* line 448, ../scss/partials/_wen.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
 /* line 449, ../scss/partials/_wen.scss */
-.tab a:hover {
-  color: #09dcff;
-}
-
-/* line 450, ../scss/partials/_wen.scss */
 .tab.active {
   position: relative;
 }
 
-/* line 451, ../scss/partials/_wen.scss */
+/* line 450, ../scss/partials/_wen.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 452, ../scss/partials/_wen.scss */
+/* line 451, ../scss/partials/_wen.scss */
 .tab-gallery a:hover {
   color: #ffdd44;
 }
 
-/* line 453, ../scss/partials/_wen.scss */
+/* line 452, ../scss/partials/_wen.scss */
 .tab-gallery a.active {
   color: #ffdd44;
 }
 
-/* line 455, ../scss/partials/_wen.scss */
+/* line 454, ../scss/partials/_wen.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2667,45 +2665,45 @@ footer {
 }
 
 @media (max-width: 835px) {
-  /* line 463, ../scss/partials/_wen.scss */
+  /* line 462, ../scss/partials/_wen.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 468, ../scss/partials/_wen.scss */
+  /* line 467, ../scss/partials/_wen.scss */
   .tab {
     display: block;
   }
 
-  /* line 469, ../scss/partials/_wen.scss */
+  /* line 468, ../scss/partials/_wen.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 470, ../scss/partials/_wen.scss */
+  /* line 469, ../scss/partials/_wen.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 471, ../scss/partials/_wen.scss */
+  /* line 470, ../scss/partials/_wen.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 478, ../scss/partials/_wen.scss */
+/* line 477, ../scss/partials/_wen.scss */
 .grid {
   width: 100%;
 }
 
-/* line 480, ../scss/partials/_wen.scss */
+/* line 479, ../scss/partials/_wen.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 486, ../scss/partials/_wen.scss */
+/* line 485, ../scss/partials/_wen.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
@@ -2720,7 +2718,7 @@ footer {
   transition: all 0.2s ease;
 }
 
-/* line 497, ../scss/partials/_wen.scss */
+/* line 496, ../scss/partials/_wen.scss */
 .grid ul li img {
   width: 100%;
   float: left;
@@ -2778,7 +2776,7 @@ footer {
     background: #ad0c6b;
   }
 }
-/* line 525, ../scss/partials/_wen.scss */
+/* line 524, ../scss/partials/_wen.scss */
 #permanent {
   display: inline-block;
   font-size: 24px;
@@ -2788,7 +2786,7 @@ footer {
   max-width: 240px;
 }
 
-/* line 536, ../scss/partials/_wen.scss */
+/* line 535, ../scss/partials/_wen.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -2809,51 +2807,43 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 553, ../scss/partials/_wen.scss */
+/* line 552, ../scss/partials/_wen.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }
 
-@keyframes flashingtext {
-  0% {
-    color: white;
-  }
-  100% {
-    color: #ffba2c;
-  }
-}
-@-webkit-keyframes flashingtext {
-  0% {
-    color: white;
-  }
-  100% {
-    color: #ffba2c;
-  }
-}
-/* line 576, ../scss/partials/_wen.scss */
+/* line 569, ../scss/partials/_wen.scss */
 .player-select-container h2, .player-select-container p {
   font-family: 'VT323';
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-/* line 583, ../scss/partials/_wen.scss */
+/* line 576, ../scss/partials/_wen.scss */
 .player-select-container h2 {
   font-size: 2.5em;
-  -webkit-animation: flashingtext 0.08s infinite linear;
-  animation: flashingtext 0.08s infinite linear;
 }
-/* line 589, ../scss/partials/_wen.scss */
+/* line 582, ../scss/partials/_wen.scss */
 .player-select-container p {
   color: #ffba2c;
 }
 
-/* line 602, ../scss/partials/_wen.scss */
+/* line 588, ../scss/partials/_wen.scss */
+.players-title {
+  color: white;
+}
+
+/* line 590, ../scss/partials/_wen.scss */
+.players-title.blinking {
+  color: #ffba2c;
+}
+
+/* line 595, ../scss/partials/_wen.scss */
 .player1, .player2 {
   width: 320px;
   height: 400px;
 }
-/* line 612, ../scss/partials/_wen.scss */
+/* line 605, ../scss/partials/_wen.scss */
 .player1 div, .player2 div {
   cursor: pointer;
   width: 255px;
@@ -2862,48 +2852,48 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 626, ../scss/partials/_wen.scss */
+/* line 619, ../scss/partials/_wen.scss */
 .player1 p, .player2 p {
   text-align: center;
   font-size: 2.5em;
 }
 
-/* line 637, ../scss/partials/_wen.scss */
+/* line 630, ../scss/partials/_wen.scss */
 .player1 div {
   margin: auto;
   background: url(Ben-BnW.png) center center no-repeat;
 }
-/* line 641, ../scss/partials/_wen.scss */
+/* line 634, ../scss/partials/_wen.scss */
 .player1 div:hover {
   background: url(Ben-Color.png) center center no-repeat;
 }
 
-/* line 648, ../scss/partials/_wen.scss */
+/* line 641, ../scss/partials/_wen.scss */
 .player2 div {
   margin: auto;
   background: url(Tim-BnW.png) center center no-repeat;
 }
-/* line 652, ../scss/partials/_wen.scss */
+/* line 645, ../scss/partials/_wen.scss */
 .player2 div:hover {
   background: url(Tim-Color.png) center center no-repeat;
 }
 
-/* line 658, ../scss/partials/_wen.scss */
+/* line 651, ../scss/partials/_wen.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 12px;
   position: relative;
 }
-/* line 664, ../scss/partials/_wen.scss */
+/* line 657, ../scss/partials/_wen.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 670, ../scss/partials/_wen.scss */
-.mixedContent .prev-no-style,
-.mixedContent .next-no-style {
+/* line 663, ../scss/partials/_wen.scss */
+.mixedContent .prev,
+.mixedContent .next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2917,12 +2907,12 @@ footer {
   outline: none;
   z-index: 1;
 }
-/* line 685, ../scss/partials/_wen.scss */
-.mixedContent .prev-no-style {
+/* line 678, ../scss/partials/_wen.scss */
+.mixedContent .prev {
   left: 2px;
 }
-/* line 689, ../scss/partials/_wen.scss */
-.mixedContent .next-no-style {
+/* line 682, ../scss/partials/_wen.scss */
+.mixedContent .next {
   right: 2px;
 }
 

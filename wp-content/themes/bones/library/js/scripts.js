@@ -101,69 +101,62 @@ function loadGravatars() {
 	}
 } // end function
 
-// freewall
-// $(function(){
-
-
-// var wall = new freewall("#freewall-container");
-// wall.fitWidth();
-
-// });
 
 /*
  * Put all your regular jQuery in here.
 */
 
-
-
 jQuery(document).ready(function($) {
-
-  // var visNumber = 2;
-
-  // $(window).resize(function() {
-
-  //     var windowWidth = $(this).width();
-
-  //     if (windowWidth < 768) {
-  //       visNumber = 1;
-
-  //     } else {
-  //       visNumber = 2;
-  //     }
-
-  //       $(".carousel-no-style").jCarouselLite({
-  //       btnNext: ".next-no-style",
-  //       btnPrev: ".prev-no-style",
-  //       visible: visNumber
-  //       });
-
-  //     // alert(visNumber);
-
-  // });
-
-  $(".carousel-no-style").jCarouselLite({
-    btnNext: ".next-no-style",
-    btnPrev: ".prev-no-style",
-    visible: 2,
-    //autoCSS: false,
-    autoWidth: true,
-  responsive: true
-  });
 
   //Blinking text
   var el = $('.players-title');
-setInterval(function() {
-   el.toggleClass('blinking');
-}, 80);
+  setInterval(function() {
+     el.toggleClass('blinking');
+  }, 80);
 
-//   $('.carousel-no-style').on('refreshCarousel', function() {
-//   // do something
-//           $(".carousel-no-style").jCarouselLite({
-//         btnNext: ".next-no-style",
-//         btnPrev: ".prev-no-style",
-//         visible: 1
-//         });
-// });
+  // init carousel
+  $(function() {
+  if($(window).width() < 700){
+          
+          $('.carousel-no-style').jCarouselLite({
+              visible: 1,
+              btnNext: ".next",
+              btnPrev: ".prev"
+          });
+      }
+  else {
+          
+          $('.carousel-no-style').jCarouselLite({
+              visible: 2,
+              btnNext: ".next",
+              btnPrev: ".prev"
+          });
+  }
+  });
+
+  // When window resize
+  $(window).trigger('resize');
+
+  $(window).resize(function(){
+      if($(window).width() < 700){
+          $('.next, .prev').unbind('click');
+          $('.carousel-no-style').jCarouselLite({
+              visible: 1,
+              btnNext: ".next",
+              btnPrev: ".prev"
+          });
+      }
+      else {
+          $('.next, .prev').unbind('click');
+          $('.carousel-no-style').jCarouselLite({
+              visible: 2,
+              btnNext: ".next",
+              btnPrev: ".prev"
+          });
+      }
+  });
+
+
 
 
 
@@ -197,23 +190,6 @@ setInterval(function() {
 
 
 
-  // init carousel2
-  // $(function() {
-
-// });
-
-  // init grid
-  // var minWidth = 300;
-  //     $(window).resize($.debounce(300,function(){
-  //       var w = $(window).width();
-  //       var numberOfItems = parseInt(w/minWidth);
-  //       var itemWidthinPercentage = 100/numberOfItems;
-  //       $(".grid ul li").css({width:itemWidthinPercentage+"%"});
-  //     }));
-  //     $(window).trigger("resize"); 
-
-
-
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
@@ -222,12 +198,8 @@ setInterval(function() {
 
 
   // highlight selected menu item
-
   var url = window.location;
-
   $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
-
-  // $('a[href="'+url+'"]').parent('.sidebar li').children().addClass('sidebar-selected');
 
 
 }); /* end of as page load scripts */

@@ -23,10 +23,10 @@
 								<!-- SELECT PLAYERS -->
 								<div class="mixedContent player-select-container">
 									<h2 class="players-title">Player Select</h2>
-								<button class="prev-no-style">&#10094;</button>
-								<button class="next-no-style">&#10095;</button>
+								<button class="prev">&#10094;</button>
+								<button class="next">&#10095;</button>
 
-								<div class="carousel-no-style" style="margin: auto; overflow: hidden;">
+								<div class="carousel-no-style" style="margin: auto;">
 								    <ul>
 								        <li class="player1">
 								        	
