@@ -28,41 +28,41 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
 
-								<div class="content-container">
+									<div class="content-container">
 
-								<img id="permanent" src="<?php echo $profile_url; ?>" alt="<?php echo "friendshop"; ?>" />
+										<img id="permanent" src="<?php echo $profile_url; ?>" alt="<?php echo "friendshop"; ?>" />
 
-								<h1><?php echo $title ?></h1>
-															
-								<p><?php echo $content ?></p>
-								
+										<h1><?php echo $title ?></h1>
+																
+										<p><?php echo $content ?></p>
+									
 
-								</div>
+									</div>
 
-									<?php
-										// the content (pretty self explanatory huh)
-										// the_content();
-									// layerslider(1);
+										<?php
+											// the content (pretty self explanatory huh)
+											// the_content();
+										// layerslider(1);
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
+											/*
+											 * Link Pages is used in case you have posts that are set to break into
+											 * multiple pages. You can remove this if you don't plan on doing that.
+											 *
+											 * Also, breaking content up into multiple pages is a horrible experience,
+											 * so don't do it. While there are SOME edge cases where this is useful, it's
+											 * mostly used for people to get more ad views. It's up to you but if you want
+											 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
+											 *
+											 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+											 *
+											*/
+											wp_link_pages( array(
+												'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
+												'after'       => '</div>',
+												'link_before' => '<span>',
+												'link_after'  => '</span>',
+											) );
+										?>
 								</section>
 
 

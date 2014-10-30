@@ -1,3 +1,4 @@
+// VERLAG BOLD
 @font-face {
   font-family: 'VerlagBold';
   src: url("../fonts/Verlag-Bold.eot");
@@ -6,6 +7,7 @@
   font-style: normal;
 }
 
+// VERLAG BOOK
 @font-face {
   font-family: 'VerlagBook';
   src: url("../fonts/Verlag-Book.eot");
@@ -14,11 +16,17 @@
   font-style: normal;
 }
 
-// ORIGINAL GIF
-body {
-	background-color: black;
+// ORIGINAL GIF BACKGROUND
+body { background-color: black; }
+
+// GIF ON ALL MENNU PAGE BODY TAG BACKGROUND
+.page-id-4,
+.page-id-13,
+.page-id-11,
+.page-id-8,
+.page-id-6 {
     background: url(../../../../../img/bg.jpg) center top;
-	background-size: cover;
+    background-size: cover;
 }
 
 .logo-header {

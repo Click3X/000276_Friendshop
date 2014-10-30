@@ -17,80 +17,65 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<section class="entry-content cf" itemprop="articleBody">
-								<?php //layerslider(1) ?>
+									<?php //layerslider(1) ?>
 
-
-								<!-- SELECT PLAYERS -->
-								<div class="mixedContent player-select-container">
-									<h2 class="players-title">Player Select</h2>
-								<button class="prev-no-style">&#10094;</button>
-								<button class="next-no-style">&#10095;</button>
-
-								<div class="carousel-no-style" style="margin: auto; overflow: hidden;">
-								    <ul>
-								        <li class="player1">
-								        	
-								        	<div></div>
-								        	<p>Ben</p>
-
-								        </li>
-								        <li class="player2">
-								        	<div></div>
-								        	<p>Tim</p>
-								        </li>
-								      
-
-								    </ul>
-								</div>
-								</div>
-
-
+									<!-- SELECT PLAYERS -->
+									<div class="mixedContent player-select-container">
+										<h2 class="players-title">Player Select</h2>
+										<button class="prev-no-style">&#10094;</button>
+										<button class="next-no-style">&#10095;</button>
+										<div class="carousel-no-style" style="margin: auto; overflow: hidden;">
+										    <ul>
+										        <li class="player1">
+										        	<div></div>
+										        	<p>Ben</p>
+										        </li>
+										        <li class="player2">
+										        	<div></div>
+										        	<p>Tim</p>
+										        </li>
+										    </ul>
+										</div>
+									</div>
 
 									<div id="tab-container" class="tab-container">
+										
+										<ul id="work-ul" class='etabs work-tabs cf'>
+											<?php if(get_field('tabs')): 
+												while(has_sub_field('tabs')): 
 
-										<!-- <div class="work-tabs-container cf"> -->
-											<ul id="work-ul" class='etabs work-tabs cf'>
-												<?php if(get_field('tabs')): 
+													$tab1 = get_sub_field('tab1'); 
+													$tab2 = get_sub_field('tab2'); 
+													$tab3 = get_sub_field('tab3'); 
+													?>
 
-													while(has_sub_field('tabs')): 
+												<?php if (is_page(4)) { ?>									    
+													<li class='tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+													<li class='tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+													<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
 
-														$tab1 = get_sub_field('tab1'); 
-														$tab2 = get_sub_field('tab2'); 
-														$tab3 = get_sub_field('tab3'); 
-														?>
-
-													<?php if (is_page(4)) { ?>									    
-														<li class='tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
-														<li class='tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
-														<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
-
-													<?php } elseif (is_page(6)) { ?>
-														<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
-														<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
-														<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
-													<?php } ?>
-													<?php endwhile; ?>  
-												<?php endif; ?>
-											</ul>
+												<?php } elseif (is_page(6)) { ?>
+													<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+													<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
+													<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+												<?php } 
+												endwhile;
+											endif; 
+											?>
+										</ul>
 										<!-- </div> -->
 
 										<!-- TAB 1 -->
 										<div id="tab1">
 											<section>
 				 								<ul class="video-list">
-
 												<?php if(get_field('video_list1')): 
-
 												while(has_sub_field('video_list1')): 
-
 													$hover_text1 = get_sub_field('hover-text1'); 
 													$hover_text2 = get_sub_field('hover-text2'); 
-
 													$poster = get_sub_field('poster');
 													if( !empty($poster) ): 
-
 														$poster_url = $poster['url'];
-
 													endif; ?>
 												  
 												    <li class="video-thumb">
@@ -103,48 +88,37 @@
 												    	</div>
 												    </li>	
 												    	  
-
 												    <?php endwhile; ?>  
 												  </ul> 
-
 												<?php endif; ?>
 											</section>
-										  </div>
+										</div>
 
 										<!-- TAB 2 -->
 										<div id="tab2">
 											<section>
-			 								
 			 									<ul class="video-list">
 												<?php if(get_field('video_list2')): 
-
 													while(has_sub_field('video_list2')): 
-
 														$hover_text1 = get_sub_field('hover-text1'); 
 														$hover_text2 = get_sub_field('hover-text2'); 
-
 														$poster = get_sub_field('poster');
 														if( !empty($poster) ): 
-
 															$poster_url = $poster['url'];
-
 														endif; ?>
-												    <li class="video-thumb">
-												    	<div class="poster-container">
-												    		<img src="<?php echo $poster_url ?>" alt="Video">
-												    		<div class="poster-hover">
-												    			<h3><?php echo $hover_text1 ?></h3>
-												    			<h4><?php echo $hover_text2 ?></h4>
-												    		</div>
-												    	</div>
-												    </li>	
-
-											    <?php endwhile; ?>  
-											  </ul> 
-
-											<?php endif; ?>
+													    <li class="video-thumb">
+													    	<div class="poster-container">
+													    		<img src="<?php echo $poster_url ?>" alt="Video">
+													    		<div class="poster-hover">
+													    			<h3><?php echo $hover_text1 ?></h3>
+													    			<h4><?php echo $hover_text2 ?></h4>
+													    		</div>
+													    	</div>
+													    </li>	
+											    	<?php endwhile; ?>  
+											  	</ul> 
+												<?php endif; ?>
 											</section>
-
 										</div>
 
 										<!-- TAB 3 -->
@@ -152,19 +126,13 @@
 										  	<section>
 				 								<ul class="video-list">
 												<?php if(get_field('video_list3')): 
-
 												while(has_sub_field('video_list3')): 
-
 													$hover_text1 = get_sub_field('hover-text1'); 
 													$hover_text2 = get_sub_field('hover-text2'); 
-
 													$poster = get_sub_field('poster');
 													if( !empty($poster) ): 
-
 														$poster_url = $poster['url'];
-
 													endif; ?>
-												  
 												    <li class="video-thumb">
 												    	<div class="poster-container">
 												    		<img src="<?php echo $poster_url ?>" alt="Video">
@@ -174,56 +142,40 @@
 												    		</div>
 												    	</div>
 												    </li>	
-												    	  
 												    <?php endwhile; ?>  
-												  </ul> 
-
+												</ul> 
 												<?php endif; ?>
 											</section>
-
-										  </div>
-
 										</div>
+							
+									</div> <!-- END TAB CONTAINER -->
 
-									<?php
-										// the content (pretty self explanatory huh)
-										// the_content();
-										// layerslider(1);
+								<?php
+									// the content (pretty self explanatory huh)
+									// the_content();
+									// layerslider(1);
 
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
+									wp_link_pages( array(
+										'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
+										'after'       => '</div>',
+										'link_before' => '<span>',
+										'link_after'  => '</span>',
+									) );
+								?>
 								</section>
 
 							</article>
 
-							<?php endwhile; else : ?>
+							<?php endwhile; ?>
 
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
+						<?php endif; ?>
 
-							<?php endif; ?>
+					</div>
 
-						</div>
-
-						<?php get_sidebar(); ?>
+					<?php get_sidebar(); ?>
 
 				</div>
 
 			</div>
-
 
 <?php get_footer(); ?>
