@@ -602,12 +602,34 @@ footer {
 .players-title.blinking { color: #ffba2c; }
 
 
-
+.float-top, .float-bottom {
+    visibility: hidden;
+}
 
 .player1, .player2 {
-
+    cursor: pointer;
     width:320px; 
-    height:400px;
+    height:440px;
+
+    &:hover {
+        
+        .float-top {
+            visibility: visible;
+            position: relative;
+            margin: auto !important;
+            -webkit-animation: floatTop 0.3s infinite  normal ease-out;
+            animation: floatTop 0.3s infinite  normal ease-out;
+        }
+
+        .float-bottom {
+            visibility: visible;
+            position: relative;
+            margin: auto !important;
+            -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+            animation: floatBottom 0.3s infinite  normal ease-out;
+        }
+
+    }
 
     // @media (max-width: 700px) {
     //     width: 220px; 
@@ -615,7 +637,7 @@ footer {
     // }
 
     div {
-        cursor: pointer;
+        
         width: 255px; 
         height: 334px; 
         background-size: 255px 334px;
@@ -631,32 +653,37 @@ footer {
     p {
         text-align: center;       
         font-size: 2.5em;
+        line-height: 1em;
+        margin: 0;
         
     }
     
 }
 
 .player1 {
-
-
     div {
         margin: auto; 
         background: url(Ben-BnW.png) center center no-repeat; 
+    }
 
-        &:hover {
-            background: url(Ben-Color.png) center center no-repeat;
+    &:hover {
+        div {
+            background: url(Ben-Color-New.png) center center no-repeat;
         }
     }
 }
+
 
 .player2 {
     div {
         margin: auto; 
         background: url(Tim-BnW.png) center center no-repeat; 
+    }
 
-        &:hover {
-        background: url(Tim-Color.png) center center no-repeat;
-        }
+    &:hover {
+        div {
+            background: url(Tim-Color-New.png) center center no-repeat;
+        }    
     }
 }
 
@@ -697,3 +724,50 @@ footer {
 
 }
 
+// white moving frames for players
+@-webkit-keyframes floatTop {
+    0% {
+        top:25px;
+        width:250px;
+    }
+    100% {
+        top: 5px;
+        width: 265px;
+    }
+}
+@keyframes floatTop {
+    0% {
+        top:25px;
+        width: 250px;
+    }
+    100% {
+        top: 5px;
+        width: 265px;
+    }
+}
+
+// .float-bottom {
+//     position: relative;
+//     -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+//     animation: floatBottom 0.3s infinite  normal ease-out;
+// }
+@-webkit-keyframes floatBottom {
+    0% {
+        bottom:25px;
+        width:250px;
+    }
+    100% {
+        bottom: 5px;
+        width: 265px;
+    }
+}
+@keyframes floatBottom {
+    0% {
+        bottom:25px;
+        width: 250px;
+    }
+    100% {
+        bottom: 5px;
+        width: 265px;
+    }
+}

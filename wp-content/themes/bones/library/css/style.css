@@ -2848,60 +2848,83 @@ footer {
   color: #ffba2c;
 }
 
-/* line 607, ../scss/partials/_wen.scss */
-.player1, .player2 {
-  width: 320px;
-  height: 400px;
+/* line 605, ../scss/partials/_wen.scss */
+.float-top, .float-bottom {
+  visibility: hidden;
 }
-/* line 617, ../scss/partials/_wen.scss */
-.player1 div, .player2 div {
+
+/* line 609, ../scss/partials/_wen.scss */
+.player1, .player2 {
   cursor: pointer;
+  width: 320px;
+  height: 440px;
+}
+/* line 616, ../scss/partials/_wen.scss */
+.player1:hover .float-top, .player2:hover .float-top {
+  visibility: visible;
+  position: relative;
+  margin: auto !important;
+  -webkit-animation: floatTop 0.3s infinite  normal ease-out;
+  animation: floatTop 0.3s infinite  normal ease-out;
+}
+/* line 624, ../scss/partials/_wen.scss */
+.player1:hover .float-bottom, .player2:hover .float-bottom {
+  visibility: visible;
+  position: relative;
+  margin: auto !important;
+  -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+  animation: floatBottom 0.3s infinite  normal ease-out;
+}
+/* line 639, ../scss/partials/_wen.scss */
+.player1 div, .player2 div {
   width: 255px;
   height: 334px;
   background-size: 255px 334px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 631, ../scss/partials/_wen.scss */
+/* line 653, ../scss/partials/_wen.scss */
 .player1 p, .player2 p {
   text-align: center;
   font-size: 2.5em;
+  line-height: 1em;
+  margin: 0;
 }
 
-/* line 642, ../scss/partials/_wen.scss */
+/* line 664, ../scss/partials/_wen.scss */
 .player1 div {
   margin: auto;
   background: url(Ben-BnW.png) center center no-repeat;
 }
-/* line 646, ../scss/partials/_wen.scss */
-.player1 div:hover {
-  background: url(Ben-Color.png) center center no-repeat;
+/* line 670, ../scss/partials/_wen.scss */
+.player1:hover div {
+  background: url(Ben-Color-New.png) center center no-repeat;
 }
 
-/* line 653, ../scss/partials/_wen.scss */
+/* line 678, ../scss/partials/_wen.scss */
 .player2 div {
   margin: auto;
   background: url(Tim-BnW.png) center center no-repeat;
 }
-/* line 657, ../scss/partials/_wen.scss */
-.player2 div:hover {
-  background: url(Tim-Color.png) center center no-repeat;
+/* line 684, ../scss/partials/_wen.scss */
+.player2:hover div {
+  background: url(Tim-Color-New.png) center center no-repeat;
 }
 
-/* line 663, ../scss/partials/_wen.scss */
+/* line 690, ../scss/partials/_wen.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 12px;
   position: relative;
 }
-/* line 669, ../scss/partials/_wen.scss */
+/* line 696, ../scss/partials/_wen.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 675, ../scss/partials/_wen.scss */
+/* line 702, ../scss/partials/_wen.scss */
 .mixedContent .prev,
 .mixedContent .next {
   position: absolute;
@@ -2917,15 +2940,55 @@ footer {
   outline: none;
   z-index: 1;
 }
-/* line 690, ../scss/partials/_wen.scss */
+/* line 717, ../scss/partials/_wen.scss */
 .mixedContent .prev {
   left: 2px;
 }
-/* line 694, ../scss/partials/_wen.scss */
+/* line 721, ../scss/partials/_wen.scss */
 .mixedContent .next {
   right: 2px;
 }
 
+@-webkit-keyframes floatTop {
+  0% {
+    top: 25px;
+    width: 250px;
+  }
+  100% {
+    top: 5px;
+    width: 265px;
+  }
+}
+@keyframes floatTop {
+  0% {
+    top: 25px;
+    width: 250px;
+  }
+  100% {
+    top: 5px;
+    width: 265px;
+  }
+}
+@-webkit-keyframes floatBottom {
+  0% {
+    bottom: 25px;
+    width: 250px;
+  }
+  100% {
+    bottom: 5px;
+    width: 265px;
+  }
+}
+@keyframes floatBottom {
+  0% {
+    bottom: 25px;
+    width: 250px;
+  }
+  100% {
+    bottom: 5px;
+    width: 265px;
+  }
+}
 /* line 1, ../scss/partials/_carousel-editors.scss */
 #slider-stage {
   width: 248px;

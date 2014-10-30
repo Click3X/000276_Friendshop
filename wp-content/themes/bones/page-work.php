@@ -29,13 +29,19 @@
 
 									<div class="carousel-no-style" style="margin: auto;">
 									    <ul>
-									        <li class="player1">									        	
+									        <li class="player1">
+									        	<img class="float-top" src="selector-top.png">									        	
 									        	<div></div>
+									        	<img class="float-bottom" src="selector-bottom.png">
 									        	<p>Ben</p>
+									        		
 									        </li>
 									        <li class="player2">
+									        	<img class="float-top" src="selector-top.png">	
 									        	<div></div>
+									        	<img class="float-bottom" src="selector-bottom.png">	
 									        	<p>Tim</p>
+									        	
 									        </li>
 									    </ul>
 									</div>
