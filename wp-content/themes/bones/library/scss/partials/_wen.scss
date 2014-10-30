@@ -567,7 +567,15 @@ footer {
         font-size: 2.3em;
     }
 
+    p {
+        color: #ffba2c;
+    }
+
 }
+
+.players-title { color: white; }
+
+.players-title.blinking { color: #ffba2c; }
 
 .player1, .player2 {
 

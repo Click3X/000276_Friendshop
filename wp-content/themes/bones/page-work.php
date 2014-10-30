@@ -22,7 +22,7 @@
 
 								<!-- SELECT PLAYERS -->
 								<div class="mixedContent player-select-container">
-									<h2>Player Select</h2>
+									<h2 class="players-title">Player Select</h2>
 								<button class="prev-no-style">&#10094;</button>
 								<button class="next-no-style">&#10095;</button>
 

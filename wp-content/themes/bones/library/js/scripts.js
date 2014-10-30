@@ -150,6 +150,12 @@ jQuery(document).ready(function($) {
   responsive: true
   });
 
+  //Blinking text
+  var el = $('.players-title');
+setInterval(function() {
+   el.toggleClass('blinking');
+}, 80);
+
 //   $('.carousel-no-style').on('refreshCarousel', function() {
 //   // do something
 //           $(".carousel-no-style").jCarouselLite({

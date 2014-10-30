@@ -1639,8 +1639,7 @@ POSTS & CONTENT STYLES
 }
 
 /* end .hentry */
-
-/* line 191, ../scss/breakpoints/_base.scss */
+/* line 200, ../scss/breakpoints/_base.scss */
 .single-title,
 .page-title,
 .entry-title {
@@ -1723,7 +1722,7 @@ POSTS & CONTENT STYLES
   height: auto;
   display: block;
 }
-/* line 279, ../scss/breakpoints/_base.scss */
+/* line 275, ../scss/breakpoints/_base.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -1767,8 +1766,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-
-/* line 310, ../scss/breakpoints/_base.scss */
+/* line 319, ../scss/breakpoints/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0;
@@ -2825,13 +2823,27 @@ footer {
 .player-select-container h2 {
   font-size: 2.3em;
 }
+/* line 570, ../scss/partials/_wen.scss */
+.player-select-container p {
+  color: #ffba2c;
+}
 
-/* line 572, ../scss/partials/_wen.scss */
+/* line 576, ../scss/partials/_wen.scss */
+.players-title {
+  color: white;
+}
+
+/* line 578, ../scss/partials/_wen.scss */
+.players-title.blinking {
+  color: #ffba2c;
+}
+
+/* line 580, ../scss/partials/_wen.scss */
 .player1, .player2 {
   width: 320px;
   height: 400px;
 }
-/* line 582, ../scss/partials/_wen.scss */
+/* line 590, ../scss/partials/_wen.scss */
 .player1 div, .player2 div {
   cursor: pointer;
   width: 255px;
@@ -2840,47 +2852,46 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 596, ../scss/partials/_wen.scss */
+/* line 604, ../scss/partials/_wen.scss */
 .player1 p, .player2 p {
   text-align: center;
   font-size: 2.5em;
 }
 
-/* line 607, ../scss/partials/_wen.scss */
+/* line 615, ../scss/partials/_wen.scss */
 .player1 div {
   margin: auto;
   background: url(Ben-BnW.png) center center no-repeat;
 }
-/* line 611, ../scss/partials/_wen.scss */
+/* line 619, ../scss/partials/_wen.scss */
 .player1 div:hover {
   background: url(Ben-Color.png) center center no-repeat;
 }
 
-/* line 618, ../scss/partials/_wen.scss */
+/* line 626, ../scss/partials/_wen.scss */
 .player2 div {
   margin: auto;
   background: url(Tim-BnW.png) center center no-repeat;
 }
-/* line 622, ../scss/partials/_wen.scss */
+/* line 630, ../scss/partials/_wen.scss */
 .player2 div:hover {
   background: url(Tim-Color.png) center center no-repeat;
 }
 
-/* line 628, ../scss/partials/_wen.scss */
+/* line 636, ../scss/partials/_wen.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 12px;
   position: relative;
 }
-/* line 634, ../scss/partials/_wen.scss */
+/* line 642, ../scss/partials/_wen.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-
-/* line 640, ../scss/partials/_wen.scss */
+/* line 648, ../scss/partials/_wen.scss */
 .mixedContent .prev-no-style,
 .mixedContent .next-no-style {
   position: absolute;
@@ -2896,11 +2907,11 @@ footer {
   outline: none;
   z-index: 1;
 }
-/* line 655, ../scss/partials/_wen.scss */
+/* line 663, ../scss/partials/_wen.scss */
 .mixedContent .prev-no-style {
   left: 2px;
 }
-/* line 659, ../scss/partials/_wen.scss */
+/* line 667, ../scss/partials/_wen.scss */
 .mixedContent .next-no-style {
   right: 2px;
 }
@@ -5186,23 +5197,18 @@ body {
 }
 
 @-webkit-keyframes scale {
-  /* line 1314, ../scss/partials/_fractal.scss */
   50% {
     -webkit-transform: scale(0.25);
     transform: scale(0.25);
   }
 }
-
 @keyframes scale {
-  /* line 1321, ../scss/partials/_fractal.scss */
   50% {
     -webkit-transform: scale(0.25);
     transform: scale(0.25);
   }
 }
-
 @-webkit-keyframes rotate {
-  /* line 1327, ../scss/partials/_fractal.scss */
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -5210,9 +5216,7 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-
 @keyframes rotate {
-  /* line 1335, ../scss/partials/_fractal.scss */
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -5220,7 +5224,6 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
