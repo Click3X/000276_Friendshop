@@ -51,7 +51,7 @@
 	<body <?php body_class(); ?>>
 
         <?php 
-            include('php/html5demos/fractal.php');
+          //  include('php/html5demos/fractal.php');
         ?>
 
 		<div id="container">
