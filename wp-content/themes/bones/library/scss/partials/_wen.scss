@@ -553,6 +553,23 @@ footer {
 
 
 // SELECTING PLAYER
+
+@keyframes flashingtext {
+    0%   {color: white;}
+    // 25%  {color: #ffba2c;}
+    // 50%  {color: white;}
+    // 99% {color: white};
+    100% {color: #ffba2c;}
+}
+
+@-webkit-keyframes flashingtext {
+    0%   {color: white;}
+    // 1% {color: #ffba2c;}
+    // 25%  {color: #ffba2c;}
+    100%  {color: #ffba2c;}
+    // 100% {color: #ffba2c;}
+}
+
 .player-select-container {
 
     h2, p {
@@ -560,11 +577,12 @@ footer {
         text-transform: uppercase;
         font-weight: 700;
         text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-        // -webkit-text-stroke: 2px black;
     }
 
     h2 {
-        font-size: 2.3em;
+        font-size: 2.5em;
+        -webkit-animation: flashingtext 0.08s infinite linear;
+        animation: flashingtext 0.08s infinite linear;
     }
 
     p {
@@ -573,9 +591,12 @@ footer {
 
 }
 
-.players-title { color: white; }
+// .players-title { color: white; }
 
-.players-title.blinking { color: #ffba2c; }
+// .players-title.blinking { color: #ffba2c; }
+
+
+
 
 .player1, .player2 {
 
