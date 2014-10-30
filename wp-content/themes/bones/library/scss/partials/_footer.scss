@@ -39,23 +39,6 @@ html, body {
 }
 
 @media(min-width:1040px) {
-    #container { 
-        // margin-bottom: -270px;
-        margin-bottom: -322px;
-    }
-    .footer, #container:after { 
-        // height: 270px; 
-        height: 322px; 
-    }
-}
-
-
-// TEMP CODE TO LIMIT NUMBER OF SOCIAL LINKS
-// DELETE BEFORE PRODUCTIONS!!@!!!!!
-.ftsocial-container {
-    ul {
-        li:last-of-type {
-            display: none;
-        }
-    }
+    #container { margin-bottom: -322px; }
+    .footer, #container:after { height: 322px;  }
 }

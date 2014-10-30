@@ -3165,16 +3165,11 @@ html, body {
     margin-bottom: -322px;
   }
 
-  /* line 46, ../scss/partials/_footer.scss */
+  /* line 43, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 322px;
   }
 }
-/* line 57, ../scss/partials/_footer.scss */
-.ftsocial-container ul li:last-of-type {
-  display: none;
-}
-
 /* line 2, ../scss/partials/_mobile-menu.scss */
 .menu-icon {
   position: relative;
