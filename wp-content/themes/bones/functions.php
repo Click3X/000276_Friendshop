@@ -206,5 +206,19 @@ function bones_fonts() {
 add_action('wp_print_styles', 'bones_fonts');
 
 
+// CHARLES HELPER FUNCTION
+function helper($var) {
+  $type = gettype ( $var );
+  echo '<h2>Var is type: '.$type.'.</h2>';
+
+  if($type == 'array') {
+    echo '<pre>'.print_r($var).'</pre>';  
+  } elseif($type == 'object') {
+    echo '<pre>'.var_dump($var).'</pre>';  
+  }
+  
+}
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

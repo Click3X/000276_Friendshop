@@ -87,8 +87,13 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "partials/mobile-menu";
 // LOGO SVG
 @import "partials/logo-svg";
+// HTML DEMO GENERAL STYLES
+@import "partials/html5demos/html-demo";
 // FRACTAL SVG
-// @import "partials/fractal";
+@import "partials/html5demos/fractal";
+// WAVE CSS
+@import "partials/html5demos/wave";
+
 
 
 /*********************

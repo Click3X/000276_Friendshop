@@ -38,9 +38,9 @@
 									    <li class="thumb"><img src="<?php echo $gif_url ?>" alt="Thumb"></li>  
 
 									    <?php endwhile; ?>  
-									  </ul> 
 
 									<?php endif; ?>
+									</ul> 
 
 								</section>
 

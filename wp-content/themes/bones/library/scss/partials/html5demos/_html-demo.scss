@@ -1,0 +1,26 @@
+// HTML DEMO SCSS
+
+#demo-holder {
+    position: fixed;
+    width:100%;
+    z-index: -1;
+}
+
+.page-template-page-dev-template-php {
+    .content-container {
+        margin:0 auto;
+    }
+    .thumb-list {
+        width: 100%;
+        display: block;
+        max-width: 915px;
+        margin: 0 auto;
+    }
+
+    .thumb {
+        position: static;
+        float: left;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }
+}
