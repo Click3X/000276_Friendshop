@@ -1,0 +1,79 @@
+// ABOUT PAGE
+.content-container {
+    text-align: center;
+    padding: 12px 8px;
+    max-width: 1000px;
+
+    h1 {
+        color: #10a1a4;
+        text-transform: uppercase;
+        font-size:30px;
+        margin-top:14px;
+        margin-bottom:14px;
+    }
+
+    p {
+        color: $white;
+        line-height: 25px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    @media(min-width: 481px) {
+        p {
+            line-height: 1.9em;
+            font-size: 1.25em;
+        }
+
+        h1 {
+            margin-top:.2em;
+            margin-bottom:.2em;
+            font-size: 2.8em;
+        }
+    }
+
+    @media(min-width: 768px) {
+        padding: 25px 20px;
+    }
+}
+
+.page-id-13 {
+    p { text-align: left; }
+}
+
+.about-container { background: rgba(0,0,0,0.5); }
+.inner-about-container { max-width: 1000px; }
+.inner-gallery-container {margin: auto;}
+
+// RAINBOW GLASSES
+ @-webkit-keyframes super-rainbow {
+    0% { background: #bb2030; }
+    20% { background: #e0793c; }
+    40% { background: #e6cf47; }
+    60% { background: #8cc453; }
+    70% { background: #19a486; }
+    80% { background: #0c6faf; }
+    90% { background: #500cad; }
+    100% { background: #ad0c6b; }
+}
+
+@-moz-keyframes super-rainbow {
+    0% { background: #bb2030; }
+    20% { background: #e0793c; }
+    40% { background: #e6cf47; }
+    60% { background: #8cc453; }
+    70% { background: #19a486; }
+    80% { background: #0c6faf; }
+    90% { background: #500cad; }
+    100% { background: #ad0c6b; }
+}
+
+#permanent {
+    display: inline-block;
+    font-size:24px;
+    -webkit-animation: super-rainbow 5s infinite linear;
+    -moz-animation: super-rainbow 5s infinite linear;
+
+    width:38%;
+    max-width: 240px;
+}

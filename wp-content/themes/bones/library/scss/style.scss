@@ -69,9 +69,17 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in base.scss
 @import "breakpoints/base";
 
-// CUSTOM STYLES
-@import "partials/_wen";
 
+// CONTACT
+@import "partials/pages/contact";
+// ABOUT
+@import "partials/pages/about";
+// WORK - EDITORS
+@import "partials/pages/work-editors";
+// FOOTER
+@import "partials/footer";
+// CUSTOM STYLES - GENERAL STYLES
+@import "partials/_wen";
 // carousel
 @import "partials/_carousel-editors";
 
@@ -80,8 +88,6 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // CONTACT PAGE
 // GOOGLE MAPS
 @import "partials/google-map";
-// FOOTER
-@import "partials/footer";
 // MOBILE MENU
 @import "partials/mobile-menu";
 // LOGO SVG

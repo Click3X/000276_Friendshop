@@ -1,0 +1,83 @@
+// CONTACT
+.page-id-11 .hentry { 
+    @media (max-width: 560px) {
+        margin-bottom:0;
+    }
+}
+
+.contact-left, .contact-right {
+    text-align: left;
+
+    h1,h3,h4 { margin:0; }
+    h1 { 
+        font-size: 2.35em; 
+        margin-bottom: .175em;
+    }
+    h3,h4 { color: $white; }
+
+    img {
+        vertical-align: bottom;
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+
+        li { margin: 10px 0; }
+
+        h3 {
+            font-size: 1em;
+            font-weight: 900;
+            line-height: 1.1em;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+
+    p {
+        line-height: 1.4em !important;
+        font-size: 1em !important;
+        margin: 0 0 1.5em;
+
+        @media(min-width: 768px) {
+            margin: 0 0 2.4em;
+        }
+    }
+}
+
+.contact-left { float: left; }
+.contact-right { float: right; }
+.inner-contact-container { 
+    padding-top:0;
+
+    @media(min-width: 768px) {
+        padding-top: 50px; 
+    }
+}
+
+
+@media (max-width: 756px) {
+    .contact-right img { width: 260px; }
+}
+
+@media (max-width: 767px) {
+    .contact-right { display: none; }
+}
+
+@media (max-width: 560px) {
+    .contact-right {
+        float: none;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .contact-left {
+        float: none;
+        text-align: center;
+
+        p { text-align: center; }
+    }
+}
