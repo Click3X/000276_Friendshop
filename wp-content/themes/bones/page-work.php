@@ -165,37 +165,26 @@
 					<?php			
 						//get all categories then display all posts in each term
 
-						$taxonomy = 'video_groups';
-						$term_args=array(
-						  'orderby' => 'name',
-						  'order' => 'ASC'
-						);
-						$terms = get_terms($taxonomy,$term_args);
-						if ($terms) {
-						  foreach( $terms as $term ) {
-						    $args=array(
-						      'post_type' => 'videos',
-						      'post_status' => 'publish',
-						      'posts_per_page' => -1,
-						      'caller_get_posts'=> 1,
-							  'tax_query' => array(
-									array(
-										'taxonomy' => 'video_groups',
-										'terms' => array($term->term_id),
-										'include_children' => true,
-										'operator' => 'IN'
-									)
-								)
-						      );
-						    $my_query = null;
-						    $my_query = new WP_Query($args);
-						    if( $my_query->have_posts() ) { ?>
+
+
+					     $args = array(
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'video_groups',
+								// 'field' => 'id',
+								'terms' => 6
+							)
+						)
+					);
+					$query = new WP_Query( $args ); 
+
+						    if( $query->have_posts() ) { ?>
 						      <div class="category section">
-							    <h2 class="group-title"><?php echo $term->name;?></h2>
+							   <!-- <h2 class="group-title"><?php echo $term->name;?></h2> -->
 							    
 
 							    <?php
-						      while ($my_query->have_posts()) : $my_query->the_post(); 
+						      while ($query->have_posts()) : $query->the_post(); 
 						       // helper($my_query); 
 						      	$title = get_field('title'); 
 						       	// $email = get_field('email'); 
@@ -214,9 +203,8 @@
 						      
 						      </div>
 						 <?php
-						    }
 						  }
-						}
+
 						wp_reset_query();  // Restore global post data stomped by the_post().
 						?>
 				</section>
