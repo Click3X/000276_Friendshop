@@ -2,13 +2,34 @@
 .svg-holder {
   width:100%;
   position:relative;
-/*    max-width:834px; */
 }
 
 svg {
   display: block;
   margin: 0 auto;
   height: auto;
-/*   max-height:184px; */
   width:100%;
+}
+
+.logo-header-svg {
+    width:100%;
+    max-width: 226px;
+    top:0;
+    position: absolute;
+    z-index: 10;
+
+    @media(min-width: 768px) {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+        position: static;
+        top:auto;
+        z-index:0;
+    }
+}
+
+.footer {
+    .svg-holder {
+        max-width: 181px;
+    }
 }

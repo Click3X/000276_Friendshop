@@ -6,7 +6,7 @@
     <svg version="1.1" id="svg-test" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 300 617 200"
     xml:space="preserve">
 
-        <linearGradient id="SVGID_1_" class="gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="100%">
+        <linearGradient id="SVGID_1_" class="gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="130%" y2="100%">
             
             <stop offset="0" style="stop-color: #b71f2d" class="red"></stop>
 

@@ -3465,16 +3465,39 @@ nav a:hover {
 .svg-holder {
   width: 100%;
   position: relative;
-  /*    max-width:834px; */
 }
 
-/* line 8, ../scss/partials/_logo-svg.scss */
+/* line 7, ../scss/partials/_logo-svg.scss */
 svg {
   display: block;
   margin: 0 auto;
   height: auto;
-  /*   max-height:184px; */
   width: 100%;
+}
+
+/* line 14, ../scss/partials/_logo-svg.scss */
+.logo-header-svg {
+  width: 100%;
+  max-width: 226px;
+  top: 0;
+  position: absolute;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  /* line 14, ../scss/partials/_logo-svg.scss */
+  .logo-header-svg {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    position: static;
+    top: auto;
+    z-index: 0;
+  }
+}
+
+/* line 32, ../scss/partials/_logo-svg.scss */
+.footer .svg-holder {
+  max-width: 181px;
 }
 
 /* line 3, ../scss/partials/html5demos/_html-demo.scss */
