@@ -16,11 +16,13 @@ svg {
     max-width: 226px;
     top:0;
     position: absolute;
-    z-index: 10;
+    z-index: 4;
+    max-height: 68px;
 
     @media(min-width: 768px) {
         width: 100%;
         max-width: 430px;
+        max-height: 139px;
         margin: 0 auto;
         position: static;
         top:auto;

@@ -3481,13 +3481,15 @@ svg {
   max-width: 226px;
   top: 0;
   position: absolute;
-  z-index: 10;
+  z-index: 4;
+  max-height: 68px;
 }
 @media (min-width: 768px) {
   /* line 14, ../scss/partials/_logo-svg.scss */
   .logo-header-svg {
     width: 100%;
     max-width: 430px;
+    max-height: 139px;
     margin: 0 auto;
     position: static;
     top: auto;
@@ -3495,23 +3497,23 @@ svg {
   }
 }
 
-/* line 32, ../scss/partials/_logo-svg.scss */
+/* line 34, ../scss/partials/_logo-svg.scss */
 .footer .svg-holder {
   max-width: 181px;
 }
 
-/* line 41, ../scss/partials/_logo-svg.scss */
+/* line 43, ../scss/partials/_logo-svg.scss */
 .svg-holder,
 .logo-header-svg {
   display: none;
 }
 
-/* line 47, ../scss/partials/_logo-svg.scss */
+/* line 49, ../scss/partials/_logo-svg.scss */
 .svg .logo-png,
 .svg .logo-header {
   display: none;
 }
-/* line 52, ../scss/partials/_logo-svg.scss */
+/* line 54, ../scss/partials/_logo-svg.scss */
 .svg .svg-holder,
 .svg .logo-header-svg {
   display: block;
