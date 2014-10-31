@@ -17,7 +17,6 @@ GENERAL STYLES
 
 html, body {
 	width:100%;
-	// overflow-y: scroll;
 	overflow-y: auto;
 	overflow-x: hidden; 
 	-webkit-overflow-scrolling: touch;
@@ -33,11 +32,6 @@ body {
 	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	position: relative;
-
-	// width:100%;
-	// overflow-y: scroll;
-	// overflow-x: hidden; 
-	// -webkit-overflow-scrolling: touch;
 }
 
 /*********************
@@ -76,8 +70,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	// font-size:2.8em;
-	// margin: .4em 0 .2em;
 	font-weight: 700;
 	line-height: 1em;
 	font-family: 'VerlagBold';
@@ -103,9 +95,7 @@ h2, .h2 {
 	}
 }
 
-h3, .h3 { 
-	font-size: 1.125em; 
-}
+h3, .h3 { font-size: 1.125em; }
 
 h4, .h4 {
 	font-size: 1.1em;
@@ -153,6 +143,10 @@ and more scalable.
 			color: #999b9b;
 			text-decoration: none;
 			padding: 0.75em;
+
+			&:active {
+				color:red;
+			}
 		}
 
 		ul.sub-menu,
