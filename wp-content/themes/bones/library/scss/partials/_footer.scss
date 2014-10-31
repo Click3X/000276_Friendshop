@@ -16,8 +16,12 @@ html, body {
 }
 
 .social {
+    margin-right: 8px;
     float: left;
-    margin-right: 20px;
+
+    @media(min-width: 481px) {
+        margin-right:4px;
+    }
 }
 
 .ftlogo-container {
@@ -74,18 +78,73 @@ html, body {
 }
 
 .ftsocial-container ul { margin:0; }
+// .Tumblr { background: url(../../../../../img/Tumblr.jpg) center center no-repeat; }
+// .Facebook { background-image: url(../../../../../img/Facebook.jpg); }
+// .Instagram { background-image: url(../../../../../img/Instagram.jpg); }
+// .Map { background-image: url(../../../../../img/Map.jpg); }
+// .Mail { background-image: url(../../../../../img/E-mail.jpg); }
 
 .social a {
-    width: 80px;
-    height:80px;
-    display: inline-block;
+    display: block;
+    width: 48px;
+    height: 50px;
+
+    @media(min-width: 481px) {
+        width: 96px;
+        height: 99px;
+    }
 }
 
-.Tumblr { background: url(../../../../../img/Tumblr.jpg) center center no-repeat; }
-.Facebook { background-image: url(../../../../../img/Facebook.jpg); }
-.Instagram { background-image: url(../../../../../img/Instagram.jpg); }
-.Map { background-image: url(../../../../../img/Map.jpg); }
-.Mail { background-image: url(../../../../../img/E-mail.jpg); }
+// GRACEFUL DEGRADATION with PNGs
+.Tumblr,
+.Facebook,
+.Instagram,
+.Map,
+.Mail {
+    background-image: url(../../../../../img/social-new.png);
+}
+
+// PROGRESSIVE ENHANCEMENT with SVGs
+.svg {
+    .Tumblr,
+    .Facebook,
+    .Instagram,
+    .Map,
+    .Mail {
+        background-image: url(../../../../../img/social-new.svg);
+    }
+}
+
+.Tumblr {
+    background-size:780%;
+    background-position-x: 100.4%; 
+    &:hover { background-position-y: 103%; }
+    @media(min-width: 481px) { 
+        background-size: auto; 
+        &:hover { background-position-y: 102%; }
+    }
+}
+
+.Map { 
+    background-size:780%;
+    background-position-x: 28.4%;
+    &:hover { background-position-y: 103%; }
+    @media(min-width: 481px) { 
+        background-size: auto; 
+        &:hover { background-position-y: 102%; }
+    }
+}
+
+.Mail { 
+    background-size:780%;
+    background-position-x: 14.4%;
+    &:hover { background-position-y: 103%; }
+    @media(min-width: 481px) { 
+        background-size: auto; 
+        &:hover { background-position-y: 102%; }
+    }
+}
+
 
 .footer { position: static; }
 
@@ -115,11 +174,11 @@ footer {
 }
 
 @media (max-width: 555px) {
-    .social a {
-        width: 55px;
-        height: 55px;
-        background-size: 55px 55px;
-    }
+    // .social a {
+    //     width: 55px;
+    //     height: 55px;
+    //     background-size: 55px 55px;
+    // }
 
     .ftaddress-container { margin-right: 0px; }
 
@@ -130,10 +189,6 @@ footer {
     @media(min-width:481px) {
         padding: 80px 2px;
     }
-}
-
-@media (max-width: 419px) { 
-    .social { margin-right: 10px; } 
 }
 
 .footer, #container:after { height: 370px; }

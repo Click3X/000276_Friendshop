@@ -2806,17 +2806,23 @@ html, body {
 
 /* line 18, ../scss/partials/_footer.scss */
 .social {
+  margin-right: 8px;
   float: left;
-  margin-right: 20px;
+}
+@media (min-width: 481px) {
+  /* line 18, ../scss/partials/_footer.scss */
+  .social {
+    margin-right: 4px;
+  }
 }
 
-/* line 23, ../scss/partials/_footer.scss */
+/* line 27, ../scss/partials/_footer.scss */
 .ftlogo-container {
   vertical-align: top;
   margin-top: 50px;
 }
 
-/* line 28, ../scss/partials/_footer.scss */
+/* line 32, ../scss/partials/_footer.scss */
 .ftlogo-container, .ftaddress-container, .ftsocial-container {
   text-align: left;
   display: block;
@@ -2825,210 +2831,257 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  /* line 37, ../scss/partials/_footer.scss */
+  /* line 41, ../scss/partials/_footer.scss */
   .ftlogo-container,
   .ftaddress-container {
     margin-bottom: 8px;
   }
 }
-/* line 40, ../scss/partials/_footer.scss */
+/* line 44, ../scss/partials/_footer.scss */
 .ftaddress-container {
   float: left;
   width: auto;
 }
 @media (min-width: 481px) {
-  /* line 40, ../scss/partials/_footer.scss */
+  /* line 44, ../scss/partials/_footer.scss */
   .ftaddress-container {
     float: left;
     width: auto;
   }
 }
 
-/* line 50, ../scss/partials/_footer.scss */
+/* line 54, ../scss/partials/_footer.scss */
 .ftsocial-container {
   float: left;
   margin-top: 16px;
   margin-left: 8px;
 }
 @media (min-width: 481px) {
-  /* line 50, ../scss/partials/_footer.scss */
+  /* line 54, ../scss/partials/_footer.scss */
   .ftsocial-container {
     margin-left: 50px;
   }
 }
 @media (min-width: 872px) {
-  /* line 50, ../scss/partials/_footer.scss */
+  /* line 54, ../scss/partials/_footer.scss */
   .ftsocial-container {
     margin-top: 0;
   }
 }
 @media (min-width: 950px) {
-  /* line 50, ../scss/partials/_footer.scss */
+  /* line 54, ../scss/partials/_footer.scss */
   .ftsocial-container {
     float: right;
     margin-left: 8px;
   }
 }
 
-/* line 67, ../scss/partials/_footer.scss */
+/* line 71, ../scss/partials/_footer.scss */
 .ftlogo-container, .ftaddress-container {
   margin-right: 0;
   margin-left: 10px;
 }
 @media (min-width: 481px) {
-  /* line 67, ../scss/partials/_footer.scss */
+  /* line 71, ../scss/partials/_footer.scss */
   .ftlogo-container, .ftaddress-container {
     margin-left: 50px;
   }
 }
 
-/* line 76, ../scss/partials/_footer.scss */
+/* line 80, ../scss/partials/_footer.scss */
 .ftsocial-container ul {
   margin: 0;
 }
 
-/* line 78, ../scss/partials/_footer.scss */
-.social a {
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-}
-
-/* line 84, ../scss/partials/_footer.scss */
-.Tumblr {
-  background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
-}
-
-/* line 85, ../scss/partials/_footer.scss */
-.Facebook {
-  background-image: url(../../../../../img/Facebook.jpg);
-}
-
-/* line 86, ../scss/partials/_footer.scss */
-.Instagram {
-  background-image: url(../../../../../img/Instagram.jpg);
-}
-
 /* line 87, ../scss/partials/_footer.scss */
-.Map {
-  background-image: url(../../../../../img/Map.jpg);
+.social a {
+  display: block;
+  width: 48px;
+  height: 50px;
+}
+@media (min-width: 481px) {
+  /* line 87, ../scss/partials/_footer.scss */
+  .social a {
+    width: 96px;
+    height: 99px;
+  }
 }
 
-/* line 88, ../scss/partials/_footer.scss */
+/* line 103, ../scss/partials/_footer.scss */
+.Tumblr,
+.Facebook,
+.Instagram,
+.Map,
 .Mail {
-  background-image: url(../../../../../img/E-mail.jpg);
+  background-image: url(../../../../../img/social-new.png);
 }
 
-/* line 90, ../scss/partials/_footer.scss */
+/* line 113, ../scss/partials/_footer.scss */
+.svg .Tumblr,
+.svg .Facebook,
+.svg .Instagram,
+.svg .Map,
+.svg .Mail {
+  background-image: url(../../../../../img/social-new.svg);
+}
+
+/* line 118, ../scss/partials/_footer.scss */
+.Tumblr {
+  background-size: 780%;
+  background-position-x: 100.4%;
+}
+/* line 121, ../scss/partials/_footer.scss */
+.Tumblr:hover {
+  background-position-y: 103%;
+}
+@media (min-width: 481px) {
+  /* line 118, ../scss/partials/_footer.scss */
+  .Tumblr {
+    background-size: auto;
+  }
+  /* line 124, ../scss/partials/_footer.scss */
+  .Tumblr:hover {
+    background-position-y: 102%;
+  }
+}
+
+/* line 128, ../scss/partials/_footer.scss */
+.Map {
+  background-size: 780%;
+  background-position-x: 28.4%;
+}
+/* line 131, ../scss/partials/_footer.scss */
+.Map:hover {
+  background-position-y: 103%;
+}
+@media (min-width: 481px) {
+  /* line 128, ../scss/partials/_footer.scss */
+  .Map {
+    background-size: auto;
+  }
+  /* line 134, ../scss/partials/_footer.scss */
+  .Map:hover {
+    background-position-y: 102%;
+  }
+}
+
+/* line 138, ../scss/partials/_footer.scss */
+.Mail {
+  background-size: 780%;
+  background-position-x: 14.4%;
+}
+/* line 141, ../scss/partials/_footer.scss */
+.Mail:hover {
+  background-position-y: 103%;
+}
+@media (min-width: 481px) {
+  /* line 138, ../scss/partials/_footer.scss */
+  .Mail {
+    background-size: auto;
+  }
+  /* line 144, ../scss/partials/_footer.scss */
+  .Mail:hover {
+    background-position-y: 102%;
+  }
+}
+
+/* line 149, ../scss/partials/_footer.scss */
 .footer {
   position: static;
 }
 
-/* line 92, ../scss/partials/_footer.scss */
+/* line 151, ../scss/partials/_footer.scss */
 #container {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -370px;
   overflow-x: hidden;
 }
-/* line 98, ../scss/partials/_footer.scss */
+/* line 157, ../scss/partials/_footer.scss */
 #container:after {
   content: "";
   display: block;
 }
 
-/* line 105, ../scss/partials/_footer.scss */
+/* line 164, ../scss/partials/_footer.scss */
 .ftaddress-container a {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-/* line 112, ../scss/partials/_footer.scss */
+/* line 171, ../scss/partials/_footer.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-  /* line 118, ../scss/partials/_footer.scss */
-  .social a {
-    width: 55px;
-    height: 55px;
-    background-size: 55px 55px;
-  }
-
-  /* line 124, ../scss/partials/_footer.scss */
+  /* line 183, ../scss/partials/_footer.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
-/* line 128, ../scss/partials/_footer.scss */
+/* line 187, ../scss/partials/_footer.scss */
 #inner-footer {
   padding: 60px 2px;
 }
 @media (min-width: 481px) {
-  /* line 128, ../scss/partials/_footer.scss */
+  /* line 187, ../scss/partials/_footer.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 
-@media (max-width: 419px) {
-  /* line 136, ../scss/partials/_footer.scss */
-  .social {
-    margin-right: 10px;
-  }
-}
-/* line 139, ../scss/partials/_footer.scss */
+/* line 194, ../scss/partials/_footer.scss */
 .footer, #container:after {
   height: 370px;
 }
 
 @media (min-width: 400px) {
-  /* line 142, ../scss/partials/_footer.scss */
+  /* line 197, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -334px;
   }
 
-  /* line 143, ../scss/partials/_footer.scss */
+  /* line 198, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 334px;
   }
 }
 @media (min-width: 400px) {
-  /* line 147, ../scss/partials/_footer.scss */
+  /* line 202, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -350px;
   }
 
-  /* line 148, ../scss/partials/_footer.scss */
+  /* line 203, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 350px;
   }
 }
 @media (min-width: 556px) {
-  /* line 152, ../scss/partials/_footer.scss */
+  /* line 207, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -359px;
   }
 
-  /* line 153, ../scss/partials/_footer.scss */
+  /* line 208, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 359px;
   }
 }
 @media (min-width: 1040px) {
-  /* line 157, ../scss/partials/_footer.scss */
+  /* line 212, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -322px;
   }
 
-  /* line 158, ../scss/partials/_footer.scss */
+  /* line 213, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 322px;
   }
 }
-/* line 162, ../scss/partials/_footer.scss */
+/* line 217, ../scss/partials/_footer.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -3045,7 +3098,7 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-/* line 175, ../scss/partials/_footer.scss */
+/* line 230, ../scss/partials/_footer.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }
