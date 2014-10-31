@@ -11,7 +11,6 @@
 		<?php // Google Chrome Frame for IE ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<!-- <title><?php wp_title(''); ?></title> -->
         <title>
         <?php
             echo empty( $post->post_parent ) ? 'Friendshop&excl; | '. get_the_title( $post->ID ) : 'Friendshop&excl; | '. get_the_title( $post->post_parent ).' | ' .get_the_title( $post->ID ) ;
@@ -42,7 +41,6 @@
             if(is_page(11)) {
                 include('php/google-maps.php');
             }
-
         ?>
 
 		<?php // wordpress head functions ?>
