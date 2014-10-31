@@ -13,6 +13,7 @@ html, body {
     width: 100%;
     max-width: 1000px;
     margin:0 auto;
+    background-color:#000;
 }
 
 .social {
@@ -26,10 +27,14 @@ html, body {
 
 .ftlogo-container {
     vertical-align: top;
-    margin-top: 50px;
+    // margin-top: 50px;
+
+    @media(min-width:481px) {
+        margin-left: 50px;
+    }
 }
 
-.ftaddress-container, .ftsocial-container {
+.ftlogo-container, .ftaddress-container, .ftsocial-container {
     text-align: left;
     display: block;
     float: left;
@@ -37,15 +42,17 @@ html, body {
 }
 
 .ftlogo-container {
-    text-align: left;
-    display: block;
-    float: left;
-    margin-left:0;
+    margin-right:50px;
 }
+
 
 @media(max-width: 480px) {
     .ftlogo-container,
     .ftaddress-container { margin-bottom: 8px; }
+}
+
+.ftlogo-container {
+    margin-left:0;
 }
 
 .ftaddress-container {
@@ -75,26 +82,21 @@ html, body {
     }
 }
 
-.ftlogo-container, .ftaddress-container { 
+.ftaddress-container { 
     margin-right:0;
-    margin-left:10px;
 
     @media(min-width:481px) {
         margin-left: 50px;
     }
 }
 
+.ftaddress-container { margin-left:10px; }
 .ftsocial-container ul { margin:0; }
-// .Tumblr { background: url(../../../../../img/Tumblr.jpg) center center no-repeat; }
-// .Facebook { background-image: url(../../../../../img/Facebook.jpg); }
-// .Instagram { background-image: url(../../../../../img/Instagram.jpg); }
-// .Map { background-image: url(../../../../../img/Map.jpg); }
-// .Mail { background-image: url(../../../../../img/E-mail.jpg); }
 
 .social a {
     display: block;
-    width: 48px;
-    height: 50px;
+    width: 72px;
+    height: 75px;
 
     @media(min-width: 481px) {
         width: 96px;
@@ -125,7 +127,7 @@ html, body {
 .Tumblr {
     background-size:780%;
     background-position-x: 100.4%; 
-    &:hover { background-position-y: 103%; }
+    &:hover { background-position-y: 103.2%; }
     @media(min-width: 481px) { 
         background-size: auto; 
         &:hover { background-position-y: 102%; }
@@ -135,7 +137,7 @@ html, body {
 .Map { 
     background-size:780%;
     background-position-x: 28.4%;
-    &:hover { background-position-y: 103%; }
+    &:hover { background-position-y: 103.2%; }
     @media(min-width: 481px) { 
         background-size: auto; 
         &:hover { background-position-y: 102%; }
@@ -145,7 +147,7 @@ html, body {
 .Mail { 
     background-size:780%;
     background-position-x: 14.4%;
-    &:hover { background-position-y: 103%; }
+    &:hover { background-position-y: 103.2%; }
     @media(min-width: 481px) { 
         background-size: auto; 
         &:hover { background-position-y: 102%; }
