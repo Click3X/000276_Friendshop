@@ -57,6 +57,21 @@ LAYOUT & GRID STYLES
     }
 }
 
+// DEAL WITH WORD BREAKING - NO WORD BREAK
+p {
+	-ms-word-break: keep-all;
+	-ms-word-wrap: keep-all;
+	word-break: keep-all;
+	word-break: keep-all;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-webkit-font-feature-settings: "liga", "dlig";
+	-moz-font-feature-settings: "liga=1, dlig=1";
+	-ms-font-feature-settings: "liga", "dlig";
+	-o-font-feature-settings: "liga", "dlig";
+	font-feature-settings: "liga", "dlig";
+}
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
@@ -112,8 +127,6 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-
-
 #logo {
 	margin: 0.75em 0;
 
@@ -123,53 +136,31 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
 .nav {
 	border-bottom: 0;
 	margin: 0;
 
 	li {
-
 		a {
 			display: block;
 			color: #999b9b;
 			text-decoration: none !important;
 			padding: 0.75em;
-
-			&:active { color:red; }
 		}
 
 		ul.sub-menu,
 		ul.children {
-
 			li {
-
-				a {
-					padding-left: 30px;
-				}
-
+				a { padding-left: 30px; }
 			}
-
 		}
-
 	} /* end .menu li */
-
 } /* end .nav */
 
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
-
 .hentry {
 	background-color: transparent;
 	border-radius: 3px;
@@ -221,7 +212,6 @@ POSTS & CONTENT STYLES
 
 	tr {
 		border-bottom: 1px solid $gray;
-
 		&:nth-child(even) { background-color: $light-gray; }
 	}
 
@@ -307,7 +297,6 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-
 .pagination,
 .wp-prev-next { margin: 1.5em 0; }
 
@@ -403,7 +392,6 @@ COMMENT STYLES
 		cite.fn {
 			font-weight: 700;
 			font-style: normal;
-
 		}
 
 		time {
@@ -415,13 +403,10 @@ COMMENT STYLES
 				color: $meta-gray;
 				text-decoration: none;
 
-				&:hover {
-					text-decoration: underline;
-				}
-
+				&:hover { text-decoration: underline; }
 			}
-
 		}
+
 		.avatar {
 			position: absolute;
 			left: 16px;
@@ -431,27 +416,21 @@ COMMENT STYLES
 	} /* end .commentlist .vcard */
 
 	&:last-child { margin-bottom: 0; }
-
 	.children { margin: 0; } /* end children */
-
 	&[class*=depth-] { margin-top: 1.1em; }
-
 	&.depth-1 {
 		margin-left: 0;
 		margin-top: 0;
 	}
-
 	&:not(.depth-1) {
 		margin-top: 0;
 		margin-left: 7px;
 		padding: 7px;
 	}
-
 	/* general comment classes */
 	&.odd { background-color: $white; }
 	&.even { background: $light-gray; }
 }
-
 
 /* comment content */
 .comment_content {
@@ -478,8 +457,6 @@ COMMENT STYLES
 	text-decoration: none;
 	font-size: 0.9em;
 }
-
-
 
 /******************************************************************
 COMMENT FORM STYLES
@@ -518,10 +495,8 @@ COMMENT FORM STYLES
 
 /* comment form title */
 #comment-form-title { margin: 0 0 1.1em; }
-
 /* allowed tags */
 #allowed_tags { margin: 1.5em 10px 0.7335em 0; }
-
 /* no comments */
 .nocomments { margin: 0 20px 1.1em; }
 
@@ -540,7 +515,6 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-
 .footer {
 	clear: both;
 	background-color: $footer;
