@@ -29,11 +29,18 @@ html, body {
     margin-top: 50px;
 }
 
-.ftlogo-container, .ftaddress-container, .ftsocial-container {
+.ftaddress-container, .ftsocial-container {
     text-align: left;
     display: block;
     float: left;
     margin: 0 8px;
+}
+
+.ftlogo-container {
+    text-align: left;
+    display: block;
+    float: left;
+    margin-left:0;
 }
 
 @media(max-width: 480px) {
