@@ -3504,20 +3504,21 @@ svg {
 /* line 34, ../scss/partials/_logo-svg.scss */
 .footer .svg-holder {
   max-width: 181px;
+  max-height: 59px;
 }
 
-/* line 43, ../scss/partials/_logo-svg.scss */
+/* line 44, ../scss/partials/_logo-svg.scss */
 .svg-holder,
 .logo-header-svg {
   display: none;
 }
 
-/* line 49, ../scss/partials/_logo-svg.scss */
+/* line 50, ../scss/partials/_logo-svg.scss */
 .svg .logo-png,
 .svg .logo-header {
   display: none;
 }
-/* line 54, ../scss/partials/_logo-svg.scss */
+/* line 55, ../scss/partials/_logo-svg.scss */
 .svg .svg-holder,
 .svg .logo-header-svg {
   display: block;
