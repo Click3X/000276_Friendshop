@@ -1,0 +1,5766 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 23, ../scss/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 33, ../scss/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 42, ../scss/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 53, ../scss/partials/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 67, ../scss/partials/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 77, ../scss/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, ../scss/partials/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 97, ../scss/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 106, ../scss/partials/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 119, ../scss/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 128, ../scss/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 138, ../scss/partials/_normalize.scss */
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 148, ../scss/partials/_normalize.scss */
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 156, ../scss/partials/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+*/
+/* line 166, ../scss/partials/_normalize.scss */
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+/* line 177, ../scss/partials/_normalize.scss */
+pre {
+  margin: 0;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 188, ../scss/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 197, ../scss/partials/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 205, ../scss/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 213, ../scss/partials/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 218, ../scss/partials/_normalize.scss */
+small, .small {
+  font-size: 75%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 227, ../scss/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 234, ../scss/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 238, ../scss/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+  Lists
+========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+/* line 253, ../scss/partials/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 257, ../scss/partials/_normalize.scss */
+dd {
+  margin: 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+/* line 265, ../scss/partials/_normalize.scss */
+menu {
+  padding: 0 0 0 40px;
+}
+
+/* line 270, ../scss/partials/_normalize.scss */
+ol,
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+/* line 280, ../scss/partials/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+  Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 293, ../scss/partials/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 301, ../scss/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 313, ../scss/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 325, ../scss/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 336, ../scss/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 350, ../scss/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 362, ../scss/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 374, ../scss/partials/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 389, ../scss/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 399, ../scss/partials/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 409, ../scss/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 420, ../scss/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 433, ../scss/partials/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 442, ../scss/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 452, ../scss/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 465, ../scss/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 472, ../scss/partials/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 480, ../scss/partials/_normalize.scss */
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 487, ../scss/partials/_normalize.scss */
+.clearfix, .cf, .comment-respond {
+  zoom: 1;
+}
+/* line 489, ../scss/partials/_normalize.scss */
+.clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  content: "";
+  display: table;
+}
+/* line 490, ../scss/partials/_normalize.scss */
+.clearfix:after, .cf:after, .comment-respond:after {
+  clear: both;
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 497, ../scss/partials/_normalize.scss */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 65, ../scss/partials/_typography.scss */
+p {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  word-break: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+/* line 35, ../scss/partials/_grid.scss */
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+}
+
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+  /* line 49, ../scss/partials/_grid.scss */
+  .m-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* line 55, ../scss/partials/_grid.scss */
+  .m-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  /* line 60, ../scss/partials/_grid.scss */
+  .m-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  /* line 65, ../scss/partials/_grid.scss */
+  .m-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  /* line 70, ../scss/partials/_grid.scss */
+  .m-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  /* line 75, ../scss/partials/_grid.scss */
+  .m-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+}
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+  /* line 86, ../scss/partials/_grid.scss */
+  .t-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* line 92, ../scss/partials/_grid.scss */
+  .t-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  /* line 97, ../scss/partials/_grid.scss */
+  .t-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  /* line 102, ../scss/partials/_grid.scss */
+  .t-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  /* line 107, ../scss/partials/_grid.scss */
+  .t-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  /* line 112, ../scss/partials/_grid.scss */
+  .t-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+
+  /* line 117, ../scss/partials/_grid.scss */
+  .t-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+
+  /* line 122, ../scss/partials/_grid.scss */
+  .t-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+
+  /* line 127, ../scss/partials/_grid.scss */
+  .t-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+
+  /* line 132, ../scss/partials/_grid.scss */
+  .t-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+}
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+  /* line 142, ../scss/partials/_grid.scss */
+  .d-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* line 148, ../scss/partials/_grid.scss */
+  .d-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  /* line 153, ../scss/partials/_grid.scss */
+  .d-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  /* line 158, ../scss/partials/_grid.scss */
+  .d-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  /* line 163, ../scss/partials/_grid.scss */
+  .d-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  /* line 168, ../scss/partials/_grid.scss */
+  .d-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+
+  /* line 173, ../scss/partials/_grid.scss */
+  .d-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+
+  /* line 178, ../scss/partials/_grid.scss */
+  .d-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+
+  /* line 183, ../scss/partials/_grid.scss */
+  .d-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+
+  /* line 188, ../scss/partials/_grid.scss */
+  .d-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+
+  /* line 193, ../scss/partials/_grid.scss */
+  .d-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%;
+  }
+
+  /* line 198, ../scss/partials/_grid.scss */
+  .d-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%;
+  }
+
+  /* line 203, ../scss/partials/_grid.scss */
+  .d-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%;
+  }
+
+  /* line 208, ../scss/partials/_grid.scss */
+  .d-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%;
+  }
+
+  /* line 213, ../scss/partials/_grid.scss */
+  .d-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%;
+  }
+
+  /* line 218, ../scss/partials/_grid.scss */
+  .d-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%;
+  }
+
+  /* line 223, ../scss/partials/_grid.scss */
+  .d-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%;
+  }
+
+  /* line 228, ../scss/partials/_grid.scss */
+  .d-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%;
+  }
+
+  /* line 233, ../scss/partials/_grid.scss */
+  .d-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%;
+  }
+
+  /* line 238, ../scss/partials/_grid.scss */
+  .d-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%;
+  }
+
+  /* line 243, ../scss/partials/_grid.scss */
+  .d-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%;
+  }
+
+  /* line 248, ../scss/partials/_grid.scss */
+  .d-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%;
+  }
+}
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+/* line 15, ../scss/modules/_alerts.scss */
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 21, ../scss/modules/_alerts.scss */
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 27, ../scss/modules/_alerts.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 33, ../scss/modules/_alerts.scss */
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 39, ../scss/modules/_alerts.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+/* line 27, ../scss/modules/_buttons.scss */
+.blue-btn, .comment-reply-link, #submit {
+  display: inline-block;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: normal;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.14s ease-in-out;
+}
+/* line 44, ../scss/modules/_buttons.scss */
+.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  color: white;
+  text-decoration: none;
+}
+/* line 50, ../scss/modules/_buttons.scss */
+.blue-btn:active, .comment-reply-link:active, #submit:active {
+  top: 1px;
+}
+
+/*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+*/
+/* line 61, ../scss/modules/_buttons.scss */
+.blue-btn, .comment-reply-link, #submit {
+  background-color: #2980b9;
+}
+/* line 66, ../scss/modules/_buttons.scss */
+.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  background-color: #2574a8;
+}
+/* line 70, ../scss/modules/_buttons.scss */
+.blue-btn:active, .comment-reply-link:active, #submit:active {
+  background-color: #2472a4;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+/*********************
+INPUTS
+*********************/
+/* line 40, ../scss/modules/_forms.scss */
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  font-size: 1em;
+  color: #5c6b80;
+  border-radius: 3px;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #eaedf2;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
+}
+/* line 60, ../scss/modules/_forms.scss */
+input[type="text"]:focus, input[type="text"]:active,
+input[type="password"]:focus,
+input[type="password"]:active,
+input[type="datetime"]:focus,
+input[type="datetime"]:active,
+input[type="datetime-local"]:focus,
+input[type="datetime-local"]:active,
+input[type="date"]:focus,
+input[type="date"]:active,
+input[type="month"]:focus,
+input[type="month"]:active,
+input[type="time"]:focus,
+input[type="time"]:active,
+input[type="week"]:focus,
+input[type="week"]:active,
+input[type="number"]:focus,
+input[type="number"]:active,
+input[type="email"]:focus,
+input[type="email"]:active,
+input[type="url"]:focus,
+input[type="url"]:active,
+input[type="search"]:focus,
+input[type="search"]:active,
+input[type="tel"]:focus,
+input[type="tel"]:active,
+input[type="color"]:focus,
+input[type="color"]:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active,
+.field:focus,
+.field:active {
+  background-color: #f7f8fa;
+}
+/* line 66, ../scss/modules/_forms.scss */
+input[type="text"].error, input[type="text"].is-invalid,
+input[type="password"].error,
+input[type="password"].is-invalid,
+input[type="datetime"].error,
+input[type="datetime"].is-invalid,
+input[type="datetime-local"].error,
+input[type="datetime-local"].is-invalid,
+input[type="date"].error,
+input[type="date"].is-invalid,
+input[type="month"].error,
+input[type="month"].is-invalid,
+input[type="time"].error,
+input[type="time"].is-invalid,
+input[type="week"].error,
+input[type="week"].is-invalid,
+input[type="number"].error,
+input[type="number"].is-invalid,
+input[type="email"].error,
+input[type="email"].is-invalid,
+input[type="url"].error,
+input[type="url"].is-invalid,
+input[type="search"].error,
+input[type="search"].is-invalid,
+input[type="tel"].error,
+input[type="tel"].is-invalid,
+input[type="color"].error,
+input[type="color"].is-invalid,
+select.error,
+select.is-invalid,
+textarea.error,
+textarea.is-invalid,
+.field.error,
+.field.is-invalid {
+  color: #fbe3e4;
+  border-color: #fbe3e4;
+  background-color: white;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+  outline-color: #fbe3e4;
+}
+/* line 78, ../scss/modules/_forms.scss */
+input[type="text"].success, input[type="text"].is-valid,
+input[type="password"].success,
+input[type="password"].is-valid,
+input[type="datetime"].success,
+input[type="datetime"].is-valid,
+input[type="datetime-local"].success,
+input[type="datetime-local"].is-valid,
+input[type="date"].success,
+input[type="date"].is-valid,
+input[type="month"].success,
+input[type="month"].is-valid,
+input[type="time"].success,
+input[type="time"].is-valid,
+input[type="week"].success,
+input[type="week"].is-valid,
+input[type="number"].success,
+input[type="number"].is-valid,
+input[type="email"].success,
+input[type="email"].is-valid,
+input[type="url"].success,
+input[type="url"].is-valid,
+input[type="search"].success,
+input[type="search"].is-valid,
+input[type="tel"].success,
+input[type="tel"].is-valid,
+input[type="color"].success,
+input[type="color"].is-valid,
+select.success,
+select.is-valid,
+textarea.success,
+textarea.is-valid,
+.field.success,
+.field.is-valid {
+  color: #e6efc2;
+  border-color: #e6efc2;
+  background-color: white;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+  outline-color: #e6efc2;
+}
+/* line 90, ../scss/modules/_forms.scss */
+input[type="text"][disabled], input[type="text"].is-disabled,
+input[type="password"][disabled],
+input[type="password"].is-disabled,
+input[type="datetime"][disabled],
+input[type="datetime"].is-disabled,
+input[type="datetime-local"][disabled],
+input[type="datetime-local"].is-disabled,
+input[type="date"][disabled],
+input[type="date"].is-disabled,
+input[type="month"][disabled],
+input[type="month"].is-disabled,
+input[type="time"][disabled],
+input[type="time"].is-disabled,
+input[type="week"][disabled],
+input[type="week"].is-disabled,
+input[type="number"][disabled],
+input[type="number"].is-disabled,
+input[type="email"][disabled],
+input[type="email"].is-disabled,
+input[type="url"][disabled],
+input[type="url"].is-disabled,
+input[type="search"][disabled],
+input[type="search"].is-disabled,
+input[type="tel"][disabled],
+input[type="tel"].is-disabled,
+input[type="color"][disabled],
+input[type="color"].is-disabled,
+select[disabled],
+select.is-disabled,
+textarea[disabled],
+textarea.is-disabled,
+.field[disabled],
+.field.is-disabled {
+  cursor: not-allowed;
+  border-color: #cfcfcf;
+  opacity: 0.6;
+}
+/* line 96, ../scss/modules/_forms.scss */
+input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
+input[type="password"][disabled]:focus,
+input[type="password"][disabled]:active,
+input[type="password"].is-disabled:focus,
+input[type="password"].is-disabled:active,
+input[type="datetime"][disabled]:focus,
+input[type="datetime"][disabled]:active,
+input[type="datetime"].is-disabled:focus,
+input[type="datetime"].is-disabled:active,
+input[type="datetime-local"][disabled]:focus,
+input[type="datetime-local"][disabled]:active,
+input[type="datetime-local"].is-disabled:focus,
+input[type="datetime-local"].is-disabled:active,
+input[type="date"][disabled]:focus,
+input[type="date"][disabled]:active,
+input[type="date"].is-disabled:focus,
+input[type="date"].is-disabled:active,
+input[type="month"][disabled]:focus,
+input[type="month"][disabled]:active,
+input[type="month"].is-disabled:focus,
+input[type="month"].is-disabled:active,
+input[type="time"][disabled]:focus,
+input[type="time"][disabled]:active,
+input[type="time"].is-disabled:focus,
+input[type="time"].is-disabled:active,
+input[type="week"][disabled]:focus,
+input[type="week"][disabled]:active,
+input[type="week"].is-disabled:focus,
+input[type="week"].is-disabled:active,
+input[type="number"][disabled]:focus,
+input[type="number"][disabled]:active,
+input[type="number"].is-disabled:focus,
+input[type="number"].is-disabled:active,
+input[type="email"][disabled]:focus,
+input[type="email"][disabled]:active,
+input[type="email"].is-disabled:focus,
+input[type="email"].is-disabled:active,
+input[type="url"][disabled]:focus,
+input[type="url"][disabled]:active,
+input[type="url"].is-disabled:focus,
+input[type="url"].is-disabled:active,
+input[type="search"][disabled]:focus,
+input[type="search"][disabled]:active,
+input[type="search"].is-disabled:focus,
+input[type="search"].is-disabled:active,
+input[type="tel"][disabled]:focus,
+input[type="tel"][disabled]:active,
+input[type="tel"].is-disabled:focus,
+input[type="tel"].is-disabled:active,
+input[type="color"][disabled]:focus,
+input[type="color"][disabled]:active,
+input[type="color"].is-disabled:focus,
+input[type="color"].is-disabled:active,
+select[disabled]:focus,
+select[disabled]:active,
+select.is-disabled:focus,
+select.is-disabled:active,
+textarea[disabled]:focus,
+textarea[disabled]:active,
+textarea.is-disabled:focus,
+textarea.is-disabled:active,
+.field[disabled]:focus,
+.field[disabled]:active,
+.field.is-disabled:focus,
+.field.is-disabled:active {
+  background-color: #d5edf8;
+}
+
+/* line 105, ../scss/modules/_forms.scss */
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+/* line 110, ../scss/modules/_forms.scss */
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em;
+}
+
+/* line 117, ../scss/modules/_forms.scss */
+select {
+  -webkit-appearance: none;
+  /* 1 */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 97.5% center;
+}
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+@font-face {
+  font-family: 'VerlagBold';
+  src: url("../fonts/Verlag-Bold.eot");
+  src: url("../fonts/Verlag-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Bold.woff") format("woff"), url("../fonts/Verlag-Bold.ttf") format("truetype"), url("../fonts/Verlag-Bold.svg#Verlag-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VerlagBook';
+  src: url("../fonts/Verlag-Book.eot");
+  src: url("../fonts/Verlag-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Book.woff") format("woff"), url("../fonts/Verlag-Book.ttf") format("truetype"), url("../fonts/Verlag-Book.svg#Verlag-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 37, ../scss/breakpoints/_base.scss */
+html, body {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* line 47, ../scss/breakpoints/_base.scss */
+body {
+  font-family: "VerlagBook";
+  font-size: 100%;
+  line-height: 1.5;
+  color: #5c6b80;
+  background-color: #eaedf2;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 66, ../scss/breakpoints/_base.scss */
+.wrap {
+  width: 96%;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  /* line 72, ../scss/breakpoints/_base.scss */
+  ul, li, .entry-content p {
+    line-height: 25px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 481px) {
+  /* line 79, ../scss/breakpoints/_base.scss */
+  .entry-content p {
+    line-height: 1.9em;
+    font-size: 1.25em;
+  }
+}
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+/* line 90, ../scss/breakpoints/_base.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+}
+/* line 94, ../scss/breakpoints/_base.scss */
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+  text-decoration: none;
+}
+
+/* line 97, ../scss/breakpoints/_base.scss */
+h1, .h1 {
+  font-weight: 700;
+  line-height: 1em;
+  font-family: 'VerlagBold';
+  font-size: 30px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+@media (min-width: 481px) {
+  /* line 97, ../scss/breakpoints/_base.scss */
+  h1, .h1 {
+    font-size: 2.8em;
+    margin: .4em 0 .2em;
+  }
+}
+
+/* line 114, ../scss/breakpoints/_base.scss */
+h2, .h2 {
+  margin-bottom: 0.375em;
+  font-family: 'VerlagBold';
+  font-size: 26px;
+}
+@media (min-width: 481px) {
+  /* line 114, ../scss/breakpoints/_base.scss */
+  h2, .h2 {
+    font-size: 1.75em;
+    line-height: 1.4em;
+  }
+}
+
+/* line 125, ../scss/breakpoints/_base.scss */
+h3, .h3 {
+  font-size: 1.125em;
+}
+
+/* line 129, ../scss/breakpoints/_base.scss */
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 134, ../scss/breakpoints/_base.scss */
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 146, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0.75em 0;
+}
+/* line 149, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: white;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+/* line 164, ../scss/breakpoints/_base.scss */
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */
+}
+/* line 170, ../scss/breakpoints/_base.scss */
+.nav li a {
+  display: block;
+  color: #999b9b;
+  text-decoration: none;
+  padding: 0.75em;
+}
+/* line 182, ../scss/breakpoints/_base.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+}
+
+/* end .nav */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* line 200, ../scss/breakpoints/_base.scss */
+.hentry {
+  background-color: transparent;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+}
+/* line 205, ../scss/breakpoints/_base.scss */
+.hentry header {
+  border-bottom: 1px solid #f8f9fa;
+  padding: 1.5em;
+}
+/* line 210, ../scss/breakpoints/_base.scss */
+.hentry footer {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+/* line 214, ../scss/breakpoints/_base.scss */
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+/* line 221, ../scss/breakpoints/_base.scss */
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0;
+}
+
+/* post meta */
+/* line 224, ../scss/breakpoints/_base.scss */
+.byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* entry content */
+/* line 233, ../scss/breakpoints/_base.scss */
+.entry-content p {
+  margin: 0 0 1.5em;
+}
+/* line 235, ../scss/breakpoints/_base.scss */
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em;
+}
+/* line 240, ../scss/breakpoints/_base.scss */
+.entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #9fa6b4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 249, ../scss/breakpoints/_base.scss */
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2;
+}
+/* line 252, ../scss/breakpoints/_base.scss */
+.entry-content tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+/* line 255, ../scss/breakpoints/_base.scss */
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2;
+}
+/* line 259, ../scss/breakpoints/_base.scss */
+.entry-content td:last-child {
+  border-right: 0;
+}
+/* line 262, ../scss/breakpoints/_base.scss */
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2;
+}
+/* line 267, ../scss/breakpoints/_base.scss */
+.entry-content th:last-child {
+  border-right: 0;
+}
+/* line 270, ../scss/breakpoints/_base.scss */
+.entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #2980b9;
+  font-style: italic;
+  color: #9fa6b4;
+}
+/* line 279, ../scss/breakpoints/_base.scss */
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+/* line 286, ../scss/breakpoints/_base.scss */
+.entry-content img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 298, ../scss/breakpoints/_base.scss */
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+/* line 303, ../scss/breakpoints/_base.scss */
+.entry-content pre {
+  background: #323944;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* end .entry-content */
+/* line 314, ../scss/breakpoints/_base.scss */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+/* line 320, ../scss/breakpoints/_base.scss */
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+/* line 326, ../scss/breakpoints/_base.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* end .wp-caption */
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+/* line 339, ../scss/breakpoints/_base.scss */
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+
+/* line 341, ../scss/breakpoints/_base.scss */
+.pagination {
+  text-align: center;
+}
+/* line 344, ../scss/breakpoints/_base.scss */
+.pagination ul {
+  display: inline-block;
+  background-color: white;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+/* line 353, ../scss/breakpoints/_base.scss */
+.pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid #eaedf2;
+}
+/* line 362, ../scss/breakpoints/_base.scss */
+.pagination a, .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #2980b9;
+}
+/* line 374, ../scss/breakpoints/_base.scss */
+.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+  background-color: #2980b9;
+  color: white;
+}
+/* line 380, ../scss/breakpoints/_base.scss */
+.pagination .current {
+  cursor: default;
+  color: #5c6b80;
+}
+/* line 384, ../scss/breakpoints/_base.scss */
+.pagination .current:hover, .pagination .current:focus {
+  background-color: white;
+  color: #5c6b80;
+}
+
+/* end .bones_page_navi */
+/* fallback previous & next links */
+/* line 394, ../scss/breakpoints/_base.scss */
+.wp-prev-next .prev-link {
+  float: left;
+}
+/* line 395, ../scss/breakpoints/_base.scss */
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+/* line 403, ../scss/breakpoints/_base.scss */
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa;
+}
+
+/* line 409, ../scss/breakpoints/_base.scss */
+.commentlist {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 414, ../scss/breakpoints/_base.scss */
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */
+}
+/* line 421, ../scss/breakpoints/_base.scss */
+.comment .comment-author {
+  padding: 7px;
+  border: 0;
+}
+/* line 427, ../scss/breakpoints/_base.scss */
+.comment .vcard {
+  margin-left: 50px;
+}
+/* line 430, ../scss/breakpoints/_base.scss */
+.comment .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+/* line 436, ../scss/breakpoints/_base.scss */
+.comment .vcard time {
+  display: block;
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* line 441, ../scss/breakpoints/_base.scss */
+.comment .vcard time a {
+  color: #9fa6b4;
+  text-decoration: none;
+}
+/* line 445, ../scss/breakpoints/_base.scss */
+.comment .vcard time a:hover {
+  text-decoration: underline;
+}
+/* line 452, ../scss/breakpoints/_base.scss */
+.comment .vcard .avatar {
+  position: absolute;
+  left: 16px;
+  border-radius: 50%;
+}
+/* line 460, ../scss/breakpoints/_base.scss */
+.comment:last-child {
+  margin-bottom: 0;
+}
+/* line 462, ../scss/breakpoints/_base.scss */
+.comment .children {
+  margin: 0;
+}
+/* line 464, ../scss/breakpoints/_base.scss */
+.comment[class*=depth-] {
+  margin-top: 1.1em;
+}
+/* line 466, ../scss/breakpoints/_base.scss */
+.comment.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+/* line 471, ../scss/breakpoints/_base.scss */
+.comment:not(.depth-1) {
+  margin-top: 0;
+  margin-left: 7px;
+  padding: 7px;
+}
+/* line 478, ../scss/breakpoints/_base.scss */
+.comment.odd {
+  background-color: white;
+}
+/* line 479, ../scss/breakpoints/_base.scss */
+.comment.even {
+  background: #f8f9fa;
+}
+
+/* comment content */
+/* line 486, ../scss/breakpoints/_base.scss */
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* end .commentlist .comment_content */
+/* comment reply link */
+/* line 495, ../scss/breakpoints/_base.scss */
+.comment-reply-link {
+  font-size: 0.9em;
+  float: right;
+}
+
+/* end .commentlist .comment-reply-link */
+/* edit comment link */
+/* line 502, ../scss/breakpoints/_base.scss */
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+/* line 515, ../scss/breakpoints/_base.scss */
+.comment-respond {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+
+/* line 521, ../scss/breakpoints/_base.scss */
+#reply-title {
+  margin: 0;
+}
+
+/* line 523, ../scss/breakpoints/_base.scss */
+.logged-in-as {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+/* line 528, ../scss/breakpoints/_base.scss */
+.logged-in-as a {
+  color: #5c6b80;
+}
+
+/* line 531, ../scss/breakpoints/_base.scss */
+.comment-form-comment {
+  margin: 1.5em 0 0.75em;
+}
+
+/* line 533, ../scss/breakpoints/_base.scss */
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+}
+
+/* comment submit button */
+/* line 540, ../scss/breakpoints/_base.scss */
+#submit {
+  float: right;
+  font-size: 1em;
+}
+
+/* comment form title */
+/* line 547, ../scss/breakpoints/_base.scss */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* allowed tags */
+/* line 550, ../scss/breakpoints/_base.scss */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+/* line 553, ../scss/breakpoints/_base.scss */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 558, ../scss/breakpoints/_base.scss */
+.no-widgets {
+  background-color: white;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+/* line 571, ../scss/breakpoints/_base.scss */
+.footer {
+  clear: both;
+  color: #f8f9fa;
+}
+
+@font-face {
+  font-family: 'VerlagBold';
+  src: url("../fonts/Verlag-Bold.eot");
+  src: url("../fonts/Verlag-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Bold.woff") format("woff"), url("../fonts/Verlag-Bold.ttf") format("truetype"), url("../fonts/Verlag-Bold.svg#Verlag-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VerlagBook';
+  src: url("../fonts/Verlag-Book.eot");
+  src: url("../fonts/Verlag-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Book.woff") format("woff"), url("../fonts/Verlag-Book.ttf") format("truetype"), url("../fonts/Verlag-Book.svg#Verlag-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 19, ../scss/partials/_wen-new.scss */
+body {
+  background-color: black;
+}
+
+/* line 30, ../scss/partials/_wen-new.scss */
+.page-id-4,
+.page-id-13,
+.page-id-11,
+.page-id-8,
+.page-id-6 {
+  background: url(../../../../../img/bg.jpg) center top;
+  background-size: cover;
+}
+
+/* line 35, ../scss/partials/_wen-new.scss */
+.logo-header {
+  background: url(../../../../../img/fs-logo.png) center center no-repeat;
+  height: 124px;
+}
+
+/* line 40, ../scss/partials/_wen-new.scss */
+.ls-nav-prev, .ls-nav-next {
+  border: 1px solid #3b3c46 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 45, ../scss/partials/_wen-new.scss */
+.ls-nav-prev {
+  margin-left: -100px;
+}
+
+/* line 46, ../scss/partials/_wen-new.scss */
+.ls-nav-next {
+  margin-right: -100px;
+}
+
+/* line 50, ../scss/partials/_wen-new.scss */
+.contact-left, .contact-right {
+  text-align: left;
+}
+/* line 53, ../scss/partials/_wen-new.scss */
+.contact-left h1, .contact-left h3, .contact-left h4, .contact-right h1, .contact-right h3, .contact-right h4 {
+  margin: 0;
+}
+/* line 54, ../scss/partials/_wen-new.scss */
+.contact-left h1, .contact-right h1 {
+  font-size: 2.35em;
+  margin-bottom: .175em;
+}
+/* line 58, ../scss/partials/_wen-new.scss */
+.contact-left h3, .contact-left h4, .contact-right h3, .contact-right h4 {
+  color: white;
+}
+/* line 60, ../scss/partials/_wen-new.scss */
+.contact-left img, .contact-right img {
+  vertical-align: bottom;
+  margin: 0;
+}
+/* line 65, ../scss/partials/_wen-new.scss */
+.contact-left ul, .contact-right ul {
+  margin: 0;
+}
+/* line 68, ../scss/partials/_wen-new.scss */
+.contact-left ul li, .contact-right ul li {
+  margin: 10px 0;
+}
+/* line 70, ../scss/partials/_wen-new.scss */
+.contact-left ul h3, .contact-right ul h3 {
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+/* line 76, ../scss/partials/_wen-new.scss */
+.contact-left ul h4, .contact-right ul h4 {
+  font-size: 1em;
+  font-weight: 700;
+}
+/* line 82, ../scss/partials/_wen-new.scss */
+.contact-left p, .contact-right p {
+  line-height: 1.4em !important;
+  font-size: 1em !important;
+  margin: 0 0 1.5em;
+}
+@media (min-width: 768px) {
+  /* line 82, ../scss/partials/_wen-new.scss */
+  .contact-left p, .contact-right p {
+    margin: 0 0 2.4em;
+  }
+}
+
+/* line 93, ../scss/partials/_wen-new.scss */
+.contact-left {
+  float: left;
+}
+
+/* line 94, ../scss/partials/_wen-new.scss */
+.contact-right {
+  float: right;
+}
+
+/* line 95, ../scss/partials/_wen-new.scss */
+.inner-contact-container {
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  /* line 95, ../scss/partials/_wen-new.scss */
+  .inner-contact-container {
+    padding-top: 50px;
+  }
+}
+
+/* line 106, ../scss/partials/_wen-new.scss */
+.content-container {
+  text-align: center;
+  padding: 12px 8px;
+  max-width: 1000px;
+}
+/* line 111, ../scss/partials/_wen-new.scss */
+.content-container h1 {
+  color: #10a1a4;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+/* line 119, ../scss/partials/_wen-new.scss */
+.content-container p {
+  color: white;
+  text-align: left;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (min-width: 481px) {
+  /* line 128, ../scss/partials/_wen-new.scss */
+  .content-container p {
+    line-height: 1.9em;
+    font-size: 1.25em;
+  }
+  /* line 133, ../scss/partials/_wen-new.scss */
+  .content-container h1 {
+    margin-top: .2em;
+    margin-bottom: .2em;
+    font-size: 2.8em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 106, ../scss/partials/_wen-new.scss */
+  .content-container {
+    padding: 25px 20px;
+  }
+}
+
+/* line 145, ../scss/partials/_wen-new.scss */
+.about-container {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 146, ../scss/partials/_wen-new.scss */
+.inner-about-container {
+  max-width: 1000px;
+}
+
+/* line 147, ../scss/partials/_wen-new.scss */
+.inner-gallery-container {
+  margin: auto;
+}
+
+/* line 155, ../scss/partials/_wen-new.scss */
+#inner-footer {
+  text-align: center;
+  padding: 80px 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* line 163, ../scss/partials/_wen-new.scss */
+.social {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 168, ../scss/partials/_wen-new.scss */
+.ftlogo-container {
+  vertical-align: top;
+  margin-top: 50px;
+}
+
+/* line 173, ../scss/partials/_wen-new.scss */
+.ftlogo-container, .ftaddress-container, .ftsocial-container {
+  text-align: left;
+  display: block;
+  float: left;
+  margin: 0 8px;
+}
+
+@media (max-width: 480px) {
+  /* line 182, ../scss/partials/_wen-new.scss */
+  .ftlogo-container,
+  .ftaddress-container {
+    margin-bottom: 8px;
+  }
+}
+/* line 187, ../scss/partials/_wen-new.scss */
+.ftaddress-container {
+  float: left;
+  width: auto;
+}
+@media (min-width: 481px) {
+  /* line 187, ../scss/partials/_wen-new.scss */
+  .ftaddress-container {
+    float: left;
+    width: auto;
+  }
+}
+
+/* line 198, ../scss/partials/_wen-new.scss */
+.ftsocial-container {
+  float: left;
+  margin-top: 16px;
+  margin-left: 8px;
+}
+@media (min-width: 481px) {
+  /* line 198, ../scss/partials/_wen-new.scss */
+  .ftsocial-container {
+    margin-left: 50px;
+  }
+}
+@media (min-width: 872px) {
+  /* line 198, ../scss/partials/_wen-new.scss */
+  .ftsocial-container {
+    margin-top: 0;
+  }
+}
+@media (min-width: 950px) {
+  /* line 198, ../scss/partials/_wen-new.scss */
+  .ftsocial-container {
+    float: right;
+    margin-left: 8px;
+  }
+}
+
+/* line 215, ../scss/partials/_wen-new.scss */
+.ftlogo-container, .ftaddress-container {
+  margin-right: 0;
+  margin-left: 10px;
+}
+@media (min-width: 481px) {
+  /* line 215, ../scss/partials/_wen-new.scss */
+  .ftlogo-container, .ftaddress-container {
+    margin-left: 50px;
+  }
+}
+
+/* line 224, ../scss/partials/_wen-new.scss */
+.ftsocial-container ul {
+  margin: 0;
+}
+
+/* line 226, ../scss/partials/_wen-new.scss */
+.social a {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+/* line 232, ../scss/partials/_wen-new.scss */
+.Tumblr {
+  background: url(../../../../../img/Tumblr.jpg) center center no-repeat;
+}
+
+/* line 233, ../scss/partials/_wen-new.scss */
+.Facebook {
+  background-image: url(../../../../../img/Facebook.jpg);
+}
+
+/* line 234, ../scss/partials/_wen-new.scss */
+.Instagram {
+  background-image: url(../../../../../img/Instagram.jpg);
+}
+
+/* line 235, ../scss/partials/_wen-new.scss */
+.Map {
+  background-image: url(../../../../../img/Map.jpg);
+}
+
+/* line 236, ../scss/partials/_wen-new.scss */
+.Mail {
+  background-image: url(../../../../../img/E-mail.jpg);
+}
+
+/* line 239, ../scss/partials/_wen-new.scss */
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 555px) {
+  /* line 245, ../scss/partials/_wen-new.scss */
+  .social a {
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+  }
+
+  /* line 251, ../scss/partials/_wen-new.scss */
+  .ftaddress-container {
+    margin-right: 0px;
+  }
+}
+/* line 255, ../scss/partials/_wen-new.scss */
+#inner-footer {
+  padding: 60px 2px;
+}
+@media (min-width: 481px) {
+  /* line 255, ../scss/partials/_wen-new.scss */
+  #inner-footer {
+    padding: 80px 2px;
+  }
+}
+
+@media (max-width: 419px) {
+  /* line 262, ../scss/partials/_wen-new.scss */
+  .social {
+    margin-right: 10px;
+  }
+}
+/* line 268, ../scss/partials/_wen-new.scss */
+.thumb-wrapper {
+  margin: 0 auto;
+}
+
+/* line 270, ../scss/partials/_wen-new.scss */
+.thumb-list {
+  position: relative;
+  list-style: none;
+  list-style-image: none;
+  margin-top: 12px;
+}
+@media (min-width: 768px) {
+  /* line 270, ../scss/partials/_wen-new.scss */
+  .thumb-list {
+    margin-top: 0;
+  }
+}
+
+/* line 279, ../scss/partials/_wen-new.scss */
+.thumb {
+  position: absolute;
+  overflow: hidden;
+  width: 295px;
+  /* Set width */
+  height: 295px;
+  /* Set height */
+}
+
+/* line 286, ../scss/partials/_wen-new.scss */
+.video-thumb {
+  width: 268px;
+  /* Set width */
+  height: 168px;
+  /* Set height */
+  display: inline-block;
+  margin: 6px 7px;
+}
+
+/* line 293, ../scss/partials/_wen-new.scss */
+.thumb img {
+  width: 295px;
+  height: 295px;
+}
+
+@media (max-width: 767px) {
+  /* line 301, ../scss/partials/_wen-new.scss */
+  .logo-header {
+    width: 226px;
+    height: 40px;
+    background-size: 226px 40px;
+    top: 15px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  /* line 310, ../scss/partials/_wen-new.scss */
+  .header {
+    background: #000000;
+    padding: 10px;
+    position: relative;
+    z-index: 5;
+    -webkit-transform: translateZ(5);
+    -moz-transform: translateZ(5);
+    -o-transform: translateZ(5);
+    -ms-transform: translateZ(5);
+    transform: translateZ(5);
+  }
+
+  /* line 319, ../scss/partials/_wen-new.scss */
+  #inner-header {
+    text-align: left;
+  }
+}
+/* line 323, ../scss/partials/_wen-new.scss */
+.poster-hover {
+  background: black;
+  opacity: 0;
+  position: absolute;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  top: 0;
+  width: 268px;
+  height: 168px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 336, ../scss/partials/_wen-new.scss */
+.poster-hover h3 {
+  margin: 0;
+  padding-top: 50px;
+  font-weight: 700;
+  font-size: 1em;
+  font-family: 'VerlagBold';
+}
+/* line 344, ../scss/partials/_wen-new.scss */
+.poster-hover h4 {
+  margin: 5px 0 0 0;
+  font-weight: 700;
+  font-size: 0.75em;
+  font-family: 'VerlagBold';
+}
+
+/* line 352, ../scss/partials/_wen-new.scss */
+.video-list {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+/* line 357, ../scss/partials/_wen-new.scss */
+.video-list .poster-container {
+  position: relative;
+  cursor: pointer;
+}
+/* line 361, ../scss/partials/_wen-new.scss */
+.video-list .poster-container img {
+  margin: 0;
+}
+/* line 366, ../scss/partials/_wen-new.scss */
+.video-list .poster-container:hover .poster-hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 756px) {
+  /* line 371, ../scss/partials/_wen-new.scss */
+  .contact-right img {
+    width: 260px;
+  }
+}
+@media (max-width: 560px) {
+  /* line 374, ../scss/partials/_wen-new.scss */
+  .page-id-11 .hentry {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 380, ../scss/partials/_wen-new.scss */
+  .contact-right {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  /* line 384, ../scss/partials/_wen-new.scss */
+  .contact-right {
+    float: none;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* line 390, ../scss/partials/_wen-new.scss */
+  .contact-left {
+    float: none;
+    text-align: center;
+  }
+  /* line 394, ../scss/partials/_wen-new.scss */
+  .contact-left p {
+    text-align: center;
+  }
+}
+/* line 499, ../scss/partials/_wen-new.scss */
+.grid {
+  width: 100%;
+}
+
+/* line 501, ../scss/partials/_wen-new.scss */
+.grid ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 507, ../scss/partials/_wen-new.scss */
+.grid ul li {
+  list-style-type: none;
+  float: left;
+  padding: 0px;
+  width: 20%;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* line 518, ../scss/partials/_wen-new.scss */
+.grid ul li img {
+  width: 100%;
+  float: left;
+}
+
+@-webkit-keyframes super-rainbow {
+  /* line 525, ../scss/partials/_wen-new.scss */
+  0% {
+    background: #bb2030;
+  }
+
+  /* line 526, ../scss/partials/_wen-new.scss */
+  20% {
+    background: #e0793c;
+  }
+
+  /* line 527, ../scss/partials/_wen-new.scss */
+  40% {
+    background: #e6cf47;
+  }
+
+  /* line 528, ../scss/partials/_wen-new.scss */
+  60% {
+    background: #8cc453;
+  }
+
+  /* line 529, ../scss/partials/_wen-new.scss */
+  70% {
+    background: #19a486;
+  }
+
+  /* line 530, ../scss/partials/_wen-new.scss */
+  80% {
+    background: #0c6faf;
+  }
+
+  /* line 531, ../scss/partials/_wen-new.scss */
+  90% {
+    background: #500cad;
+  }
+
+  /* line 532, ../scss/partials/_wen-new.scss */
+  100% {
+    background: #ad0c6b;
+  }
+}
+
+@-moz-keyframes super-rainbow {
+  /* line 536, ../scss/partials/_wen-new.scss */
+  0% {
+    background: #bb2030;
+  }
+
+  /* line 537, ../scss/partials/_wen-new.scss */
+  20% {
+    background: #e0793c;
+  }
+
+  /* line 538, ../scss/partials/_wen-new.scss */
+  40% {
+    background: #e6cf47;
+  }
+
+  /* line 539, ../scss/partials/_wen-new.scss */
+  60% {
+    background: #8cc453;
+  }
+
+  /* line 540, ../scss/partials/_wen-new.scss */
+  70% {
+    background: #19a486;
+  }
+
+  /* line 541, ../scss/partials/_wen-new.scss */
+  80% {
+    background: #0c6faf;
+  }
+
+  /* line 542, ../scss/partials/_wen-new.scss */
+  90% {
+    background: #500cad;
+  }
+
+  /* line 543, ../scss/partials/_wen-new.scss */
+  100% {
+    background: #ad0c6b;
+  }
+}
+
+/* line 546, ../scss/partials/_wen-new.scss */
+#permanent {
+  display: inline-block;
+  font-size: 24px;
+  -webkit-animation: super-rainbow 5s infinite linear;
+  -moz-animation: super-rainbow 5s infinite linear;
+  width: 38%;
+  max-width: 240px;
+}
+
+/* line 557, ../scss/partials/_wen-new.scss */
+#transition img {
+  background-position: 0 0;
+  background-size: 200% 100%;
+  background-color: red;
+  background-image: -webkit-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -moz-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -ms-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: -o-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  background-image: linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
+  -moz-transition: all 0.3s ease-out;
+  /* FF4+ */
+  -o-transition: all 0.3s ease-out;
+  /* Opera 10.5+ */
+  -webkit-transition: all 0.3s ease-out;
+  /* Saf3.2+, Chrome */
+  -ms-transition: all 0.3s ease-out;
+  /* IE10? */
+  transition: all 0.3s ease-out;
+}
+
+/* line 574, ../scss/partials/_wen-new.scss */
+#transition img:hover {
+  background-position: -100% 100%;
+}
+
+/* line 591, ../scss/partials/_wen-new.scss */
+.player-select-container h2, .player-select-container p {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/* line 599, ../scss/partials/_wen-new.scss */
+.player-select-container h2 {
+  font-size: 1.6em;
+}
+/* line 605, ../scss/partials/_wen-new.scss */
+.player-select-container p {
+  color: #ffba2c;
+}
+
+/* line 611, ../scss/partials/_wen-new.scss */
+.players-title {
+  color: white;
+}
+
+/* line 613, ../scss/partials/_wen-new.scss */
+.players-title.blinking {
+  color: #ffba2c;
+}
+
+/* line 615, ../scss/partials/_wen-new.scss */
+.float-top, .float-bottom {
+  visibility: hidden;
+}
+
+/* line 619, ../scss/partials/_wen-new.scss */
+.player1, .player2 {
+  cursor: pointer;
+  width: 320px;
+  height: 440px;
+}
+/* line 626, ../scss/partials/_wen-new.scss */
+.player1:hover .float-top, .player2:hover .float-top {
+  visibility: visible;
+  position: relative;
+  margin: auto !important;
+  -webkit-animation: floatTop 0.3s infinite  normal ease-out;
+  animation: floatTop 0.3s infinite  normal ease-out;
+}
+/* line 634, ../scss/partials/_wen-new.scss */
+.player1:hover .float-bottom, .player2:hover .float-bottom {
+  visibility: visible;
+  position: relative;
+  margin: auto !important;
+  -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+  animation: floatBottom 0.3s infinite  normal ease-out;
+}
+/* line 649, ../scss/partials/_wen-new.scss */
+.player1 div, .player2 div {
+  width: 255px;
+  height: 334px;
+  background-size: 255px 334px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 663, ../scss/partials/_wen-new.scss */
+.player1 p, .player2 p {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1em;
+  margin: 0;
+}
+
+/* line 674, ../scss/partials/_wen-new.scss */
+.player1 div {
+  margin: auto;
+  background: url(Ben-BnW.png) center center no-repeat;
+}
+/* line 680, ../scss/partials/_wen-new.scss */
+.player1:hover div {
+  background: url(Ben-Color-New.png) center center no-repeat;
+}
+
+/* line 688, ../scss/partials/_wen-new.scss */
+.player2 div {
+  margin: auto;
+  background: url(Tim-BnW.png) center center no-repeat;
+}
+/* line 694, ../scss/partials/_wen-new.scss */
+.player2:hover div {
+  background: url(Tim-Color-New.png) center center no-repeat;
+}
+
+/* line 700, ../scss/partials/_wen-new.scss */
+.mixedContent {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto 12px;
+  position: relative;
+  max-height: 500px;
+}
+/* line 708, ../scss/partials/_wen-new.scss */
+.mixedContent h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+/* line 715, ../scss/partials/_wen-new.scss */
+.mixedContent .prev,
+.mixedContent .next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #aaa;
+  padding: 6px;
+  outline: none;
+  z-index: 1;
+}
+/* line 729, ../scss/partials/_wen-new.scss */
+.mixedContent .prev {
+  left: 2px;
+}
+/* line 733, ../scss/partials/_wen-new.scss */
+.mixedContent .next {
+  right: 2px;
+}
+
+@-webkit-keyframes floatTop {
+  /* line 741, ../scss/partials/_wen-new.scss */
+  0% {
+    top: 25px;
+    width: 250px;
+  }
+
+  /* line 745, ../scss/partials/_wen-new.scss */
+  100% {
+    top: 5px;
+    width: 265px;
+  }
+}
+
+@keyframes floatTop {
+  /* line 751, ../scss/partials/_wen-new.scss */
+  0% {
+    top: 25px;
+    width: 250px;
+  }
+
+  /* line 755, ../scss/partials/_wen-new.scss */
+  100% {
+    top: 5px;
+    width: 265px;
+  }
+}
+
+@-webkit-keyframes floatBottom {
+  /* line 767, ../scss/partials/_wen-new.scss */
+  0% {
+    bottom: 25px;
+    width: 250px;
+  }
+
+  /* line 771, ../scss/partials/_wen-new.scss */
+  100% {
+    bottom: 5px;
+    width: 265px;
+  }
+}
+
+@keyframes floatBottom {
+  /* line 777, ../scss/partials/_wen-new.scss */
+  0% {
+    bottom: 25px;
+    width: 250px;
+  }
+
+  /* line 781, ../scss/partials/_wen-new.scss */
+  100% {
+    bottom: 5px;
+    width: 265px;
+  }
+}
+
+/* line 1, ../scss/partials/_carousel-editors.scss */
+#slider-stage {
+  width: 248px;
+  overflow: hidden;
+  height: 175px;
+  margin-left: 1px;
+  float: left;
+  position: relative;
+}
+
+/*#slider-buttons {
+	width: 296px;
+	margin: 0 auto;
+	position:relative;
+	height:20px;
+}*/
+/* line 15, ../scss/partials/_carousel-editors.scss */
+#slider-list {
+  width: 2000px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  left: 0px;
+  position: absolute;
+}
+
+/* line 23, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-right: 8px;
+  float: left;
+  width: 120px;
+  height: 140px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* line 39, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme span.nameVignette {
+  position: absolute;
+  left: 4px;
+  bottom: 0px;
+  color: #a0a09b;
+  padding: 3px;
+  font-size: 10px;
+}
+
+/* line 47, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme:hover span.nameVignette {
+  color: #494947;
+}
+
+/* line 50, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme span.changeTheme {
+  background: #363636;
+  color: #FFD200;
+  display: none;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  height: 16px;
+  left: 0px;
+  padding: 4px 0 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0px;
+  width: 120px;
+}
+
+/* line 66, ../scss/partials/_carousel-editors.scss */
+#slider-list a.theme:hover span.changeTheme {
+  display: block;
+}
+
+/* line 69, ../scss/partials/_carousel-editors.scss */
+#sliderBloc {
+  height: 145px;
+  /*margin:0 auto;*/
+  width: 294px;
+  overflow: hidden;
+}
+
+/* line 75, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#previous, #sliderBloc a#next {
+  background: url(fleche-carrousel-gauche.png) no-repeat left top;
+  float: left;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 55px 2px 0 0;
+}
+
+/* line 84, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#next {
+  background: url(fleche-carrousel-droite.png) no-repeat left top;
+  margin: 55px 0 0 2px;
+}
+
+/* line 88, ../scss/partials/_carousel-editors.scss */
+#sliderBloc a#previous:hover, #sliderBloc a#next:hover {
+  background-position: left -20px;
+}
+
+/* line 91, ../scss/partials/_carousel-editors.scss */
+.demo {
+  background: #F3F2DA none repeat scroll 0 0;
+  padding: 0 1em 1em;
+}
+
+/*********************
+CHARLES STYLES
+*********************/
+/* line 4, ../scss/partials/_google-map.scss */
+.page-id-11 .map, .page-id-11 .city {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+/* line 11, ../scss/partials/_google-map.scss */
+.page-id-11 .map {
+  background-color: black;
+  padding-bottom: 60%;
+}
+@media (min-width: 600px) {
+  /* line 11, ../scss/partials/_google-map.scss */
+  .page-id-11 .map {
+    padding-bottom: 377px;
+  }
+}
+@media (min-width: 980px) and (min-height: 800px) {
+  /* line 11, ../scss/partials/_google-map.scss */
+  .page-id-11 .map {
+    padding-bottom: 641.516px;
+  }
+}
+
+/* line 2, ../scss/partials/_footer.scss */
+* {
+  margin: 0;
+}
+
+/* line 4, ../scss/partials/_footer.scss */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* line 9, ../scss/partials/_footer.scss */
+.footer {
+  position: static;
+}
+
+/* line 11, ../scss/partials/_footer.scss */
+#container {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -350px;
+  overflow-x: hidden;
+}
+/* line 18, ../scss/partials/_footer.scss */
+#container:after {
+  content: "";
+  display: block;
+}
+
+/* line 24, ../scss/partials/_footer.scss */
+.footer, #container:after {
+  height: 350px;
+}
+
+@media (min-width: 400px) {
+  /* line 27, ../scss/partials/_footer.scss */
+  #container {
+    margin-bottom: -334px;
+  }
+
+  /* line 28, ../scss/partials/_footer.scss */
+  .footer, #container:after {
+    height: 334px;
+  }
+}
+@media (min-width: 400px) {
+  /* line 32, ../scss/partials/_footer.scss */
+  #container {
+    margin-bottom: -350px;
+  }
+
+  /* line 33, ../scss/partials/_footer.scss */
+  .footer, #container:after {
+    height: 350px;
+  }
+}
+@media (min-width: 556px) {
+  /* line 37, ../scss/partials/_footer.scss */
+  #container {
+    margin-bottom: -359px;
+  }
+
+  /* line 38, ../scss/partials/_footer.scss */
+  .footer, #container:after {
+    height: 359px;
+  }
+}
+@media (min-width: 1040px) {
+  /* line 42, ../scss/partials/_footer.scss */
+  #container {
+    margin-bottom: -322px;
+  }
+
+  /* line 43, ../scss/partials/_footer.scss */
+  .footer, #container:after {
+    height: 322px;
+  }
+}
+/* line 2, ../scss/partials/_logo-svg.scss */
+.svg-holder {
+  width: 100%;
+  position: relative;
+  /*    max-width:834px; */
+}
+
+/* line 8, ../scss/partials/_logo-svg.scss */
+svg {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  /*   max-height:184px; */
+  width: 100%;
+}
+
+/* line 3, ../scss/partials/html5demos/_html-demo.scss */
+#demo-holder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 15, ../scss/partials/html5demos/_html-demo.scss */
+.page-template-page-dev-template-php .content-container {
+  margin: 0 auto;
+}
+/* line 18, ../scss/partials/html5demos/_html-demo.scss */
+.page-template-page-dev-template-php .thumb-list {
+  width: 100%;
+  display: block;
+  max-width: 915px;
+  margin: 0 auto;
+}
+/* line 25, ../scss/partials/html5demos/_html-demo.scss */
+.page-template-page-dev-template-php .thumb {
+  position: static;
+  float: left;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+/* line 2, ../scss/partials/html5demos/_fractal.scss */
+.fractal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: rotate 20000ms linear infinite;
+  animation: rotate 20000ms linear infinite;
+  z-index: -1;
+  -webkit-transform: translateZ(-1);
+  -moz-transform: translateZ(-1);
+  -o-transform: translateZ(-1);
+  -ms-transform: translateZ(-1);
+  transform: translateZ(-1);
+}
+
+/* line 17, ../scss/partials/html5demos/_fractal.scss */
+.part {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  margin: -7.5em;
+  border-radius: 100%;
+  width: 15em;
+  height: 15em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2) inset;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: scale 8000ms linear infinite;
+  animation: scale 8000ms linear infinite;
+}
+
+/* line 33, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(1) {
+  top: 0em;
+  left: 0.1em;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 38, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(2) {
+  top: 0.04207em;
+  left: 0.02702em;
+  background: rgba(255, 253, 253, 0.1);
+}
+
+/* line 43, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(3) {
+  top: 0em;
+  left: 0em;
+  background: rgba(255, 251, 251, 0.1);
+}
+
+/* line 48, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(4) {
+  top: -0.00706em;
+  left: 0.0495em;
+  background: rgba(255, 250, 249, 0.1);
+}
+
+/* line 53, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(5) {
+  top: 0.07568em;
+  left: 0.06536em;
+  background: rgba(255, 249, 247, 0.1);
+}
+
+/* line 58, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(6) {
+  top: 0.14384em;
+  left: -0.04255em;
+  background: rgba(255, 248, 245, 0.1);
+}
+
+/* line 63, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(7) {
+  top: 0.05588em;
+  left: -0.19203em;
+  background: rgba(255, 247, 243, 0.1);
+}
+
+/* line 68, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(8) {
+  top: -0.16425em;
+  left: -0.18848em;
+  background: rgba(255, 246, 241, 0.1);
+}
+
+/* line 73, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(9) {
+  top: -0.29681em;
+  left: 0.04365em;
+  background: rgba(255, 245, 239, 0.1);
+}
+
+/* line 78, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(10) {
+  top: -0.14424em;
+  left: 0.3189em;
+  background: rgba(255, 245, 237, 0.1);
+}
+
+/* line 83, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(11) {
+  top: 0.21761em;
+  left: 0.33563em;
+  background: rgba(255, 245, 235, 0.1);
+}
+
+/* line 88, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(12) {
+  top: 0.45em;
+  left: -0.00199em;
+  background: rgba(255, 245, 233, 0.1);
+}
+
+/* line 93, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(13) {
+  top: 0.26829em;
+  left: -0.42193em;
+  background: rgba(255, 245, 231, 0.1);
+}
+
+/* line 98, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(14) {
+  top: -0.23109em;
+  left: -0.4991em;
+  background: rgba(255, 246, 229, 0.1);
+}
+
+/* line 103, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(15) {
+  top: -0.59436em;
+  left: -0.08204em;
+  background: rgba(255, 247, 227, 0.1);
+}
+
+/* line 108, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(16) {
+  top: -0.42269em;
+  left: 0.4938em;
+  background: rgba(255, 248, 225, 0.1);
+}
+
+/* line 113, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(17) {
+  top: 0.20153em;
+  left: 0.67036em;
+  background: rgba(255, 249, 223, 0.1);
+}
+
+/* line 118, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(18) {
+  top: 0.72105em;
+  left: 0.20637em;
+  background: rgba(255, 250, 221, 0.1);
+}
+
+/* line 123, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(19) {
+  top: 0.60079em;
+  left: -0.52825em;
+  background: rgba(255, 251, 219, 0.1);
+}
+
+/* line 128, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(20) {
+  top: -0.1274em;
+  left: -0.8404em;
+  background: rgba(255, 253, 217, 0.1);
+}
+
+/* line 133, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(21) {
+  top: -0.82165em;
+  left: -0.36727em;
+  background: rgba(255, 255, 215, 0.1);
+}
+
+/* line 138, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(22) {
+  top: -0.79482em;
+  left: 0.52034em;
+  background: rgba(253, 255, 213, 0.1);
+}
+
+/* line 143, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(23) {
+  top: 0.00885em;
+  left: 0.99996em;
+  background: rgba(251, 255, 211, 0.1);
+}
+
+/* line 148, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(24) {
+  top: 0.88853em;
+  left: 0.55947em;
+  background: rgba(248, 255, 209, 0.1);
+}
+
+/* line 153, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(25) {
+  top: 0.99614em;
+  left: -0.4666em;
+  background: rgba(245, 255, 207, 0.1);
+}
+
+/* line 158, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(26) {
+  top: 0.1522em;
+  left: -1.13988em;
+  background: rgba(243, 255, 205, 0.1);
+}
+
+/* line 163, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(27) {
+  top: -0.91507em;
+  left: -0.7763em;
+  background: rgba(239, 255, 203, 0.1);
+}
+
+/* line 168, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(28) {
+  top: -1.19547em;
+  left: 0.36517em;
+  background: rgba(236, 255, 201, 0.1);
+}
+
+/* line 173, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(29) {
+  top: -0.35218em;
+  left: 1.25139em;
+  background: rgba(233, 255, 199, 0.1);
+}
+
+/* line 178, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(30) {
+  top: 0.89591em;
+  left: 1.00988em;
+  background: rgba(229, 255, 197, 0.1);
+}
+
+/* line 183, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(31) {
+  top: 1.38324em;
+  left: -0.21595em;
+  background: rgba(225, 255, 195, 0.1);
+}
+
+/* line 188, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(32) {
+  top: 0.58585em;
+  left: -1.32638em;
+  background: rgba(221, 255, 193, 0.1);
+}
+
+/* line 193, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(33) {
+  top: -0.82714em;
+  left: -1.25134em;
+  background: rgba(217, 255, 191, 0.1);
+}
+
+/* line 198, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(34) {
+  top: -1.54986em;
+  left: 0.02058em;
+  background: rgba(212, 255, 189, 0.1);
+}
+
+/* line 203, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(35) {
+  top: -0.84653em;
+  left: 1.35771em;
+  background: rgba(207, 255, 187, 0.1);
+}
+
+/* line 208, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(36) {
+  top: 0.7065em;
+  left: 1.49109em;
+  background: rgba(203, 255, 185, 0.1);
+}
+
+/* line 213, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(37) {
+  top: 1.68602em;
+  left: 0.21754em;
+  background: rgba(197, 255, 183, 0.1);
+}
+
+/* line 218, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(38) {
+  top: 1.12619em;
+  left: -1.33947em;
+  background: rgba(192, 255, 181, 0.1);
+}
+
+/* line 223, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(39) {
+  top: -0.53346em;
+  left: -1.71913em;
+  background: rgba(187, 255, 179, 0.1);
+}
+
+/* line 228, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(40) {
+  top: -1.78302em;
+  left: -0.49329em;
+  background: rgba(181, 255, 177, 0.1);
+}
+
+/* line 233, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(41) {
+  top: -1.41572em;
+  left: 1.26718em;
+  background: rgba(175, 255, 175, 0.1);
+}
+
+/* line 238, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(42) {
+  top: 0.30931em;
+  left: 1.92531em;
+  background: rgba(173, 255, 177, 0.1);
+}
+
+/* line 243, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(43) {
+  top: 1.83304em;
+  left: 0.79997em;
+  background: rgba(171, 255, 179, 0.1);
+}
+
+/* line 248, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(44) {
+  top: 1.70514em;
+  left: -1.13798em;
+  background: rgba(169, 255, 182, 0.1);
+}
+
+/* line 253, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(45) {
+  top: -0.03717em;
+  left: -2.09967em;
+  background: rgba(167, 255, 185, 0.1);
+}
+
+/* line 258, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(46) {
+  top: -1.82944em;
+  left: -1.12944em;
+  background: rgba(165, 255, 187, 0.1);
+}
+
+/* line 263, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(47) {
+  top: -1.98393em;
+  left: 0.95079em;
+  background: rgba(163, 255, 191, 0.1);
+}
+
+/* line 268, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(48) {
+  top: -0.27804em;
+  left: 2.23275em;
+  background: rgba(161, 255, 194, 0.1);
+}
+
+/* line 273, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(49) {
+  top: 1.76699em;
+  left: 1.47233em;
+  background: rgba(159, 255, 197, 0.1);
+}
+
+/* line 278, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(50) {
+  top: 2.24132em;
+  left: -0.70639em;
+  background: rgba(157, 255, 201, 0.1);
+}
+
+/* line 283, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(51) {
+  top: 0.6297em;
+  left: -2.31592em;
+  background: rgba(155, 255, 205, 0.1);
+}
+
+/* line 288, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(52) {
+  top: -1.64206em;
+  left: -1.81828em;
+  background: rgba(153, 255, 209, 0.1);
+}
+
+/* line 293, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(53) {
+  top: -2.46657em;
+  left: 0.40748em;
+  background: rgba(151, 255, 213, 0.1);
+}
+
+/* line 298, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(54) {
+  top: -1.00961em;
+  left: 2.34162em;
+  background: rgba(149, 255, 218, 0.1);
+}
+
+/* line 303, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(55) {
+  top: 1.45285em;
+  left: 2.15621em;
+  background: rgba(147, 255, 223, 0.1);
+}
+
+/* line 308, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(56) {
+  top: 2.64935em;
+  left: -0.05864em;
+  background: rgba(145, 255, 228, 0.1);
+}
+
+/* line 313, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(57) {
+  top: 1.40819em;
+  left: -2.30369em;
+  background: rgba(143, 255, 233, 0.1);
+}
+
+/* line 318, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(58) {
+  top: -1.19945em;
+  left: -2.47463em;
+  background: rgba(141, 255, 238, 0.1);
+}
+
+/* line 323, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(59) {
+  top: -2.78004em;
+  left: -0.3337em;
+  background: rgba(139, 255, 243, 0.1);
+}
+
+/* line 328, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(60) {
+  top: -1.8147em;
+  left: 2.19758em;
+  background: rgba(137, 255, 249, 0.1);
+}
+
+/* line 333, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(61) {
+  top: 0.88395em;
+  left: 2.762em;
+  background: rgba(135, 255, 255, 0.1);
+}
+
+/* line 338, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(62) {
+  top: 2.85005em;
+  left: 0.7614em;
+  background: rgba(133, 249, 255, 0.1);
+}
+
+/* line 343, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(63) {
+  top: 2.21754em;
+  left: -2.02052em;
+  background: rgba(131, 243, 255, 0.1);
+}
+
+/* line 348, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(64) {
+  top: -0.51043em;
+  left: -3.00698em;
+  background: rgba(129, 236, 255, 0.1);
+}
+
+/* line 353, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(65) {
+  top: -2.85208em;
+  left: -1.21476em;
+  background: rgba(127, 229, 255, 0.1);
+}
+
+/* line 358, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(66) {
+  top: -2.60451em;
+  left: 1.77173em;
+  background: rgba(125, 223, 255, 0.1);
+}
+
+/* line 363, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(67) {
+  top: 0.08496em;
+  left: 3.19887em;
+  background: rgba(123, 215, 255, 0.1);
+}
+
+/* line 368, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(68) {
+  top: 2.78044em;
+  left: 1.68275em;
+  background: rgba(121, 208, 255, 0.1);
+}
+
+/* line 373, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(69) {
+  top: 2.96316em;
+  left: -1.45247em;
+  background: rgba(119, 201, 255, 0.1);
+}
+
+/* line 378, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(70) {
+  top: 0.38453em;
+  left: -3.32786em;
+  background: rgba(117, 193, 255, 0.1);
+}
+
+/* line 383, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(71) {
+  top: -2.63123em;
+  left: -2.15329em;
+  background: rgba(115, 185, 255, 0.1);
+}
+
+/* line 388, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(72) {
+  top: -3.28114em;
+  left: 1.06613em;
+  background: rgba(113, 177, 255, 0.1);
+}
+
+/* line 393, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(73) {
+  top: -0.88838em;
+  left: 3.38538em;
+  background: rgba(111, 169, 255, 0.1);
+}
+
+/* line 398, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(74) {
+  top: 2.40254em;
+  left: 2.61348em;
+  background: rgba(109, 160, 255, 0.1);
+}
+
+/* line 403, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(75) {
+  top: 3.54653em;
+  left: -0.61818em;
+  background: rgba(107, 151, 255, 0.1);
+}
+
+/* line 408, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(76) {
+  top: 1.4154em;
+  left: -3.36439em;
+  background: rgba(105, 143, 255, 0.1);
+}
+
+/* line 413, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(77) {
+  top: -2.0946em;
+  left: -3.05003em;
+  background: rgba(103, 133, 255, 0.1);
+}
+
+/* line 418, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(78) {
+  top: -3.7482em;
+  left: 0.11616em;
+  background: rgba(101, 124, 255, 0.1);
+}
+
+/* line 423, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(79) {
+  top: -1.95312em;
+  left: 3.25965em;
+  background: rgba(99, 115, 255, 0.1);
+}
+
+/* line 428, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(80) {
+  top: 1.70983em;
+  left: 3.44949em;
+  background: rgba(97, 105, 255, 0.1);
+}
+
+/* line 433, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(81) {
+  top: 3.87617em;
+  left: 0.43051em;
+  background: rgba(95, 95, 255, 0.1);
+}
+
+/* line 438, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(82) {
+  top: 2.48806em;
+  left: -3.06791em;
+  background: rgba(101, 93, 255, 0.1);
+}
+
+/* line 443, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(83) {
+  top: -1.25292em;
+  left: -3.79871em;
+  background: rgba(107, 91, 255, 0.1);
+}
+
+/* line 448, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(84) {
+  top: -3.92188em;
+  left: -1.01064em;
+  background: rgba(114, 89, 255, 0.1);
+}
+
+/* line 453, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(85) {
+  top: -3.00608em;
+  left: 2.7881em;
+  background: rgba(121, 87, 255, 0.1);
+}
+
+/* line 458, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(86) {
+  top: 0.73071em;
+  left: 4.08516em;
+  background: rgba(128, 85, 255, 0.1);
+}
+
+/* line 463, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(87) {
+  top: 3.87853em;
+  left: 1.61153em;
+  background: rgba(135, 83, 255, 0.1);
+}
+
+/* line 468, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(88) {
+  top: 3.49273em;
+  left: -2.42144em;
+  background: rgba(142, 81, 255, 0.1);
+}
+
+/* line 473, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(89) {
+  top: -0.15221em;
+  left: -4.29731em;
+  background: rgba(149, 79, 255, 0.1);
+}
+
+/* line 478, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(90) {
+  top: -3.7413em;
+  left: -2.21927em;
+  background: rgba(157, 77, 255, 0.1);
+}
+
+/* line 483, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(91) {
+  top: -3.93359em;
+  left: 1.97152em;
+  background: rgba(165, 75, 255, 0.1);
+}
+
+/* line 488, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(92) {
+  top: -0.47164em;
+  left: 4.42494em;
+  background: rgba(173, 73, 255, 0.1);
+}
+
+/* line 493, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(93) {
+  top: 3.5076em;
+  left: 2.819em;
+  background: rgba(181, 71, 255, 0.1);
+}
+
+/* line 498, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(94) {
+  top: 4.31468em;
+  left: -1.4443em;
+  background: rgba(190, 69, 255, 0.1);
+}
+
+/* line 503, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(95) {
+  top: 1.12816em;
+  left: -4.45951em;
+  background: rgba(199, 67, 255, 0.1);
+}
+
+/* line 508, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(96) {
+  top: -3.17717em;
+  left: -3.39531em;
+  background: rgba(208, 65, 255, 0.1);
+}
+
+/* line 513, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(97) {
+  top: -4.62286em;
+  left: 0.84802em;
+  background: rgba(217, 63, 255, 0.1);
+}
+
+/* line 518, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(98) {
+  top: -1.80314em;
+  left: 4.39445em;
+  background: rgba(226, 61, 255, 0.1);
+}
+
+/* line 523, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(99) {
+  top: 2.75223em;
+  left: 3.93258em;
+  background: rgba(235, 59, 255, 0.1);
+}
+
+/* line 528, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(100) {
+  top: 4.84615em;
+  left: -0.19313em;
+  background: rgba(245, 57, 255, 0.1);
+}
+
+/* line 533, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(101) {
+  top: 2.48119em;
+  left: -4.22536em;
+  background: rgba(255, 55, 255, 0.1);
+}
+
+/* line 538, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(102) {
+  top: -2.23753em;
+  left: -4.41542em;
+  background: rgba(255, 53, 245, 0.1);
+}
+
+/* line 543, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(103) {
+  top: -4.97413em;
+  left: -0.50793em;
+  background: rgba(255, 51, 235, 0.1);
+}
+
+/* line 548, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(104) {
+  top: -3.14609em;
+  left: 3.95027em;
+  background: rgba(255, 49, 224, 0.1);
+}
+
+/* line 553, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(105) {
+  top: 1.64027em;
+  left: 4.82903em;
+  background: rgba(255, 47, 213, 0.1);
+}
+
+/* line 558, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(106) {
+  top: 4.99826em;
+  left: 1.24094em;
+  background: rgba(255, 45, 202, 0.1);
+}
+
+/* line 563, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(107) {
+  top: 3.78114em;
+  left: -3.56973em;
+  background: rgba(255, 43, 191, 0.1);
+}
+
+/* line 568, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(108) {
+  top: -0.9701em;
+  left: -5.15959em;
+  background: rgba(255, 41, 180, 0.1);
+}
+
+/* line 573, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(109) {
+  top: -4.91214em;
+  left: -1.9902em;
+  background: rgba(255, 39, 169, 0.1);
+}
+
+/* line 578, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(110) {
+  top: -4.36957em;
+  left: 3.08696em;
+  background: rgba(255, 37, 157, 0.1);
+}
+
+/* line 583, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(111) {
+  top: 0.23891em;
+  left: 5.39471em;
+  background: rgba(255, 35, 145, 0.1);
+}
+
+/* line 588, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(112) {
+  top: 4.71181em;
+  left: 2.73887em;
+  background: rgba(255, 33, 133, 0.1);
+}
+
+/* line 593, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(113) {
+  top: 4.89498em;
+  left: -2.50783em;
+  background: rgba(255, 31, 121, 0.1);
+}
+
+/* line 598, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(114) {
+  top: 0.53936em;
+  left: -5.52373em;
+  background: rgba(255, 29, 108, 0.1);
+}
+
+/* line 603, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(115) {
+  top: -4.39589em;
+  left: -3.46932em;
+  background: rgba(255, 27, 95, 0.1);
+}
+
+/* line 608, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(116) {
+  top: -5.34171em;
+  left: 1.84083em;
+  background: rgba(255, 25, 82, 0.1);
+}
+
+/* line 613, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(117) {
+  top: -1.34897em;
+  left: 5.53808em;
+  background: rgba(255, 23, 69, 0.1);
+}
+
+/* line 618, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(118) {
+  top: 3.96576em;
+  left: 4.16356em;
+  background: rgba(255, 21, 56, 0.1);
+}
+
+/* line 623, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(119) {
+  top: 5.69532em;
+  left: -1.09695em;
+  background: rgba(255, 19, 43, 0.1);
+}
+
+/* line 628, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(120) {
+  top: 2.17271em;
+  left: -5.43156em;
+  background: rgba(255, 17, 29, 0.1);
+}
+
+/* line 633, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(121) {
+  top: -3.42561em;
+  left: -4.80367em;
+  background: rgba(255, 15, 15, 0.1);
+}
+
+/* line 638, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(122) {
+  top: -5.94295em;
+  left: 0.28955em;
+  background: rgba(255, 25, 13, 0.1);
+}
+
+/* line 643, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(123) {
+  top: -2.99228em;
+  left: 5.2006em;
+  background: rgba(255, 35, 11, 0.1);
+}
+
+/* line 648, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(124) {
+  top: 2.78242em;
+  left: 5.37221em;
+  background: rgba(255, 46, 9, 0.1);
+}
+
+/* line 653, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(125) {
+  top: 6.07369em;
+  left: 0.56593em;
+  background: rgba(255, 57, 7, 0.1);
+}
+
+/* line 658, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(126) {
+  top: 3.78865em;
+  left: -4.84444em;
+  background: rgba(255, 68, 5, 0.1);
+}
+
+/* line 663, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(127) {
+  top: -2.04594em;
+  left: -5.8527em;
+  background: rgba(255, 79, 3, 0.1);
+}
+
+/* line 668, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(128) {
+  top: -6.07894em;
+  left: -1.45224em;
+  background: rgba(255, 90, 1, 0.1);
+}
+
+/* line 673, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(129) {
+  top: -4.54254em;
+  left: 4.36524em;
+  background: rgba(254, 102, 0, 0.1);
+}
+
+/* line 678, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(130) {
+  top: 1.22856em;
+  left: 6.23002em;
+  background: rgba(252, 113, 0, 0.1);
+}
+
+/* line 683, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(131) {
+  top: 5.95268em;
+  left: 2.35066em;
+  background: rgba(250, 125, 0, 0.1);
+}
+
+/* line 688, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(132) {
+  top: 5.23484em;
+  left: -3.76815em;
+  background: rgba(248, 136, 0, 0.1);
+}
+
+/* line 693, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(133) {
+  top: -0.34504em;
+  left: -6.49084em;
+  background: rgba(246, 148, 0, 0.1);
+}
+
+/* line 698, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(134) {
+  top: -5.69173em;
+  left: -3.24141em;
+  background: rgba(244, 159, 0, 0.1);
+}
+
+/* line 703, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(135) {
+  top: -5.8471em;
+  left: 3.06127em;
+  background: rgba(242, 169, 0, 0.1);
+}
+
+/* line 708, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(136) {
+  top: -0.58765em;
+  left: 6.62398em;
+  background: rgba(240, 180, 0, 0.1);
+}
+
+/* line 713, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(137) {
+  top: 5.2959em;
+  left: 4.10407em;
+  background: rgba(238, 190, 0, 0.1);
+}
+
+/* line 718, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(138) {
+  top: 6.36197em;
+  left: -2.25562em;
+  background: rgba(236, 201, 0, 0.1);
+}
+
+/* line 723, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(139) {
+  top: 1.55076em;
+  left: -6.62081em;
+  background: rgba(234, 211, 0, 0.1);
+}
+
+/* line 728, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(140) {
+  top: -4.76815em;
+  left: -4.91805em;
+  background: rgba(232, 220, 0, 0.1);
+}
+
+/* line 733, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(141) {
+  top: -6.76365em;
+  left: 1.36491em;
+  background: rgba(230, 230, 0, 0.1);
+}
+
+/* line 738, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(142) {
+  top: -2.52404em;
+  left: 6.47547em;
+  background: rgba(217, 228, 0, 0.1);
+}
+
+/* line 743, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(143) {
+  top: 4.11457em;
+  left: 5.66307em;
+  background: rgba(203, 226, 0, 0.1);
+}
+
+/* line 748, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(144) {
+  top: 7.03833em;
+  left: -0.40539em;
+  background: rgba(190, 224, 0, 0.1);
+}
+
+/* line 753, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(145) {
+  top: 3.48625em;
+  left: -6.18515em;
+  background: rgba(178, 222, 0, 0.1);
+}
+
+/* line 758, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(146) {
+  top: -3.34438em;
+  left: -6.31962em;
+  background: rgba(165, 220, 0, 0.1);
+}
+
+/* line 763, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(147) {
+  top: -7.17458em;
+  left: -0.60451em;
+  background: rgba(153, 218, 0, 0.1);
+}
+
+/* line 768, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(148) {
+  top: -4.41557em;
+  left: 5.75024em;
+  background: rgba(140, 216, 0, 0.1);
+}
+
+/* line 773, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(149) {
+  top: 2.46983em;
+  left: 6.86949em;
+  background: rgba(128, 214, 0, 0.1);
+}
+
+/* line 778, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(150) {
+  top: 7.16367em;
+  left: 1.6445em;
+  background: rgba(117, 212, 0, 0.1);
+}
+
+/* line 783, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(151) {
+  top: 5.29009em;
+  left: -5.17446em;
+  background: rgba(105, 210, 0, 0.1);
+}
+
+/* line 788, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(152) {
+  top: -1.50602em;
+  left: -7.29619em;
+  background: rgba(94, 208, 0, 0.1);
+}
+
+/* line 793, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(153) {
+  top: -6.9999em;
+  left: -2.69283em;
+  background: rgba(82, 206, 0, 0.1);
+}
+
+/* line 798, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(154) {
+  top: -6.08832em;
+  left: 4.46484em;
+  background: rgba(71, 204, 0, 0.1);
+}
+
+/* line 803, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(155) {
+  top: 0.47059em;
+  left: 7.58542em;
+  background: rgba(61, 202, 0, 0.1);
+}
+
+/* line 808, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(156) {
+  top: 6.68084em;
+  left: 3.72678em;
+  background: rgba(50, 200, 0, 0.1);
+}
+
+/* line 813, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(157) {
+  top: 6.78974em;
+  left: -3.63172em;
+  background: rgba(40, 198, 0, 0.1);
+}
+
+/* line 818, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(158) {
+  top: 0.6165em;
+  left: -7.72544em;
+  background: rgba(29, 196, 0, 0.1);
+}
+
+/* line 823, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(159) {
+  top: -6.20743em;
+  left: -4.72312em;
+  background: rgba(19, 194, 0, 0.1);
+}
+
+/* line 828, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(160) {
+  top: -7.37523em;
+  left: 2.68858em;
+  background: rgba(10, 192, 0, 0.1);
+}
+
+/* line 833, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(161) {
+  top: -1.73346em;
+  left: 7.70747em;
+  background: rgba(0, 190, 0, 0.1);
+}
+
+/* line 838, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(162) {
+  top: 5.58414em;
+  left: 5.65861em;
+  background: rgba(0, 188, 9, 0.1);
+}
+
+/* line 843, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(163) {
+  top: 7.8276em;
+  left: -1.65186em;
+  background: rgba(0, 186, 19, 0.1);
+}
+
+/* line 848, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(164) {
+  top: 2.85703em;
+  left: -7.52595em;
+  background: rgba(0, 184, 28, 0.1);
+}
+
+/* line 853, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(165) {
+  top: -4.81896em;
+  left: -6.51058em;
+  background: rgba(0, 182, 36, 0.1);
+}
+
+/* line 858, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(166) {
+  top: -8.13205em;
+  left: 0.54065em;
+  background: rgba(0, 180, 45, 0.1);
+}
+
+/* line 863, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(167) {
+  top: -3.96299em;
+  left: 7.17877em;
+  background: rgba(0, 178, 53, 0.1);
+}
+
+/* line 868, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(168) {
+  top: 3.92329em;
+  left: 7.25743em;
+  background: rgba(0, 176, 62, 0.1);
+}
+
+/* line 873, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(169) {
+  top: 8.27654em;
+  left: 0.62363em;
+  background: rgba(0, 174, 70, 0.1);
+}
+
+/* line 878, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(170) {
+  top: 5.0267em;
+  left: -6.66744em;
+  background: rgba(0, 172, 77, 0.1);
+}
+
+/* line 883, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(171) {
+  top: -2.91186em;
+  left: -7.87916em;
+  background: rgba(0, 170, 85, 0.1);
+}
+
+/* line 888, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(172) {
+  top: -8.25219em;
+  left: -1.81764em;
+  background: rgba(0, 168, 92, 0.1);
+}
+
+/* line 893, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(173) {
+  top: -6.0236em;
+  left: 5.99718em;
+  background: rgba(0, 166, 100, 0.1);
+}
+
+/* line 898, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(174) {
+  top: 1.80243em;
+  left: 8.35786em;
+  background: rgba(0, 164, 107, 0.1);
+}
+
+/* line 903, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(175) {
+  top: 8.05357em;
+  left: 3.01661em;
+  background: rgba(0, 162, 113, 0.1);
+}
+
+/* line 908, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(176) {
+  top: 6.92981em;
+  left: -5.17689em;
+  background: rgba(0, 160, 120, 0.1);
+}
+
+/* line 913, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(177) {
+  top: -0.61554em;
+  left: -8.6782em;
+  background: rgba(0, 158, 126, 0.1);
+}
+
+/* line 918, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(178) {
+  top: -7.67891em;
+  left: -4.19486em;
+  background: rgba(0, 156, 133, 0.1);
+}
+
+/* line 923, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(179) {
+  top: -7.72266em;
+  left: 4.21906em;
+  background: rgba(0, 154, 139, 0.1);
+}
+
+/* line 928, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(180) {
+  top: -0.62589em;
+  left: 8.82784em;
+  background: rgba(0, 152, 144, 0.1);
+}
+
+/* line 933, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(181) {
+  top: 7.13026em;
+  left: 5.32629em;
+  background: rgba(0, 150, 150, 0.1);
+}
+
+/* line 938, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(182) {
+  top: 8.38124em;
+  left: -3.13964em;
+  background: rgba(0, 141, 148, 0.1);
+}
+
+/* line 943, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(183) {
+  top: 1.89703em;
+  left: -8.7978em;
+  background: rgba(0, 131, 146, 0.1);
+}
+
+/* line 948, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(184) {
+  top: -6.41356em;
+  left: -6.38504em;
+  background: rgba(0, 122, 144, 0.1);
+}
+
+/* line 953, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(185) {
+  top: -8.88692em;
+  left: 1.95773em;
+  background: rgba(0, 114, 142, 0.1);
+}
+
+/* line 958, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(186) {
+  top: -3.17158em;
+  left: 8.58275em;
+  background: rgba(0, 105, 140, 0.1);
+}
+
+/* line 963, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(187) {
+  top: 5.53862em;
+  left: 7.346em;
+  background: rgba(0, 97, 138, 0.1);
+}
+
+/* line 968, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(188) {
+  top: 9.22383em;
+  left: -0.69529em;
+  background: rgba(0, 88, 136, 0.1);
+}
+
+/* line 973, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(189) {
+  top: 4.42237em;
+  left: -8.18124em;
+  background: rgba(0, 80, 134, 0.1);
+}
+
+/* line 978, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(190) {
+  top: -4.51902em;
+  left: -8.18541em;
+  background: rgba(0, 73, 132, 0.1);
+}
+
+/* line 983, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(191) {
+  top: -9.37931em;
+  left: -0.62328em;
+  background: rgba(0, 65, 130, 0.1);
+}
+
+/* line 988, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(192) {
+  top: -5.62189em;
+  left: 7.59585em;
+  background: rgba(0, 58, 128, 0.1);
+}
+
+/* line 993, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(193) {
+  top: 3.37191em;
+  left: 8.88145em;
+  background: rgba(0, 50, 126, 0.1);
+}
+
+/* line 998, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(194) {
+  top: 9.34426em;
+  left: 1.97162em;
+  background: rgba(0, 43, 124, 0.1);
+}
+
+/* line 1003, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(195) {
+  top: 6.74291em;
+  left: -6.83324em;
+  background: rgba(0, 37, 122, 0.1);
+}
+
+/* line 1008, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(196) {
+  top: -2.11774em;
+  left: -9.41476em;
+  background: rgba(0, 30, 120, 0.1);
+}
+
+/* line 1013, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(197) {
+  top: -9.11344em;
+  left: -3.32192em;
+  background: rgba(0, 24, 118, 0.1);
+}
+
+/* line 1018, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(198) {
+  top: -7.75911em;
+  left: 5.90413em;
+  background: rgba(0, 17, 116, 0.1);
+}
+
+/* line 1023, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(199) {
+  top: 0.77987em;
+  left: 9.76892em;
+  background: rgba(0, 11, 114, 0.1);
+}
+
+/* line 1028, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(200) {
+  top: 8.68572em;
+  left: 4.64551em;
+  background: rgba(0, 6, 112, 0.1);
+}
+
+/* line 1033, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(201) {
+  top: 8.64564em;
+  left: -4.82316em;
+  background: rgba(0, 0, 110, 0.1);
+}
+
+/* line 1038, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(202) {
+  top: 0.61581em;
+  left: -9.93093em;
+  background: rgba(5, 0, 108, 0.1);
+}
+
+/* line 1043, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(203) {
+  top: -8.06418em;
+  left: -5.91345em;
+  background: rgba(11, 0, 106, 0.1);
+}
+
+/* line 1048, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(204) {
+  top: -9.37976em;
+  left: 3.60868em;
+  background: rgba(16, 0, 104, 0.1);
+}
+
+/* line 1053, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(205) {
+  top: -2.04142em;
+  left: 9.89154em;
+  background: rgba(20, 0, 102, 0.1);
+}
+
+/* line 1058, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(206) {
+  top: 7.25621em;
+  left: 7.09718em;
+  background: rgba(25, 0, 100, 0.1);
+}
+
+/* line 1063, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(207) {
+  top: 9.94135em;
+  left: -2.28246em;
+  background: rgba(29, 0, 98, 0.1);
+}
+
+/* line 1068, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(208) {
+  top: 3.46763em;
+  left: -9.64562em;
+  background: rgba(34, 0, 96, 0.1);
+}
+
+/* line 1073, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(209) {
+  top: -6.2734em;
+  left: -8.16912em;
+  background: rgba(38, 0, 94, 0.1);
+}
+
+/* line 1078, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(210) {
+  top: -10.31343em;
+  left: 0.86929em;
+  background: rgba(41, 0, 92, 0.1);
+}
+
+/* line 1083, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(211) {
+  top: -4.86427em;
+  left: 9.19233em;
+  background: rgba(45, 0, 90, 0.1);
+}
+
+/* line 1088, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(212) {
+  top: 5.13145em;
+  left: 9.10334em;
+  background: rgba(48, 0, 88, 0.1);
+}
+
+/* line 1093, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(213) {
+  top: 10.48264em;
+  left: 0.60346em;
+  background: rgba(52, 0, 86, 0.1);
+}
+
+/* line 1098, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(214) {
+  top: 6.20098em;
+  left: -8.53524em;
+  background: rgba(55, 0, 84, 0.1);
+}
+
+/* line 1103, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(215) {
+  top: -3.84991em;
+  left: -9.87614em;
+  background: rgba(57, 0, 82, 0.1);
+}
+
+/* line 1108, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(216) {
+  top: -10.43962em;
+  left: -2.1064em;
+  background: rgba(60, 0, 80, 0.1);
+}
+
+/* line 1113, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(217) {
+  top: -7.44783em;
+  left: 7.68244em;
+  background: rgba(62, 0, 78, 0.1);
+}
+
+/* line 1118, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(218) {
+  top: 2.45188em;
+  left: 10.46665em;
+  background: rgba(65, 0, 76, 0.1);
+}
+
+/* line 1123, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(219) {
+  top: 10.17926em;
+  left: 3.60868em;
+  background: rgba(67, 0, 74, 0.1);
+}
+
+/* line 1128, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(220) {
+  top: 8.576em;
+  left: -6.64641em;
+  background: rgba(68, 0, 72, 0.1);
+}
+
+/* line 1133, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(221) {
+  top: -0.96355em;
+  left: -10.85733em;
+  background: rgba(70, 0, 70, 0.1);
+}
+
+/* line 1138, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(222) {
+  top: -9.70103em;
+  left: -5.07863em;
+  background: rgba(68, 0, 65, 0.1);
+}
+
+/* line 1143, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(223) {
+  top: -9.55846em;
+  left: 5.44388em;
+  background: rgba(66, 0, 59, 0.1);
+}
+
+/* line 1148, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(224) {
+  top: -0.58624em;
+  left: 11.03444em;
+  background: rgba(64, 0, 54, 0.1);
+}
+
+/* line 1153, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(225) {
+  top: 9.00899em;
+  left: 6.48445em;
+  background: rgba(62, 0, 50, 0.1);
+}
+
+/* line 1158, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(226) {
+  top: 10.37056em;
+  left: -4.09561em;
+  background: rgba(60, 0, 45, 0.1);
+}
+
+/* line 1163, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(227) {
+  top: 2.16657em;
+  left: -10.98845em;
+  background: rgba(58, 0, 41, 0.1);
+}
+
+/* line 1168, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(228) {
+  top: -8.11191em;
+  left: -7.79483em;
+  background: rgba(56, 0, 36, 0.1);
+}
+
+/* line 1173, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(229) {
+  top: -10.99064em;
+  left: 2.62599em;
+  background: rgba(54, 0, 32, 0.1);
+}
+
+/* line 1178, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(230) {
+  top: -3.74507em;
+  left: 10.71433em;
+  background: rgba(52, 0, 29, 0.1);
+}
+
+/* line 1183, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(231) {
+  top: 7.02313em;
+  left: 8.97973em;
+  background: rgba(50, 0, 25, 0.1);
+}
+
+/* line 1188, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(232) {
+  top: 11.40058em;
+  left: -1.06263em;
+  background: rgba(48, 0, 22, 0.1);
+}
+
+/* line 1193, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(233) {
+  top: 5.28858em;
+  left: -10.2118em;
+  background: rgba(46, 0, 18, 0.1);
+}
+
+/* line 1198, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(234) {
+  top: -5.76044em;
+  left: -10.01099em;
+  background: rgba(44, 0, 15, 0.1);
+}
+
+/* line 1203, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(235) {
+  top: -11.58627em;
+  left: -0.56415em;
+  background: rgba(42, 0, 13, 0.1);
+}
+
+/* line 1208, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(236) {
+  top: -6.76383em;
+  left: 9.48541em;
+  background: rgba(40, 0, 10, 0.1);
+}
+
+/* line 1213, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(237) {
+  top: 4.34576em;
+  left: 10.86298em;
+  background: rgba(38, 0, 8, 0.1);
+}
+
+/* line 1218, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(238) {
+  top: 11.538em;
+  left: 2.22192em;
+  background: rgba(36, 0, 5, 0.1);
+}
+
+/* line 1223, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(239) {
+  top: 8.13818em;
+  left: -8.54459em;
+  background: rgba(34, 0, 3, 0.1);
+}
+
+/* line 1228, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(240) {
+  top: -2.80478em;
+  left: -11.51328em;
+  background: rgba(32, 0, 2, 0.1);
+}
+
+/* line 1233, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(241) {
+  top: -11.2508em;
+  left: -3.8768em;
+  background: rgba(30, 0, 0, 0.1);
+}
+
+/* line 1238, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(242) {
+  top: -9.38029em;
+  left: 7.40355em;
+  background: rgba(28, 1, 0, 0.1);
+}
+
+/* line 1243, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(243) {
+  top: 1.16654em;
+  left: 11.94316em;
+  background: rgba(26, 3, 0, 0.1);
+}
+
+/* line 1248, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(244) {
+  top: 10.72461em;
+  left: 5.4941em;
+  background: rgba(24, 4, 0, 0.1);
+}
+
+/* line 1253, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(245) {
+  top: 10.46089em;
+  left: -6.0811em;
+  background: rgba(22, 4, 0, 0.1);
+}
+
+/* line 1258, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(246) {
+  top: 0.53718em;
+  left: -12.13812em;
+  background: rgba(20, 5, 0, 0.1);
+}
+
+/* line 1263, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(247) {
+  top: -9.96447em;
+  left: -7.03913em;
+  background: rgba(18, 5, 0, 0.1);
+}
+
+/* line 1268, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(248) {
+  top: -11.35339em;
+  left: 4.60033em;
+  background: rgba(16, 6, 0, 0.1);
+}
+
+/* line 1273, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(249) {
+  top: -2.27245em;
+  left: 12.08826em;
+  background: rgba(14, 6, 0, 0.1);
+}
+
+/* line 1278, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(250) {
+  top: 8.98047em;
+  left: 8.47784em;
+  background: rgba(12, 5, 0, 0.1);
+}
+
+/* line 1283, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(251) {
+  top: 12.03455em;
+  left: -2.98825em;
+  background: rgba(10, 5, 0, 0.1);
+}
+
+/* line 1288, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(252) {
+  top: 4.00384em;
+  left: -11.78863em;
+  background: rgba(8, 4, 0, 0.1);
+}
+
+/* line 1293, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(253) {
+  top: -7.78765em;
+  left: -9.77765em;
+  background: rgba(6, 4, 0, 0.1);
+}
+
+/* line 1298, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(254) {
+  top: -12.48504em;
+  left: 1.27528em;
+  background: rgba(4, 3, 0, 0.1);
+}
+
+/* line 1303, ../scss/partials/html5demos/_fractal.scss */
+.part:nth-child(255) {
+  top: -5.69519em;
+  left: 11.23943em;
+  background: rgba(2, 1, 0, 0.1);
+}
+
+@-webkit-keyframes scale {
+  /* line 1310, ../scss/partials/html5demos/_fractal.scss */
+  50% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+}
+
+@keyframes scale {
+  /* line 1317, ../scss/partials/html5demos/_fractal.scss */
+  50% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+}
+
+@-webkit-keyframes rotate {
+  /* line 1323, ../scss/partials/html5demos/_fractal.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  /* line 1331, ../scss/partials/html5demos/_fractal.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* line 2, ../scss/partials/html5demos/_wave.scss */
+.wave-container {
+  position: relative;
+  width: 10em;
+  height: 5em;
+  font-size: 50px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* line 11, ../scss/partials/html5demos/_wave.scss */
+.wave {
+  border-width: 0.1em;
+  border-style: solid;
+  position: absolute;
+  -webkit-animation: wave 1500ms infinite alternate;
+  animation: wave 1500ms infinite alternate;
+  -webkit-transform: rotate(-44.5deg);
+  -ms-transform: rotate(-44.5deg);
+  transform: rotate(-44.5deg);
+}
+
+/* line 21, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(1) {
+  width: 9.5125em;
+  height: 9.5125em;
+  bottom: -4.75625em;
+  left: 0.24375em;
+  -webkit-animation-delay: 75ms;
+  animation-delay: 75ms;
+  border-color: transparent transparent #1abc9c #1abc9c;
+  border-radius: 9.5125em;
+}
+
+/* line 31, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(2) {
+  width: 9.025em;
+  height: 9.025em;
+  bottom: -4.5125em;
+  left: 0.4875em;
+  -webkit-animation-delay: 150ms;
+  animation-delay: 150ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.90476) rgba(26, 188, 156, 0.90476);
+  border-radius: 9.025em;
+}
+
+/* line 41, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(3) {
+  width: 8.5375em;
+  height: 8.5375em;
+  bottom: -4.26875em;
+  left: 0.73125em;
+  -webkit-animation-delay: 225ms;
+  animation-delay: 225ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.85714) rgba(26, 188, 156, 0.85714);
+  border-radius: 8.5375em;
+}
+
+/* line 51, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(4) {
+  width: 8.05em;
+  height: 8.05em;
+  bottom: -4.025em;
+  left: 0.975em;
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.80952) rgba(26, 188, 156, 0.80952);
+  border-radius: 8.05em;
+}
+
+/* line 61, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(5) {
+  width: 7.5625em;
+  height: 7.5625em;
+  bottom: -3.78125em;
+  left: 1.21875em;
+  -webkit-animation-delay: 375ms;
+  animation-delay: 375ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.7619) rgba(26, 188, 156, 0.7619);
+  border-radius: 7.5625em;
+}
+
+/* line 71, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(6) {
+  width: 7.075em;
+  height: 7.075em;
+  bottom: -3.5375em;
+  left: 1.4625em;
+  -webkit-animation-delay: 450ms;
+  animation-delay: 450ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.71429) rgba(26, 188, 156, 0.71429);
+  border-radius: 7.075em;
+}
+
+/* line 81, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(7) {
+  width: 6.5875em;
+  height: 6.5875em;
+  bottom: -3.29375em;
+  left: 1.70625em;
+  -webkit-animation-delay: 525ms;
+  animation-delay: 525ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.66667) rgba(26, 188, 156, 0.66667);
+  border-radius: 6.5875em;
+}
+
+/* line 91, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(8) {
+  width: 6.1em;
+  height: 6.1em;
+  bottom: -3.05em;
+  left: 1.95em;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.61905) rgba(26, 188, 156, 0.61905);
+  border-radius: 6.1em;
+}
+
+/* line 101, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(9) {
+  width: 5.6125em;
+  height: 5.6125em;
+  bottom: -2.80625em;
+  left: 2.19375em;
+  -webkit-animation-delay: 675ms;
+  animation-delay: 675ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.57143) rgba(26, 188, 156, 0.57143);
+  border-radius: 5.6125em;
+}
+
+/* line 111, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(10) {
+  width: 5.125em;
+  height: 5.125em;
+  bottom: -2.5625em;
+  left: 2.4375em;
+  -webkit-animation-delay: 750ms;
+  animation-delay: 750ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.52381) rgba(26, 188, 156, 0.52381);
+  border-radius: 5.125em;
+}
+
+/* line 121, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(11) {
+  width: 4.6375em;
+  height: 4.6375em;
+  bottom: -2.31875em;
+  left: 2.68125em;
+  -webkit-animation-delay: 825ms;
+  animation-delay: 825ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.47619) rgba(26, 188, 156, 0.47619);
+  border-radius: 4.6375em;
+}
+
+/* line 131, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(12) {
+  width: 4.15em;
+  height: 4.15em;
+  bottom: -2.075em;
+  left: 2.925em;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.42857) rgba(26, 188, 156, 0.42857);
+  border-radius: 4.15em;
+}
+
+/* line 141, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(13) {
+  width: 3.6625em;
+  height: 3.6625em;
+  bottom: -1.83125em;
+  left: 3.16875em;
+  -webkit-animation-delay: 975ms;
+  animation-delay: 975ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.38095) rgba(26, 188, 156, 0.38095);
+  border-radius: 3.6625em;
+}
+
+/* line 151, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(14) {
+  width: 3.175em;
+  height: 3.175em;
+  bottom: -1.5875em;
+  left: 3.4125em;
+  -webkit-animation-delay: 1050ms;
+  animation-delay: 1050ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.33333) rgba(26, 188, 156, 0.33333);
+  border-radius: 3.175em;
+}
+
+/* line 161, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(15) {
+  width: 2.6875em;
+  height: 2.6875em;
+  bottom: -1.34375em;
+  left: 3.65625em;
+  -webkit-animation-delay: 1125ms;
+  animation-delay: 1125ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.28571) rgba(26, 188, 156, 0.28571);
+  border-radius: 2.6875em;
+}
+
+/* line 171, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(16) {
+  width: 2.2em;
+  height: 2.2em;
+  bottom: -1.1em;
+  left: 3.9em;
+  -webkit-animation-delay: 1200ms;
+  animation-delay: 1200ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.2381) rgba(26, 188, 156, 0.2381);
+  border-radius: 2.2em;
+}
+
+/* line 181, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(17) {
+  width: 1.7125em;
+  height: 1.7125em;
+  bottom: -0.85625em;
+  left: 4.14375em;
+  -webkit-animation-delay: 1275ms;
+  animation-delay: 1275ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.19048) rgba(26, 188, 156, 0.19048);
+  border-radius: 1.7125em;
+}
+
+/* line 191, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(18) {
+  width: 1.225em;
+  height: 1.225em;
+  bottom: -0.6125em;
+  left: 4.3875em;
+  -webkit-animation-delay: 1350ms;
+  animation-delay: 1350ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.14286) rgba(26, 188, 156, 0.14286);
+  border-radius: 1.225em;
+}
+
+/* line 201, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(19) {
+  width: 0.7375em;
+  height: 0.7375em;
+  bottom: -0.36875em;
+  left: 4.63125em;
+  -webkit-animation-delay: 1425ms;
+  animation-delay: 1425ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.09524) rgba(26, 188, 156, 0.09524);
+  border-radius: 0.7375em;
+}
+
+/* line 211, ../scss/partials/html5demos/_wave.scss */
+.wave:nth-child(20) {
+  width: 0.25em;
+  height: 0.25em;
+  bottom: -0.125em;
+  left: 4.875em;
+  -webkit-animation-delay: 1500ms;
+  animation-delay: 1500ms;
+  border-color: transparent transparent rgba(26, 188, 156, 0.04762) rgba(26, 188, 156, 0.04762);
+  border-radius: 0.25em;
+}
+
+@-webkit-keyframes wave {
+  /* line 223, ../scss/partials/html5demos/_wave.scss */
+  to {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes wave {
+  /* line 230, ../scss/partials/html5demos/_wave.scss */
+  to {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection.
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /*
+  IMPORTANT NOTE ABOUT SASS 3.3 & UP
+  You can't use @extend within media queries
+  anymore, so just be aware that if you drop
+  them in here, they won't work.
+  */
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* .menu is clearfixed inside mixins.scss */
+  /* line 33, ../scss/breakpoints/_481up.scss */
+  .menu {
+    /* end .menu ul */
+  }
+  /* line 34, ../scss/breakpoints/_481up.scss */
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 35, ../scss/breakpoints/_481up.scss */
+  .menu ul li {
+    /*
+    plan your menus and drop-downs wisely.
+    */
+  }
+  /* line 36, ../scss/breakpoints/_481up.scss */
+  .menu ul li a {
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+
+  /* end .menu */
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
+  /* entry content */
+  /* line 81, ../scss/breakpoints/_481up.scss */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 85, ../scss/breakpoints/_481up.scss */
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 90, ../scss/breakpoints/_481up.scss */
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 95, ../scss/breakpoints/_481up.scss */
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+  /* end .entry-content */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
+  /* end .footer-links */
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  /* line 26, ../scss/breakpoints/_768up.scss */
+  .wrap {
+    width: 760px;
+  }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  /* line 42, ../scss/breakpoints/_768up.scss */
+  .nav {
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 44, ../scss/breakpoints/_768up.scss */
+  .nav ul {
+    background: #323944;
+    margin-top: 0;
+  }
+  /* line 48, ../scss/breakpoints/_768up.scss */
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */
+  }
+  /* line 52, ../scss/breakpoints/_768up.scss */
+  .nav li a {
+    border-bottom: 0;
+    /*
+    you can use hover styles here even though this size
+    has the possibility of being a mobile device.
+    */
+  }
+  /* line 59, ../scss/breakpoints/_768up.scss */
+  .nav li a:hover, .nav li a:focus {
+    color: white;
+    text-decoration: underline;
+  }
+  /* line 72, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  /* line 80, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+    if you need to go deeper, go nuts
+    just remember deeper menus suck
+    for usability. k, bai.
+    */
+  }
+  /* line 82, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  /* line 99, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  /* line 109, ../scss/breakpoints/_768up.scss */
+  .nav li ul.sub-menu li ul,
+  .nav li ul.children li ul {
+    top: 0;
+    left: 100%;
+  }
+  /* line 124, ../scss/breakpoints/_768up.scss */
+  .nav li:hover > ul {
+    top: auto;
+    visibility: visible;
+  }
+
+  /* end .nav */
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  /* line 144, ../scss/breakpoints/_768up.scss */
+  .sidebar {
+    margin-top: 2.2em;
+  }
+
+  /* line 148, ../scss/breakpoints/_768up.scss */
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+
+  /* line 153, ../scss/breakpoints/_768up.scss */
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  /* line 158, ../scss/breakpoints/_768up.scss */
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  /* line 166, ../scss/breakpoints/_768up.scss */
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  /* line 274, ../scss/breakpoints/_768up.scss */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */
+  }
+
+  /* end .footer-links */
+}
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+  
+  ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1030up.scss */
+  .wrap {
+    width: 1040px;
+  }
+}
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  /* line 13, ../scss/partials/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 21, ../scss/partials/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 26, ../scss/partials/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 31, ../scss/partials/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 38, ../scss/partials/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 42, ../scss/partials/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 47, ../scss/partials/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 51, ../scss/partials/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 55, ../scss/partials/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 63, ../scss/partials/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 69, ../scss/partials/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 78, ../scss/partials/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

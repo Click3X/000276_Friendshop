@@ -16,8 +16,11 @@
   font-style: normal;
 }
 
-// ORIGINAL GIF BACKGROUND
-body { background-color: black; }
+body {
+	background-color: black;
+ //    background: url(../../../../../img/bg.jpg) center top;
+	// background-size: cover;
+}
 
 // GIF ON ALL MENNU PAGE BODY TAG BACKGROUND
 .page-id-4,
@@ -39,8 +42,8 @@ body { background-color: black; }
 	background-color: rgba(0,0,0,0.5);
 }
 
-.ls-nav-prev { margin-left: -100px; }
-.ls-nav-next { margin-right: -100px; }
+// .ls-nav-prev { margin-left: -100px; }
+// .ls-nav-next { margin-right: -100px; }
 
 // CONTACT
 .contact-left, .contact-right {
@@ -131,7 +134,8 @@ body { background-color: black; }
 
 .ftaddress-container {
     float: left;
-    width:100%;
+    // width:100%;
+    width:auto;
 
     @media(min-width: 481px) {
         float: left;
@@ -449,7 +453,7 @@ footer {
     line-height:30px;
 	display: block; 
 	outline: none; 
-    font-weight: 500;
+    font-weight: 700;
 
     &:hover { color: #09dcff; }
 }
@@ -479,9 +483,6 @@ footer {
 	.tab a.active {  color: $light-green; }
 }
 
-@media (min-width: 836px) {
-
-}
 
 .grid{ width: 100%; }
 
@@ -495,7 +496,7 @@ footer {
 	list-style-type: none;
 	float: left;
 	padding: 0px;
-	margin: -0.2px -0.2px;
+	// margin: -0.2px -0.2px;
 	width: 20%;
 	white-space: nowrap;
 
@@ -563,35 +564,30 @@ footer {
 
 // SELECTING PLAYER
 
-@keyframes flashingtext {
-    0%   {color: white;}
-    // 25%  {color: #ffba2c;}
-    // 50%  {color: white;}
-    // 99% {color: white};
-    100% {color: #ffba2c;}
-}
+// @keyframes flashingtext {
+//     0%   {color: white;}
+//     100% {color: #ffba2c;}
+// }
 
-@-webkit-keyframes flashingtext {
-    0%   {color: white;}
-    // 1% {color: #ffba2c;}
-    // 25%  {color: #ffba2c;}
-    100%  {color: #ffba2c;}
-    // 100% {color: #ffba2c;}
-}
+// @-webkit-keyframes flashingtext {
+//     0%   {color: white;}
+//     100%  {color: #ffba2c;}
+// }
 
 .player-select-container {
 
     h2, p {
-        font-family: 'VT323';
+        // font-family: 'VT323';
+        font-family: 'Press Start 2P', cursive;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
         text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 
     h2 {
-        font-size: 2.5em;
-        -webkit-animation: flashingtext 0.08s infinite linear;
-        animation: flashingtext 0.08s infinite linear;
+        font-size: 1.6em;
+        // -webkit-animation: flashingtext 0.3s infinite linear;
+        // animation: flashingtext 0.3s infinite linear;
     }
 
     p {
@@ -600,17 +596,39 @@ footer {
 
 }
 
-// .players-title { color: white; }
+.players-title { color: white; }
 
-// .players-title.blinking { color: #ffba2c; }
+.players-title.blinking { color: #ffba2c; }
 
 
-
+.float-top, .float-bottom {
+    visibility: hidden;
+}
 
 .player1, .player2 {
-
+    cursor: pointer;
     width:320px; 
-    height:400px;
+    height:440px;
+
+    &:hover {
+        
+        .float-top {
+            visibility: visible;
+            position: relative;
+            margin: auto !important;
+            -webkit-animation: floatTop 0.3s infinite  normal ease-out;
+            animation: floatTop 0.3s infinite  normal ease-out;
+        }
+
+        .float-bottom {
+            visibility: visible;
+            position: relative;
+            margin: auto !important;
+            -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+            animation: floatBottom 0.3s infinite  normal ease-out;
+        }
+
+    }
 
     // @media (max-width: 700px) {
     //     width: 220px; 
@@ -618,7 +636,7 @@ footer {
     // }
 
     div {
-        cursor: pointer;
+        
         width: 255px; 
         height: 334px; 
         background-size: 255px 334px;
@@ -633,33 +651,38 @@ footer {
 
     p {
         text-align: center;       
-        font-size: 2.5em;
+        font-size: 1.3em;
+        line-height: 1em;
+        margin: 0;
         
     }
     
 }
 
 .player1 {
-
-
     div {
         margin: auto; 
         background: url(Ben-BnW.png) center center no-repeat; 
+    }
 
-        &:hover {
-            background: url(Ben-Color.png) center center no-repeat;
+    &:hover {
+        div {
+            background: url(Ben-Color-New.png) center center no-repeat;
         }
     }
 }
+
 
 .player2 {
     div {
         margin: auto; 
         background: url(Tim-BnW.png) center center no-repeat; 
+    }
 
-        &:hover {
-        background: url(Tim-Color.png) center center no-repeat;
-        }
+    &:hover {
+        div {
+            background: url(Tim-Color-New.png) center center no-repeat;
+        }    
     }
 }
 
@@ -668,6 +691,8 @@ footer {
     width: 100%;
     margin: 0 auto 12px;
     position: relative;
+    max-height: 500px;
+    overflow-y: hidden; 
 
     h2 { 
         text-align: center; 
@@ -675,8 +700,8 @@ footer {
         color:white;
     }
 
-    .prev-no-style,
-    .next-no-style {
+    .prev,
+    .next {
         position: absolute;
         top:0; bottom:0; 
         margin:auto;
@@ -690,13 +715,60 @@ footer {
         z-index: 1;
     }
 
-    .prev-no-style {
+    .prev {
         left:2px;
     }
 
-    .next-no-style {
+    .next {
         right:2px;
     }
 
 }
 
+// white moving frames for players
+@-webkit-keyframes floatTop {
+    0% {
+        top:25px;
+        width:250px;
+    }
+    100% {
+        top: 5px;
+        width: 265px;
+    }
+}
+@keyframes floatTop {
+    0% {
+        top:25px;
+        width: 250px;
+    }
+    100% {
+        top: 5px;
+        width: 265px;
+    }
+}
+
+// .float-bottom {
+//     position: relative;
+//     -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
+//     animation: floatBottom 0.3s infinite  normal ease-out;
+// }
+@-webkit-keyframes floatBottom {
+    0% {
+        bottom:25px;
+        width:250px;
+    }
+    100% {
+        bottom: 5px;
+        width: 265px;
+    }
+}
+@keyframes floatBottom {
+    0% {
+        bottom:25px;
+        width: 250px;
+    }
+    100% {
+        bottom: 5px;
+        width: 265px;
+    }
+}

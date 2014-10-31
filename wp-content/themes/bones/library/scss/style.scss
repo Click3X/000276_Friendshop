@@ -16,6 +16,7 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 
 ******************************************************************/
 
+
 /*********************
 IMPORTING PARTIALS
 These files are needed at the beginning so that we establish all
@@ -121,6 +122,7 @@ you can add resource intensive styles.
 	@import "breakpoints/768up";
 
 } // end of media query
+
 
 /*********************
 DESKTOP
