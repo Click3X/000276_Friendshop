@@ -16,7 +16,7 @@
 
 				<div class="ftlogo-container" id="transition">
 					<a href="<?php echo bloginfo('url'); ?>">
-						<!-- <img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" /> -->
+						<img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" class="logo-png" />
                         <!-- NEW SVG LOGO -->
                         <?php include('php/logo-svg.php'); ?>
 					</a>

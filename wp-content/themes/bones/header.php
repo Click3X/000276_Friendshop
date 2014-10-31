@@ -79,7 +79,7 @@
 					</nav>
 
 					<!-- ORIGINAL LOGO AS BG IMAGE -->
-                    <!-- <div class="logo-header"></div> -->
+                    <div class="logo-header"></div>
                     <!-- NEW SVG LOGO -->
                     <div class="logo-header-svg">
                         <?php include('php/logo-svg.php'); ?>

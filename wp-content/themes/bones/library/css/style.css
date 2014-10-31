@@ -3500,6 +3500,23 @@ svg {
   max-width: 181px;
 }
 
+/* line 41, ../scss/partials/_logo-svg.scss */
+.svg-holder,
+.logo-header-svg {
+  display: none;
+}
+
+/* line 47, ../scss/partials/_logo-svg.scss */
+.svg .logo-png,
+.svg .logo-header {
+  display: none;
+}
+/* line 52, ../scss/partials/_logo-svg.scss */
+.svg .svg-holder,
+.svg .logo-header-svg {
+  display: block;
+}
+
 /* line 3, ../scss/partials/html5demos/_html-demo.scss */
 #demo-holder {
   position: fixed;

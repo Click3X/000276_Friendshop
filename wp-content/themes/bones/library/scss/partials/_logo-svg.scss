@@ -33,3 +33,24 @@ svg {
         max-width: 181px;
     }
 }
+
+
+// MODERNIZR BROWSER SUPPORT CSS
+
+.svg-holder,
+.logo-header-svg {
+    display: none;
+}
+
+.svg {
+    .logo-png,
+    .logo-header {
+        display: none;
+    }
+
+    .svg-holder,
+    .logo-header-svg {
+        display: block;
+    }
+
+}
