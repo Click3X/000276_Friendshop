@@ -9,11 +9,11 @@ get_header();
 
 $args = array(
 	// GIF GALLERY
-	// 'page_id' => 8
+	'page_id' => 8
 	// ABOUT
 	// 'page_id' => 13
 	// EDITORS
-	'page_id' => 6
+	// 'page_id' => 6
 );
 
 $query = new WP_Query( $args );
