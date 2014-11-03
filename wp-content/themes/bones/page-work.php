@@ -20,9 +20,9 @@
 
 								<?php //layerslider(1) ?>
 
-
 								<!-- SELECT PLAYERS -->
 								<?php if (is_page(6)) { ?>	
+
 								<div class="mixedContent player-select-container">
 									<h2 class="players-title">Player Select</h2>
 									<button class="prev">&#10094;</button>
@@ -76,77 +76,160 @@
 										</ul>
 										<!-- </div> -->
 
-										<!-- TAB 1 -->
+										<!-- TAB 1 CREATIVE DIRECTION / COMEDY-->
 										<div id="tab1">
-											<section>
-				 								<ul class="video-list">
-												<?php if(get_field('video_list1')): 
-												while(has_sub_field('video_list1')): 
-													$hover_text1 = get_sub_field('hover-text1'); 
-													$hover_text2 = get_sub_field('hover-text2'); 
-													$poster = get_sub_field('poster');
-													if( !empty($poster) ): 
-														$poster_url = $poster['url'];
-													endif; ?>
-												  
-												    <li class="video-thumb">
-												    	<div class="poster-container">
-												    		<img src="<?php echo $poster_url ?>" alt="Video">
-												    		<div class="poster-hover">
-												    			<h3><?php echo $hover_text1 ?></h3>
-												    			<h4><?php echo $hover_text2 ?></h4>
-												    		</div>
-												    	</div>
-												    </li>	
-												    	  
-												    <?php endwhile; ?>  
-												  </ul> 
-												<?php endif; ?>
+
+												<section class="clearfix videogroup-list">
+												<?php			
+												if (is_page(4)) { 
+													// CREATIVE DIRECTION
+												    $args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 3
+																		)
+															)
+													);
+
+												} else {
+													// COMEDY
+													$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 6
+																		)
+															)
+													);
+												}
+													$query = new WP_Query( $args ); 
+
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
+
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+													       		<li class="video-thumb">
+																	<div class="poster-container">
+																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
+																		<div class="poster-hover">
+																			<h3><?php echo $title ?></h3>
+																			<h4><?php echo $hover_text2 ?></h4>
+																		</div>
+																	</div>
+																</li>	
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
+
+													wp_reset_query();  // Restore global post data stomped by the_post().
+													?>
 											</section>
 										</div>
 
-										<!-- TAB 2 -->
+										<!-- TAB 2 FEATURED WORK / GENERAL-->
 										<div id="tab2">
-											<section>
-			 									<ul class="video-list">
-												<?php if(get_field('video_list2')): 
-													while(has_sub_field('video_list2')): 
-														$hover_text1 = get_sub_field('hover-text1'); 
-														$hover_text2 = get_sub_field('hover-text2'); 
-														$poster = get_sub_field('poster');
-														if( !empty($poster) ): 
-															$poster_url = $poster['url'];
-														endif; ?>
-													    <li class="video-thumb">
-													    	<div class="poster-container">
-													    		<img src="<?php echo $poster_url ?>" alt="Video">
-													    		<div class="poster-hover">
-													    			<h3><?php echo $hover_text1 ?></h3>
-													    			<h4><?php echo $hover_text2 ?></h4>
-													    		</div>
-													    	</div>
-													    </li>	
-											    	<?php endwhile; ?>  
-											  	</ul> 
-												<?php endif; ?>
+											<section class="clearfix videogroup-list">
+												<?php			
+
+												if (is_page(4)) { 
+													// FEATURED WORK
+												    $args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 4
+																		)
+															)
+													);
+
+												} else {
+													// GENERAL
+													$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 7
+																		)
+															)
+													);
+												}
+													$query = new WP_Query( $args ); 
+
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
+
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+													       		<li class="video-thumb">
+																	<div class="poster-container">
+																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
+																		<div class="poster-hover">
+																			<h3><?php echo $title ?></h3>
+																			<h4><?php echo $hover_text2 ?></h4>
+																		</div>
+																	</div>
+																</li>	
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
+
+													wp_reset_query();  // Restore global post data stomped by the_post().
+													?>
 											</section>
 										</div>
 
-										<!-- TAB 3 -->
+										<!-- TAB 3 FRIENDSHOP PRODUCTIONS / LONG FORM-->
 										<div id="tab3">
 
 											<section class="clearfix videogroup-list">
 												<?php			
 
+												if (is_page(4)) { 
+													// FRIENDSHOP PRODUCTION
 												    $args = array(
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															// 'field' => 'id',
-															'terms' => 6
+															'terms' => 5
 																		)
 															)
 													);
+
+												} else {
+													// LONG FORM
+													$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 8
+																		)
+															)
+													);
+												}
 													$query = new WP_Query( $args ); 
 
 													    if( $query->have_posts() ) { ?>
@@ -187,10 +270,6 @@
 									</div> <!-- END TAB CONTAINER -->
 
 								<?php
-									// the content (pretty self explanatory huh)
-									// the_content();
-									// layerslider(1);
-
 									wp_link_pages( array(
 										'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
 										'after'       => '</div>',
