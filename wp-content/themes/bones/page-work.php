@@ -31,22 +31,30 @@
 									<div class="carousel-no-style" style="margin: auto;">
 									    <ul>
 									        <li class="player1">
+									        	<a href="#" name="player1">
 									        	<img class="float-top" src="selector-top.png">									        	
 									        	<div></div>
 									        	<img class="float-bottom" src="selector-bottom.png">
+									        	</a>
 									        	<p>Ben</p>
 									        		
 									        </li>
 									        <li class="player2">
+									        	<a href="#" name="player2">
 									        	<img class="float-top" src="selector-top.png">	
 									        	<div></div>
 									        	<img class="float-bottom" src="selector-bottom.png">	
+									        	</a>
 									        	<p>Tim</p>
 									        	
 									        </li>
 									    </ul>
 									</div>
 								</div>
+
+								<?php if(isset($_GET['player2'])) {
+									echo 'fuck';
+								} ?>
 								<?php } ?>
 
 									<div id="tab-container" class="tab-container">
