@@ -134,78 +134,54 @@
 
 										<!-- TAB 3 -->
 										<div id="tab3">
-<!-- 										  	<section>
-				 								<ul class="video-list">
-												<?php if(get_field('video_list3')): 
-												while(has_sub_field('video_list3')): 
-													$hover_text1 = get_sub_field('hover-text1'); 
-													$hover_text2 = get_sub_field('hover-text2'); 
-													$poster = get_sub_field('poster');
-													if( !empty($poster) ): 
-														$poster_url = $poster['url'];
-													endif; ?>
-												    <li class="video-thumb">
-												    	<div class="poster-container">
-												    		<img src="<?php echo $poster_url ?>" alt="Video">
-												    		<div class="poster-hover">
-												    			<h3><?php echo $hover_text1 ?></h3>
-												    			<h4><?php echo $hover_text2 ?></h4>
-												    		</div>
-												    	</div>
-												    </li>	
-												    <?php endwhile; ?>  
-												</ul> 
-												<?php endif; ?>
-											</section> -->
 
+											<section class="clearfix videogroup-list">
+												<?php			
 
+												    $args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															// 'field' => 'id',
+															'terms' => 6
+																		)
+															)
+													);
+													$query = new WP_Query( $args ); 
 
-											<!-- VIDEO GROUP LIST TEST -->
-															<section class="clearfix videogroup-list">
-					<?php			
-						//get all categories then display all posts in each term
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
 
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
 
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+													       		<li class="video-thumb">
+																	<div class="poster-container">
+																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
+																		<div class="poster-hover">
+																			<h3><?php echo $title ?></h3>
+																			<h4><?php echo $hover_text2 ?></h4>
+																		</div>
+																	</div>
+																</li>	
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
 
-					     $args = array(
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'video_groups',
-								// 'field' => 'id',
-								'terms' => 6
-							)
-						)
-					);
-					$query = new WP_Query( $args ); 
+													wp_reset_query();  // Restore global post data stomped by the_post().
+													?>
+											</section>
 
-						    if( $query->have_posts() ) { ?>
-						      <div class="category section">
-							   <!-- <h2 class="group-title"><?php echo $term->name;?></h2> -->
-							    
-
-							    <?php
-						      while ($query->have_posts()) : $query->the_post(); 
-
-						      	$title = get_field('title'); 
-						       	// $email = get_field('email'); 
-						       	// $telephone = get_field('telephone'); 
-						       ?>
-						       <ul class="">
-							        <!-- <li class="address"><h3 class="gothic"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3></li> -->
-							        <li class="emp-title"><?php echo $title; ?></li>
-
-						        </ul>
-						       <?php
-						      endwhile;
-						      ?>
-						      
-						      </div>
-						 <?php
-						  }
-
-						wp_reset_query();  // Restore global post data stomped by the_post().
-						?>
-				</section>
 										</div>
 							
 									</div> <!-- END TAB CONTAINER -->
