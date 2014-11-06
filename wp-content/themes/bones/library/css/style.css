@@ -2599,38 +2599,37 @@ FOOTER STYLES
   visibility: hidden;
 }
 
-/* line 226, ../scss/partials/pages/_work-editors.scss */
-.player1, .player2 {
+/* line 227, ../scss/partials/pages/_work-editors.scss */
+.players {
   cursor: pointer;
   width: 320px;
   height: 440px;
 }
-/* line 233, ../scss/partials/pages/_work-editors.scss */
-.player1:hover .float-top, .player2:hover .float-top {
+/* line 234, ../scss/partials/pages/_work-editors.scss */
+.players:hover .float-top {
   visibility: visible;
   position: relative;
   margin: auto !important;
   -webkit-animation: floatTop 0.3s infinite  normal ease-out;
   animation: floatTop 0.3s infinite  normal ease-out;
 }
-/* line 241, ../scss/partials/pages/_work-editors.scss */
-.player1:hover .float-bottom, .player2:hover .float-bottom {
+/* line 242, ../scss/partials/pages/_work-editors.scss */
+.players:hover .float-bottom {
   visibility: visible;
   position: relative;
   margin: auto !important;
   -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
   animation: floatBottom 0.3s infinite  normal ease-out;
 }
-/* line 250, ../scss/partials/pages/_work-editors.scss */
-.player1 div, .player2 div {
+/* line 251, ../scss/partials/pages/_work-editors.scss */
+.players div {
   width: 255px;
   height: 334px;
-  background-size: 255px 334px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 257, ../scss/partials/pages/_work-editors.scss */
-.player1 p, .player2 p {
+/* line 258, ../scss/partials/pages/_work-editors.scss */
+.players p {
   text-align: center;
   font-size: 1.3em;
   line-height: 1em;
@@ -2638,26 +2637,34 @@ FOOTER STYLES
 }
 
 /* line 268, ../scss/partials/pages/_work-editors.scss */
-.player1 div {
+.players div {
+  background-position: center center;
+  background-repeat: no-repeat;
   margin: auto;
-  background: url(Ben-BnW.png) center center no-repeat;
-}
-/* line 274, ../scss/partials/pages/_work-editors.scss */
-.player1:hover div {
-  background: url(Ben-Color-New.png) center center no-repeat;
+  background-size: auto;
 }
 
-/* line 282, ../scss/partials/pages/_work-editors.scss */
-.player2 div {
-  margin: auto;
-  background: url(Tim-BnW.png) center center no-repeat;
-}
-/* line 288, ../scss/partials/pages/_work-editors.scss */
-.player2:hover div {
-  background: url(Tim-Color-New.png) center center no-repeat;
+/* line 275, ../scss/partials/pages/_work-editors.scss */
+.grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 3.5+, IE10 */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+  -webkit-transition: all .6s ease;
+  /* Fade to color for Chrome and Safari */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
 }
 
-/* line 294, ../scss/partials/pages/_work-editors.scss */
+/* line 283, ../scss/partials/pages/_work-editors.scss */
+.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+/* line 328, ../scss/partials/pages/_work-editors.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
@@ -2665,13 +2672,13 @@ FOOTER STYLES
   position: relative;
   max-height: 500px;
 }
-/* line 301, ../scss/partials/pages/_work-editors.scss */
+/* line 335, ../scss/partials/pages/_work-editors.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 307, ../scss/partials/pages/_work-editors.scss */
+/* line 341, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev,
 .mixedContent .next {
   position: absolute;
@@ -2687,11 +2694,11 @@ FOOTER STYLES
   outline: none;
   z-index: 1;
 }
-/* line 322, ../scss/partials/pages/_work-editors.scss */
+/* line 356, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev {
   left: 2px;
 }
-/* line 326, ../scss/partials/pages/_work-editors.scss */
+/* line 360, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .next {
   right: 2px;
 }

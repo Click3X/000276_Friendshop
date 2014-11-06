@@ -223,7 +223,8 @@
     visibility: hidden;
 }
 
-.player1, .player2 {
+// .player1, .player2 {
+.players {
     cursor: pointer;
     width:320px; 
     height:440px;
@@ -250,7 +251,7 @@
     div {
         width: 255px; 
         height: 334px; 
-        background-size: 255px 334px;
+        // background-size: 255px 334px;
         @include transition(all 0.3s ease-in-out);
     }
 
@@ -264,32 +265,65 @@
     
 }
 
-.player1 {
-    div {
-        margin: auto; 
-        background: url(Ben-BnW.png) center center no-repeat; 
-    }
-
-    &:hover {
-        div {
-            background: url(Ben-Color-New.png) center center no-repeat;
-        }
-    }
+.players div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: auto;
 }
 
-
-.player2 {
-    div {
-        margin: auto; 
-        background: url(Tim-BnW.png) center center no-repeat; 
-    }
-
-    &:hover {
-        div {
-            background: url(Tim-Color-New.png) center center no-repeat;
-        }    
-    }
+.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
 }
+
+.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+// svg {
+//     background:url(http://4.bp.blogspot.com/-IzPWLqY4gJ0/T01CPzNb1KI/AAAAAAAACgA/_8uyj68QhFE/s400/a2cf7051-5952-4b39-aca3-4481976cb242.jpg);
+// }
+
+// svg image {
+//     transition: all .6s ease;
+// }
+
+// svg image:hover {
+//     opacity: 0;
+// }
+
+// .player1 {
+
+//     div {
+//         margin: auto; 
+//         background: url(Ben-BnW.png) center center no-repeat; 
+//     }
+
+//     &:hover {
+//         div {
+//             background: url(Ben-Color-New.png) center center no-repeat;
+//         }
+//     }
+// }
+
+
+// .player2 {
+//     div {
+//         margin: auto; 
+//         background: url(Tim-BnW.png) center center no-repeat; 
+//     }
+
+//     &:hover {
+//         div {
+//             background: url(Tim-Color-New.png) center center no-repeat;
+//         }    
+//     }
+// }
 
 .mixedContent {
     max-width: 1000px;

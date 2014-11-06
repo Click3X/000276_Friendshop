@@ -21,25 +21,75 @@
 								<?php //layerslider(1) ?>
 
 								<!-- SELECT PLAYERS -->
-								<?php if (is_page(6)) { ?>	
+								<?php if (is_page(6)) { ?> 
 
-								<div class="mixedContent player-select-container">
+									<div class="mixedContent player-select-container">
 									<h2 class="players-title">Player Select</h2>
 									<button class="prev">&#10094;</button>
 									<button class="next">&#10095;</button>
 
 									<div class="carousel-no-style" style="margin: auto;">
-									    <ul>
-									        <li class="player1">
-									        	<a href="#" name="player1">
+
+
+								<?php if (function_exists('get_terms_meta'))
+									{
+										$term_id = 10;
+										$taxonomy_name = 'video_groups';
+										$termchildren = get_term_children( $term_id, $taxonomy_name );
+
+										$meta_key1 = 'player-image';
+										$meta_key2 = 'player-image-hover';
+										
+										echo '<ul>';
+										foreach ( $termchildren as $child ) {
+											$term = get_term_by( 'id', $child, $taxonomy_name );
+											$child_ids = $term->term_id;
+
+											$metaValue1 = get_terms_meta($child_ids, $meta_key1);
+    										$metaValue2 = get_terms_meta($child_ids, $meta_key2);
+
+    										$img_url = $metaValue1[0];
+											$img_hover_url = $metaValue2[0];
+
+											?>
+
+											<li class="players">
+									        	
+									        	<img class="float-top" src="selector-top.png">							        	<a href="<?php echo get_term_link( $child, $taxonomy_name ) ?>">
+									        	<div class="grayscale" style="background-image: url( <?php echo $img_hover_url ?> );"></div></a>
+									        	<img class="float-bottom" src="selector-bottom.png">
+									        	
+									        	<p><?php echo $term->name ;?></p>
+									        		
+									        </li>
+
+<!-- 											echo '<li><a style="background-image: url(' . $img_url . ')" href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>'; -->
+										<?php } 
+										echo '</ul>'; 
+
+
+									} }?>
+
+								</div>
+								</div>
+
+<!-- 								<div class="mixedContent player-select-container">
+									<h2 class="players-title">Player Select</h2>
+									<button class="prev">&#10094;</button>
+									<button class="next">&#10095;</button>
+
+									<div class="carousel-no-style" style="margin: auto;">
+									    <ul> -->
+<!-- 									        <li>
+									        	
 									        	<img class="float-top" src="selector-top.png">									        	
 									        	<div></div>
 									        	<img class="float-bottom" src="selector-bottom.png">
-									        	</a>
-									        	<p>Ben</p>
+									        	
+									        	<p><?php echo $term->name ;?></p>
 									        		
-									        </li>
-									        <li class="player2">
+									        </li> -->
+<!-- 									        <li class="player2">
 									        	<a href="#" name="player2">
 									        	<img class="float-top" src="selector-top.png">	
 									        	<div></div>
@@ -47,15 +97,11 @@
 									        	</a>
 									        	<p>Tim</p>
 									        	
-									        </li>
-									    </ul>
+									        </li> -->
+<!-- 									    </ul>
 									</div>
-								</div>
+								</div> -->
 
-								<?php if(isset($_GET['player2'])) {
-									echo 'fuck';
-								} ?>
-								<?php } ?>
 
 									<div id="tab-container" class="tab-container">
 										
@@ -106,7 +152,8 @@
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															'terms' => 6
+															'terms' => array(6, 9),
+															'operator' => 'AND',
 																		)
 															)
 													);
