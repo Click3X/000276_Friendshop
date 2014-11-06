@@ -65,13 +65,58 @@
 
 <!-- 											echo '<li><a style="background-image: url(' . $img_url . ')" href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>'; -->
 										<?php } 
-										echo '</ul>'; 
+										echo '</ul> 
+
+										</div>
+								</div>';
+									} } elseif (is_page(4)) {
+
+										//layerslider(2);
+										// FEATURED
+										$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 12
+																		)
+															)
+													);
 
 
-									} }?>
+										$query = new WP_Query( $args ); 
 
-								</div>
-								</div>
+													    if( $query->have_posts() ) { ?>
+													      <div class="wrapper">
+    <div class="h_iframe">
+
+													      	<ul class="bxslider">
+														    
+														<?php
+													    while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$link = get_field('embed_video_link'); 
+													    ?>
+
+
+														  <li>
+														  	<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
+														    <?php echo $link ?>
+														  </li>
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													      </div>
+										<?php  }
+
+										wp_reset_query();  // Restore global post data stomped by the_post().
+
+									}
+										?>
+
+								
 
 <!-- 								<div class="mixedContent player-select-container">
 									<h2 class="players-title">Player Select</h2>

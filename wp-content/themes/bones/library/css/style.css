@@ -3123,8 +3123,43 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* line 41, ../scss/partials/_wen.scss */
+iframe {
+  border: 0;
+}
+
+/* line 45, ../scss/partials/_wen.scss */
+.wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background: transparent;
+  max-width: 1600px;
+}
+
+/* line 46, ../scss/partials/_wen.scss */
+.h_iframe {
+  position: relative;
+}
+
+/* line 47, ../scss/partials/_wen.scss */
+.h_iframe .ratio {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 48, ../scss/partials/_wen.scss */
+.h_iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 767px) {
-  /* line 46, ../scss/partials/_wen.scss */
+  /* line 51, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -3134,7 +3169,7 @@ body {
     z-index: 10;
   }
 
-  /* line 55, ../scss/partials/_wen.scss */
+  /* line 60, ../scss/partials/_wen.scss */
   .header {
     background: #000000;
     padding: 10px;
@@ -3147,7 +3182,7 @@ body {
     transform: translateZ(5);
   }
 
-  /* line 64, ../scss/partials/_wen.scss */
+  /* line 69, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }

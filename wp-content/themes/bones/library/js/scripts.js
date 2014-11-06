@@ -182,6 +182,12 @@ jQuery(document).ready(function($) {
     maxCols     : 3       // Maximum # of columns
   });
 
+  // init video slider
+  $('.bxslider').bxSlider({
+    video: true,
+    useCSS: false
+  });
+
   // init fancybox
   $(".fancybox").fancybox();
 
