@@ -69,7 +69,7 @@
 
 										</div>
 								</div>';
-									} } elseif (is_page(4)) {
+									} } //elseif (is_page(4)) {
 
 										//layerslider(2);
 										// FEATURED
@@ -109,7 +109,7 @@
 													      </ul>
 													      </div>
 													      </div>
-										<?php  }
+										<?php  //}
 
 										wp_reset_query();  // Restore global post data stomped by the_post().
 
@@ -216,10 +216,13 @@
 													      	$title = get_field('title'); 
 													       	$hover_text2 = get_field('hover_text2'); 
 													       	$thumbnail = get_field('thumbnail');
+													       	$link = get_field('embed_video_link'); 
+													       	$title_clean = cleanString($title);
 															if( !empty($thumbnail) ): 
 																$thumbnail_url = $thumbnail['url'];
 															endif; ?>
 													       		<li class="video-thumb">
+													       			<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
 																	<div class="poster-container">
 																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
 																		<div class="poster-hover">
@@ -227,7 +230,27 @@
 																			<h4><?php echo $hover_text2 ?></h4>
 																		</div>
 																	</div>
+																	</a>
 																</li>	
+
+																<!-- hidden divs for lightbox -->
+																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+																	<div class="iframe-wrapper">
+																	<div class="iframe-container">
+																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
+																	<?php echo $link ?>
+																	<div class="credits">
+																		<h2>CREDITS</h2>
+																		<span class="credit-title">Client: </span><span class="credit-name">Pabst Blue Ribbon</span><br />
+																		<span class="credit-title">Director: </span><span class="credit-name">Oison Weles</span><br />
+																		<span class="credit-title">Production: </span><span class="credit-name">ACME</span><br />
+																		<span class="credit-title">Editor: </span><span class="credit-name">Tim Wilson</span>
+
+																	</div>
+
+																</div>
+																</div>
+																</div>
 													        
 													       <?php endwhile; ?>
 													      </ul>

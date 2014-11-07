@@ -219,5 +219,18 @@ function helper($var) {
   
 }
 
+// Wen Clean String format
+function cleanString($string){
+  $search = '/[^[:alpha:]]/';
+  $space = ' ';
+  $replace = '-';
+  $newString = str_replace($search, $replace, $string);
+  $newString = strtolower($newString);
+  $newString = str_replace($space, $replace, $newString);
+
+  return $newString;
+
+}
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

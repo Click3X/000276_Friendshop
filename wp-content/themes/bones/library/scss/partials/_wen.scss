@@ -20,11 +20,22 @@ body { background-color: black; }
 
 // GIF ON ALL MENNU PAGE BODY TAG BACKGROUND
 .page-id-4,
-.page-id-13,
+
 .page-id-11,
-.page-id-8,
-.page-id-6 {
-    background: url(../../../../../img/bg.jpg) center top;
+{
+    // background: url(../../../../../img/bg.jpg) center top;
+    background: url(../../../../../img/bg3.gif) center top;
+    background-size: cover;
+}
+
+.page-id-6,
+.page-id-13  {
+  background: url(../../../../../img/bg2.gif) center top;
+    background-size: cover;
+}
+
+.page-id-8  {
+  background: url(../../../../../img/bg1.gif) center top;
     background-size: cover;
 }
 
@@ -46,6 +57,76 @@ iframe {
 .h_iframe        {position:relative;}
 .h_iframe .ratio {display:block;width:100%;height:auto;}
 .h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+
+      
+.iframe-container iframe {
+    width: 1000px;
+    height: 563px;
+    max-width: 100%;
+}
+
+.fancybox-skin {
+  padding: 0 !important;
+  background-color: transparent !important;
+  width: 1600px;
+  max-width: 1600px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+// CREDITS
+.credits  {
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  padding: 1.8em 0;
+  h2 {
+    color: $tab-blue;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+
+  .credit-title {
+    color: #325166;
+    font-size: 1.15em;
+  }
+
+  .credit-name {
+    color: white;
+    font-size: 1.15em;
+  }
+  
+}
+
+
+@media (max-width: 1054px) {
+  .iframe-container iframe {
+    width: 800px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 854px) {
+  .iframe-container iframe {
+    width: 600px;
+    height: 338px;
+  }
+}
+
+@media (max-width: 654px) {
+  .iframe-container iframe {
+    width: 400px;
+    height: 225px;
+  }
+}
+
+// @media (max-width: 454px) {
+//   .iframe-container iframe {
+//     width: 200px;
+//     height: 113px;
+//   }
+// }
 
 @media (max-width: 767px) {
 	.logo-header {
