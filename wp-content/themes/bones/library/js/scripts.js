@@ -157,6 +157,25 @@ jQuery(document).ready(function($) {
   });
 
 
+  // init fancybox
+        // Remove padding, set opening and closing animations, close if clicked and disable overlay
+      $(".video-fancy").fancybox({
+        padding: 0,
+
+        openEffect : 'elastic',
+        openSpeed  : 150,
+
+        closeEffect : 'elastic',
+        closeSpeed  : 150,
+
+        closeClick : true,
+
+        helpers : {
+          overlay : null
+        }
+      });
+
+
 
 
 
@@ -182,13 +201,26 @@ jQuery(document).ready(function($) {
     maxCols     : 3       // Maximum # of columns
   });
 
+  // init video slider
+  $('.bxslider').bxSlider({
+    video: true,
+    useCSS: false
+  });
+
   // init fancybox
   $(".fancybox").fancybox();
 
   // init tabs
   $('#tab-container').easytabs();
 
+// init rift
+    $(window).load(function() {
 
+      $('.rift').rift();
+
+     // $('body').fadeTo(500,1); // Just a nice transition effect
+
+    });
 
   /*
    * Let's fire off the gravatar function
