@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+/*
+
+Template Name: Video Archive
+
+*/
+
+
+get_header(); ?>
 
 			<div id="content">
 
