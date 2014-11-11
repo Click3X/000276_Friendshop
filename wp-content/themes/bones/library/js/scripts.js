@@ -220,7 +220,12 @@ jQuery(document).ready(function($) {
 $('#news-bxslider').bxSlider({
     // video: true,
     // useCSS: false
-    auto: true
+    auto: true,
+    nextSelector: '#news-slider-next',
+    prevSelector: '#news-slider-prev',
+    nextText: '>',
+    prevText: '<'
+    // autoControls: true
   });
   // init fancybox
   $(".fancybox").fancybox();

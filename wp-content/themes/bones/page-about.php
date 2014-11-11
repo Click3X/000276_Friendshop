@@ -160,13 +160,18 @@
 													
 													
 
-													<a href="<?php echo $link ?>" target="_blank"><?php echo $read_btn; ?></a>
+													<a href="<?php echo $link ?>" target="_blank"><?php echo $read_btn; ?> →</a>
 
 												</li>
 
 											<?php endwhile; ?>
 
 											</ul>
+
+											<!-- <div class="outside"> -->
+ 
+  <!-- <p> --><span id="news-slider-prev"></span> <span id="news-slider-next"></span><!-- </p> -->
+<!-- </div> -->
 
 										<?php endif; ?>
 

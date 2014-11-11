@@ -109,11 +109,14 @@ iframe {
   text-transform: uppercase;
   font-size: 1.45em;
   font-weight: 500;
+  padding-top: 20px;
 }
 
 #news-bxslider {
 
-  
+  li {
+    margin-top: 50px;
+  }
 
   h3 {
     color: #03c3b8;
@@ -127,6 +130,19 @@ iframe {
     text-transform: uppercase;
     font-size: 2.4em;
     font-weight: 400;
+    max-width: 700px;
+    margin: auto;
+
+    @media (max-width: 767px) {
+      font-size: 1.8em;
+      max-width: 400px;
+    }
+
+        @media (max-width: 569px) {
+      font-size: 1.42em;
+      max-width: 260px;
+    }
+    
   }
 
   a {
@@ -144,6 +160,31 @@ iframe {
 .news-wrapper {
   background-color: #141414;
   text-align: center;
+  position: relative;
+}
+
+#news-slider-prev,  #news-slider-next {
+  position: absolute;
+  top: 48%;
+    font-size: 2.5em;
+    border: 1px solid #202020;
+
+background-color: black;
+line-height: 0.9em;
+padding: 0 0.25em;
+  a {
+    text-decoration: none;
+    color: white !important;
+  }
+}
+
+#news-slider-prev {
+  left: 20px;
+
+}
+
+#news-slider-next {
+  right: 20px;
 }
 
 
