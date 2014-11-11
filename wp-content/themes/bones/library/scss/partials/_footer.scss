@@ -68,7 +68,8 @@ html, body {
 .ftsocial-container { 
     float:left;
     margin-top:16px;
-    margin-left:8px;
+    // margin-left:8px;
+    margin-left:0;
 
     @media(min-width:481px) {
         margin-left: 50px;

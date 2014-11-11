@@ -51,9 +51,18 @@ svg {
         display: none;
     }
 
-    .svg-holder,
-    .logo-header-svg {
-        display: block;
-    }
+    // .svg-holder,
+    // .logo-header-svg {
+    //     display: block;
+    // }
 
+}
+
+.svg .svg-holder {display: block;}
+.svg .logo-header-svg {display: block;}
+
+.ftlogo-container-new {
+    width:200px; height: 60px;
+    margin-right: 50px;
+    float: left;
 }
