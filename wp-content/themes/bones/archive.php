@@ -1,11 +1,11 @@
-<?php get_header(); ?>
+<?php //get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+<!-- 
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
 									<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
@@ -39,7 +39,7 @@
 									<h1 class="archive-title h2">
 										<span><?php _e( 'Yearly Archives:', 'bonestheme' ); ?></span> <?php the_time('Y'); ?>
 									</h1>
-							<?php } ?>
+							<?php } ?> -->
 
 							<div id="tab-container" class="tab-container">
 										
@@ -54,58 +54,6 @@
 							</div>
 
 
-<!-- 							<div id="tab1">
-
-												<section class="clearfix videogroup-list">
-												<?php			
-
-													// COMEDY
-													$args = array(
-													'tax_query' => array(
-														array(
-															'taxonomy' => 'video_groups',
-															'terms' => 6,
-															
-																		)
-															)
-													);
-												
-													$query = new WP_Query( $args ); 
-
-													    if( $query->have_posts() ) { ?>
-													      <div class="category section">
-
-													      	<ul class="video-list">
-														    
-														    <?php
-													      while ($query->have_posts()) : $query->the_post(); 
-
-													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$thumbnail = get_field('thumbnail');
-															if( !empty($thumbnail) ): 
-																$thumbnail_url = $thumbnail['url'];
-															endif; ?>
-													       		<li class="video-thumb">
-																	<div class="poster-container">
-																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
-																		<div class="poster-hover">
-																			<h3><?php echo $title ?></h3>
-																			<h4><?php echo $hover_text2 ?></h4>
-																		</div>
-																	</div>
-																</li>	
-													        
-													       <?php endwhile; ?>
-													      </ul>
-													      </div>
-													 <?php  }
-
-													wp_reset_query();  // Restore global post data stomped by the_post().
-													?>
-											</section>
-										</div>  -->
-
 										<!-- END OF TAB1 -->
 
 							<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -116,14 +64,12 @@
 								<?php
 									// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 									$args= array(
+										'post_type' => 'videos',
 										'tax_query' => array(
-										'taxonomy' => 'video_groups',
-										'terms' => 6,
-															)
-										// 'paged' => $paged
-												);
-									// query_posts($args);
-									
+											'taxonomy' => 'video_groups',
+											'terms' => 6
+											)
+										);
 
 										$query = new WP_Query( $args ); 
 
@@ -134,7 +80,7 @@
 														    
 														    <?php
 													      while ($query->have_posts()) : $query->the_post(); 
-
+													      	
 													      	$title = get_field('title'); 
 													       	$hover_text2 = get_field('hover_text2'); 
 													       	$thumbnail = get_field('thumbnail');
@@ -145,8 +91,8 @@
 																	<div class="poster-container">
 																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
 																		<div class="poster-hover">
-																			<h3><?php echo $title ?></h3>
-																			<h4><?php echo $hover_text2 ?></h4>
+																			<h3><?php echo $title; ?></h3>
+																			<h4><?php echo $hover_text2; ?></h4>
 																		</div>
 																	</div>
 																</li>	
@@ -206,10 +152,10 @@
 
 						</div>
 
-					<?php get_sidebar(); ?>
+					<?php //get_sidebar(); ?>
 
 				</div>
 
 			</div>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

@@ -2801,7 +2801,7 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  /* line 51, ../scss/partials/_footer.scss */
+  /* line 50, ../scss/partials/_footer.scss */
   .ftlogo-container,
   .ftaddress-container {
     margin-bottom: 8px;
@@ -2886,7 +2886,7 @@ html, body {
   }
 }
 
-
+/* line 108, ../scss/partials/_footer.scss */
 .Tumblr,
 .Facebook,
 .Instagram,
@@ -2895,6 +2895,7 @@ html, body {
   background-image: url(../../../../../img/social-new.png);
 }
 
+/* line 118, ../scss/partials/_footer.scss */
 .svg .Tumblr,
 .svg .Facebook,
 .svg .Instagram,
@@ -2909,7 +2910,7 @@ html, body {
   background-position-x: 100.4%;
   background-position: 100.4% 0;
 }
-
+/* line 131, ../scss/partials/_footer.scss */
 .Tumblr:hover {
   background-position-y: 103.2%;
   background-position: 100.4% 103.2%;
@@ -2919,157 +2920,156 @@ html, body {
   .Tumblr {
     background-size: auto;
   }
-
+  /* line 137, ../scss/partials/_footer.scss */
   .Tumblr:hover {
     background-position-y: 102%;
     background-position: 100.4% 102%;
   }
 }
 
-
+/* line 144, ../scss/partials/_footer.scss */
 .Map {
   background-size: 780%;
   background-position-x: 28.4%;
   background-position: 28.4% 0;
 }
-
+/* line 148, ../scss/partials/_footer.scss */
 .Map:hover {
   background-position-y: 103.2%;
   background-position: 28.4% 103.2%;
 }
 @media (min-width: 481px) {
-  /* line 137, ../scss/partials/_footer.scss */
+  /* line 144, ../scss/partials/_footer.scss */
   .Map {
     background-size: auto;
   }
-
+  /* line 154, ../scss/partials/_footer.scss */
   .Map:hover {
     background-position-y: 102%;
     background-position: 28.4% 102%;
   }
 }
 
-
+/* line 161, ../scss/partials/_footer.scss */
 .Mail {
   background-size: 780%;
   background-position-x: 14.4%;
   background-position: 14.4% 0;
 }
-
+/* line 165, ../scss/partials/_footer.scss */
 .Mail:hover {
   background-position-y: 103.2%;
   background-position: 14.4% 103.2%;
 }
 @media (min-width: 481px) {
-  /* line 147, ../scss/partials/_footer.scss */
+  /* line 161, ../scss/partials/_footer.scss */
   .Mail {
     background-size: auto;
   }
-  /* line 153, ../scss/partials/_footer.scss */
-
+  /* line 171, ../scss/partials/_footer.scss */
   .Mail:hover {
     background-position-y: 102%;
     background-position: 14.4% 102%;
   }
 }
 
-
+/* line 179, ../scss/partials/_footer.scss */
 .footer {
   position: static;
 }
 
-
+/* line 181, ../scss/partials/_footer.scss */
 #container {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -370px;
   overflow-x: hidden;
 }
-
+/* line 187, ../scss/partials/_footer.scss */
 #container:after {
   content: "";
   display: block;
 }
 
-
+/* line 194, ../scss/partials/_footer.scss */
 .ftaddress-container a {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-
+/* line 201, ../scss/partials/_footer.scss */
 footer {
   position: absolute;
   width: 100%;
 }
 
 @media (max-width: 555px) {
-
+  /* line 213, ../scss/partials/_footer.scss */
   .ftaddress-container {
     margin-right: 0px;
   }
 }
-
+/* line 217, ../scss/partials/_footer.scss */
 #inner-footer {
   padding: 60px 2px;
 }
 @media (min-width: 481px) {
-
+  /* line 217, ../scss/partials/_footer.scss */
   #inner-footer {
     padding: 80px 2px;
   }
 }
 
-
+/* line 224, ../scss/partials/_footer.scss */
 .footer, #container:after {
   height: 370px;
 }
 
 @media (min-width: 400px) {
-
+  /* line 227, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -334px;
   }
 
-
+  /* line 228, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 334px;
   }
 }
 @media (min-width: 400px) {
-
+  /* line 232, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -350px;
   }
 
-
+  /* line 233, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 350px;
   }
 }
 @media (min-width: 556px) {
-
+  /* line 237, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -359px;
   }
 
-
+  /* line 238, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 359px;
   }
 }
 @media (min-width: 1040px) {
-
+  /* line 242, ../scss/partials/_footer.scss */
   #container {
     margin-bottom: -322px;
   }
 
-
+  /* line 243, ../scss/partials/_footer.scss */
   .footer, #container:after {
     height: 322px;
   }
 }
-
+/* line 247, ../scss/partials/_footer.scss */
 #transition img {
   background-position: 0 0;
   background-size: 200% 100%;
@@ -3086,7 +3086,7 @@ footer {
   transition: all 0.3s ease-out;
 }
 
-
+/* line 260, ../scss/partials/_footer.scss */
 #transition img:hover {
   background-position: -100% 100%;
 }
@@ -3108,26 +3108,6 @@ footer {
 /* line 19, ../scss/partials/_wen.scss */
 body {
   background-color: black;
-}
-
-/* line 22, ../scss/partials/_wen.scss */
-.page-id-4,
-.page-id-11 {
-  background: url(../../../../../img/bg3.gif) center top;
-  background-size: cover;
-}
-
-/* line 31, ../scss/partials/_wen.scss */
-.page-id-6,
-.page-id-13 {
-  background: url(../../../../../img/bg2.gif) center top;
-  background-size: cover;
-}
-
-/* line 37, ../scss/partials/_wen.scss */
-.page-id-8 {
-  background: url(../../../../../img/bg1.gif) center top;
-  background-size: cover;
 }
 
 /* line 42, ../scss/partials/_wen.scss */
@@ -3219,22 +3199,67 @@ iframe {
   font-size: 1.15em;
 }
 
+/* line 103, ../scss/partials/_wen.scss */
+.bx-viewport {
+  min-height: 300px;
+}
+
+/* line 107, ../scss/partials/_wen.scss */
+.news-toptitle {
+  color: #0666e1;
+  text-transform: uppercase;
+  font-size: 1.45em;
+  font-weight: 500;
+}
+
+/* line 118, ../scss/partials/_wen.scss */
+#news-bxslider h3 {
+  color: #03c3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 124, ../scss/partials/_wen.scss */
+#news-bxslider h1 {
+  color: white;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2.4em;
+  font-weight: 400;
+}
+/* line 132, ../scss/partials/_wen.scss */
+#news-bxslider a {
+  padding: 5px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #373737;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* line 144, ../scss/partials/_wen.scss */
+.news-wrapper {
+  background-color: #141414;
+  text-align: center;
+}
+
 @media (max-width: 854px) {
-  /* line 111, ../scss/partials/_wen.scss */
+  /* line 158, ../scss/partials/_wen.scss */
   .iframe-container iframe {
     width: 600px;
     height: 338px;
   }
 }
 @media (max-width: 654px) {
-  /* line 118, ../scss/partials/_wen.scss */
+  /* line 165, ../scss/partials/_wen.scss */
   .iframe-container iframe {
     width: 400px;
     height: 225px;
   }
 }
 @media (max-width: 767px) {
-  /* line 132, ../scss/partials/_wen.scss */
+  /* line 179, ../scss/partials/_wen.scss */
   .logo-header {
     width: 226px;
     height: 40px;
@@ -3244,7 +3269,7 @@ iframe {
     z-index: 10;
   }
 
-  /* line 141, ../scss/partials/_wen.scss */
+  /* line 188, ../scss/partials/_wen.scss */
   .header {
     background: #000000;
     padding: 10px;
@@ -3257,12 +3282,12 @@ iframe {
     transform: translateZ(5);
   }
 
-  /* line 150, ../scss/partials/_wen.scss */
+  /* line 197, ../scss/partials/_wen.scss */
   #inner-header {
     text-align: left;
   }
 }
-/* line 155, ../scss/partials/_wen.scss */
+/* line 202, ../scss/partials/_wen.scss */
 .grid figure {
   position: relative;
   float: left;
@@ -3274,7 +3299,7 @@ iframe {
   cursor: pointer;
 }
 
-/* line 170, ../scss/partials/_wen.scss */
+/* line 217, ../scss/partials/_wen.scss */
 .grid figure img {
   position: relative;
   display: block;
@@ -3283,7 +3308,7 @@ iframe {
   opacity: 0.8;
 }
 
-/* line 178, ../scss/partials/_wen.scss */
+/* line 225, ../scss/partials/_wen.scss */
 .grid figure figcaption {
   padding: 2em;
   color: #fff;
@@ -3293,13 +3318,13 @@ iframe {
   backface-visibility: hidden;
 }
 
-/* line 187, ../scss/partials/_wen.scss */
+/* line 234, ../scss/partials/_wen.scss */
 .grid figure figcaption::before,
 .grid figure figcaption::after {
   pointer-events: none;
 }
 
-/* line 192, ../scss/partials/_wen.scss */
+/* line 239, ../scss/partials/_wen.scss */
 .grid figure figcaption,
 .grid figure figcaption > a {
   position: absolute;
@@ -3311,7 +3336,7 @@ iframe {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-/* line 203, ../scss/partials/_wen.scss */
+/* line 250, ../scss/partials/_wen.scss */
 .grid figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
@@ -3320,30 +3345,30 @@ iframe {
   opacity: 0;
 }
 
-/* line 211, ../scss/partials/_wen.scss */
+/* line 258, ../scss/partials/_wen.scss */
 .grid figure h2 {
   word-spacing: -0.15em;
   font-weight: 300;
 }
 
-/* line 216, ../scss/partials/_wen.scss */
+/* line 263, ../scss/partials/_wen.scss */
 .grid figure h2 span {
   font-weight: 800;
 }
 
-/* line 220, ../scss/partials/_wen.scss */
+/* line 267, ../scss/partials/_wen.scss */
 .grid figure h2,
 .grid figure p {
   margin: 0;
 }
 
-/* line 225, ../scss/partials/_wen.scss */
+/* line 272, ../scss/partials/_wen.scss */
 .grid figure p {
   letter-spacing: 1px;
   font-size: 55%;
 }
 
-/* line 231, ../scss/partials/_wen.scss */
+/* line 278, ../scss/partials/_wen.scss */
 figure.effect-sadie figcaption::before {
   position: absolute;
   top: 0;
@@ -3358,7 +3383,7 @@ figure.effect-sadie figcaption::before {
   transform: translate3d(0, 50%, 0);
 }
 
-/* line 245, ../scss/partials/_wen.scss */
+/* line 292, ../scss/partials/_wen.scss */
 figure.effect-sadie h2 {
   position: absolute;
   top: 50%;
@@ -3372,14 +3397,14 @@ figure.effect-sadie h2 {
   transform: translate3d(0, -50%, 0);
 }
 
-/* line 258, ../scss/partials/_wen.scss */
+/* line 305, ../scss/partials/_wen.scss */
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
-/* line 264, ../scss/partials/_wen.scss */
+/* line 311, ../scss/partials/_wen.scss */
 figure.effect-sadie p {
   position: absolute;
   bottom: 0;
@@ -3391,14 +3416,14 @@ figure.effect-sadie p {
   transform: translate3d(0, 10px, 0);
 }
 
-/* line 275, ../scss/partials/_wen.scss */
+/* line 322, ../scss/partials/_wen.scss */
 figure.effect-sadie:hover h2 {
   color: #fff;
   -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
   transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
 }
 
-/* line 281, ../scss/partials/_wen.scss */
+/* line 328, ../scss/partials/_wen.scss */
 figure.effect-sadie:hover figcaption::before,
 figure.effect-sadie:hover p {
   opacity: 1;
@@ -3409,12 +3434,12 @@ figure.effect-sadie:hover p {
 /*-----------------*/
 /***** Selena *****/
 /*-----------------*/
-/* line 292, ../scss/partials/_wen.scss */
+/* line 339, ../scss/partials/_wen.scss */
 figure.effect-selena {
   background: #fff;
 }
 
-/* line 296, ../scss/partials/_wen.scss */
+/* line 343, ../scss/partials/_wen.scss */
 figure.effect-selena img {
   opacity: 0.95;
   -webkit-transition: -webkit-transform 0.35s;
@@ -3423,13 +3448,13 @@ figure.effect-selena img {
   transform-origin: 50% 50%;
 }
 
-/* line 304, ../scss/partials/_wen.scss */
+/* line 351, ../scss/partials/_wen.scss */
 figure.effect-selena:hover img {
   -webkit-transform: scale3d(0.95, 0.95, 1);
   transform: scale3d(0.95, 0.95, 1);
 }
 
-/* line 309, ../scss/partials/_wen.scss */
+/* line 356, ../scss/partials/_wen.scss */
 figure.effect-selena h2 {
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
@@ -3438,7 +3463,7 @@ figure.effect-selena h2 {
   font-size: 1.1em;
 }
 
-/* line 317, ../scss/partials/_wen.scss */
+/* line 364, ../scss/partials/_wen.scss */
 figure.effect-selena p {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -3449,13 +3474,13 @@ figure.effect-selena p {
   transform-origin: 50% 0%;
 }
 
-/* line 327, ../scss/partials/_wen.scss */
+/* line 374, ../scss/partials/_wen.scss */
 figure.effect-selena:hover h2 {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 332, ../scss/partials/_wen.scss */
+/* line 379, ../scss/partials/_wen.scss */
 figure.effect-selena:hover p {
   opacity: 1;
   -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0);

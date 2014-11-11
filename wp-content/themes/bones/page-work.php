@@ -45,17 +45,18 @@
 											$term = get_term_by( 'id', $child, $taxonomy_name );
 											$child_ids = $term->term_id;
 
-											$metaValue1 = get_terms_meta($child_ids, $meta_key1);
+											// $metaValue1 = get_terms_meta($child_ids, $meta_key1);
     										$metaValue2 = get_terms_meta($child_ids, $meta_key2);
 
-    										$img_url = $metaValue1[0];
+    										// $img_url = $metaValue1[0];
 											$img_hover_url = $metaValue2[0];
 
 											?>
 
 											<li class="players">
 									        	
-									        	<img class="float-top" src="selector-top.png">							        	<a href="<?php echo get_term_link( $child, $taxonomy_name ) ?>">
+									        	<img class="float-top" src="selector-top.png">							        	
+									        	<a class="players_link" href="<?php echo get_term_link( $child, $taxonomy_name ) ?>">
 									        	<div class="grayscale" style="background-image: url( <?php echo $img_hover_url ?> );"></div></a>
 									        	<img class="float-bottom" src="selector-bottom.png">
 									        	
@@ -87,9 +88,9 @@
 
 													    if( $query->have_posts() ) { ?>
 													      <div class="wrapper">
-    <div class="h_iframe">
+    														<div class="h_iframe">
 
-													      	<ul class="bxslider">
+													      	<ul id="video-bxslider">
 														    
 														<?php
 													    while ($query->have_posts()) : $query->the_post(); 
@@ -147,7 +148,8 @@
 									</div>
 								</div> -->
 
-
+									<!-- AJAX DIV WRAPPER -->
+									<div id="select-refresh-wrapper">
 									<div id="tab-container" class="tab-container">
 										
 										<ul id="work-ul" class='etabs work-tabs cf'>
@@ -174,6 +176,8 @@
 											?>
 										</ul>
 										<!-- </div> -->
+
+
 
 										<!-- TAB 1 CREATIVE DIRECTION / COMEDY-->
 										<div id="tab1">
@@ -441,6 +445,8 @@
 										</div>
 							
 									</div> <!-- END TAB CONTAINER -->
+
+								</div> <!-- END AJAX WRAPPER -->
 
 								<?php
 									wp_link_pages( array(

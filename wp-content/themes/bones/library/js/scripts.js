@@ -108,6 +108,16 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
+  // AJAX BINDING
+  $.ajaxSetup({cache:false});
+        $(".players_link").click(function(){
+            var post_link = $(this).attr("href");
+  console.dir(post_link);
+            $("#select-refresh-wrapper").html("content loading");
+            $("#select-refresh-wrapper").load(post_link);
+        return false;
+  });
+
   //Blinking text
   var el = $('.players-title');
   setInterval(function() {
@@ -202,11 +212,16 @@ jQuery(document).ready(function($) {
   });
 
   // init video slider
-  $('.bxslider').bxSlider({
+  $('#video-bxslider').bxSlider({
     video: true,
     useCSS: false
   });
 
+$('#news-bxslider').bxSlider({
+    // video: true,
+    // useCSS: false
+    auto: true
+  });
   // init fancybox
   $(".fancybox").fancybox();
 

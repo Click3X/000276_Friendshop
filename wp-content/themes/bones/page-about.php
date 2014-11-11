@@ -14,6 +14,10 @@
 
 	endif;
 
+	$read_btn = get_field('read_btn');
+	$session_title = get_field('session_title');
+	
+
 ?>
 
 			<div id="content" class="about-container">
@@ -32,10 +36,44 @@
 
 										<img id="permanent" src="<?php echo $profile_url; ?>" alt="<?php echo "friendshop"; ?>" />
 
-										<h1><?php echo $title ?></h1>
+										<h1><?php echo $title; ?></h1>
 																
-										<p><?php echo $content ?></p>
-									
+										<p><?php echo $content; ?></p>
+
+<!-- 										<div class="news-wrapper">
+
+
+										<?php if(get_field('friendly_news')): ?>
+
+											<h2 class="news-toptitle"><?php echo $session_title; ?></h2>
+
+											<ul id="news-bxslider">
+
+											<?php while(has_sub_field('friendly_news')): 
+
+											$press_name = get_sub_field('press_name'); 
+											$news_title = get_sub_field('news_title'); 
+											$link = get_sub_field('link'); ?>
+
+												<li>
+													
+													<h3><?php echo $press_name; ?></h3>
+
+													<h1>&ldquo;<?php echo $news_title; ?>&rdquo;</h1>
+													
+													
+
+													<a href="<?php echo $link ?>" target="_blank"><?php echo $read_btn; ?></a>
+
+												</li>
+
+											<?php endwhile; ?>
+
+											</ul>
+
+										<?php endif; ?>
+
+										</div> -->
 
 									</div>
 
@@ -98,7 +136,43 @@
 
 				</div>
 
-			</div>
+
+				<div class="news-wrapper">
+
+
+										<?php if(get_field('friendly_news')): ?>
+
+											<h2 class="news-toptitle"><?php echo $session_title; ?></h2>
+
+											<ul id="news-bxslider">
+
+											<?php while(has_sub_field('friendly_news')): 
+
+											$press_name = get_sub_field('press_name'); 
+											$news_title = get_sub_field('news_title'); 
+											$link = get_sub_field('link'); ?>
+
+												<li>
+													
+													<h3><?php echo $press_name; ?></h3>
+
+													<h1>&ldquo;<?php echo $news_title; ?>&rdquo;</h1>
+													
+													
+
+													<a href="<?php echo $link ?>" target="_blank"><?php echo $read_btn; ?></a>
+
+												</li>
+
+											<?php endwhile; ?>
+
+											</ul>
+
+										<?php endif; ?>
+
+										</div>
+
+				</div>
 
 
 <?php get_footer(); ?>

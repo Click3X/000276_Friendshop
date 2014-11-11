@@ -1,1 +1,0 @@
-<div class="wd-error"><?php echo $this->get('message') ?></div>
