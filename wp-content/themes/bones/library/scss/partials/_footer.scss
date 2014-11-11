@@ -127,30 +127,51 @@ html, body {
 .Tumblr {
     background-size:780%;
     background-position-x: 100.4%; 
-    &:hover { background-position-y: 103.2%; }
+    background-position: 100.4% 0;
+    &:hover { 
+        background-position-y: 103.2%; 
+        background-position: 100.4% 103.2%;
+    }
     @media(min-width: 481px) { 
         background-size: auto; 
-        &:hover { background-position-y: 102%; }
+        &:hover { 
+            background-position-y: 102%;
+            background-position: 100.4% 102%;
+        }
     }
 }
 
 .Map { 
     background-size:780%;
     background-position-x: 28.4%;
-    &:hover { background-position-y: 103.2%; }
+    background-position: 28.4% 0;
+    &:hover { 
+        background-position-y: 103.2%;
+        background-position: 28.4% 103.2%;
+    }
     @media(min-width: 481px) { 
         background-size: auto; 
-        &:hover { background-position-y: 102%; }
+        &:hover { 
+            background-position-y: 102%; 
+            background-position: 28.4% 102%;
+        }
     }
 }
 
 .Mail { 
     background-size:780%;
     background-position-x: 14.4%;
-    &:hover { background-position-y: 103.2%; }
+    background-position: 14.4% 0;
+    &:hover { 
+        background-position-y: 103.2%; 
+        background-position: 14.4% 103.2%;
+    }
     @media(min-width: 481px) { 
         background-size: auto; 
-        &:hover { background-position-y: 102%; }
+        &:hover { 
+            background-position-y: 102%; 
+            background-position: 14.4% 102%;
+        }
     }
 }
 
