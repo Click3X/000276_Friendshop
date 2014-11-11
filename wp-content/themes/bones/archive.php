@@ -54,7 +54,7 @@
 							</div>
 
 
-							<div id="tab1">
+<!-- 							<div id="tab1">
 
 												<section class="clearfix videogroup-list">
 												<?php			
@@ -104,20 +104,69 @@
 													wp_reset_query();  // Restore global post data stomped by the_post().
 													?>
 											</section>
-										</div> 
+										</div>  -->
 
 										<!-- END OF TAB1 -->
 
 							<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<!-- <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article"> -->
-<!-- 
-								<header class="article-header">
+							<div id="tab1">
+
+								<?php
+									// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+									$args= array(
+										'tax_query' => array(
+										'taxonomy' => 'video_groups',
+										'terms' => 6,
+															)
+										// 'paged' => $paged
+												);
+									// query_posts($args);
+									
+
+										$query = new WP_Query( $args ); 
+
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
+
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+													       		<li class="video-thumb">
+																	<div class="poster-container">
+																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
+																		<div class="poster-hover">
+																			<h3><?php echo $title ?></h3>
+																			<h4><?php echo $hover_text2 ?></h4>
+																		</div>
+																	</div>
+																</li>	
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
+
+													wp_reset_query();  // Restore global post data stomped by the_post().
+													?>
+
+							</div>
+
+<!-- 								<header class="article-header">
 
 									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-								</header>  -->
-
+								</header> 
+ -->
 								<section class="entry-content cf">
 
 									<?php //the_post_thumbnail( 'bones-thumb-300' ); ?>
@@ -153,7 +202,7 @@
 										</footer>
 									</article> -->
 
-							<?php endif; ?>
+							<?php //endif; ?>
 
 						</div>
 

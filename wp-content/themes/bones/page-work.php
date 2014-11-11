@@ -69,7 +69,7 @@
 
 										</div>
 								</div>';
-									} } //elseif (is_page(4)) {
+									} } elseif (is_page(4)) {
 
 										//layerslider(2);
 										// FEATURED
@@ -109,7 +109,7 @@
 													      </ul>
 													      </div>
 													      </div>
-										<?php  //}
+										<?php  }
 
 										wp_reset_query();  // Restore global post data stomped by the_post().
 
@@ -221,7 +221,7 @@
 															if( !empty($thumbnail) ): 
 																$thumbnail_url = $thumbnail['url'];
 															endif; ?>
-													       		<li class="video-thumb">
+<!-- 													       		<li class="video-thumb">
 													       			<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
 																	<div class="poster-container">
 																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
@@ -231,7 +231,23 @@
 																		</div>
 																	</div>
 																	</a>
-																</li>	
+																</li> -->
+
+
+																<!-- HOVER EFFECT DOMO 1 -->
+																    <!-- Add figure class of 'slider' and figcaption class of 'caption' -->
+																<li class="video-thumb">
+																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
+																	    <figure class="rift">
+																	      <img src="<?php echo $thumbnail_url ?>" alt="Image 01">
+																	      <figcaption class="caption">
+																	      	<?php echo $title ?></br >
+																	      	<?php echo $hover_text2 ?>
+
+																	      </figcaption>
+																	    </figure>
+																    </a>
+															    </li>
 
 																<!-- hidden divs for lightbox -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
@@ -305,7 +321,7 @@
 															if( !empty($thumbnail) ): 
 																$thumbnail_url = $thumbnail['url'];
 															endif; ?>
-													       		<li class="video-thumb">
+<!-- 													       		<li class="video-thumb">
 																	<div class="poster-container">
 																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
 																		<div class="poster-hover">
@@ -313,7 +329,24 @@
 																			<h4><?php echo $hover_text2 ?></h4>
 																		</div>
 																	</div>
-																</li>	
+																</li>	 -->
+
+
+																<!-- TEST DEMO 2 -->
+																	
+																<li class="video-thumb">
+																	<div class="grid">
+																	<figure class="effect-sadie">
+																		<img src="<?php echo $thumbnail_url ?>" />
+																		<figcaption>
+																			<h2>Holy <span>Sadie</span></h2>
+																			<p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
+																			<a href="#">View more</a>
+																		</figcaption>			
+																	</figure>
+																	</div>
+																</li>
+																
 													        
 													       <?php endwhile; ?>
 													      </ul>
@@ -369,7 +402,7 @@
 															if( !empty($thumbnail) ): 
 																$thumbnail_url = $thumbnail['url'];
 															endif; ?>
-													       		<li class="video-thumb">
+<!-- 													       		<li class="video-thumb">
 																	<div class="poster-container">
 																		<img src="<?php echo $thumbnail_url ?>" alt="Video">
 																		<div class="poster-hover">
@@ -377,7 +410,24 @@
 																			<h4><?php echo $hover_text2 ?></h4>
 																		</div>
 																	</div>
-																</li>	
+																</li>	 -->
+
+
+																<!-- TEST DEMO 3 -->
+																<li class="video-thumb">
+																<div class="grid">
+																	<figure class="effect-selena">
+																		<img src="<?php echo $thumbnail_url ?>"/>
+																		<figcaption>
+																			<h2>Happy <span>Selena</span></h2>
+																			<p>Selena is a tiny-winged bird.</p>
+																			<a href="#">View more</a>
+																		</figcaption>			
+																	</figure>
+																</div>
+																</li>
+
+																
 													        
 													       <?php endwhile; ?>
 													      </ul>

@@ -3144,7 +3144,7 @@ iframe {
   height: 100%;
   margin: 0 auto;
   background: transparent;
-  max-width: 1600px;
+  max-width: 850px;
 }
 
 /* line 57, ../scss/partials/_wen.scss */
@@ -3170,8 +3170,8 @@ iframe {
 
 /* line 62, ../scss/partials/_wen.scss */
 .iframe-container iframe {
-  width: 1000px;
-  height: 563px;
+  width: 850px;
+  height: 478px;
   max-width: 100%;
 }
 
@@ -3210,13 +3210,6 @@ iframe {
   font-size: 1.15em;
 }
 
-@media (max-width: 1054px) {
-  /* line 104, ../scss/partials/_wen.scss */
-  .iframe-container iframe {
-    width: 800px;
-    height: 450px;
-  }
-}
 @media (max-width: 854px) {
   /* line 111, ../scss/partials/_wen.scss */
   .iframe-container iframe {
@@ -3260,6 +3253,206 @@ iframe {
     text-align: left;
   }
 }
+/* line 155, ../scss/partials/_wen.scss */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 269px;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 170, ../scss/partials/_wen.scss */
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+/* line 178, ../scss/partials/_wen.scss */
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 187, ../scss/partials/_wen.scss */
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+/* line 192, ../scss/partials/_wen.scss */
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+/* line 203, ../scss/partials/_wen.scss */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+/* line 211, ../scss/partials/_wen.scss */
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+/* line 216, ../scss/partials/_wen.scss */
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+/* line 220, ../scss/partials/_wen.scss */
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+/* line 225, ../scss/partials/_wen.scss */
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 55%;
+}
+
+/* line 231, ../scss/partials/_wen.scss */
+figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+  content: '';
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+}
+
+/* line 245, ../scss/partials/_wen.scss */
+figure.effect-sadie h2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.2em;
+  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+  transition: transform 0.35s, color 0.35s;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+/* line 258, ../scss/partials/_wen.scss */
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+/* line 264, ../scss/partials/_wen.scss */
+figure.effect-sadie p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+/* line 275, ../scss/partials/_wen.scss */
+figure.effect-sadie:hover h2 {
+  color: #fff;
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+
+/* line 281, ../scss/partials/_wen.scss */
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*-----------------*/
+/***** Selena *****/
+/*-----------------*/
+/* line 292, ../scss/partials/_wen.scss */
+figure.effect-selena {
+  background: #fff;
+}
+
+/* line 296, ../scss/partials/_wen.scss */
+figure.effect-selena img {
+  opacity: 0.95;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+/* line 304, ../scss/partials/_wen.scss */
+figure.effect-selena:hover img {
+  -webkit-transform: scale3d(0.95, 0.95, 1);
+  transform: scale3d(0.95, 0.95, 1);
+}
+
+/* line 309, ../scss/partials/_wen.scss */
+figure.effect-selena h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+  font-size: 1.1em;
+}
+
+/* line 317, ../scss/partials/_wen.scss */
+figure.effect-selena p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+/* line 327, ../scss/partials/_wen.scss */
+figure.effect-selena:hover h2 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 332, ../scss/partials/_wen.scss */
+figure.effect-selena:hover p {
+  opacity: 1;
+  -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0);
+  transform: perspective(1000px) rotate3d(1, 0, 0, 0);
+}
+
 /* line 1, ../scss/partials/_carousel-editors.scss */
 #slider-stage {
   width: 248px;

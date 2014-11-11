@@ -213,7 +213,14 @@ jQuery(document).ready(function($) {
   // init tabs
   $('#tab-container').easytabs();
 
+// init rift
+    $(window).load(function() {
 
+      $('.rift').rift();
+
+     // $('body').fadeTo(500,1); // Just a nice transition effect
+
+    });
 
   /*
    * Let's fire off the gravatar function

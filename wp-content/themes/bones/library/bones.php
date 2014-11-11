@@ -146,6 +146,9 @@ function bones_scripts_and_styles() {
 		// carousel style sheet
 		wp_register_style( 'videoslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.bxslider.css', array(), '' );
 
+		// rift style sheet
+		wp_register_style( 'rift-stylesheet', get_stylesheet_directory_uri() . '/library/css/rift.css', array(), '' );
+
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		  wp_enqueue_script( 'comment-reply' );
@@ -169,11 +172,16 @@ function bones_scripts_and_styles() {
 		// adding video slider js
 		wp_register_script( 'videoslider-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array( 'jquery' ), '', true );
 
+		
+
 		// adding responsive carousel js
 		//wp_register_script( 'rescarousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jcarousellite-responsive.js', array( 'jquery' ), '', true );
 
 		//adding tabs js
 		wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
+
+		// adding rift js
+		wp_register_script( 'rift-js', get_stylesheet_directory_uri() . '/library/js/libs/rift.min.js', array( 'jquery' ), '', true );
 
 
         // FAST CLICK
@@ -186,6 +194,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'bones-ie-only' );
 		wp_enqueue_style( 'fancybox-stylesheet' );
 		wp_enqueue_style( 'videoslider-stylesheet' );
+		wp_enqueue_style( 'rift-stylesheet' );
 
 
 
@@ -206,6 +215,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'carousel-js' );
 		wp_enqueue_script( 'fitvids-js' );
 		wp_enqueue_script( 'videoslider-js' );
+		wp_enqueue_script( 'rift-js' );
 		// wp_enqueue_script( 'rescarousel-js' );
 
 	}
