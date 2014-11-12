@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Work
+ Template Name: Editors
 */
 ?>
 
@@ -18,52 +18,57 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
 
-									<!-- MARQUEE CAROUSEL AT THE TOP -->
-									<?php 
-									$args = array(
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'video_groups',
-												'terms' => 12
-												)
-															)
-									);
+								<!-- SELECT PLAYERS -->
+									<div class="mixedContent player-select-container">
+									<h2 class="players-title">Player Select</h2>
+									<button class="prev">&#10094;</button>
+									<button class="next">&#10095;</button>
 
-									$query = new WP_Query( $args ); 
-
-													    if( $query->have_posts() ) { ?>
-
-													      <div class="wrapper">
-    														<div class="h_iframe">
-
-													      	<ul id="video-bxslider">
-														    
-														<?php
-													    while ($query->have_posts()) : $query->the_post(); 
-
-													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$link = get_field('embed_video_link'); 
-													    ?>
+									<div class="carousel-no-style" style="margin: auto;">
 
 
-														  <li>
-														  	<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
-														    <?php echo $link ?>
-														  </li>
-													        
-													       <?php endwhile; ?>
-													      </ul>
-													      </div>
-													      </div>
+									<?php if (function_exists('get_terms_meta')) {
 
-														<?php  }
+										$term_id = 10;
+										$taxonomy_name = 'video_groups';
+										$termchildren = get_term_children( $term_id, $taxonomy_name );
 
-									wp_reset_query();  
+										$meta_key1 = 'player-image';
+										$meta_key2 = 'player-image-hover';
+										
+										echo '<ul>';
+										foreach ( $termchildren as $child ) {
+											$term = get_term_by( 'id', $child, $taxonomy_name );
+											$child_ids = $term->term_id;
 
-									?>
+											// $metaValue1 = get_terms_meta($child_ids, $meta_key1);
+    										$metaValue2 = get_terms_meta($child_ids, $meta_key2);
 
+    										// $img_url = $metaValue1[0];
+											$img_hover_url = $metaValue2[0];
 
+											?>
+
+											<li class="players">
+									        	
+									        	<img class="float-top" src="selector-top.png">							        	
+									        	<a class="players_link" href="<?php echo get_term_link( $child, $taxonomy_name ) ?>">
+									        	<div class="grayscale" style="background-image: url( <?php echo $img_hover_url ?> );"></div></a>
+									        	<img class="float-bottom" src="selector-bottom.png">
+									        	
+									        	<p><?php echo $term->name ;?></p>
+									        		
+									        </li>
+									
+										<?php } 
+
+										echo '</ul> 
+
+										</div>
+								</div>';
+									} ?>
+
+										
 									<!-- TABS -->
 									<div id="tab-container" class="tab-container">
 										
@@ -75,28 +80,30 @@
 											$i=1;
 											
 											foreach ($new_tabs as $key => $new_tab) {													
-												echo '<li class="tab"><a href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
+												echo '<li class="tab-gallery tab"><a href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
 												$i++;
 											}
 										?>											
 										</ul>
 
-										<!-- TAB 1 CREATIVE DIRECTION -->
+
+										<!-- TAB 1 COMEDY -->
 										<div id="tab1">
 
 												<section class="clearfix videogroup-list">
 												<?php			
 
-													// CREATIVE DIRECTION
-												    $args = array(
+													// COMEDY
+													$args = array(
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															'terms' => 3
+															'terms' => array(6, 9),
+															'operator' => 'AND',
 																		)
 															)
 													);
-
+												
 													$query = new WP_Query( $args ); 
 
 													    if( $query->have_posts() ) { ?>
@@ -131,7 +138,7 @@
 																    </a>
 															    </li>
 
-																<!-- hidden divs for lightbox -->
+																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
@@ -160,19 +167,20 @@
 											</section>
 										</div>
 
-										<!-- TAB 2 FEATURED WORK -->
+										<!-- TAB 2 GENERAL -->
 										<div id="tab2">
 											<section class="clearfix videogroup-list">
 												<?php			
-												    $args = array(
+
+													$args = array(
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															'terms' => 4
+															'terms' => 7
 																		)
 															)
 													);
-
+												
 													$query = new WP_Query( $args ); 
 
 													    if( $query->have_posts() ) { ?>
@@ -190,9 +198,7 @@
 																$thumbnail_url = $thumbnail['url'];
 															endif; ?>
 
-
-																<!-- TEST HOVER DEMO 2 -->
-																	
+																<!-- TEST HOVER DEMO 2 -->																	
 																<li class="video-thumb">
 																	<div class="grid">
 																	<figure class="effect-sadie">
@@ -217,21 +223,21 @@
 											</section>
 										</div>
 
-										<!-- TAB 3 FRIENDSHOP PRODUCTIONS-->
+										<!-- TAB 3 LONG FORM -->
 										<div id="tab3">
 
 											<section class="clearfix videogroup-list">
 												<?php			
-
-												    $args = array(
+	
+													$args = array(
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															'terms' => 5
+															'terms' => 8
 																		)
 															)
 													);
-
+												
 													$query = new WP_Query( $args ); 
 
 													    if( $query->have_posts() ) { ?>
@@ -262,13 +268,14 @@
 																	</figure>
 																</div>
 																</li>
-												        
+
+																													        
 													       <?php endwhile; ?>
 													      </ul>
 													      </div>
 													 <?php  }
 
-													wp_reset_query();  
+													wp_reset_query(); 
 													?>
 											</section>
 
