@@ -118,6 +118,7 @@ jQuery(document).ready(function($) {
   //       return false;
   // });
 
+
   //Blinking text
   var el = $('.players-title');
   setInterval(function() {
@@ -252,6 +253,27 @@ $('#news-bxslider').bxSlider({
   // highlight selected menu item
   var url = window.location;
   $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
+
+
+
+
+  // AJAX FUNCTION TO CORRESPOND WITH SERVER FUNCTION FROM FUNCTIONS.PHP
+  function cat_ajax_get(catID) {
+    jQuery("a.ajax").removeClass("current");
+    jQuery("a.ajax").addClass("current"); //adds class current to the category menu item being displayed so you can style it with css
+    jQuery("#loading-animation-2").show();
+    var ajaxurl = '/wp-admin/admin-ajax.php';
+    jQuery.ajax({
+        type: 'POST',
+        url: ajaxurl,
+        data: {"action": "load-filter", cat: catID },
+        success: function(response) {
+            jQuery("#category-post-content").html(response);
+            jQuery("#loading-animation").hide();
+            return false;
+        }
+    });
+}
 
 
 }); /* end of as page load scripts */

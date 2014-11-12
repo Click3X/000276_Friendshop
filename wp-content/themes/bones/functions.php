@@ -233,6 +233,7 @@ function cleanString($string){
 }
 
 
+
 // ENABLE FULL TOOL BAR ON WYSIWYG EDITOR so that we can see WIREDRIVE DETAILS
 // function enable_more_buttons($buttons) {
 
