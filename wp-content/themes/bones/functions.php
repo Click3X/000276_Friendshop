@@ -233,49 +233,6 @@ function cleanString($string){
 }
 
 
-// AJAX TRY
-add_action( 'wp_ajax_nopriv_load-filter', 'prefix_load_cat_posts' );
-add_action( 'wp_ajax_load-filter', 'prefix_load_cat_posts' );
-function prefix_load_cat_posts () {
-    $cat_id = $_POST[ 'cat' ];
-    
-    $args = array (
-      'tax_query' => array(
-           array(
-              'taxonomy' => 'video_groups',
-              'field' => 'term_id',
-              'terms' => array( $cat_id )
-           )
-      ),
-      'post_type' => 'videos', // <== this was missing
-      'order' => 'DESC'
-    );
-
-    $posts = get_posts( $args );
-
-    ob_start ();
-
-    foreach ( $posts as $p ) { ?>
-
-    <div id="post-<?php echo $post->ID; ?>">
-        <h1 class="posttitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-
-        <div id="post-content">
-        <?php the_excerpt(); ?>
-
-        </div>
-   </div> 
-
-
-   <?php } wp_reset_postdata();
-
-   $response = ob_get_contents();
-   ob_end_clean();
-
-   echo $response;
-   die(1);
-}
-
 
 // ENABLE FULL TOOL BAR ON WYSIWYG EDITOR so that we can see WIREDRIVE DETAILS
 // function enable_more_buttons($buttons) {
@@ -304,5 +261,3 @@ function prefix_load_cat_posts () {
 // }
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
-
-
