@@ -149,7 +149,7 @@
 								</div> -->
 
 									<!-- AJAX DIV WRAPPER -->
-									<!-- <div id="select-refresh-wrapper"> -->
+									<div id="select-refresh-wrapper">
 									<div id="tab-container" class="tab-container">
 										
 										<ul id="work-ul" class='etabs work-tabs cf'>
@@ -167,9 +167,19 @@
 													<li class='tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
 
 												<?php } elseif (is_page(6)) { ?>
-													<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
+													<?php
+														$new_tabs = get_field('vid_tax');
+														
+														$i=1;
+														foreach ($new_tabs as $key => $new_tab) {
+															// helper($new_tab);
+															echo '<li class="tab-gallery tab"><a href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
+															$i++;
+														}
+													?>
+<!-- 													<li class='tab-gallery tab'><a href="#tab1"><?php echo $tab1 ?></a></li>
 													<li class='tab-gallery tab'><a href="#tab2"><?php echo $tab2 ?></a></li>
-													<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li>
+													<li class='tab-gallery tab'><a href="#tab3"><?php echo $tab3 ?></a></li> -->
 												<?php } 
 												endwhile;
 											endif; 
@@ -367,7 +377,7 @@
 
 											<section class="clearfix videogroup-list">
 												<?php			
-
+												// WORK
 												if (is_page(4)) { 
 													// FRIENDSHOP PRODUCTION
 												    $args = array(
@@ -446,7 +456,7 @@
 							
 									</div> <!-- END TAB CONTAINER -->
 
-								<!-- </div> --> <!-- END AJAX WRAPPER -->
+								</div> <!-- END AJAX WRAPPER -->
 
 								<?php
 									wp_link_pages( array(
