@@ -109,14 +109,14 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
 
   // AJAX BINDING
-  $.ajaxSetup({cache:false});
-        $(".players_link").click(function(){
-            var post_link = $(this).attr("href");
-  console.dir(post_link);
-            $("#select-refresh-wrapper").html("content loading");
-            $("#select-refresh-wrapper").load(post_link);
-        return false;
-  });
+  // $.ajaxSetup({cache:false});
+  //       $(".players_link").click(function(){
+  //           var post_link = $(this).attr("href");
+  // console.dir(post_link);
+  //           $("#select-refresh-wrapper").html("content loading");
+  //           $("#select-refresh-wrapper").load(post_link);
+  //       return false;
+  // });
 
   //Blinking text
   var el = $('.players-title');

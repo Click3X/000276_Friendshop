@@ -3110,6 +3110,26 @@ body {
   background-color: black;
 }
 
+/* line 22, ../scss/partials/_wen.scss */
+.page-id-4,
+.page-id-11 {
+  background: url(../../../../../img/bg3.gif) center top;
+  background-size: cover;
+}
+
+/* line 31, ../scss/partials/_wen.scss */
+.page-id-6,
+.page-id-13 {
+  background: url(../../../../../img/bg2.gif) center top;
+  background-size: cover;
+}
+
+/* line 37, ../scss/partials/_wen.scss */
+.page-id-8 {
+  background: url(../../../../../img/bg1.gif) center top;
+  background-size: cover;
+}
+
 /* line 42, ../scss/partials/_wen.scss */
 .logo-header {
   background: url(../../../../../img/fs-logo.png) center center no-repeat;

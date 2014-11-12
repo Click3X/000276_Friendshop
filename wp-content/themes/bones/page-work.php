@@ -149,7 +149,7 @@
 								</div> -->
 
 									<!-- AJAX DIV WRAPPER -->
-									<div id="select-refresh-wrapper">
+									<!-- <div id="select-refresh-wrapper"> -->
 									<div id="tab-container" class="tab-container">
 										
 										<ul id="work-ul" class='etabs work-tabs cf'>
@@ -446,7 +446,7 @@
 							
 									</div> <!-- END TAB CONTAINER -->
 
-								</div> <!-- END AJAX WRAPPER -->
+								<!-- </div> --> <!-- END AJAX WRAPPER -->
 
 								<?php
 									wp_link_pages( array(
