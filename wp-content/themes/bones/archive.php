@@ -45,9 +45,9 @@
 										
 										<ul id="work-ul" class='etabs work-tabs cf'>
 												
-													<li class='tab-gallery tab'><a href="#tab1">COMEDY</a></li>
-													<li class='tab-gallery tab'><a href="#tab2">GENERAL</a></li>
-													<li class='tab-gallery tab'><a href="#tab3">LONG FORM</a></li>
+											<li class='tab-gallery tab'><a href="#tab1">COMEDY</a></li>
+											<li class='tab-gallery tab'><a href="#tab2">GENERAL</a></li>
+											<li class='tab-gallery tab'><a href="#tab3">LONG FORM</a></li>
 
 										</ul>
 
