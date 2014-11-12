@@ -131,18 +131,35 @@
 																    </a>
 															    </li>
 
-																<!-- hidden divs for lightbox -->
+																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
 																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
 																	<?php echo $link ?>
+
+																	<!-- CREDITS -->
 																	<div class="credits">
-																		<h2>CREDITS</h2>
-																		<span class="credit-title">Client: </span><span class="credit-name">Pabst Blue Ribbon</span><br />
-																		<span class="credit-title">Director: </span><span class="credit-name">Oison Weles</span><br />
-																		<span class="credit-title">Production: </span><span class="credit-name">ACME</span><br />
-																		<span class="credit-title">Editor: </span><span class="credit-name">Tim Wilson</span>
+
+																		<h2><?php echo $title ?></h2>
+																		<?php if(get_field('credits')): ?>
+
+																			<ul>
+																				<?php while(has_sub_field('credits')): 
+
+																				$credit_title = get_sub_field('title'); 
+																				$credit_name = get_sub_field('name'); 
+																				?>
+
+																				<li>
+																					<span class="credit-title"><?php echo $credit_title; ?>: </span>
+																					<span class="credit-name"><?php echo $credit_name; ?></span>
+																				</li>
+
+																				<?php endwhile; ?>
+																			</ul>
+
+																		<?php endif; ?>
 
 																	</div>
 
@@ -155,8 +172,7 @@
 													      </div>
 													 <?php  }
 
-													wp_reset_query();  
-													?>
+													wp_reset_query();  ?>
 											</section>
 										</div>
 

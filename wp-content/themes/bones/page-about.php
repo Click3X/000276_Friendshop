@@ -98,7 +98,7 @@
 
 								<h1>&ldquo;<?php echo $news_title; ?>&rdquo;</h1>
 																										
-								<a href="<?php echo $link ?>" target="_blank"><?php echo $read_btn; ?> →</a>
+								<a href="<?php echo $link ?>" target="_blank" class="read_btn"><?php echo $read_btn; ?> <span>→</span></a>
 
 							</li>
 

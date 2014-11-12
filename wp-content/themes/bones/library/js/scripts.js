@@ -222,6 +222,8 @@ $('#news-bxslider').bxSlider({
     // video: true,
     // useCSS: false
     auto: true,
+    pause: 9000,
+    autoHover: true,
     nextSelector: '#news-slider-next',
     prevSelector: '#news-slider-prev',
     nextText: '>',
