@@ -1,22 +1,24 @@
 // WORK EDITORS SCSS
 
 // GALLARY
-.thumb-wrapper { margin: 0 auto; }
-
 .thumb-list {
-    position: relative;
-    list-style: none;
-    list-style-image: none; 
     margin-top: 12px;
 
     @media(min-width: 768px) { margin-top:0; }
-}
 
-.thumb {
-  position: absolute;
-  overflow: hidden;
-  width: 295px; /* Set width */
-  height: 295px; /* Set height */
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+
+    .thumb {
+        display: inline-block;
+        padding: 4px;
+    }
+
+    .thumb img { 
+        width: 295px;
+        height: 295px;
+    }
 }
 
 .video-thumb {
@@ -24,11 +26,6 @@
     height: 168px; /* Set height */
     display: inline-block;
     margin: 6px 7px;
-}
-
-.thumb img { 
-    width: 295px;
-    height: 295px;
 }
 
 
@@ -296,34 +293,6 @@
 
 // svg image:hover {
 //     opacity: 0;
-// }
-
-// .player1 {
-
-//     div {
-//         margin: auto; 
-//         background: url(Ben-BnW.png) center center no-repeat; 
-//     }
-
-//     &:hover {
-//         div {
-//             background: url(Ben-Color-New.png) center center no-repeat;
-//         }
-//     }
-// }
-
-
-// .player2 {
-//     div {
-//         margin: auto; 
-//         background: url(Tim-BnW.png) center center no-repeat; 
-//     }
-
-//     &:hover {
-//         div {
-//             background: url(Tim-Color-New.png) center center no-repeat;
-//         }    
-//     }
 // }
 
 .mixedContent {

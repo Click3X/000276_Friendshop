@@ -2287,35 +2287,30 @@ FOOTER STYLES
 }
 
 /* line 4, ../scss/partials/pages/_work-editors.scss */
-.thumb-wrapper {
-  margin: 0 auto;
-}
-
-/* line 6, ../scss/partials/pages/_work-editors.scss */
 .thumb-list {
-  position: relative;
-  list-style: none;
-  list-style-image: none;
   margin-top: 12px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
 }
 @media (min-width: 768px) {
-  /* line 6, ../scss/partials/pages/_work-editors.scss */
+  /* line 4, ../scss/partials/pages/_work-editors.scss */
   .thumb-list {
     margin-top: 0;
   }
 }
-
-/* line 15, ../scss/partials/pages/_work-editors.scss */
-.thumb {
-  position: absolute;
-  overflow: hidden;
+/* line 13, ../scss/partials/pages/_work-editors.scss */
+.thumb-list .thumb {
+  display: inline-block;
+  padding: 4px;
+}
+/* line 18, ../scss/partials/pages/_work-editors.scss */
+.thumb-list .thumb img {
   width: 295px;
-  /* Set width */
   height: 295px;
-  /* Set height */
 }
 
-/* line 22, ../scss/partials/pages/_work-editors.scss */
+/* line 24, ../scss/partials/pages/_work-editors.scss */
 .video-thumb {
   width: 268px;
   /* Set width */
@@ -2325,13 +2320,7 @@ FOOTER STYLES
   margin: 6px 7px;
 }
 
-/* line 29, ../scss/partials/pages/_work-editors.scss */
-.thumb img {
-  width: 295px;
-  height: 295px;
-}
-
-/* line 36, ../scss/partials/pages/_work-editors.scss */
+/* line 33, ../scss/partials/pages/_work-editors.scss */
 .poster-hover {
   background: black;
   opacity: 0;
@@ -2346,7 +2335,7 @@ FOOTER STYLES
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 49, ../scss/partials/pages/_work-editors.scss */
+/* line 46, ../scss/partials/pages/_work-editors.scss */
 .poster-hover h3 {
   margin: 0;
   padding-top: 50px;
@@ -2354,7 +2343,7 @@ FOOTER STYLES
   font-size: 1em;
   font-family: 'VerlagBold';
 }
-/* line 57, ../scss/partials/pages/_work-editors.scss */
+/* line 54, ../scss/partials/pages/_work-editors.scss */
 .poster-hover h4 {
   margin: 5px 0 0 0;
   font-weight: 700;
@@ -2362,34 +2351,34 @@ FOOTER STYLES
   font-family: 'VerlagBold';
 }
 
-/* line 65, ../scss/partials/pages/_work-editors.scss */
+/* line 62, ../scss/partials/pages/_work-editors.scss */
 .video-list {
   text-align: center;
   max-width: 1000px;
   margin: auto;
 }
-/* line 70, ../scss/partials/pages/_work-editors.scss */
+/* line 67, ../scss/partials/pages/_work-editors.scss */
 .video-list .poster-container {
   position: relative;
   cursor: pointer;
 }
-/* line 74, ../scss/partials/pages/_work-editors.scss */
+/* line 71, ../scss/partials/pages/_work-editors.scss */
 .video-list .poster-container img {
   margin: 0;
 }
-/* line 79, ../scss/partials/pages/_work-editors.scss */
+/* line 76, ../scss/partials/pages/_work-editors.scss */
 .video-list .poster-container:hover .poster-hover {
   opacity: 0.7;
 }
 
-/* line 84, ../scss/partials/pages/_work-editors.scss */
+/* line 81, ../scss/partials/pages/_work-editors.scss */
 #work-ul {
   background: rgba(0, 0, 0, 0.5);
   border-top: 1px solid #838383;
   border-bottom: 1px solid #838383;
   margin-bottom: 31px;
 }
-/* line 90, ../scss/partials/pages/_work-editors.scss */
+/* line 87, ../scss/partials/pages/_work-editors.scss */
 #work-ul:before {
   content: "";
   position: absolute;
@@ -2403,13 +2392,13 @@ FOOTER STYLES
   z-index: -1;
 }
 @media (max-width: 835px) {
-  /* line 90, ../scss/partials/pages/_work-editors.scss */
+  /* line 87, ../scss/partials/pages/_work-editors.scss */
   #work-ul:before {
     display: none;
   }
 }
 @media (min-width: 834px) {
-  /* line 84, ../scss/partials/pages/_work-editors.scss */
+  /* line 81, ../scss/partials/pages/_work-editors.scss */
   #work-ul {
     background: none;
     border-top: 0;
@@ -2417,20 +2406,20 @@ FOOTER STYLES
   }
 }
 
-/* line 111, ../scss/partials/pages/_work-editors.scss */
+/* line 108, ../scss/partials/pages/_work-editors.scss */
 .tab-container .etabs,
 .work-tabs.etabs {
   padding: 8px 0;
 }
 @media (min-width: 834px) {
-  /* line 111, ../scss/partials/pages/_work-editors.scss */
+  /* line 108, ../scss/partials/pages/_work-editors.scss */
   .tab-container .etabs,
   .work-tabs.etabs {
     padding: 0;
   }
 }
 
-/* line 119, ../scss/partials/pages/_work-editors.scss */
+/* line 116, ../scss/partials/pages/_work-editors.scss */
 .etabs {
   margin: 0 auto;
   padding: 0;
@@ -2439,7 +2428,7 @@ FOOTER STYLES
   max-width: 850px;
 }
 
-/* line 127, ../scss/partials/pages/_work-editors.scss */
+/* line 124, ../scss/partials/pages/_work-editors.scss */
 .tab {
   display: inline-block;
   zoom: 1;
@@ -2447,14 +2436,14 @@ FOOTER STYLES
 }
 
 @media (min-width: 836px) {
-  /* line 134, ../scss/partials/pages/_work-editors.scss */
+  /* line 131, ../scss/partials/pages/_work-editors.scss */
   .work-tabs .tab {
     width: 33.33333%;
     display: block;
     float: left;
   }
 }
-/* line 141, ../scss/partials/pages/_work-editors.scss */
+/* line 138, ../scss/partials/pages/_work-editors.scss */
 .tab a {
   font-size: 0.75em;
   padding-top: 1px;
@@ -2467,37 +2456,37 @@ FOOTER STYLES
   outline: none;
   font-weight: 500;
 }
+/* line 151, ../scss/partials/pages/_work-editors.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
 /* line 154, ../scss/partials/pages/_work-editors.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
-/* line 157, ../scss/partials/pages/_work-editors.scss */
-.tab a:hover {
-  color: #09dcff;
-}
-
-/* line 158, ../scss/partials/pages/_work-editors.scss */
+/* line 155, ../scss/partials/pages/_work-editors.scss */
 .tab.active {
   position: relative;
 }
 
-/* line 159, ../scss/partials/pages/_work-editors.scss */
+/* line 156, ../scss/partials/pages/_work-editors.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 160, ../scss/partials/pages/_work-editors.scss */
+/* line 157, ../scss/partials/pages/_work-editors.scss */
 .tab-gallery a:hover {
   color: #ffdd44;
 }
 
-/* line 161, ../scss/partials/pages/_work-editors.scss */
+/* line 158, ../scss/partials/pages/_work-editors.scss */
 .tab-gallery a.active {
   color: #ffdd44;
 }
 
-/* line 163, ../scss/partials/pages/_work-editors.scss */
+/* line 160, ../scss/partials/pages/_work-editors.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2510,45 +2499,45 @@ FOOTER STYLES
 }
 
 @media (max-width: 835px) {
-  /* line 171, ../scss/partials/pages/_work-editors.scss */
+  /* line 168, ../scss/partials/pages/_work-editors.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 176, ../scss/partials/pages/_work-editors.scss */
+  /* line 173, ../scss/partials/pages/_work-editors.scss */
   .tab {
     display: block;
   }
 
-  /* line 177, ../scss/partials/pages/_work-editors.scss */
+  /* line 174, ../scss/partials/pages/_work-editors.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 178, ../scss/partials/pages/_work-editors.scss */
+  /* line 175, ../scss/partials/pages/_work-editors.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 179, ../scss/partials/pages/_work-editors.scss */
+  /* line 176, ../scss/partials/pages/_work-editors.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 182, ../scss/partials/pages/_work-editors.scss */
+/* line 179, ../scss/partials/pages/_work-editors.scss */
 .grid {
   width: 100%;
 }
 
-/* line 183, ../scss/partials/pages/_work-editors.scss */
+/* line 180, ../scss/partials/pages/_work-editors.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 189, ../scss/partials/pages/_work-editors.scss */
+/* line 186, ../scss/partials/pages/_work-editors.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
@@ -2562,50 +2551,50 @@ FOOTER STYLES
   transition: all 0.2s ease;
 }
 
-/* line 199, ../scss/partials/pages/_work-editors.scss */
+/* line 196, ../scss/partials/pages/_work-editors.scss */
 .grid ul li img {
   width: 100%;
   float: left;
 }
 
-/* line 207, ../scss/partials/pages/_work-editors.scss */
+/* line 204, ../scss/partials/pages/_work-editors.scss */
 .player-select-container h2, .player-select-container p {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
   font-weight: 500;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-/* line 214, ../scss/partials/pages/_work-editors.scss */
+/* line 211, ../scss/partials/pages/_work-editors.scss */
 .player-select-container h2 {
   font-size: 1.6em;
 }
-/* line 215, ../scss/partials/pages/_work-editors.scss */
+/* line 212, ../scss/partials/pages/_work-editors.scss */
 .player-select-container p {
   color: #ffba2c;
 }
 
-/* line 218, ../scss/partials/pages/_work-editors.scss */
+/* line 215, ../scss/partials/pages/_work-editors.scss */
 .players-title {
   color: white;
 }
 
-/* line 220, ../scss/partials/pages/_work-editors.scss */
+/* line 217, ../scss/partials/pages/_work-editors.scss */
 .players-title.blinking {
   color: #ffba2c;
 }
 
-/* line 223, ../scss/partials/pages/_work-editors.scss */
+/* line 220, ../scss/partials/pages/_work-editors.scss */
 .float-top, .float-bottom {
   visibility: hidden;
 }
 
-/* line 228, ../scss/partials/pages/_work-editors.scss */
+/* line 225, ../scss/partials/pages/_work-editors.scss */
 .players {
   cursor: pointer;
   width: 320px;
   height: 440px;
 }
-/* line 235, ../scss/partials/pages/_work-editors.scss */
+/* line 232, ../scss/partials/pages/_work-editors.scss */
 .players:hover .float-top {
   visibility: visible;
   position: relative;
@@ -2613,7 +2602,7 @@ FOOTER STYLES
   -webkit-animation: floatTop 0.3s infinite  normal ease-out;
   animation: floatTop 0.3s infinite  normal ease-out;
 }
-/* line 243, ../scss/partials/pages/_work-editors.scss */
+/* line 240, ../scss/partials/pages/_work-editors.scss */
 .players:hover .float-bottom {
   visibility: visible;
   position: relative;
@@ -2621,14 +2610,14 @@ FOOTER STYLES
   -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
   animation: floatBottom 0.3s infinite  normal ease-out;
 }
-/* line 252, ../scss/partials/pages/_work-editors.scss */
+/* line 249, ../scss/partials/pages/_work-editors.scss */
 .players div {
   width: 255px;
   height: 334px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 259, ../scss/partials/pages/_work-editors.scss */
+/* line 256, ../scss/partials/pages/_work-editors.scss */
 .players p {
   text-align: center;
   font-size: 1.3em;
@@ -2636,7 +2625,7 @@ FOOTER STYLES
   margin: 0;
 }
 
-/* line 269, ../scss/partials/pages/_work-editors.scss */
+/* line 266, ../scss/partials/pages/_work-editors.scss */
 .players div {
   background-position: center center;
   background-repeat: no-repeat;
@@ -2644,7 +2633,7 @@ FOOTER STYLES
   background-size: auto;
 }
 
-/* line 276, ../scss/partials/pages/_work-editors.scss */
+/* line 273, ../scss/partials/pages/_work-editors.scss */
 .grayscale {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+, IE10 */
@@ -2658,13 +2647,13 @@ FOOTER STYLES
   /* Fix for transition flickering */
 }
 
-/* line 284, ../scss/partials/pages/_work-editors.scss */
+/* line 281, ../scss/partials/pages/_work-editors.scss */
 .grayscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
 
-/* line 329, ../scss/partials/pages/_work-editors.scss */
+/* line 298, ../scss/partials/pages/_work-editors.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
@@ -2672,13 +2661,13 @@ FOOTER STYLES
   position: relative;
   max-height: 500px;
 }
-/* line 336, ../scss/partials/pages/_work-editors.scss */
+/* line 305, ../scss/partials/pages/_work-editors.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 342, ../scss/partials/pages/_work-editors.scss */
+/* line 311, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev,
 .mixedContent .next {
   position: absolute;
@@ -2694,11 +2683,11 @@ FOOTER STYLES
   outline: none;
   z-index: 1;
 }
-/* line 357, ../scss/partials/pages/_work-editors.scss */
+/* line 326, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev {
   left: 2px;
 }
-/* line 361, ../scss/partials/pages/_work-editors.scss */
+/* line 330, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .next {
   right: 2px;
 }

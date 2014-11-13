@@ -158,9 +158,9 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		//adding freemason js
-		wp_register_script( 'freemason.min', get_stylesheet_directory_uri() . '/library/js/libs/freemason.min.js', array( 'jquery' ), '', true );
+		// wp_register_script( 'freemason.min', get_stylesheet_directory_uri() . '/library/js/libs/freemason.min.js', array( 'jquery' ), '', true );
         // free mason code
-        wp_register_script( 'mason-code', get_stylesheet_directory_uri() . '/library/js/mason-code.js', array( 'jquery', 'freemason.min' ), '', true );
+        // wp_register_script( 'mason-code', get_stylesheet_directory_uri() . '/library/js/mason-code.js', array( 'jquery', 'freemason.min' ), '', true );
 
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
@@ -217,10 +217,10 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-js' );
 
         // CHECK FOR GALLERY PAGE
-		if(is_page(8)) {
-            wp_enqueue_script( 'freemason.min' );  
-            wp_enqueue_script( 'mason-code' );   
-        }
+		// if(is_page(8)) {
+  //           wp_enqueue_script( 'freemason.min' );  
+  //           wp_enqueue_script( 'mason-code' );   
+  //       }
         
 
 		wp_enqueue_script( 'fancybox-js' );
