@@ -108,7 +108,6 @@
  
  						<span id="news-slider-prev"></span> <span id="news-slider-next"></span>
 
-
 					<?php endif; ?>
 
 				</div>

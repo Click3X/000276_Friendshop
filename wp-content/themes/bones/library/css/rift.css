@@ -9,8 +9,8 @@
  */
 
 .rift { 
-  width: 269px; /* Define width */
-  height: 169px; /* Define height */
+  width: 268px; /* Define width */
+  height: 168px; /* Define height */
   position: relative; 
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -72,7 +72,7 @@
 .rift { 
   display: inline-block;
   cursor: pointer;
-  margin: 0 10px 20px 10px; 
+  /*margin: 0 10px 20px 10px; */
 }
 
 /** 
