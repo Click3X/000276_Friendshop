@@ -55,8 +55,8 @@
 													       <?php endwhile; ?>
 													      </ul>
 
-													      <button id="video-slider-prev"></button>
-													      <span id="video-slider-next"></span>
+													      <!-- <button id="video-slider-prev"></button>
+													      <span id="video-slider-next"></span> -->
 
 													      </div>
 													      </div>
