@@ -151,6 +151,11 @@ iframe {
       font-size: 1.42em;
       max-width: 260px;
     }
+
+    @media (max-width: 437px) {
+      font-size: 1.35em;
+      max-width: 240px;
+    }
     
   }
 
@@ -513,5 +518,9 @@ figure.effect-selena:hover p {
   background-repeat: no-repeat;
   top: 0 !important;
   right: -36px !important;
+}
+
+.fancybox-mobile.fancybox-opened {
+  position: fixed !important;
 }
 

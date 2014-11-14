@@ -44,11 +44,21 @@
 							<ul>
 								<?php while(has_sub_field('contact_list')): 
 									$sub_title = get_sub_field('title'); 
-									$sub_content = get_sub_field('content'); ?>
+									$sub_content = get_sub_field('content'); 
+
+									$values = get_sub_field('type');
+									$value = $values[0]; ?>
 
 									<li>
 										<h3><?php echo $sub_title ?></h3>
-										<h4><?php echo $sub_content ?></h4>
+
+										<?php if($value == 'email') { ?>
+											<a href="mailto:<?php echo antispambot($sub_content); ?>"><?php echo antispambot($sub_content); ?></a>
+										<?php } else { ?>
+											<h4><?php echo $sub_content ?></h4>
+										<?php } ?>
+										
+										
 									</li>
 
 								<?php endwhile; ?>
