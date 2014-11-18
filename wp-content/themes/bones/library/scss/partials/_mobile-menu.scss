@@ -119,10 +119,10 @@ nav a {
     @media(max-width: 768px) {
         background: black;
         width:100%;
-        padding-bottom:10px;
-        padding-top: 10px;
+        
 
-        position: absolute;
+        // position: absolute;
+        height: 0;
         left: 0;
         transform: translateY(-350px);
         z-index: 1;
@@ -133,6 +133,9 @@ nav a {
 }
 
 .menu-display > #menu-main-menu {
+    height: 245px;
+    padding-bottom:10px;
+        padding-top: 10px;
     // display: block;
     @include prefix(transform, translateY(0px));
     @include transition(all 0.3s ease-in-out);

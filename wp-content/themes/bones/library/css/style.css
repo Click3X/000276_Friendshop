@@ -3797,7 +3797,12 @@ figure.effect-selena:hover p {
   }
 }
 
-/* line 648, ../scss/partials/_wen.scss */
+/* line 644, ../scss/partials/_wen.scss */
+.menu-main-menu {
+  z-index: 9999 !important;
+}
+
+/* line 650, ../scss/partials/_wen.scss */
 .arrow-r, .arrow-u {
   display: inline-block;
   background: url(../../../../../img/credits-arrow.png) no-repeat;
@@ -3806,7 +3811,7 @@ figure.effect-selena:hover p {
   text-align: left;
 }
 
-/* line 651, ../scss/partials/_wen.scss */
+/* line 653, ../scss/partials/_wen.scss */
 .arrow-r {
   background-position: -0px -0px;
   width: 16px;
@@ -3814,7 +3819,7 @@ figure.effect-selena:hover p {
   margin-bottom: -2px;
 }
 
-/* line 652, ../scss/partials/_wen.scss */
+/* line 654, ../scss/partials/_wen.scss */
 .arrow-u {
   background-position: -0px -16px;
   width: 16px;
@@ -4122,9 +4127,7 @@ nav a:hover {
   #menu-main-menu {
     background: black;
     width: 100%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    position: absolute;
+    height: 0;
     left: 0;
     transform: translateY(-350px);
     z-index: 1;
@@ -4148,6 +4151,9 @@ nav a:hover {
 
 /* line 135, ../scss/partials/_mobile-menu.scss */
 .menu-display > #menu-main-menu {
+  height: 245px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -o-transform: translateY(0px);
@@ -4158,7 +4164,7 @@ nav a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 142, ../scss/partials/_mobile-menu.scss */
+  /* line 145, ../scss/partials/_mobile-menu.scss */
   nav[role="navigation"]:before {
     content: "";
     display: block;

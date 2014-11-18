@@ -126,11 +126,11 @@ $('.credit-bar').click(function(){
 });
 
 
-// $("iframe").each(function(){
-//       var ifr_source = $(this).attr('src');
-//       var wmode = "&wmode=transparent";
-//       $(this).attr('src',ifr_source+wmode);
-// });
+$("iframe").each(function(){
+      var ifr_source = $(this).attr('src');
+      var wmode = "&wmode=transparent";
+      $(this).attr('src',ifr_source+wmode);
+});
 
 
   //Blinking text
