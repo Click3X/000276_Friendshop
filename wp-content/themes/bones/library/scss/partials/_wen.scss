@@ -259,10 +259,18 @@ iframe {
 
 #news-slider-prev {
   left: 20px;
+
+    @media (max-width: 480px) {
+      left: 0;
+    }
 }
 
 #news-slider-next {
   right: 20px;
+
+  @media (max-width: 480px) {
+    right: 0;
+  }
 }
 
 #video-slider-prev {
