@@ -58,6 +58,60 @@ iframe {
 .h_iframe .ratio {display:block;width:100%;height:auto;}
 .h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
 
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  // padding-bottom: 45%;
+  // padding-top: 25px;
+  height: 0;
+  margin: auto;
+  // max-width: 900px;
+  // width: 80%;
+
+
+  //       @media (max-width: 1018px) {
+  //       width: 80%;
+  //       padding-bottom: 56.25%; /* 16:9 */
+  // // padding-top: 25px;
+  // height: 0;
+      
+  //     }
+  
+
+     @media (min-width: 901px) {
+      max-width: 900px;
+      padding-bottom: 0; 
+      padding-top: 0;
+      height: 506px;
+      // margin: auto;
+      }
+
+
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+      //  @media (min-width: 901px) {
+      // max-width: 900px;
+      // padding-bottom: 0; 
+      // padding-top: 0;
+      // height: 478px;
+      // }
+  
+}
+
+#video-bxslider {
+
+    margin: 0;
+
+}
+
       
 .iframe-container iframe {
     width: 850px;
@@ -192,7 +246,6 @@ iframe {
 #news-slider-prev,  #news-slider-next, #video-slider-prev, #video-slider-next {
 
   position: absolute;
-  top: 48%;
   font-size: 2.5em;
   border: 1px solid #202020;
   background-color: black;
@@ -212,33 +265,55 @@ iframe {
 
 }
 
+// .bx-wrapper .bx-next {
+//   background: none;
+// }
+
+// .bx-wrapper .bx-prev {
+//   background: none;
+// }
+
+.slider-container {
+  position: relative;
+}
+
+#news-slider-prev,  #news-slider-next {
+  top: 48%;
+}
+
+#video-slider-prev, #video-slider-next {
+  top: 38%;
+}
+
 #news-slider-prev {
   left: 20px;
-  // -webkit-appearance: none;
-
-
-
 }
 
 #news-slider-next {
   right: 20px;
-
-
 }
 
 #video-slider-prev {
-  left: -50px;
+  left: 50px;
 // z-index: 8000;
   a {
     display: block;
   }
+
+  @media (max-width: 1108px) {
+    left: 5px;
+  }
 }
 
 #video-slider-next {
-  right: -50px;
+  right: 50px;
   // z-index: 8000;
-      a {
+  a {
     display: block;
+  }
+
+  @media (max-width: 1108px) {
+    right: 5px;
   }
 }
 

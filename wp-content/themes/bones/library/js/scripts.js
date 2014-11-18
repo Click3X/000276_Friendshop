@@ -119,6 +119,13 @@ jQuery(document).ready(function($) {
   // });
 
 
+$("iframe").each(function(){
+      var ifr_source = $(this).attr('src');
+      var wmode = "&wmode=transparent";
+      $(this).attr('src',ifr_source+wmode);
+});
+
+
   //Blinking text
   var el = $('.players-title');
   setInterval(function() {
@@ -242,6 +249,14 @@ $('#news-bxslider').bxSlider({
      // $('body').fadeTo(500,1); // Just a nice transition effect
 
     });
+
+
+    // init royal slider
+        //     $(".royalSlider").royalSlider({
+        //     // options go here
+        //     // as an example, enable keyboard arrows nav
+        //     keyboardNavEnabled: true
+        // }); 
 
   /*
    * Let's fire off the gravatar function

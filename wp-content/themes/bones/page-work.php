@@ -33,10 +33,13 @@
 
 													    if( $query->have_posts() ) { ?>
 
-													      <div class="wrapper">
-    														<div class="h_iframe">
+													      <!-- <div class="wrapper"> -->
+    														<!-- <div class="h_iframe"> -->
+    														<div class="slider-container">
 
 													      	<ul id="video-bxslider">
+
+													    <!-- <div class="royalSlider rsDefault"> -->
 														    
 														<?php
 													    while ($query->have_posts()) : $query->the_post(); 
@@ -48,18 +51,31 @@
 
 
 														  <li>
+
+														  	<div class="wrapper"> 
+    														<div class="h_iframe"> 
+														  <!-- <div class="rsContent"> -->
+														  	<!-- <div class="videoWrapper"> -->
 														  	<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
 														    <?php echo $link ?>
+														    </div>
+														    </div>
 														  </li>
 													        
 													       <?php endwhile; ?>
+
+
 													      </ul>
 
-													      <button id="video-slider-prev"></button>
+													      <span id="video-slider-prev"></span>
 													      <span id="video-slider-next"></span>
 
-													      </div>
-													      </div>
+													     <!--  </div>
+													      </div> -->
+
+													  <!-- </div> -->
+
+													  </div>
 
 														<?php  }
 
