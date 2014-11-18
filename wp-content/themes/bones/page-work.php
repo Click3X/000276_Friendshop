@@ -31,57 +31,74 @@
 
 									$query = new WP_Query( $args ); 
 
-													    if( $query->have_posts() ) { ?>
+									if( $query->have_posts() ) { ?>
 
-													      <!-- <div class="wrapper"> -->
-    														<!-- <div class="h_iframe"> -->
-    														<div class="slider-container">
+    									<div class="slider-container">
 
-													      	<ul id="video-bxslider">
+											<ul id="video-bxslider">
+													    
+												<?php while ($query->have_posts()) : $query->the_post(); 
 
-													    <!-- <div class="royalSlider rsDefault"> -->
-														    
-														<?php
-													    while ($query->have_posts()) : $query->the_post(); 
+													$title = get_field('title'); 
+													$hover_text2 = get_field('hover_text2'); 
+													$link = get_field('embed_video_link'); ?>
 
-													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$link = get_field('embed_video_link'); 
-													    ?>
+													<li>
+														<div class="wrapper"> 
+		    												<div class="h_iframe"> 
+																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
+																<?php echo $link ?>
+															</div>
+														</div>
 
+														<!-- CREDITS at the bottom -->
+														<div class="credit-content hide">
+															<!-- CREDITS -->
+																	<div class="credits">
 
-														  <li>
+																		<!-- <h2><?php echo $title ?></h2> -->
+																		<?php if(get_field('credits')): ?>
 
-														  	<div class="wrapper"> 
-    														<div class="h_iframe"> 
-														  <!-- <div class="rsContent"> -->
-														  	<!-- <div class="videoWrapper"> -->
-														  	<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
-														    <?php echo $link ?>
-														    </div>
-														    </div>
-														  </li>
+																			<ul class="credit-marquee">
+																				<?php while(has_sub_field('credits')): 
+
+																				$credit_title = get_sub_field('title'); 
+																				$credit_name = get_sub_field('name'); 
+																				?>
+
+																				<li>
+																					<span class="credit-title"><?php echo $credit_title; ?>: </span>
+																					<span class="credit-name"><?php echo $credit_name; ?></span>
+																				</li>
+
+																				<?php endwhile; ?>
+																			</ul>
+
+																		<?php endif; ?>
+
+																	</div>
+
+														</div>
+														<div class="credit-bar"><?php echo $title ?>  <div class="credit-arrow arrow-r"></div></div>
+													</li>
+
+													
+											
 													        
-													       <?php endwhile; ?>
+												<?php endwhile; ?>
 
+											</ul>
 
-													      </ul>
+											<span id="video-slider-prev"></span>
+											<span id="video-slider-next"></span>
 
-													      <span id="video-slider-prev"></span>
-													      <span id="video-slider-next"></span>
+											
 
-													     <!--  </div>
-													      </div> -->
+										</div> <!-- END OF slider-container -->
 
-													  <!-- </div> -->
+									<?php  }
 
-													  </div>
-
-														<?php  }
-
-									wp_reset_query();  
-
-									?>
+									wp_reset_query();  ?>
 
 
 									<!-- TABS -->

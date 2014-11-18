@@ -149,9 +149,6 @@ function bones_scripts_and_styles() {
 		// rift style sheet
 		wp_register_style( 'rift-stylesheet', get_stylesheet_directory_uri() . '/library/css/rift.css', array(), '' );
 
-		// royal sheet
-		wp_register_style( 'royal-stylesheet', get_stylesheet_directory_uri() . '/library/css/royalslider.css', array(), '' );
-
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		  wp_enqueue_script( 'comment-reply' );
@@ -176,9 +173,6 @@ function bones_scripts_and_styles() {
 
 		// adding video slider js
 		wp_register_script( 'videoslider-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array( 'jquery' ), '', true );
-
-		// adding royalslider js
-		wp_register_script( 'royal-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.royalslider.min.js', array( 'jquery' ), '', true );
 
 		
 
@@ -207,7 +201,6 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'fancybox-stylesheet' );
 		wp_enqueue_style( 'videoslider-stylesheet' );
 		wp_enqueue_style( 'rift-stylesheet' );
-		wp_enqueue_style( 'royal-stylesheet' );
 
 
 
@@ -236,7 +229,6 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'fitvids-js' );
 		wp_enqueue_script( 'videoslider-js' );
 		wp_enqueue_script( 'rift-js' );
-		wp_enqueue_script( 'royal-js' );
 		// wp_enqueue_script( 'rescarousel-js' );
 
 	}

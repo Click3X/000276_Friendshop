@@ -119,11 +119,18 @@ jQuery(document).ready(function($) {
   // });
 
 
-$("iframe").each(function(){
-      var ifr_source = $(this).attr('src');
-      var wmode = "&wmode=transparent";
-      $(this).attr('src',ifr_source+wmode);
+$('.credit-bar').click(function(){
+    $('.credit-content').toggleClass('hide').toggleClass('show');
+    $('.credit-arrow').toggleClass('arrow-r').toggleClass('arrow-u');
+    return false;
 });
+
+
+// $("iframe").each(function(){
+//       var ifr_source = $(this).attr('src');
+//       var wmode = "&wmode=transparent";
+//       $(this).attr('src',ifr_source+wmode);
+// });
 
 
   //Blinking text
@@ -206,13 +213,6 @@ $("iframe").each(function(){
     event.preventDefault();
   });
 
-  // TAKE OFF 300 MS MOBILE DELAY ON MENU BUTTON
-  // $(function() {
-  //   FastClick.attach('.menu-icon');
-  // });
-
-
-
   // init video slider
   $('#video-bxslider').bxSlider({
     video: true,
@@ -243,20 +243,8 @@ $('#news-bxslider').bxSlider({
 
 // init rift
     $(window).load(function() {
-
       $('.rift').rift();
-
-     // $('body').fadeTo(500,1); // Just a nice transition effect
-
     });
-
-
-    // init royal slider
-        //     $(".royalSlider").royalSlider({
-        //     // options go here
-        //     // as an example, enable keyboard arrows nav
-        //     keyboardNavEnabled: true
-        // }); 
 
   /*
    * Let's fire off the gravatar function
