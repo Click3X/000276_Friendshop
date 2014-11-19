@@ -118,6 +118,20 @@ jQuery(document).ready(function($) {
   //       return false;
   // });
 
+    $('.video-poster').click(function(){
+      $(this).next('.mqplay-btn').css('display', 'none');
+        video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+        // video = $(this).attr('data-video');
+        $(this).replaceWith(video);
+
+    });
+
+    $('.mqplay-btn').click(function(){
+        video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+        $(this).prev().replaceWith(video);
+        $(this).css('display', 'none');
+    });
+
 
 $('.credit-bar').click(function(){
     $('.credit-content').toggleClass('hide').toggleClass('show');
@@ -126,11 +140,11 @@ $('.credit-bar').click(function(){
 });
 
 
-$("iframe").each(function(){
-      var ifr_source = $(this).attr('src');
-      var wmode = "&wmode=transparent";
-      $(this).attr('src',ifr_source+wmode);
-});
+// $("iframe").each(function(){
+//       var ifr_source = $(this).attr('src');
+//       var wmode = "&wmode=transparent";
+//       $(this).attr('src',ifr_source+wmode);
+// });
 
 
   //Blinking text

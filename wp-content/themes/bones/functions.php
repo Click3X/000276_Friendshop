@@ -232,6 +232,15 @@ function cleanString($string){
 
 }
 
+// STORE CUSTOM FIELD VARIABLE INTO JQUERY
+// function my_jquery_var() {
+//     global $post;
+//     if ( $embed_video_link = get_post_meta( $post->ID, 'embed_video_link', 1 ) ) { 
+//         echo '<script type="text/javascript">var embed_video_link = "' . $embed_video_link . '";</script>' . "\n";
+//     }
+// }
+// add_action( 'wp_head', 'my_jquery_var' );
+
 
 
 // ENABLE FULL TOOL BAR ON WYSIWYG EDITOR so that we can see WIREDRIVE DETAILS

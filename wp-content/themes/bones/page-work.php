@@ -41,13 +41,17 @@
 
 													$title = get_field('title'); 
 													$hover_text2 = get_field('hover_text2'); 
-													$link = get_field('embed_video_link'); ?>
+													$link = get_field('embed_video_link'); 
+													$poster = get_field('featured_poster'); ?>
 
 													<li>
 														<div class="wrapper"> 
 		    												<div class="h_iframe"> 
 																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
-																<?php echo $link ?>
+
+																<img class="video-poster" src="<?php echo $poster['url'] ?>" data-video="<?php echo $link ?>">
+																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>">
+																<?php //echo $link ?>
 															</div>
 														</div>
 
