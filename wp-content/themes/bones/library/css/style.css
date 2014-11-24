@@ -3749,7 +3749,7 @@ figure.effect-selena:hover p {
 /* line 587, ../scss/partials/_wen.scss */
 .credit-content {
   position: absolute;
-  bottom: 35px;
+  bottom: 41px;
   max-width: 850px;
   text-align: center;
   width: 80%;
@@ -3759,9 +3759,12 @@ figure.effect-selena:hover p {
   margin-right: auto;
   height: 60%;
   background: black;
+  border-top: 1px solid #838383;
+  border-left: 1px solid #838383;
+  border-right: 1px solid #838383;
 }
 
-/* line 604, ../scss/partials/_wen.scss */
+/* line 607, ../scss/partials/_wen.scss */
 .hide {
   height: 0;
   opacity: 0;
@@ -3771,7 +3774,7 @@ figure.effect-selena:hover p {
   -o-transition: all 0.6s ease;
 }
 
-/* line 613, ../scss/partials/_wen.scss */
+/* line 616, ../scss/partials/_wen.scss */
 .show {
   opacity: 1;
   height: 50%;
@@ -3782,44 +3785,44 @@ figure.effect-selena:hover p {
   overflow: hidden;
 }
 @media (max-width: 560px) {
-  /* line 613, ../scss/partials/_wen.scss */
+  /* line 616, ../scss/partials/_wen.scss */
   .show {
-    height: 90%;
+    height: 82%;
   }
 }
 
 @media (min-width: 850px) {
-  /* line 628, ../scss/partials/_wen.scss */
+  /* line 630, ../scss/partials/_wen.scss */
   .credit-marquee {
     margin-top: 20px;
   }
 }
 @media (min-width: 1038px) {
-  /* line 628, ../scss/partials/_wen.scss */
+  /* line 630, ../scss/partials/_wen.scss */
   .credit-marquee {
     margin-top: 50px;
   }
 }
 @media (max-width: 849px) {
-  /* line 628, ../scss/partials/_wen.scss */
+  /* line 630, ../scss/partials/_wen.scss */
   .credit-marquee {
     margin-top: 15px;
   }
 }
 @media (max-width: 700px) {
-  /* line 628, ../scss/partials/_wen.scss */
+  /* line 630, ../scss/partials/_wen.scss */
   .credit-marquee {
     margin-top: 0px;
   }
 }
 @media (max-width: 560px) {
-  /* line 628, ../scss/partials/_wen.scss */
+  /* line 630, ../scss/partials/_wen.scss */
   .credit-marquee {
     margin-top: 20px;
   }
 }
 
-/* line 654, ../scss/partials/_wen.scss */
+/* line 656, ../scss/partials/_wen.scss */
 .mqplay-btn {
   position: absolute;
   top: 0;
@@ -3832,34 +3835,32 @@ figure.effect-selena:hover p {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 672, ../scss/partials/_wen.scss */
+/* line 674, ../scss/partials/_wen.scss */
 .video-poster {
   cursor: pointer;
 }
 
-/* line 678, ../scss/partials/_wen.scss */
-.arrow-r, .arrow-u {
+/* line 680, ../scss/partials/_wen.scss */
+.arrow-d, .arrow-u {
   display: inline-block;
-  background: url(../../../../../img/credits-arrow.png) no-repeat;
+  background: url("../../../../../img/credits-arrow.png") no-repeat;
   overflow: hidden;
   text-indent: -9999px;
   text-align: left;
 }
 
-/* line 681, ../scss/partials/_wen.scss */
-.arrow-r {
+/* line 683, ../scss/partials/_wen.scss */
+.arrow-d {
   background-position: -0px -0px;
-  width: 16px;
-  height: 16px;
-  margin-bottom: -2px;
+  width: 10px;
+  height: 10px;
 }
 
-/* line 682, ../scss/partials/_wen.scss */
+/* line 684, ../scss/partials/_wen.scss */
 .arrow-u {
-  background-position: -0px -16px;
-  width: 16px;
-  height: 16px;
-  margin-bottom: -2px;
+  background-position: -0px -10px;
+  width: 10px;
+  height: 10px;
 }
 
 /* line 1, ../scss/partials/_carousel-editors.scss */

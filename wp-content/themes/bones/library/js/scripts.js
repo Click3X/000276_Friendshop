@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
 
 $('.credit-bar').click(function(){
     $('.credit-content').toggleClass('hide').toggleClass('show');
-    $('.credit-arrow').toggleClass('arrow-r').toggleClass('arrow-u');
+    $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
     return false;
 });
 

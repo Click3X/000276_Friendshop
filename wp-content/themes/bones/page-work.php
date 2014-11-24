@@ -83,7 +83,10 @@
 																	</div>
 
 														</div>
-														<div class="credit-bar"><?php echo $title ?>  <div class="credit-arrow arrow-r"></div></div>
+														<div class="credit-bar" style="line-height: 1">
+															<div class="credit-arrow arrow-u"></div><br />
+															<span><?php echo $title ?></span>
+														</div>
 													</li>
 
 													
