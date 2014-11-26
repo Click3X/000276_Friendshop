@@ -275,22 +275,68 @@ $('#news-bxslider').bxSlider({
 
 
   // AJAX FUNCTION TO CORRESPOND WITH SERVER FUNCTION FROM FUNCTIONS.PHP
-  function cat_ajax_get(catID) {
-    jQuery("a.ajax").removeClass("current");
-    jQuery("a.ajax").addClass("current"); //adds class current to the category menu item being displayed so you can style it with css
-    jQuery("#loading-animation-2").show();
-    var ajaxurl = '/wp-admin/admin-ajax.php';
-    jQuery.ajax({
-        type: 'POST',
-        url: ajaxurl,
-        data: {"action": "load-filter", cat: catID },
-        success: function(response) {
-            jQuery("#category-post-content").html(response);
-            jQuery("#loading-animation").hide();
-            return false;
+//   function cat_ajax_get(catID) {
+//     jQuery("a.ajax").removeClass("current");
+//     jQuery("a.ajax").addClass("current"); //adds class current to the category menu item being displayed so you can style it with css
+//     jQuery("#loading-animation-2").show();
+//     var ajaxurl = '/wp-admin/admin-ajax.php';
+//     jQuery.ajax({
+//         type: 'POST',
+//         url: ajaxurl,
+//         data: {"action": "load-filter", cat: catID },
+//         success: function(response) {
+//             jQuery("#category-post-content").html(response);
+//             jQuery("#loading-animation").hide();
+//             return false;
+//         }
+//     });
+// }
+
+
+    var _director = "";
+    var _category = "6";
+
+    function getVideos(){
+      $('#videoList').empty();
+      var data = {
+        director:_director,
+        category:_category,
+        action:'getEditorsVideos'
+      };
+      
+      console.log('make the ajax call with:');
+      console.log(data);
+
+      
+      $.ajax({
+        type:'POST',
+        ajaxurl:'/wp-admin/admin-ajax.php',
+        dataType:'json',
+        data:data,
+        success:function(data){
+          console.log('success');
+        },
+        error: function(err){
+          console.log(err);
         }
+      });
+      
+    }
+
+    $('.director_btn').on('click', function(e){
+      e.preventDefault();
+      _director = $(this).attr('data-director');
+      getVideos();
     });
-}
+
+
+    $('.cat_btn').on('click', function(e){
+      e.preventDefault();
+      _category = $(this).attr('data-category');
+      getVideos();
+    });
+    
+    getVideos();
 
 
 }); /* end of as page load scripts */

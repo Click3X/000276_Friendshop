@@ -235,9 +235,24 @@ function cleanString($string){
 // MAKING AJAX ACTION
 
 
-function getVideos(){
+function getEditorsVideos(){
 
-// global $wpdb;
+global $wpdb;
+
+$vi_director = $_POST['_director'];
+$vi_category = $_POST['_category'];
+
+$args = array(
+                          'tax_query' => array(
+                            array(
+                              'taxonomy' => 'video_groups',
+                              'terms' => array($vi_director, $vi_category),
+                              'operator' => 'AND',
+                                    )
+                              )
+);
+
+$query = new WP_Query( $args ); 
 
 // $name = $_POST['name'];
 // $phone = $_POST['phone'];
@@ -261,8 +276,8 @@ function getVideos(){
 // die();
 }
 
-add_action('wp_ajax_getVideos', 'getVideos');
-add_action('wp_ajax_nopriv_getVideos', 'getVideos');
+add_action('wp_ajax_getEditorsVideos', 'getEditorsVideos');
+add_action('wp_ajax_nopriv_getEditorsVideos', 'getEditorsVideos');
 
 // STORE CUSTOM FIELD VARIABLE INTO JQUERY
 // function my_jquery_var() {

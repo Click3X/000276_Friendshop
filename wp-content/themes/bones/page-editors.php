@@ -52,7 +52,8 @@
 											<li class="players">
 									        	
 									        	<img class="float-top" src="selector-top.png">							        	
-									        	<a class="players_link" href="<?php echo get_term_link( $child, $taxonomy_name ) ?>">
+									        	<!-- <a class="players_link director-btn" data-director="<?php echo $term->name ;?>" href="<?php echo get_term_link( $child, $taxonomy_name ) ?>"> -->
+									        	<a class="players_link director_btn" data-director="<?php echo $term->term_id ;?>" href="#">
 									        	<div class="grayscale" style="background-image: url( <?php echo $img_hover_url ?> );"></div></a>
 									        	<img class="float-bottom" src="selector-bottom.png">
 									        	
@@ -80,11 +81,23 @@
 											$i=1;
 											
 											foreach ($new_tabs as $key => $new_tab) {													
-												echo '<li class="tab-gallery tab"><a href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
+												echo '<li class="tab-gallery tab"><a class="cat_btn" data-category="'.$new_tab->term_id.'" href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
 												$i++;
 											}
 										?>											
 										</ul>
+
+										<!-- test ajax container -->
+										<main id="videoList">
+											<?php 
+												
+
+
+
+											?>
+
+
+										</main>
 
 
 										<!-- TAB 1 COMEDY -->
