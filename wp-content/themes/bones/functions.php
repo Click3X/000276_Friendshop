@@ -73,6 +73,10 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 
+// Video thumbnail sizes
+add_image_size( 'video-small', 269, 168, true );
+add_image_size( 'video-large', 850, 478, true );
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you

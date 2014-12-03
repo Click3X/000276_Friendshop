@@ -130,8 +130,9 @@
 @media(min-width: 836px) {
     .work-tabs .tab { 
         width: 33.33333%;
-        display: block;
-        float: left;
+        // HIDE OTHER TABS AND ADJUST CSS
+        // display: block;
+        // float: left;
     }
 }
 

@@ -2451,11 +2451,9 @@ FOOTER STYLES
   /* line 131, ../scss/partials/pages/_work-editors.scss */
   .work-tabs .tab {
     width: 33.33333%;
-    display: block;
-    float: left;
   }
 }
-/* line 138, ../scss/partials/pages/_work-editors.scss */
+/* line 139, ../scss/partials/pages/_work-editors.scss */
 .tab a {
   font-size: 0.75em;
   padding-top: 1px;
@@ -2468,37 +2466,37 @@ FOOTER STYLES
   outline: none;
   font-weight: 500;
 }
-/* line 151, ../scss/partials/pages/_work-editors.scss */
-.tab a:hover {
-  color: #09dcff;
-}
-
-/* line 154, ../scss/partials/pages/_work-editors.scss */
+/* line 152, ../scss/partials/pages/_work-editors.scss */
 .tab a:hover {
   color: #09dcff;
 }
 
 /* line 155, ../scss/partials/pages/_work-editors.scss */
+.tab a:hover {
+  color: #09dcff;
+}
+
+/* line 156, ../scss/partials/pages/_work-editors.scss */
 .tab.active {
   position: relative;
 }
 
-/* line 156, ../scss/partials/pages/_work-editors.scss */
+/* line 157, ../scss/partials/pages/_work-editors.scss */
 .tab a.active {
   color: #09dcff;
 }
 
-/* line 157, ../scss/partials/pages/_work-editors.scss */
+/* line 158, ../scss/partials/pages/_work-editors.scss */
 .tab-gallery a:hover {
   color: #ffdd44;
 }
 
-/* line 158, ../scss/partials/pages/_work-editors.scss */
+/* line 159, ../scss/partials/pages/_work-editors.scss */
 .tab-gallery a.active {
   color: #ffdd44;
 }
 
-/* line 160, ../scss/partials/pages/_work-editors.scss */
+/* line 161, ../scss/partials/pages/_work-editors.scss */
 .tab-container .panel-container {
   background: #fff;
   border: solid #666 1px;
@@ -2511,45 +2509,45 @@ FOOTER STYLES
 }
 
 @media (max-width: 835px) {
-  /* line 168, ../scss/partials/pages/_work-editors.scss */
+  /* line 169, ../scss/partials/pages/_work-editors.scss */
   .etabs {
     border-top: 3px solid #b4e458;
     border-bottom: 3px solid #b4e458;
   }
 
-  /* line 173, ../scss/partials/pages/_work-editors.scss */
+  /* line 174, ../scss/partials/pages/_work-editors.scss */
   .tab {
     display: block;
   }
 
-  /* line 174, ../scss/partials/pages/_work-editors.scss */
+  /* line 175, ../scss/partials/pages/_work-editors.scss */
   .tab a {
     color: #767676;
   }
 
-  /* line 175, ../scss/partials/pages/_work-editors.scss */
+  /* line 176, ../scss/partials/pages/_work-editors.scss */
   .tab a:hover {
     color: #b4e458;
   }
 
-  /* line 176, ../scss/partials/pages/_work-editors.scss */
+  /* line 177, ../scss/partials/pages/_work-editors.scss */
   .tab a.active {
     color: #b4e458;
   }
 }
-/* line 179, ../scss/partials/pages/_work-editors.scss */
+/* line 180, ../scss/partials/pages/_work-editors.scss */
 .grid {
   width: 100%;
 }
 
-/* line 180, ../scss/partials/pages/_work-editors.scss */
+/* line 181, ../scss/partials/pages/_work-editors.scss */
 .grid ul {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* line 186, ../scss/partials/pages/_work-editors.scss */
+/* line 187, ../scss/partials/pages/_work-editors.scss */
 .grid ul li {
   list-style-type: none;
   float: left;
@@ -2563,50 +2561,50 @@ FOOTER STYLES
   transition: all 0.2s ease;
 }
 
-/* line 196, ../scss/partials/pages/_work-editors.scss */
+/* line 197, ../scss/partials/pages/_work-editors.scss */
 .grid ul li img {
   width: 100%;
   float: left;
 }
 
-/* line 204, ../scss/partials/pages/_work-editors.scss */
+/* line 205, ../scss/partials/pages/_work-editors.scss */
 .player-select-container h2, .player-select-container p {
   font-family: 'Press Start 2P', cursive;
   text-transform: uppercase;
   font-weight: 500;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-/* line 211, ../scss/partials/pages/_work-editors.scss */
+/* line 212, ../scss/partials/pages/_work-editors.scss */
 .player-select-container h2 {
   font-size: 1.6em;
 }
-/* line 212, ../scss/partials/pages/_work-editors.scss */
+/* line 213, ../scss/partials/pages/_work-editors.scss */
 .player-select-container p {
   color: #ffba2c;
 }
 
-/* line 215, ../scss/partials/pages/_work-editors.scss */
+/* line 216, ../scss/partials/pages/_work-editors.scss */
 .players-title {
   color: white;
 }
 
-/* line 217, ../scss/partials/pages/_work-editors.scss */
+/* line 218, ../scss/partials/pages/_work-editors.scss */
 .players-title.blinking {
   color: #ffba2c;
 }
 
-/* line 220, ../scss/partials/pages/_work-editors.scss */
+/* line 221, ../scss/partials/pages/_work-editors.scss */
 .float-top, .float-bottom {
   visibility: hidden;
 }
 
-/* line 225, ../scss/partials/pages/_work-editors.scss */
+/* line 226, ../scss/partials/pages/_work-editors.scss */
 .players {
   cursor: pointer;
   width: 320px;
   height: 440px;
 }
-/* line 232, ../scss/partials/pages/_work-editors.scss */
+/* line 233, ../scss/partials/pages/_work-editors.scss */
 .players:hover .float-top {
   visibility: visible;
   position: relative;
@@ -2614,7 +2612,7 @@ FOOTER STYLES
   -webkit-animation: floatTop 0.3s infinite  normal ease-out;
   animation: floatTop 0.3s infinite  normal ease-out;
 }
-/* line 240, ../scss/partials/pages/_work-editors.scss */
+/* line 241, ../scss/partials/pages/_work-editors.scss */
 .players:hover .float-bottom {
   visibility: visible;
   position: relative;
@@ -2622,14 +2620,14 @@ FOOTER STYLES
   -webkit-animation: floatBottom 0.3s infinite  normal ease-out;
   animation: floatBottom 0.3s infinite  normal ease-out;
 }
-/* line 249, ../scss/partials/pages/_work-editors.scss */
+/* line 250, ../scss/partials/pages/_work-editors.scss */
 .players div {
   width: 255px;
   height: 334px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 256, ../scss/partials/pages/_work-editors.scss */
+/* line 257, ../scss/partials/pages/_work-editors.scss */
 .players p {
   text-align: center;
   font-size: 1.3em;
@@ -2637,7 +2635,7 @@ FOOTER STYLES
   margin: 0;
 }
 
-/* line 266, ../scss/partials/pages/_work-editors.scss */
+/* line 267, ../scss/partials/pages/_work-editors.scss */
 .players div {
   background-position: center center;
   background-repeat: no-repeat;
@@ -2645,7 +2643,7 @@ FOOTER STYLES
   background-size: auto;
 }
 
-/* line 273, ../scss/partials/pages/_work-editors.scss */
+/* line 274, ../scss/partials/pages/_work-editors.scss */
 .grayscale {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+, IE10 */
@@ -2659,13 +2657,13 @@ FOOTER STYLES
   /* Fix for transition flickering */
 }
 
-/* line 281, ../scss/partials/pages/_work-editors.scss */
+/* line 282, ../scss/partials/pages/_work-editors.scss */
 .grayscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
 
-/* line 298, ../scss/partials/pages/_work-editors.scss */
+/* line 299, ../scss/partials/pages/_work-editors.scss */
 .mixedContent {
   max-width: 1000px;
   width: 100%;
@@ -2673,13 +2671,13 @@ FOOTER STYLES
   position: relative;
   max-height: 500px;
 }
-/* line 305, ../scss/partials/pages/_work-editors.scss */
+/* line 306, ../scss/partials/pages/_work-editors.scss */
 .mixedContent h2 {
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-/* line 311, ../scss/partials/pages/_work-editors.scss */
+/* line 312, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev,
 .mixedContent .next {
   position: absolute;
@@ -2695,11 +2693,11 @@ FOOTER STYLES
   outline: none;
   z-index: 1;
 }
-/* line 326, ../scss/partials/pages/_work-editors.scss */
+/* line 327, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .prev {
   left: 2px;
 }
-/* line 330, ../scss/partials/pages/_work-editors.scss */
+/* line 331, ../scss/partials/pages/_work-editors.scss */
 .mixedContent .next {
   right: 2px;
 }
@@ -3110,26 +3108,6 @@ footer {
 /* line 19, ../scss/partials/_wen.scss */
 body {
   background-color: black;
-}
-
-/* line 22, ../scss/partials/_wen.scss */
-.page-id-4,
-.page-id-11 {
-  background: url(../../../../../img/bg3.gif) center top;
-  background-size: cover;
-}
-
-/* line 31, ../scss/partials/_wen.scss */
-.page-id-6,
-.page-id-13 {
-  background: url(../../../../../img/bg2.gif) center top;
-  background-size: cover;
-}
-
-/* line 37, ../scss/partials/_wen.scss */
-.page-id-8 {
-  background: url(../../../../../img/bg1.gif) center top;
-  background-size: cover;
 }
 
 /* line 42, ../scss/partials/_wen.scss */

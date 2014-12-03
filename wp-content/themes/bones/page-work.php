@@ -21,12 +21,13 @@
 									<!-- MARQUEE CAROUSEL AT THE TOP -->
 									<?php 
 									$args = array(
+
 										'tax_query' => array(
 											array(
 												'taxonomy' => 'video_groups',
 												'terms' => 12
-												)
-															)
+											)
+										)
 									);
 
 									$query = new WP_Query( $args ); 
@@ -42,16 +43,21 @@
 													$title = get_field('title'); 
 													$hover_text2 = get_field('hover_text2'); 
 													$link = get_field('embed_video_link'); 
-													$poster = get_field('featured_poster'); ?>
+												?>
 
 													<li>
 														<div class="wrapper"> 
 		    												<div class="h_iframe"> 
 																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
 
-																<img class="video-poster" src="<?php echo $poster['url'] ?>" data-video="<?php echo $link ?>">
+
+																<?php if (has_post_thumbnail( $post->ID ) ): ?>
+																	<?php $poster = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'video-large' ); ?>
+																	<img class="video-poster" src="<?php echo $poster[0]; ?>" data-video="<?php echo $link ?>">																
+																<?php endif; ?>
+																
 																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>">
-																<?php //echo $link ?>
+																
 															</div>
 														</div>
 
@@ -125,20 +131,19 @@
 										?>											
 										</ul>
 
-										<!-- TAB 1 CREATIVE DIRECTION -->
+
+										<!-- TAB 1 FEATURED WORK -->
 										<div id="tab1">
-
-												<section class="clearfix videogroup-list">
+											<section class="clearfix videogroup-list">
 												<?php			
-
-													// CREATIVE DIRECTION
 												    $args = array(
-													'tax_query' => array(
-														array(
-															'taxonomy' => 'video_groups',
-															'terms' => 3
-																		)
+												    	'posts_per_page'=> -1,
+														'tax_query' => array(
+															array(
+																'taxonomy' => 'video_groups',
+																'terms' => 4
 															)
+														)
 													);
 
 													$query = new WP_Query( $args ); 
@@ -152,28 +157,33 @@
 													      while ($query->have_posts()) : $query->the_post(); 
 
 													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$thumbnail = get_field('thumbnail');
-													       	$link = get_field('embed_video_link'); 
-													       	$title_clean = cleanString($title);
-															if( !empty($thumbnail) ): 
-																$thumbnail_url = $thumbnail['url'];
-															endif; ?>
+													       	$hover_text_client = get_field('hover_text_client'); 
+													       	$hover_text_director = get_field('hover_text_director'); 
+															$title_clean = cleanString($title);
+													       	
+													       	// $thumbnail = get_field('thumbnail');
+															//if( !empty($thumbnail) ): 
+																//$thumbnail_url = $thumbnail['url'];
+															//endif; ?>
 
-
-																<!-- HOVER EFFECT DOMO 1 -->
+																<!-- TEST HOVER EFFECT -->
 																<li class="video-thumb">
+																<div class="grid">
 																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
-																	    <figure class="rift">
-																	      <img src="<?php echo $thumbnail_url ?>" alt="Image 01">
-																	      <figcaption class="caption">
-																	      	<?php echo $title ?></br >
-																	      	<?php echo $hover_text2 ?>
-
-																	      </figcaption>
-																	    </figure>
-																    </a>
-															    </li>
+																	<figure class="effect-selena">
+																		<?php if ( has_post_thumbnail() ) { 
+																			the_post_thumbnail( 'video-small' ); 
+																		}
+																		?>
+																		<figcaption>
+																			<h2><?php echo $title; ?></h2>
+																			<p><?php echo $hover_text_client; ?><br />
+																			<?php echo $hover_text_director; ?></p>																		
+																		</figcaption>			
+																	</figure>
+																	</a>
+																</div>
+																</li>
 
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
@@ -182,146 +192,34 @@
 																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
 																	<?php echo $link ?>
 
-																	<!-- CREDITS -->
-																	<div class="credits">
+																		<!-- CREDITS -->
+																		<div class="credits">
 
-																		<h2><?php echo $title ?></h2>
-																		<?php if(get_field('credits')): ?>
+																			<h2><?php echo $title ?></h2>
+																			<?php if(get_field('credits')): ?>
 
-																			<ul>
-																				<?php while(has_sub_field('credits')): 
+																				<ul>
+																					<?php while(has_sub_field('credits')): 
 
-																				$credit_title = get_sub_field('title'); 
-																				$credit_name = get_sub_field('name'); 
-																				?>
+																					$credit_title = get_sub_field('title'); 
+																					$credit_name = get_sub_field('name'); 
+																					?>
 
-																				<li>
-																					<span class="credit-title"><?php echo $credit_title; ?>: </span>
-																					<span class="credit-name"><?php echo $credit_name; ?></span>
-																				</li>
+																					<li>
+																						<span class="credit-title"><?php echo $credit_title; ?>: </span>
+																						<span class="credit-name"><?php echo $credit_name; ?></span>
+																					</li>
 
-																				<?php endwhile; ?>
-																			</ul>
+																					<?php endwhile; ?>
+																				</ul>
 
-																		<?php endif; ?>
+																			<?php endif; ?>
+
+																		</div>
 
 																	</div>
-
-																</div>
-																</div>
-																</div>
-													        
-													       <?php endwhile; ?>
-													      </ul>
-													      </div>
-													 <?php  }
-
-													wp_reset_query();  ?>
-											</section>
-										</div>
-
-										<!-- TAB 2 FEATURED WORK -->
-										<div id="tab2">
-											<section class="clearfix videogroup-list">
-												<?php			
-												    $args = array(
-													'tax_query' => array(
-														array(
-															'taxonomy' => 'video_groups',
-															'terms' => 4
-																		)
-															)
-													);
-
-													$query = new WP_Query( $args ); 
-
-													    if( $query->have_posts() ) { ?>
-													      <div class="category section">
-
-													      	<ul class="video-list">
-														    
-														    <?php
-													      while ($query->have_posts()) : $query->the_post(); 
-
-													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$thumbnail = get_field('thumbnail');
-															if( !empty($thumbnail) ): 
-																$thumbnail_url = $thumbnail['url'];
-															endif; ?>
-
-
-																<!-- TEST HOVER DEMO 2 -->
-																	
-																<li class="video-thumb">
-																	<div class="grid">
-																	<figure class="effect-sadie">
-																		<img src="<?php echo $thumbnail_url ?>" />
-																		<figcaption>
-																			<h2>Holy <span>Sadie</span></h2>
-																			<p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-																			<a href="#">View more</a>
-																		</figcaption>			
-																	</figure>
 																	</div>
-																</li>
-																
-													        
-													       <?php endwhile; ?>
-													      </ul>
-													      </div>
-													 <?php  }
-
-													wp_reset_query();  
-													?>
-											</section>
-										</div>
-
-										<!-- TAB 3 FRIENDSHOP PRODUCTIONS-->
-										<div id="tab3">
-
-											<section class="clearfix videogroup-list">
-												<?php			
-
-												    $args = array(
-													'tax_query' => array(
-														array(
-															'taxonomy' => 'video_groups',
-															'terms' => 5
-																		)
-															)
-													);
-
-													$query = new WP_Query( $args ); 
-
-													    if( $query->have_posts() ) { ?>
-													      <div class="category section">
-
-													      	<ul class="video-list">
-														    
-														    <?php
-													      while ($query->have_posts()) : $query->the_post(); 
-
-													      	$title = get_field('title'); 
-													       	$hover_text2 = get_field('hover_text2'); 
-													       	$thumbnail = get_field('thumbnail');
-															if( !empty($thumbnail) ): 
-																$thumbnail_url = $thumbnail['url'];
-															endif; ?>
-
-																<!-- TEST HOVER DEMO 3 -->
-																<li class="video-thumb">
-																<div class="grid">
-																	<figure class="effect-selena">
-																		<img src="<?php echo $thumbnail_url ?>"/>
-																		<figcaption>
-																			<h2>Happy <span>Selena</span></h2>
-																			<p>Selena is a tiny-winged bird.</p>
-																			<a href="#">View more</a>
-																		</figcaption>			
-																	</figure>
 																</div>
-																</li>
 												        
 													       <?php endwhile; ?>
 													      </ul>
