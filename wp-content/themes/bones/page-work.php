@@ -160,37 +160,37 @@
 													       	$hover_text_client = get_field('hover_text_client'); 
 													       	$hover_text_director = get_field('hover_text_director'); 
 															$title_clean = cleanString($title);
+															$link = get_field('embed_video_link'); 
 													       	
-													       	// $thumbnail = get_field('thumbnail');
-															//if( !empty($thumbnail) ): 
-																//$thumbnail_url = $thumbnail['url'];
-															//endif; ?>
+															?>
 
-																<!-- TEST HOVER EFFECT -->
-																<li class="video-thumb">
-																<div class="grid">
-																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
-																	<figure class="effect-selena">
-																		<?php if ( has_post_thumbnail() ) { 
-																			the_post_thumbnail( 'video-small' ); 
-																		}
-																		?>
-																		<figcaption>
-																			<h2><?php echo $title; ?></h2>
-																			<p><?php echo $hover_text_client; ?><br />
-																			<?php echo $hover_text_director; ?></p>																		
-																		</figcaption>			
-																	</figure>
-																	</a>
-																</div>
+																<!-- HOVER EFFECT -->
+																<li class="video-thumb" data-video="<?php echo $link ?>">
+																	<div class="grid">
+																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
+																		<figure class="effect-selena">
+																			<?php if ( has_post_thumbnail() ) { 
+																				the_post_thumbnail( 'video-small' ); 
+																			}
+
+																			
+																			?>
+																			<div class="hover-shadow"></div>
+																			<figcaption>
+																				<h2><?php echo $title; ?></h2>
+																				<p><?php echo $hover_text_client; ?><br />
+																				<?php echo $hover_text_director; ?></p>																		
+																			</figcaption>			
+																		</figure>
+																		</a>
+																	</div>
 																</li>
 
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
-																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
-																	<?php echo $link ?>
+																		<iframe src=""></iframe>
 
 																		<!-- CREDITS -->
 																		<div class="credits">

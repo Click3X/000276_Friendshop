@@ -132,6 +132,15 @@ jQuery(document).ready(function($) {
         $(this).css('display', 'none');
     });
 
+   $('.video-thumb').click(function() {
+      video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+      $(this).next().find('iframe').replaceWith(video);
+    });
+
+   // $('.fancybox-close').click(function(){
+   //    $(this).prev('.fancybox-outer').find('iframe').attr('src', '');
+   // });
+
 
 $('.credit-bar').click(function(){
     $('.credit-content').toggleClass('hide').toggleClass('show');

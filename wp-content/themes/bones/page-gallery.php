@@ -24,16 +24,38 @@
 
 									while(has_sub_field('gallery_list')): 
 
-										$sub_title = get_sub_field('title'); 
+										$title = get_sub_field('title'); 
+										$title_clean = cleanString($title); 
 
 										$gif = get_sub_field('gif');
+										$gif_lightbox = get_sub_field('gif_lightbox');
 										if( !empty($gif) ): 
 
 											$gif_url = $gif['url'];
 
+										endif; 
+
+										if( !empty($gif_lightbox) ): 
+
+											$gifL_url = $gif_lightbox['url'];
+
 										endif; ?>
 									  
-									    <li class="thumb"><img src="<?php echo $gif_url ?>" alt="Thumb"></li>  
+									    <li class="thumb">
+									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various" rel="f-gallery">
+									    		<img src="<?php echo $gif_url ?>" alt="Thumb">
+									    	</a>
+									    </li> 
+
+									     <!-- LIGHTBOX -->
+									    <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+									    	<?php if ($gif_lightbox) { ?>
+									    		<img class="lb-image" src="<?php echo $gifL_url ?>" alt="Original">	
+									    	<?php } elseif (empty($gif_lightbox)) { ?>
+									    		<img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	
+									    	<?php } ?>
+														
+										</div>
 
 									    <?php endwhile; ?>  
 
@@ -59,17 +81,6 @@
 
 							<?php endwhile; else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
 
 							<?php endif; ?>
 

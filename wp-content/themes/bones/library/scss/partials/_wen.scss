@@ -505,7 +505,7 @@ figure.effect-selena {
   background: #fff;
 }
 
-figure.effect-selena img {
+figure.effect-selena img, figure.effect-selena div {
   opacity: 0.95;
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
@@ -513,7 +513,7 @@ figure.effect-selena img {
   transform-origin: 50% 50%;
 }
 
-figure.effect-selena:hover img {
+figure.effect-selena:hover img, figure.effect-selena:hover div {
   -webkit-transform: scale3d(0.95,0.95,1);
   transform: scale3d(0.95,0.95,1);
 }
@@ -673,6 +673,24 @@ figure.effect-selena:hover p {
 
 .video-poster {
   cursor: pointer;
+}
+
+.effect-selena {
+  h2 {
+    font-size: 0.85em !important;
+  }
+
+  .hover-shadow {
+    position:absolute; 
+    width: 269px; height:168px; 
+    top:0; 
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+}
+
+.lb-image {
+  max-width: 100%;
 }
 
 

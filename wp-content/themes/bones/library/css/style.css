@@ -3639,7 +3639,7 @@ figure.effect-selena {
 }
 
 /* line 508, ../scss/partials/_wen.scss */
-figure.effect-selena img {
+figure.effect-selena img, figure.effect-selena div {
   opacity: 0.95;
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
@@ -3648,7 +3648,7 @@ figure.effect-selena img {
 }
 
 /* line 516, ../scss/partials/_wen.scss */
-figure.effect-selena:hover img {
+figure.effect-selena:hover img, figure.effect-selena:hover div {
   -webkit-transform: scale3d(0.95, 0.95, 1);
   transform: scale3d(0.95, 0.95, 1);
 }
@@ -3818,7 +3818,25 @@ figure.effect-selena:hover p {
   cursor: pointer;
 }
 
-/* line 680, ../scss/partials/_wen.scss */
+/* line 679, ../scss/partials/_wen.scss */
+.effect-selena h2 {
+  font-size: 0.85em !important;
+}
+/* line 683, ../scss/partials/_wen.scss */
+.effect-selena .hover-shadow {
+  position: absolute;
+  width: 269px;
+  height: 168px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 692, ../scss/partials/_wen.scss */
+.lb-image {
+  max-width: 100%;
+}
+
+/* line 698, ../scss/partials/_wen.scss */
 .arrow-d, .arrow-u {
   display: inline-block;
   background: url("../../../../../img/credits-arrow.png") no-repeat;
@@ -3827,14 +3845,14 @@ figure.effect-selena:hover p {
   text-align: left;
 }
 
-/* line 683, ../scss/partials/_wen.scss */
+/* line 701, ../scss/partials/_wen.scss */
 .arrow-d {
   background-position: -0px -0px;
   width: 10px;
   height: 10px;
 }
 
-/* line 684, ../scss/partials/_wen.scss */
+/* line 702, ../scss/partials/_wen.scss */
 .arrow-u {
   background-position: -0px -10px;
   width: 10px;

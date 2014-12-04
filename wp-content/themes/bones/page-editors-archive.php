@@ -75,7 +75,7 @@
 										
 										<ul id="work-ul" class='etabs work-tabs cf'>
 
-<!-- 										<?php
+										<?php
 											// GET TAXONOMY INFO ON TABS
 											$new_tabs = get_field('vid_tax');														
 											$i=1;
@@ -84,9 +84,7 @@
 												echo '<li class="tab-gallery tab"><a class="cat_btn" data-category="'.$new_tab->term_id.'" href="#tab'.$i.'" data-video-group="'.$new_tab->term_id.'">'.$new_tab->name.'</a></li>';
 												$i++;
 											}
-										?>	 -->	
-
-										<li class='tab-gallery tab'><a href="#tab1">Reels</a></li>									
+										?>											
 										</ul>
 
 										<!-- test ajax container -->
@@ -108,13 +106,13 @@
 												<section class="clearfix videogroup-list">
 												<?php			
 
-													// REELS - BEN
+													// COMEDY
 													$args = array(
 													'tax_query' => array(
 														array(
 															'taxonomy' => 'video_groups',
-															'terms' => 13,
-															// 'operator' => 'AND',
+															'terms' => array(6, 9),
+															'operator' => 'AND',
 																		)
 															)
 													);
@@ -130,39 +128,35 @@
 													      while ($query->have_posts()) : $query->the_post(); 
 
 													      	$title = get_field('title'); 
-													       	$hover_text_client = get_field('hover_text_client'); 
-													       	$hover_text_director = get_field('hover_text_director'); 
-															$title_clean = cleanString($title); ?>
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+													       	$link = get_field('embed_video_link'); 
+													       	$title_clean = cleanString($title);
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
 
 
-																<!-- TEST HOVER EFFECT -->
+																<!-- HOVER EFFECT DOMO 1 -->
 																<li class="video-thumb">
-																<div class="grid">
 																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
-																	<figure class="effect-selena">
-																		<?php if ( has_post_thumbnail() ) { 
-																			the_post_thumbnail( 'video-small' ); 
-																		}
-																		?>
-																		<div class="hover-shadow"></div>
-																		<figcaption>
-																			<h2><?php echo $title; ?></h2>
-																			<p><?php echo $hover_text_client; ?><br />
-																			<?php echo $hover_text_director; ?></p>																		
-																		</figcaption>			
-																	</figure>
-																	</a>
-																</div>
-																</li>
+																	    <figure class="rift">
+																	      <img src="<?php echo $thumbnail_url ?>" alt="Image 01">
+																	      <figcaption class="caption">
+																	      	<?php echo $title ?></br >
+																	      	<?php echo $hover_text2 ?>
+
+																	      </figcaption>
+																	    </figure>
+																    </a>
+															    </li>
 
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
 																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
-																	<?php //echo $link ?>
-																	<iframe src="https://friendshop.wiredrive.com/?routekey=iframe-embed&token=5feea034cffd7e7bb3b7bd9ebb08a350&autoplay=0&loop=0&controls=1"></iframe>
-
+																	<?php echo $link ?>
 																	<div class="credits">
 																		<h2>CREDITS</h2>
 																		<span class="credit-title">Client: </span><span class="credit-name">Pabst Blue Ribbon</span><br />
@@ -186,7 +180,119 @@
 											</section>
 										</div>
 
-										
+										<!-- TAB 2 GENERAL -->
+										<div id="tab2">
+											<section class="clearfix videogroup-list">
+												<?php			
+
+													$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 7
+																		)
+															)
+													);
+												
+													$query = new WP_Query( $args ); 
+
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
+
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+
+																<!-- TEST HOVER DEMO 2 -->																	
+																<li class="video-thumb">
+																	<div class="grid">
+																	<figure class="effect-sadie">
+																		<img src="<?php echo $thumbnail_url ?>" />
+																		<figcaption>
+																			<h2>Holy <span>Sadie</span></h2>
+																			<p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
+																			<a href="#">View more</a>
+																		</figcaption>			
+																	</figure>
+																	</div>
+																</li>
+																
+													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
+
+													wp_reset_query();  
+													?>
+											</section>
+										</div>
+
+										<!-- TAB 3 LONG FORM -->
+										<div id="tab3">
+
+											<section class="clearfix videogroup-list">
+												<?php			
+	
+													$args = array(
+													'tax_query' => array(
+														array(
+															'taxonomy' => 'video_groups',
+															'terms' => 8
+																		)
+															)
+													);
+												
+													$query = new WP_Query( $args ); 
+
+													    if( $query->have_posts() ) { ?>
+													      <div class="category section">
+
+													      	<ul class="video-list">
+														    
+														    <?php
+													      while ($query->have_posts()) : $query->the_post(); 
+
+													      	$title = get_field('title'); 
+													       	$hover_text2 = get_field('hover_text2'); 
+													       	$thumbnail = get_field('thumbnail');
+															if( !empty($thumbnail) ): 
+																$thumbnail_url = $thumbnail['url'];
+															endif; ?>
+
+																<!-- TEST HOVER DEMO 3 -->
+																<li class="video-thumb">
+																<div class="grid">
+																	<figure class="effect-selena">
+																		<img src="<?php echo $thumbnail_url ?>"/>
+																		<figcaption>
+																			<h2>Happy <span>Selena</span></h2>
+																			<p>Selena is a tiny-winged bird.</p>
+																			<a href="#">View more</a>
+																		</figcaption>			
+																	</figure>
+																</div>
+																</li>
+
+																													        
+													       <?php endwhile; ?>
+													      </ul>
+													      </div>
+													 <?php  }
+
+													wp_reset_query(); 
+													?>
+											</section>
+
+										</div>
 							
 									</div> <!-- END TAB CONTAINER -->
 
