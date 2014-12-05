@@ -143,11 +143,12 @@ function bones_scripts_and_styles() {
 		// carousel style sheet
 		wp_register_style( 'carousel-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.infinite-carousel.css', array(), '' );
 
-		// carousel style sheet
+		// video carousel style sheet
 		wp_register_style( 'videoslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.bxslider.css', array(), '' );
 
-		// rift style sheet
-		wp_register_style( 'rift-stylesheet', get_stylesheet_directory_uri() . '/library/css/rift.css', array(), '' );
+		// video carousel style sheet
+		wp_register_style( 'swipebox-stylesheet', get_stylesheet_directory_uri() . '/library/css/swipebox.min.css', array(), '' );
+
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -157,23 +158,26 @@ function bones_scripts_and_styles() {
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
-		//adding freemason js
-		// wp_register_script( 'freemason.min', get_stylesheet_directory_uri() . '/library/js/libs/freemason.min.js', array( 'jquery' ), '', true );
-        // free mason code
-        // wp_register_script( 'mason-code', get_stylesheet_directory_uri() . '/library/js/mason-code.js', array( 'jquery', 'freemason.min' ), '', true );
+		//adding swipebox js
+		wp_register_script( 'jquery.swipebox.min', get_stylesheet_directory_uri() . '/library/js/libs/jquery.swipebox.min.js', array( 'jquery' ), '', true );
+		// swipebox code
+		wp_register_script( 'swipebox-code', get_stylesheet_directory_uri() . '/library/js/swipebox-code.js', array( 'jquery', 'jquery.swipebox.min' ), '', true );
 
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
+		//fancybox code
+		wp_register_script( 'fancybox-code', get_stylesheet_directory_uri() . '/library/js/fancybox-code.js', array( 'jquery', 'fancybox-js' ), '', true );
 
 		// adding carousel js
-		wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jCarouselLite.js', array( 'jquery' ), '', true );
+		//wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jCarouselLite.js', array( 'jquery' ), '', true );
 
 		// adding fitvids js
 		wp_register_script( 'fitvids-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fitvids.js', array( 'jquery' ), '', true );
 
 		// adding video slider js
 		wp_register_script( 'videoslider-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array( 'jquery' ), '', true );
-
+		// swipebox code
+		wp_register_script( 'videoslider-code', get_stylesheet_directory_uri() . '/library/js/videoslider-code.js', array( 'jquery', 'videoslider-js' ), '', true );
 		
 
 		// adding responsive carousel js
@@ -182,27 +186,11 @@ function bones_scripts_and_styles() {
 		//adding tabs js
 		wp_register_script( 'tab-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easytabs.min.js', array( 'jquery' ), '', true );
 
-		// adding rift js
-		wp_register_script( 'rift-js', get_stylesheet_directory_uri() . '/library/js/libs/rift.min.js', array( 'jquery' ), '', true );
-
-
-
-
-
-
-        // FAST CLICK
-        // wp_register_script( 'fastclick', get_stylesheet_directory_uri() . '/library/js/libs/fastclick.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
-
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
-		wp_enqueue_style( 'fancybox-stylesheet' );
-		wp_enqueue_style( 'videoslider-stylesheet' );
-		wp_enqueue_style( 'rift-stylesheet' );
-
-
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
@@ -213,22 +201,33 @@ function bones_scripts_and_styles() {
 		*/
 
 		wp_enqueue_script( 'jquery' );
-        // wp_enqueue_script( 'fastclick' );
 		wp_enqueue_script( 'bones-js' );
 
-        // CHECK FOR GALLERY PAGE
-		// if(is_page(8)) {
-  //           wp_enqueue_script( 'freemason.min' );  
-  //           wp_enqueue_script( 'mason-code' );   
-  //       }
-        
 
-		wp_enqueue_script( 'fancybox-js' );
+		// CHECK FOR GALLERY PAGE - SWIPEBOX
+		// if(is_page(8)) {
+		// 	wp_enqueue_style( 'swipebox-stylesheet' );
+  //           wp_enqueue_script( 'jquery.swipebox.min' );  
+  //           wp_enqueue_script( 'swipebox-code' );   
+  //       }
+
+        // CHECK FOR WORK / EDITORS / GALLERY PAGE - FANCYBOX
+        if(is_page(4) || is_page(6) || is_page(8)) {
+        	wp_enqueue_style( 'fancybox-stylesheet' );
+            wp_enqueue_script( 'fancybox-js' );  
+            wp_enqueue_script( 'fancybox-code' );
+        }
+
+        // CHECK FOR WORK / ABOUT PAGE - BX SLIDER
+        if(is_page(4) || is_page(13)) {
+        	wp_enqueue_style( 'videoslider-stylesheet' );
+            wp_enqueue_script( 'videoslider-js' );
+            wp_enqueue_script( 'videoslider-code' );   
+        }
+
 		wp_enqueue_script( 'tab-js' );
-		wp_enqueue_script( 'carousel-js' );
-		wp_enqueue_script( 'fitvids-js' );
-		wp_enqueue_script( 'videoslider-js' );
-		wp_enqueue_script( 'rift-js' );
+		//wp_enqueue_script( 'carousel-js' );
+		wp_enqueue_script( 'fitvids-js' );		
 		// wp_enqueue_script( 'rescarousel-js' );
 
 	}

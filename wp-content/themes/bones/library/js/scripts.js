@@ -108,6 +108,9 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
+
+
+
   // AJAX BINDING
   // $.ajaxSetup({cache:false});
   //       $(".players_link").click(function(){
@@ -137,9 +140,7 @@ jQuery(document).ready(function($) {
       $(this).next().find('iframe').replaceWith(video);
     });
 
-   // $('.fancybox-close').click(function(){
-   //    $(this).prev('.fancybox-outer').find('iframe').attr('src', '');
-   // });
+
 
 
 $('.credit-bar').click(function(){
@@ -148,6 +149,20 @@ $('.credit-bar').click(function(){
     return false;
 });
 
+// HIGHLIGHT SELECTED DIRECTOR
+$('.new-players').click(function(){
+  $(".new-players.director-active").removeClass("director-active");
+  $(this).addClass('director-active');
+
+  var director = this.id.slice(4);
+  var director_container = director + '-container';
+  $('.editors-videos').removeClass("container-active");
+  $("#" + director_container).addClass('container-active');
+  // $('.editors-videos').fadeOut();
+  // $("#" + director_container).fadeIn();
+
+  
+});
 
 // $("iframe").each(function(){
 //       var ifr_source = $(this).attr('src');
@@ -163,65 +178,49 @@ $('.credit-bar').click(function(){
   }, 80);
 
   // init carousel
-  $(function() {
-  if($(window).width() < 700){
+  // $(function() {
+  // if($(window).width() < 700){
           
-          $('.carousel-no-style').jCarouselLite({
-              visible: 1,
-              btnNext: ".next",
-              btnPrev: ".prev"
-          });
-      }
-  else {
+  //         $('.carousel-no-style').jCarouselLite({
+  //             visible: 1,
+  //             btnNext: ".next",
+  //             btnPrev: ".prev"
+  //         });
+  //     }
+  // else {
           
-          $('.carousel-no-style').jCarouselLite({
-              visible: 2,
-              btnNext: ".next",
-              btnPrev: ".prev"
-          });
-  }
-  });
+  //         $('.carousel-no-style').jCarouselLite({
+  //             visible: 2,
+  //             btnNext: ".next",
+  //             btnPrev: ".prev"
+  //         });
+  // }
+  // });
 
   // When window resize
-  $(window).trigger('resize');
+  // $(window).trigger('resize');
 
-  $(window).resize(function(){
-      if($(window).width() < 700){
-          $('.next, .prev').unbind('click');
-          $('.carousel-no-style').jCarouselLite({
-              visible: 1,
-              btnNext: ".next",
-              btnPrev: ".prev"
-          });
-      }
-      else {
-          $('.next, .prev').unbind('click');
-          $('.carousel-no-style').jCarouselLite({
-              visible: 2,
-              btnNext: ".next",
-              btnPrev: ".prev"
-          });
-      }
-  });
+  // $(window).resize(function(){
+  //     if($(window).width() < 700){
+  //         $('.next, .prev').unbind('click');
+  //         $('.carousel-no-style').jCarouselLite({
+  //             visible: 1,
+  //             btnNext: ".next",
+  //             btnPrev: ".prev"
+  //         });
+  //     }
+  //     else {
+  //         $('.next, .prev').unbind('click');
+  //         $('.carousel-no-style').jCarouselLite({
+  //             visible: 2,
+  //             btnNext: ".next",
+  //             btnPrev: ".prev"
+  //         });
+  //     }
+  // });
 
 
-  // init fancybox
-        // Remove padding, set opening and closing animations, close if clicked and disable overlay
-      $(".video-fancy").fancybox({
-        padding: 0,
 
-        openEffect : 'elastic',
-        openSpeed  : 150,
-
-        closeEffect : 'elastic',
-        closeSpeed  : 150,
-
-        closeClick : true,
-
-        helpers : {
-          overlay : null
-        }
-      });
 
 
 
@@ -236,38 +235,12 @@ $('.credit-bar').click(function(){
     event.preventDefault();
   });
 
-  // init video slider
-  $('#video-bxslider').bxSlider({
-    video: true,
-    useCSS: false,
-    nextSelector: '#video-slider-next',
-    prevSelector: '#video-slider-prev',
-    nextText: '>',
-    prevText: '<'
-  });
 
-$('#news-bxslider').bxSlider({
-    // video: true,
-    // useCSS: false
-    auto: true,
-    pause: 9000,
-    autoHover: true,
-    nextSelector: '#news-slider-next',
-    prevSelector: '#news-slider-prev',
-    nextText: '>',
-    prevText: '<'
-    // autoControls: true
-  });
-  // init fancybox
-  $(".fancybox").fancybox();
+
 
   // init tabs
   $('#tab-container').easytabs();
 
-// init rift
-    $(window).load(function() {
-      $('.rift').rift();
-    });
 
   /*
    * Let's fire off the gravatar function

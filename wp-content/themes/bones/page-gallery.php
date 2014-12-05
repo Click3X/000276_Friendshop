@@ -43,7 +43,15 @@
 									  
 									    <li class="thumb">
 									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various" rel="f-gallery">
-									    		<img src="<?php echo $gif_url ?>" alt="Thumb">
+									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
+<!-- 									    	<?php if ($gif_lightbox) { ?>
+									    		<a href="<?php echo $gifL_url ?>" class="swipebox" rel="f-gallery">
+									    	<?php } elseif (empty($gif_lightbox)) { ?>
+									    		<a href="<?php echo $gif_url ?>" class="swipebox" rel="f-gallery">
+									    	<?php } ?>
+									    			<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
+
+									    		</a> -->
 									    	</a>
 									    </li> 
 

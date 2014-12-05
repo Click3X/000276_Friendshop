@@ -691,7 +691,46 @@ figure.effect-selena:hover p {
 
 .lb-image {
   max-width: 100%;
+} 
+
+
+
+.fancybox-nav span {
+ visibility: visible !important;
 }
+
+// NEW PLAYERS STYLING
+
+.director-active {
+    color: white !important;
+}
+
+.editors-videos {
+  display: none;
+  opacity: 0;
+  @include transition(all 0.3s linear);
+}
+
+.container-active {
+  display: block;
+  opacity: 1;
+  @include transition(all 0.3s linear);
+}
+
+
+.new-players {
+  text-decoration: none;
+  outline-color: transparent !important;
+  display: block;
+  text-transform: uppercase;
+  color: #aaa;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 800;
+}
+
+
+
 
 
 // ARROW SPRITE
