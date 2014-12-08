@@ -142,10 +142,18 @@ jQuery(document).ready(function($) {
 
 
 
-
+// CREDIT BAR DRAWER
 $('.credit-bar').click(function(){
+  $('.credit-bar').css('visibility', 'hidden');
     $('.credit-content').toggleClass('hide').toggleClass('show');
-    $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
+    // $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
+    return false;
+});
+
+$('.cb-inner').click(function(){
+  $('.credit-bar').css('visibility', 'visible');
+    $('.credit-content').toggleClass('hide').toggleClass('show');
+    // $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
     return false;
 });
 

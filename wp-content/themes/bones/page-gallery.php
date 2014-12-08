@@ -42,7 +42,7 @@
 										endif; ?>
 									  
 									    <li class="thumb">
-									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various" rel="f-gallery">
+									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various gallery-fancy" rel="f-gallery">
 									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
 <!-- 									    	<?php if ($gif_lightbox) { ?>
 									    		<a href="<?php echo $gifL_url ?>" class="swipebox" rel="f-gallery">
@@ -58,6 +58,7 @@
 									     <!-- LIGHTBOX -->
 									    <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 									    	<?php if ($gif_lightbox) { ?>
+
 									    		<img class="lb-image" src="<?php echo $gifL_url ?>" alt="Original">	
 									    	<?php } elseif (empty($gif_lightbox)) { ?>
 									    		<img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	

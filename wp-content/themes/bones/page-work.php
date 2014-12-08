@@ -34,7 +34,7 @@
 
 									if( $query->have_posts() ) { ?>
 
-    									<div class="slider-container">
+    									<div class="slider-container" style="max-height: 524px; overflow-y: hidden">
 
 											<ul id="video-bxslider">
 													    
@@ -66,6 +66,12 @@
 															<!-- CREDITS -->
 																	<div class="credits">
 
+																		<div class="cb-inner" style="line-height: 1">
+																			<div class="credit-arrow arrow-d ca-left"></div>
+																			<div class="credit-arrow arrow-d ca-right"></div>
+																			<span><?php the_title(); ?></span>
+																		</div>
+
 																		<!-- <h2><?php echo $title ?></h2> -->
 																		<?php if(get_field('credits')): ?>
 
@@ -90,8 +96,9 @@
 
 														</div>
 														<div class="credit-bar" style="line-height: 1">
-															<div class="credit-arrow arrow-u"></div><br />
-															<span><?php echo $title ?></span>
+															<div class="credit-arrow arrow-u ca-left"></div>
+															<div class="credit-arrow arrow-u ca-right"></div>
+															<span><?php the_title(); ?></span>
 														</div>
 													</li>
 
@@ -177,7 +184,7 @@
 																			?>
 																			<div class="hover-shadow"></div>
 																			<figcaption>
-																				<h2><?php echo $title; ?></h2>
+																				<h2><?php the_title(); ?></h2>
 																				<p><?php echo $hover_text_client; ?><br />
 																				<?php echo $hover_text_director; ?></p>																		
 																			</figcaption>			
@@ -195,7 +202,7 @@
 																		<!-- CREDITS -->
 																		<div class="credits">
 
-																			<h2><?php echo $title ?></h2>
+																			<h2><?php the_title(); ?></h2>
 																			<?php if(get_field('credits')): ?>
 
 																				<ul>

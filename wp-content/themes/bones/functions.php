@@ -228,9 +228,13 @@ function cleanString($string){
   $search = '/[^[:alpha:]]/';
   $space = ' ';
   $replace = '-';
+  $search2 = '/[^A-Za-z0-9\-]/';
+  $replace2 = '';
   $newString = str_replace($search, $replace, $string);
   $newString = strtolower($newString);
+  $newString = str_replace($search2, $replace2, $newString);
   $newString = str_replace($space, $replace, $newString);
+  
 
   return $newString;
 

@@ -5,8 +5,8 @@
     }
 }
 
-.contact-left, .contact-right {
-    text-align: left;
+.contact-left {
+    text-align: center;
 
     h1,h3,h4 { margin:0; }
     h1 { 
@@ -51,9 +51,9 @@
 .contact-left {
     a {
         text-decoration: none;
-        color: white;
+        color: $contact-text;
         font-size: 1em;
-        font-weight: 700;
+        font-weight: 400;
 
         &:hover {
             text-decoration: underline;
@@ -61,8 +61,16 @@
     }
 }
 
-.contact-left { float: left; }
-.contact-right { float: right; }
+.contact-address {
+    p {
+        color: $contact-text !important;
+        font-weight: 400 !important;
+    }
+    
+}
+
+// .contact-left { float: left; }
+// .contact-right { float: right; }
 .inner-contact-container { 
     padding-top:0;
 

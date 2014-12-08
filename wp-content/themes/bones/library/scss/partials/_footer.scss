@@ -37,13 +37,13 @@ html, body {
 .ftlogo-container, .ftaddress-container, .ftsocial-container {
     text-align: left;
     display: block;
-    float: left;
+    // float: left;
     margin: 0 8px;
 }
 
-.ftlogo-container {
-    margin-right:50px;
-}
+// .ftlogo-container {
+//     margin-right:50px;
+// }
 
 
 @media(max-width: 480px) {
@@ -66,119 +66,160 @@ html, body {
 }
 
 .ftsocial-container { 
-    float:left;
-    margin-top:16px;
+    float: right;
+    // float:left;
+    // margin-top:16px;
     // margin-left:8px;
-    margin-left:0;
+    // margin-left:0;
 
-    @media(min-width:481px) {
-        margin-left: 50px;
-    }
-    @media(min-width: 872px) {
-        margin-top:0;
-    }
-    @media(min-width:950px) {
-        float:right; 
-        margin-left: 8px;
-    }
+    // @media(min-width:481px) {
+    //     margin-left: 50px;
+    // }
+    // @media(min-width: 872px) {
+    //     margin-top:0;
+    // }
+    // @media(min-width:950px) {
+    //     float:right; 
+    //     margin-left: 8px;
+    // }
 }
 
-.ftaddress-container { 
-    margin-right:0;
+// .ftaddress-container { 
+//     margin-right:0;
 
-    @media(min-width:481px) {
-        margin-left: 50px;
-    }
-}
+//     @media(min-width:481px) {
+//         margin-left: 50px;
+//     }
+// }
 
 .ftaddress-container { margin-left:10px; }
 .ftsocial-container ul { margin:0; }
 
 .social a {
     display: block;
-    width: 72px;
-    height: 75px;
+    // width: 72px;
+    // height: 75px;
     position: relative;
 
-    @media(min-width: 481px) {
-        width: 96px;
-        height: 99px;
+    // @media(min-width: 481px) {
+    //     width: 96px;
+    //     height: 99px;
+    // }
+}
+
+.Tumblr {
+    background-image: url(../../../../../img/deer.jpg);
+    background-size: 150px 150px;
+    width: 150px;
+    height:150px;
+    outline-color: transparent !important;
+}
+
+.footer-left {
+    float: left;
+    margin-left: 50px;
+}
+
+// @media(max-width: 488px) { 
+//     .footer-left {
+//         margin-left: 0;
+//     }
+// }
+
+@media(max-width: 488px) { 
+    .footer-left, .ftsocial-container {
+        display: inline-block;
+        float: none;
+        margin-left: 16px;
+
+        .ftlogo-container-new {
+            margin-right: 0px;
+        }
     }
 }
 
 // GRACEFUL DEGRADATION with PNGs
-.Tumblr,
-.Facebook,
-.Instagram,
-.Map,
-.Mail {
-    background-image: url(../../../../../img/social-new.png);
+// .Tumblr,
+// .Facebook,
+// .Instagram,
+// .Map,
+// .Mail {
+//     background-image: url(../../../../../img/social-new.png);
+// }
+
+// // PROGRESSIVE ENHANCEMENT with SVGs
+// .svg {
+//     .Tumblr,
+//     .Facebook,
+//     .Instagram,
+//     .Map,
+//     .Mail {
+//         background-image: url(../../../../../img/social-new.svg);
+//     }
+// }
+
+// .Tumblr {
+//     background-size:780%;
+//     background-position-x: 100.4%; 
+//     background-position: 100.4% 0;
+//     &:hover { 
+//         background-position-y: 103.2%; 
+//         background-position: 100.4% 103.2%;
+//     }
+//     @media(min-width: 481px) { 
+//         background-size: auto; 
+//         &:hover { 
+//             background-position-y: 102%;
+//             background-position: 100.4% 102%;
+//         }
+//     }
+// }
+
+// .Map { 
+//     background-size:780%;
+//     background-position-x: 28.4%;
+//     background-position: 28.4% 0;
+//     &:hover { 
+//         background-position-y: 103.2%;
+//         background-position: 28.4% 103.2%;
+//     }
+//     @media(min-width: 481px) { 
+//         background-size: auto; 
+//         &:hover { 
+//             background-position-y: 102%; 
+//             background-position: 28.4% 102%;
+//         }
+//     }
+// }
+
+// .Mail { 
+//     background-size:780%;
+//     background-position-x: 14.4%;
+//     background-position: 14.4% 0;
+//     &:hover { 
+//         background-position-y: 103.2%; 
+//         background-position: 14.4% 103.2%;
+//     }
+//     @media(min-width: 481px) { 
+//         background-size: auto; 
+//         &:hover { 
+//             background-position-y: 102%; 
+//             background-position: 14.4% 102%;
+//         }
+//     }
+// }
+
+
+.footer { 
+    position: static; 
+    border-top: 1px solid #343536;
+    background-color: black;
+
 }
 
-// PROGRESSIVE ENHANCEMENT with SVGs
-.svg {
-    .Tumblr,
-    .Facebook,
-    .Instagram,
-    .Map,
-    .Mail {
-        background-image: url(../../../../../img/social-new.svg);
-    }
+.tab-container {
+    margin-bottom: 50px;
 }
-
-.Tumblr {
-    background-size:780%;
-    background-position-x: 100.4%; 
-    background-position: 100.4% 0;
-    &:hover { 
-        background-position-y: 103.2%; 
-        background-position: 100.4% 103.2%;
-    }
-    @media(min-width: 481px) { 
-        background-size: auto; 
-        &:hover { 
-            background-position-y: 102%;
-            background-position: 100.4% 102%;
-        }
-    }
-}
-
-.Map { 
-    background-size:780%;
-    background-position-x: 28.4%;
-    background-position: 28.4% 0;
-    &:hover { 
-        background-position-y: 103.2%;
-        background-position: 28.4% 103.2%;
-    }
-    @media(min-width: 481px) { 
-        background-size: auto; 
-        &:hover { 
-            background-position-y: 102%; 
-            background-position: 28.4% 102%;
-        }
-    }
-}
-
-.Mail { 
-    background-size:780%;
-    background-position-x: 14.4%;
-    background-position: 14.4% 0;
-    &:hover { 
-        background-position-y: 103.2%; 
-        background-position: 14.4% 103.2%;
-    }
-    @media(min-width: 481px) { 
-        background-size: auto; 
-        &:hover { 
-            background-position-y: 102%; 
-            background-position: 14.4% 102%;
-        }
-    }
-}
-
-
-.footer { position: static; }
 
 #container { 
     min-height: 100%;

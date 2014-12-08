@@ -21,18 +21,22 @@
                         <?php include('php/logo-svg.php'); ?>
 					</a>
 				</div> -->
+
+				<div class="footer-left">
                 
-                <div class="ftlogo-container-new">
-                    <a href="<?php echo bloginfo('url'); ?>">
-                        <img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" class="logo-png" />
-                        <!-- NEW SVG LOGO -->
-                        <?php include('php/logo-svg.php'); ?>
-                    </a>
-                </div>
+	                <div class="ftlogo-container-new">
+	                    <a href="<?php echo bloginfo('url'); ?>">
+	                        <!-- <img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" class="logo-png" /> -->
+	                        <!-- NEW SVG LOGO -->
+	                        <?php include('php/logo-svg.php'); ?>
+	                    </a>
+	                </div>
 
 
-				<div class="ftaddress-container">
-					<?php echo $address ?>
+					<div class="ftaddress-container">
+						<?php echo $address ?>
+					</div>
+
 				</div>
 
 
@@ -42,14 +46,14 @@
 						<?php while(has_sub_field('social_media', 'option')): 
 							$sub_title = get_sub_field('title'); 
 
-							if ($sub_title == 'Mail') { ?>
-								<li class="social">
+							//if ($sub_title == 'Mail') { ?>
+<!-- 								<li class="social">
 									<a href="<?php echo 'mailto:' . get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title;?>" class="<?php echo $sub_title; ?>"></a>
-								</li>
-							<?php } else { ?>
+								</li> -->
+							<?php //} else { ?>
 									<li class="social"><a href="<?php echo get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title ;?>" class="<?php echo $sub_title; ?>"></a>
 									</li>
-							<?php } ?>
+							<?php //} ?>
 
 							<?php endwhile; ?>
 						</ul>

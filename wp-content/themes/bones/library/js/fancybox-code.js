@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   // init fancybox
         // Remove padding, set opening and closing animations, close if clicked and disable overlay
-      $(".video-fancy").fancybox({
+  $(".video-fancy").fancybox({
         padding: 0,
 
         openEffect : 'elastic',
@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
         helpers : {
           overlay : null
         }
-      });
+  });
 
         // init fancybox
   $(".video-hook").fancybox({
@@ -26,4 +26,6 @@ jQuery(document).ready(function($) {
 
 	}); 
 
-  }); 
+  $(".gallery-fancy").fancybox();
+
+}); 
