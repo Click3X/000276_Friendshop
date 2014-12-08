@@ -244,12 +244,15 @@ iframe {
     // color: $tab-blue;
     color: white;
     font-family: 'VerlagBold';
-    font-weight: 700;
+    font-weight: 500;
     margin: auto;
     padding: 10px 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
       @media (max-width: 767px) {
-        font-size: 1.1em;
+        font-size: 0.98em;
+        .ca-left, .ca-right {
+          margin-top: 2px;
+        }
       }
     @include transition(all 0.1s ease-in-out);
 
@@ -270,10 +273,10 @@ iframe {
   text-transform: uppercase;
   color: $tab-blue;
   font-family: 'VerlagBold';
-  font-weight: 700;
-  font-size: 1.5em;
+  font-weight: 500;
+  font-size: 1.3em;
         @media (max-width: 767px) {
-        font-size: 1.1em;
+        font-size: 0.95em;
       }
   cursor: pointer;
   @include transition(all 0.1s ease-in-out);
