@@ -53,7 +53,10 @@
 
 																<?php if (has_post_thumbnail( $post->ID ) ): ?>
 																	<?php $poster = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'video-large' ); ?>
-																	<img class="video-poster" src="<?php echo $poster[0]; ?>" data-video="<?php echo $link ?>">																
+																	<!-- <div class="preloader-container"> -->
+																		<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
+																		<img class="video-poster" src="<?php echo $poster[0]; ?>" data-video="<?php echo $link ?>">
+																	<!-- </div>	 -->																									
 																<?php endif; ?>
 																
 																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>">
@@ -197,8 +200,10 @@
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
-																		<iframe src=""></iframe>
-
+																		<div class="preloader-container">
+																			<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
+																			<iframe src="" class="myFrames"></iframe>
+																		</div>
 																		<!-- CREDITS -->
 																		<div class="credits">
 

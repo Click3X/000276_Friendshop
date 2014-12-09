@@ -28,7 +28,10 @@
 										$title_clean = cleanString($title); 
 
 										$gif = get_sub_field('gif');
+										
 										$gif_lightbox = get_sub_field('gif_lightbox');
+										// $gif_lightbox = get_sub_field('test_crop_image_thumbnail');
+
 										if( !empty($gif) ): 
 
 											$gif_url = $gif['url'];

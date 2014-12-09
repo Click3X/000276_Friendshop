@@ -82,7 +82,7 @@
 
 					<?php if(get_field('friendly_news')): ?>
 
-						<h2 class="news-toptitle"><?php echo $session_title; ?></h2>
+						<!-- <h2 class="news-toptitle"><?php echo $session_title; ?></h2> -->
 
 						<ul id="news-bxslider">
 

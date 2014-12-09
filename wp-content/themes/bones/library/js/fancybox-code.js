@@ -1,23 +1,23 @@
 jQuery(document).ready(function($) {
   // init fancybox
-        // Remove padding, set opening and closing animations, close if clicked and disable overlay
-  $(".video-fancy").fancybox({
-        padding: 0,
+  // Remove padding, set opening and closing animations, close if clicked and disable overlay
+  // $(".video-fancy").fancybox({
+  //       padding: 0,
 
-        openEffect : 'elastic',
-        openSpeed  : 150,
+  //       openEffect : 'elastic',
+  //       openSpeed  : 150,
 
-        closeEffect : 'elastic',
-        closeSpeed  : 150,
+  //       closeEffect : 'elastic',
+  //       closeSpeed  : 150,
 
-        closeClick : true,
+  //       closeClick : true,
 
-        helpers : {
-          overlay : null
-        }
-  });
+  //       helpers : {
+  //         overlay : null
+  //       }
+  // });
 
-        // init fancybox
+  // init WORK/EDITORS fancybox
   $(".video-hook").fancybox({
   	
 	  afterClose: function() {
@@ -26,6 +26,7 @@ jQuery(document).ready(function($) {
 
 	}); 
 
+  // init GALLERY fancybox
   $(".gallery-fancy").fancybox();
 
 }); 

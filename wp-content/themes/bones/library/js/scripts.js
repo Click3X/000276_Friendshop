@@ -122,23 +122,38 @@ jQuery(document).ready(function($) {
   // });
 
     $('.video-poster').click(function(){
+      $(this).prev().show();
       $(this).next('.mqplay-btn').css('display', 'none');
         video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
         // video = $(this).attr('data-video');
         $(this).replaceWith(video);
-
+        $('iframe').on('load', function () {
+          $(this).prev().hide();
+        });
     });
 
     $('.mqplay-btn').click(function(){
+      $(this).prev().prev().show();
         video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
         $(this).prev().replaceWith(video);
         $(this).css('display', 'none');
+        $('iframe').on('load', function () {
+          $(this).prev().hide();
+        });
     });
 
    $('.video-thumb').click(function() {
+      // ADDING PRELOADER
+      $(this).next().find('.myLoader').show();
+
       video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
       $(this).next().find('iframe').replaceWith(video);
+      $(this).next().find('iframe').on('load', function () {
+          $(this).prev().hide();
+      });
     });
+
+
 
 
 
@@ -156,6 +171,9 @@ $('.cb-inner').click(function(){
     // $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
     return false;
 });
+
+
+
 
 // HIGHLIGHT SELECTED DIRECTOR
 $('.new-players').click(function(){

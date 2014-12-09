@@ -154,50 +154,70 @@
 													      	$title = get_field('title'); 
 													       	$hover_text_client = get_field('hover_text_client'); 
 													       	$hover_text_director = get_field('hover_text_director'); 
-															$title_clean = cleanString($title); ?>
+															$title_clean = cleanString($title);
+															$link = get_field('embed_video_link'); 
+													       	
+															?>
 
+																<!-- HOVER EFFECT -->
+																<li class="video-thumb" data-video="<?php echo $link ?>">
+																	<div class="grid">
+																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
+																		<figure class="effect-selena">
+																			<?php if ( has_post_thumbnail() ) { 
+																				the_post_thumbnail( 'video-small' ); 
+																			}
 
-																<!-- TEST HOVER EFFECT -->
-																<li class="video-thumb">
-																<div class="grid">
-																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
-																	<figure class="effect-selena">
-																		<?php if ( has_post_thumbnail() ) { 
-																			the_post_thumbnail( 'video-small' ); 
-																		}
-																		?>
-																		<div class="hover-shadow"></div>
-																		<figcaption>
-																			<h2><?php echo $title; ?></h2>
-																			<p><?php echo $hover_text_client; ?><br />
-																			<?php echo $hover_text_director; ?></p>																		
-																		</figcaption>			
-																	</figure>
-																	</a>
-																</div>
+																			
+																			?>
+																			<div class="hover-shadow"></div>
+																			<figcaption>
+																				<h2><?php the_title(); ?></h2>
+																				<p><?php echo $hover_text_client; ?><br />
+																				<?php echo $hover_text_director; ?></p>																		
+																			</figcaption>			
+																		</figure>
+																		</a>
+																	</div>
 																</li>
 
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
-																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
-																	<?php //echo $link ?>
-																	<!-- <iframe src="https://friendshop.wiredrive.com/?routekey=iframe-embed&token=5feea034cffd7e7bb3b7bd9ebb08a350&autoplay=0&loop=0&controls=1"></iframe> -->
+																		<div class="preloader-container">
+																			<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
+																			<iframe src="" class="myFrames"></iframe>
+																		</div>
+																		<!-- CREDITS -->
+																		<div class="credits">
 
-																	<div class="credits">
-																		<h2>CREDITS</h2>
-																		<span class="credit-title">Client: </span><span class="credit-name">Pabst Blue Ribbon</span><br />
-																		<span class="credit-title">Director: </span><span class="credit-name">Oison Weles</span><br />
-																		<span class="credit-title">Production: </span><span class="credit-name">ACME</span><br />
-																		<span class="credit-title">Editor: </span><span class="credit-name">Tim Wilson</span>
+																			<h2><?php the_title(); ?></h2>
+																			<?php if(get_field('credits')): ?>
+
+																				<ul>
+																					<?php while(has_sub_field('credits')): 
+
+																					$credit_title = get_sub_field('title'); 
+																					$credit_name = get_sub_field('name'); 
+																					?>
+
+																					<li>
+																						<span class="credit-title"><?php echo $credit_title; ?>: </span>
+																						<span class="credit-name"><?php echo $credit_name; ?></span>
+																					</li>
+
+																					<?php endwhile; ?>
+																				</ul>
+
+																			<?php endif; ?>
+
+																		</div>
 
 																	</div>
-
+																	</div>
 																</div>
-																</div>
-																</div>
-													        
+												        
 													       <?php endwhile; ?>
 													      </ul>
 													      </div>
@@ -235,50 +255,70 @@
 													      	$title = get_field('title'); 
 													       	$hover_text_client = get_field('hover_text_client'); 
 													       	$hover_text_director = get_field('hover_text_director'); 
-															$title_clean = cleanString($title); ?>
+															$title_clean = cleanString($title);
+															$link = get_field('embed_video_link'); 
+													       	
+															?>
 
+																<!-- HOVER EFFECT -->
+																<li class="video-thumb" data-video="<?php echo $link ?>">
+																	<div class="grid">
+																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
+																		<figure class="effect-selena">
+																			<?php if ( has_post_thumbnail() ) { 
+																				the_post_thumbnail( 'video-small' ); 
+																			}
 
-																<!-- TEST HOVER EFFECT -->
-																<li class="video-thumb">
-																<div class="grid">
-																	<a href="#<?php echo $title_clean ?>-container" class="fancybox various">
-																	<figure class="effect-selena">
-																		<?php if ( has_post_thumbnail() ) { 
-																			the_post_thumbnail( 'video-small' ); 
-																		}
-																		?>
-																		<div class="hover-shadow"></div>
-																		<figcaption>
-																			<h2><?php echo $title; ?></h2>
-																			<p><?php echo $hover_text_client; ?><br />
-																			<?php echo $hover_text_director; ?></p>																		
-																		</figcaption>			
-																	</figure>
-																	</a>
-																</div>
+																			
+																			?>
+																			<div class="hover-shadow"></div>
+																			<figcaption>
+																				<h2><?php the_title(); ?></h2>
+																				<p><?php echo $hover_text_client; ?><br />
+																				<?php echo $hover_text_director; ?></p>																		
+																			</figcaption>			
+																		</figure>
+																		</a>
+																	</div>
 																</li>
 
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
-																	<!-- <img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/> -->
-																	<?php //echo $link ?>
-																	<!-- <iframe src="https://friendshop.wiredrive.com/?routekey=iframe-embed&token=5feea034cffd7e7bb3b7bd9ebb08a350&autoplay=0&loop=0&controls=1"></iframe> -->
+																		<div class="preloader-container">
+																			<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
+																			<iframe src="" class="myFrames"></iframe>
+																		</div>
+																		<!-- CREDITS -->
+																		<div class="credits">
 
-																	<div class="credits">
-																		<h2>CREDITS</h2>
-																		<span class="credit-title">Client: </span><span class="credit-name">Pabst Blue Ribbon</span><br />
-																		<span class="credit-title">Director: </span><span class="credit-name">Oison Weles</span><br />
-																		<span class="credit-title">Production: </span><span class="credit-name">ACME</span><br />
-																		<span class="credit-title">Editor: </span><span class="credit-name">Tim Wilson</span>
+																			<h2><?php the_title(); ?></h2>
+																			<?php if(get_field('credits')): ?>
+
+																				<ul>
+																					<?php while(has_sub_field('credits')): 
+
+																					$credit_title = get_sub_field('title'); 
+																					$credit_name = get_sub_field('name'); 
+																					?>
+
+																					<li>
+																						<span class="credit-title"><?php echo $credit_title; ?>: </span>
+																						<span class="credit-name"><?php echo $credit_name; ?></span>
+																					</li>
+
+																					<?php endwhile; ?>
+																				</ul>
+
+																			<?php endif; ?>
+
+																		</div>
 
 																	</div>
-
+																	</div>
 																</div>
-																</div>
-																</div>
-													        
+												        
 													       <?php endwhile; ?>
 													      </ul>
 													      </div>

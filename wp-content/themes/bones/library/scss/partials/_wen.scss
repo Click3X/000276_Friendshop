@@ -177,7 +177,7 @@ iframe {
 }
 
 .news-wrapper {
-  background-color: #141414;
+  // background-color: #141414;
   text-align: center;
   position: relative;
   // padding: 20px 0;
@@ -803,3 +803,18 @@ margin-top: 7px;
   margin-right: 1em;
 margin-top: 7px;
 }
+
+// PREALOADER
+.preloader-container {
+  position: relative;
+
+}
+
+  .myLoader {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto !important;
+  }
