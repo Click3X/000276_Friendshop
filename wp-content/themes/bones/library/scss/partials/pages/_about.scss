@@ -1,7 +1,7 @@
 // ABOUT PAGE
 .content-container {
     text-align: center;
-    padding: 12px 8px;
+    padding: 0 8px;
     max-width: 1000px;
 
     h1 {
@@ -32,7 +32,7 @@
         }
     }
 
-    @media(min-width: 768px) {
+    @media(max-width: 767px) {
         padding: 25px 20px;
     }
 }

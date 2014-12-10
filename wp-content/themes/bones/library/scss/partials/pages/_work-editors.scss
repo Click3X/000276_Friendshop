@@ -334,6 +334,75 @@
 
 }
 
+// NEW EDITORS
+.editors-wrapper {
+
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+}
+.editors-container {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    //height: 59px;
+    margin: 120px 3% 200px 3%;
+
+    // @media (max-width: 767px) {
+    //     margin: 80px 3% 80px 3%;
+
+    // }
+
+    img {
+        position: absolute;
+        @include transition(all 0.3s ease-in-out);
+        max-width: 350px;
+        left:0;
+        right:0;
+        margin: auto !important;
+    }
+
+    .e-bottom {
+        opacity: 0;
+    }
+
+    &:hover {
+        .e-bottom {
+            opacity: 1;
+        }
+
+        .e-top {
+            opacity: 0;
+        }
+    }
+
+        .img_tim {
+        width: 84%; 
+        max-width: 300px; 
+        top: 3px;
+        @media (max-width: 660px) {
+            top:2px;
+
+        }
+
+                @media (max-width: 400px) {
+            top:1px;
+
+        }
+    }
+
+}
+
+.editor-active {
+    opacity: 1 !important;
+}
+
+.editor-inactive {
+    opacity: 0;
+}
+
+
+
 // white moving frames for players
 @-webkit-keyframes floatTop {
     0% {

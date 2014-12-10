@@ -27,39 +27,41 @@
 										$title = get_sub_field('title'); 
 										$title_clean = cleanString($title); 
 
+										// CROPPED THUMBNAIL
 										$gif = get_sub_field('gif');
-										
-										$gif_lightbox = get_sub_field('gif_lightbox');
-										// $gif_lightbox = get_sub_field('test_crop_image_thumbnail');
+
+										// ORIGINAL IN LIGHTBOX
+										// $gif_lightbox = get_sub_field('gif_lightbox');
 
 										if( !empty($gif) ): 
-
 											$gif_url = $gif['url'];
-
 										endif; 
 
-										if( !empty($gif_lightbox) ): 
-
-											$gifL_url = $gif_lightbox['url'];
-
-										endif; ?>
+										//if( !empty($gif_lightbox) ): 
+											// $gifL_url = $gif_lightbox['url'];
+										//endif; ?>
 									  
 									    <li class="thumb">
-									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various gallery-fancy" rel="f-gallery">
-									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
-<!-- 									    	<?php if ($gif_lightbox) { ?>
-									    		<a href="<?php echo $gifL_url ?>" class="swipebox" rel="f-gallery">
-									    	<?php } elseif (empty($gif_lightbox)) { ?>
-									    		<a href="<?php echo $gif_url ?>" class="swipebox" rel="f-gallery">
-									    	<?php } ?>
-									    			<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
+									    	<?php //echo getOriginal($gif_url); ?>
+									    	<?php //print_r($gif)?>
 
-									    		</a> -->
+									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various gallery-fancy" rel="f-gallery">
+									    		<!-- CROPPED -->
+									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
 									    	</a>
 									    </li> 
 
 									     <!-- LIGHTBOX -->
-									    <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+									     <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+									    	<?php //if ($gif_lightbox) { ?>
+
+									    		<img class="lb-image" src="<?php echo getOriginal($gif_url); ?>" alt="Original">	
+									    	<?php //} elseif (empty($gif_lightbox)) { ?>
+									    		<!-- <img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	 -->
+									    	<?php //} ?>
+														
+										</div>
+<!-- 									    <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 									    	<?php if ($gif_lightbox) { ?>
 
 									    		<img class="lb-image" src="<?php echo $gifL_url ?>" alt="Original">	
@@ -67,7 +69,7 @@
 									    		<img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	
 									    	<?php } ?>
 														
-										</div>
+										</div> -->
 
 									    <?php endwhile; ?>  
 

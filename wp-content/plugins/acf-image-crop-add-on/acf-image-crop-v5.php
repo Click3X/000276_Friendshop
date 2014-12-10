@@ -565,7 +565,11 @@ class acf_field_image_crop extends acf_field_image {
                  'post_status' => 'inherit'
             );
             $attachmentId = wp_insert_attachment( $attachment, $targetFilePath);
+            // $attachmentData = wp_generate_attachment_metadata( $attachmentId, $targetFilePath );
             $attachmentData = wp_generate_attachment_metadata( $attachmentId, $targetFilePath );
+            $upload_dir = wp_upload_dir();
+            $attachmentData['image_meta']['original_image'] = $upload_dir['baseurl'].'/'.$originalImageData['file'];
+            
             wp_update_attachment_metadata( $attachmentId, $attachmentData );
             add_post_meta($attachmentId, 'acf_is_cropped', 'true', true);
 
@@ -1071,6 +1075,8 @@ class acf_field_image_crop extends acf_field_image {
         // create array to hold value data
         $src = wp_get_attachment_image_src( $attachment->ID, 'full' );
 
+        $meta_handler = wp_get_attachment_metadata($attachment->ID);
+
         $imageArray = array(
             'id' => $attachment->ID,
             'alt' => get_post_meta($attachment->ID, '_wp_attachment_image_alt', true),
@@ -1082,6 +1088,7 @@ class acf_field_image_crop extends acf_field_image {
             'width' => $src[1],
             'height' => $src[2],
             'sizes' => array(),
+            'original_image' => $meta_handler['image_meta']['original_image']
         );
 
 

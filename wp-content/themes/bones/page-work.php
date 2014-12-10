@@ -19,27 +19,16 @@
 								<section class="entry-content cf" itemprop="articleBody">
 
 									<!-- MARQUEE CAROUSEL AT THE TOP -->
-									<?php 
-									$args = array(
+									<?php $posts = get_field('marquee_list');
 
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'video_groups',
-												'terms' => 12
-											)
-										)
-									);
-
-									$query = new WP_Query( $args ); 
-
-									if( $query->have_posts() ) { ?>
+									if( $posts ): ?>
 
     									<div class="slider-container" style="max-height: 524px; overflow-y: hidden">
 
 											<ul id="video-bxslider">
 													    
-												<?php while ($query->have_posts()) : $query->the_post(); 
-
+												<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) 
+									        		setup_postdata($post); 
 													$title = get_field('title'); 
 													$hover_text2 = get_field('hover_text2'); 
 													$link = get_field('embed_video_link'); 
@@ -49,7 +38,6 @@
 														<div class="wrapper"> 
 		    												<div class="h_iframe"> 
 																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
-
 
 																<?php if (has_post_thumbnail( $post->ID ) ): ?>
 																	<?php $poster = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'video-large' ); ?>
@@ -105,23 +93,16 @@
 														</div>
 													</li>
 
-													
-											
-													        
-												<?php endwhile; ?>
-
+												<?php endforeach; ?>
 											</ul>
+											<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+											<?php endif; ?>
 
 											<span id="video-slider-prev"></span>
 											<span id="video-slider-next"></span>
-
 											
 
 										</div> <!-- END OF slider-container -->
-
-									<?php  }
-
-									wp_reset_query();  ?>
 
 
 									<!-- TABS -->
@@ -145,26 +126,16 @@
 										<!-- TAB 1 FEATURED WORK -->
 										<div id="tab1">
 											<section class="clearfix videogroup-list">
-												<?php			
-												    $args = array(
-												    	'posts_per_page'=> -1,
-														'tax_query' => array(
-															array(
-																'taxonomy' => 'video_groups',
-																'terms' => 4
-															)
-														)
-													);
 
-													$query = new WP_Query( $args ); 
+												<?php $posts = get_field('featured_work_list');
+												if( $posts ): ?>
 
-													    if( $query->have_posts() ) { ?>
-													      <div class="category section">
+													<div class="category section">
 
-													      	<ul class="video-list">
+													    <ul class="video-list">
 														    
-														    <?php
-													      while ($query->have_posts()) : $query->the_post(); 
+														   	<?php foreach( $posts as $post): 
+									        				setup_postdata($post); 
 
 													      	$title = get_field('title'); 
 													       	$hover_text_client = get_field('hover_text_client'); 
@@ -232,28 +203,20 @@
 																	</div>
 																	</div>
 																</div>
-												        
-													       <?php endwhile; ?>
-													      </ul>
-													      </div>
-													 <?php  }
 
-													wp_reset_query();  
-													?>
+													     <?php endforeach; ?>
+														</ul>
+														<?php wp_reset_postdata(); ?>
+														<?php endif; ?>
+													    </div>
+
 											</section>
 
 										</div>
 							
 									</div> <!-- END TAB CONTAINER -->
 
-								<?php
-									wp_link_pages( array(
-										'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-										'after'       => '</div>',
-										'link_before' => '<span>',
-										'link_after'  => '</span>',
-									) );
-								?>
+
 								</section>
 
 							</article>

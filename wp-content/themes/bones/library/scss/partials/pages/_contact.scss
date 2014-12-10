@@ -27,13 +27,14 @@
 
         h3 {
             font-size: 1em;
-            font-weight: 900;
+            font-weight: 700;
             line-height: 1.1em;
+            font-family: 'VerlagBold';
         }
 
         h4 {
-            font-size: 1em;
-            font-weight: 700;
+            font-size: 0.98em;
+            font-weight: 500;
         }
     }
 
@@ -74,9 +75,9 @@
 .inner-contact-container { 
     padding-top:0;
 
-    @media(min-width: 768px) {
-        padding-top: 50px; 
-    }
+    // @media(min-width: 768px) {
+    //     padding-top: 50px; 
+    // }
 }
 
 

@@ -40,12 +40,14 @@
 								<?php while(has_sub_field('contact_list')): 
 									$sub_title = get_sub_field('title'); 
 									$sub_content = get_sub_field('content'); 
+									$job_title = get_sub_field('job_title');
 
 									$values = get_sub_field('type');
 									$value = $values[0]; ?>
 
 									<li>
 										<h3><?php echo $sub_title ?></h3>
+										<h4><?php echo $job_title ?></h4>
 
 										<?php if($value == 'email') { ?>
 											<a href="mailto:<?php echo antispambot($sub_content); ?>" class="contact-text"><?php echo antispambot($sub_content); ?></a>

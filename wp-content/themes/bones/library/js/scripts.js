@@ -177,18 +177,30 @@ $('.cb-inner').click(function(){
 
 // HIGHLIGHT SELECTED DIRECTOR
 $('.new-players').click(function(){
-  $(".new-players.director-active").removeClass("director-active");
-  $(this).addClass('director-active');
+  // Display Reels tab
+  if ($('.etabs').css('visibility') == 'hidden') {
+    $('.etabs').css('visibility','visible');
+}
+  $('.new-players').find('.e-bottom').removeClass("editor-active");
+  $('.new-players').find('.e-top').addClass("editor-active");
+  // $(this).find('.e-top').addClass("editor-inactive");
+  $(this).find('.e-bottom').addClass('editor-active');
+  $(this).find('.e-top').addClass('editor-inactive');
 
   var director = this.id.slice(4);
   var director_container = director + '-container';
   $('.editors-videos').removeClass("container-active");
+  //$('.editors-videos').fadeOut();
   $("#" + director_container).addClass('container-active');
+  //$("#" + director_container).fadeIn();
   // $('.editors-videos').fadeOut();
   // $("#" + director_container).fadeIn();
 
   
 });
+
+
+
 
 // $("iframe").each(function(){
 //       var ifr_source = $(this).attr('src');

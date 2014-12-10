@@ -240,6 +240,16 @@ function cleanString($string){
 
 }
 
+function getOriginal($img) {
+  $first = '_300x300';
+  $original = strstr($img, $first, true);
+  $type = substr($img, -4);
+  //$original = substr($img, 0, -24);
+  $original_url = $original . $type;
+  return $original_url;
+
+}
+
 // MAKING AJAX ACTION
 
 

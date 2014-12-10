@@ -64,6 +64,20 @@ iframe {
     margin: 0;
 }
 
+.fancybox-overlay {
+  background-color: black !important;
+}
+
+.fancybox-skin {
+  -webkit-box-shadow: none !important; 
+  -moz-box-shadow: none !important;
+  box-shadow: none !important; 
+}
+
+.iframe-container {
+  background-color: transparent;
+}
+
 .iframe-container iframe {
     width: 850px;
     height: 478px;
@@ -83,7 +97,7 @@ iframe {
 // CREDITS
 .credits  {
   text-align: center;
-  background-color: rgba(0,0,0,0.8);
+  background-color: transparent;
   padding: 1.8em 0;
   h2 {
     color: $tab-blue;
@@ -619,13 +633,21 @@ figure.effect-selena:hover p {
   background-image: url(../../../../../img/close_btn.png) !important;
   background-size: 36px;
   background-repeat: no-repeat;
-  top: 0 !important;
-  right: -36px !important;
+  position: fixed !important;
+  top: 20px !important;
+  right: 30px !important;
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
 }
 
 .fancybox-mobile.fancybox-opened {
   position: fixed !important;
 }
+
 
 // credits show/hide 
 .credit-bar {
@@ -706,16 +728,16 @@ figure.effect-selena:hover p {
   left: 0;
   right: 0;
   margin: auto !important;
-  // opacity: 0;
+  opacity: 0;
   cursor: pointer;
   @include transition(all 0.2s ease-in-out);
 }
 
-// .wrapper:hover {
-//   .mqplay-btn {
-//     opacity: 1;
-//   }
-// }
+.wrapper:hover {
+  .mqplay-btn {
+    opacity: 1;
+  }
+}
 
 .video-poster {
   cursor: pointer;
@@ -723,16 +745,23 @@ figure.effect-selena:hover p {
 
 .effect-selena {
   h2 {
-    font-size: 0.85em !important;
+    font-size: 0.8em !important;
   }
 
   .hover-shadow {
     position:absolute; 
     width: 269px; height:168px; 
     top:0; 
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.1);
+    @include transition(all 0.2s ease-in-out);
   }
   
+}
+
+.video-thumb:hover {
+  .hover-shadow {
+    background-color: rgba(0,0,0,0.6);
+  }
 }
 
 .lb-image {
@@ -765,14 +794,16 @@ figure.effect-selena:hover p {
 
 
 .new-players {
+  font-family: 'VerlagBold';
   text-decoration: none;
   outline-color: transparent !important;
   display: block;
-  text-transform: uppercase;
-  color: #aaa;
+  // text-transform: uppercase;
+  color: #05385b !important;
   text-align: center;
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 
