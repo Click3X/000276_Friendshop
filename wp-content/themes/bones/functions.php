@@ -75,6 +75,7 @@ add_image_size( 'bones-thumb-300', 300, 100, true );
 
 // Video thumbnail sizes
 add_image_size( 'video-small', 269, 168, true );
+add_image_size( 'video-full', 525, 328, true );
 add_image_size( 'video-large', 850, 478, true );
 
 /*

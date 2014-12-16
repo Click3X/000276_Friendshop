@@ -168,6 +168,10 @@ function bones_scripts_and_styles() {
 		//fancybox code
 		wp_register_script( 'fancybox-code', get_stylesheet_directory_uri() . '/library/js/fancybox-code.js', array( 'jquery', 'fancybox-js' ), '', true );
 
+		//scrollto code
+		wp_register_script( 'scrollTo', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollTo.min.js', array( 'jquery'), '', true );
+
+
 		// adding carousel js
 		//wp_register_script( 'carousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jCarouselLite.js', array( 'jquery' ), '', true );
 
@@ -202,6 +206,7 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'scrollTo' );
 
 
 		// CHECK FOR GALLERY PAGE - SWIPEBOX

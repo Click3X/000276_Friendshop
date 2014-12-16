@@ -102,6 +102,8 @@ function loadGravatars() {
 } // end function
 
 
+
+
 /*
  * Put all your regular jQuery in here.
 */
@@ -109,6 +111,18 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
 
 
+// $(window).scroll(function() {
+//   var distance = $(window).scrollTop() -$(document).height() + $(window).height();
+//   console.log(distance);
+// });
+
+$(window).scroll(function() {
+        // GET WINDOW SCROLL TOP
+        scroll = $(window).scrollTop();
+        console.log('This is scroll:');
+        console.log(scroll);
+
+    });
 
 
   // AJAX BINDING
@@ -141,6 +155,13 @@ jQuery(document).ready(function($) {
           $(this).prev().hide();
         });
     });
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     $('.mqplay-btn').css('opacity','1');
+     $('figcaption').css('visibility','hidden');
+     $('.grid').find('figure').removeClass('effect-selena');
+     $('.grid').find('div').removeClass('hover-shadow');
+    }
 
    $('.video-thumb').click(function() {
       // ADDING PRELOADER
@@ -176,7 +197,14 @@ $('.cb-inner').click(function(){
 
 
 // HIGHLIGHT SELECTED DIRECTOR
-$('.new-players').click(function(){
+$('.new-players').click(function(e){
+  //e.preventDefault();
+
+  // REDUCE MARGIN TOP
+  $('.editors-wrapper').css('margin-top', '40px');
+
+
+
   // Display Reels tab
   if ($('.etabs').css('visibility') == 'hidden') {
     $('.etabs').css('visibility','visible');
@@ -196,7 +224,15 @@ $('.new-players').click(function(){
   // $('.editors-videos').fadeOut();
   // $("#" + director_container).fadeIn();
 
-  
+        // SCROLL TO THE CONTAINER
+      //$('body,html').animate({
+        //scrollTop: 500
+
+        // $("#work-ul").offset().top
+      //}, 300);
+  // var el = document.getElementById('#tab-container');
+  //     el.scrollIntoView(true);
+  //$.scrollTo('#tab-container');
 });
 
 

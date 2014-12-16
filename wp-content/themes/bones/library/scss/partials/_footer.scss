@@ -108,11 +108,32 @@ html, body {
 }
 
 .Tumblr {
-    background-image: url(../../../../../img/deer.jpg);
-    background-size: 150px 150px;
+    img {
+        position: absolute;
+        top:0;
+        width: 150px;
+        height:150px;
+        @include transition(all 0.2s ease-in-out);
+    }
+
+    .dr-hov {
+        opacity: 0;
+    }
+    // background-image: url(../../../../../img/deer.jpg);
+    // background-size: 150px 150px;
     width: 150px;
     height:150px;
     outline-color: transparent !important;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+        // background-image: url(../../../../../img/deer_hover.jpg);
+        .dr-hov {
+            opacity: 1;
+        }
+        .dr-ori {
+            opacity: 0;
+        }
+    }
 }
 
 .footer-left {
@@ -211,16 +232,16 @@ html, body {
 
 
 .footer { 
-    position: static; 
+    //position: static; 
     border-top: 1px solid #343536;
     background-color: black;
 
 }
 
 #container { 
-    min-height: 100%;
+    //min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -370px;
+    // margin-bottom: -370px;
     overflow-x: hidden;
 
     &:after {
@@ -238,7 +259,7 @@ html, body {
 
 // Footer 
 footer {
-    position: absolute; 
+    //position: absolute; 
     width: 100%;
 }
 
@@ -259,8 +280,8 @@ footer {
         padding: 50px 2px;
     }
 }
-#container { margin-bottom: -250px; }
-.footer, #container:after { height: 250px; }
+//#container { margin-bottom: -250px; }
+// .footer, #container:after { height: 250px; }
 
 // @media(min-width:400px) {
 //     #container { margin-bottom: -334px; }

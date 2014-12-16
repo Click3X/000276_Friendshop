@@ -18,6 +18,16 @@
 
 body { background-color: #131418; }
 
+a {
+  outline-color: transparent !important;
+}
+
+// DISABLE HOVER 
+// .disable-hover,
+// .disable-hover * {
+//     pointer-events: none !important;
+// }
+
 // GIF ON ALL MENNU PAGE BODY TAG BACKGROUND
 // .page-id-4,
 
@@ -222,10 +232,18 @@ iframe {
     padding: 0 0.15em;
    }
 
+   &:hover {
+    a {
+      color: #aaa !important;
+    }
+   }
+
   a {
+
     text-decoration: none;
     color: white !important;
-
+    outline-color: transparent !important;
+    @include transition(all 0.1s ease-in-out);
   }
 
 }
@@ -263,7 +281,7 @@ iframe {
     padding: 10px 0;
     font-size: 1.3em;
       @media (max-width: 767px) {
-        font-size: 0.98em;
+        font-size: 0.9em;
         .ca-left, .ca-right {
           margin-top: 2px;
         }
@@ -423,7 +441,7 @@ iframe {
 	#inner-header { text-align: left; }
 }
 
-// SADDIE
+// HOVER EFFECT
 
 .grid figure {
   position: relative;
@@ -435,7 +453,7 @@ iframe {
   // max-height: 360px;
   width: 269px;
   // width: 48%;
-  background: #3085a3;
+  //background: #3085a3;
   text-align: center;
   cursor: pointer;
 }
@@ -501,63 +519,6 @@ iframe {
   font-size: 55%;
 }
 
-figure.effect-sadie figcaption::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-  background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-  content: '';
-  opacity: 0;
-  -webkit-transform: translate3d(0,50%,0);
-  transform: translate3d(0,50%,0);
-}
-
-figure.effect-sadie h2 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  color: white;
-  font-size: 1.2em;
-  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
-  transition: transform 0.35s, color 0.35s;
-  -webkit-transform: translate3d(0,-50%,0);
-  transform: translate3d(0,-50%,0);
-}
-
-figure.effect-sadie figcaption::before,
-figure.effect-sadie p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-sadie p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 2em;
-  width: 100%;
-  opacity: 0;
-  -webkit-transform: translate3d(0,10px,0);
-  transform: translate3d(0,10px,0);
-}
-
-figure.effect-sadie:hover h2 {
-  color: #fff;
-  -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-  transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-}
-
-figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
 /*-----------------*/
 /***** Selena *****/
 /*-----------------*/
@@ -585,6 +546,8 @@ figure.effect-selena h2 {
   -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
   font-size: 1.1em;
+  opacity: 0;
+  @include transition(all 0.2s);
 }
 
 figure.effect-selena p {
@@ -600,6 +563,7 @@ figure.effect-selena p {
 figure.effect-selena:hover h2 {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+  opacity: 1;
 }
 
 figure.effect-selena:hover p {
@@ -610,21 +574,23 @@ figure.effect-selena:hover p {
 
 // READ BTN STYLE 
 .read_btn {
-  position: relative;
+  @include transition(all 0.2s ease-in-out);
+  // position: relative;
 
-  span {
-    position: absolute;
-    top: 4px;
-    right: 24px;
-    opacity: 0;
-    @include transition(all 0.2s ease-in-out);
-  }
+  // span {
+  //   position: absolute;
+  //   top: 4px;
+  //   right: 24px;
+  //   opacity: 0;
+  //   @include transition(all 0.2s ease-in-out);
+  // }
 
   &:hover {
-    span {
-      opacity: 1;
-      right: 9px;
-    }
+    // span {
+    //   opacity: 1;
+    //   right: 9px;
+    // }
+    background-color: $tab-blue;
   }
 }
 
@@ -849,3 +815,43 @@ margin-top: 7px;
     right:0;
     margin: auto !important;
   }
+
+// PLACEHOLDER THUMBNAIL
+.video-small {
+  width: 269px;
+  height: 168px !important;
+}
+
+.video-large {
+  width: 850px;
+  height: 478px;
+}
+
+// GALLERY BUTTONS
+.gallery-prev, .gallery-next {
+  text-align: center;
+  font-size: 3.5em;
+  // border: 1px solid $tab-blue !important;
+  background-color: black;
+  // line-height: 0.9em;
+  padding: 0 0.25em;
+  color: $tab-blue;
+  @include transition(all 0.1s ease-in-out);
+  &:hover {
+    color: #aaa;
+  }
+}
+
+.gallery-prev {
+  left: -60px !important;
+}
+
+.gallery-next {
+  right: -60px !important;
+}
+
+.grid {
+  img {
+    width: 100%;
+  }
+}

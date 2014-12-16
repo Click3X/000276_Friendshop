@@ -155,8 +155,8 @@
 .tab a:hover { color: $tab-blue; }
 .tab.active { position: relative; }
 .tab a.active { color: $tab-blue; }
-.tab-gallery a:hover{ color: $tab-yellow; }
-.tab-gallery a.active{ color: $tab-yellow; }
+.tab-gallery a:hover{ color: $light-green; }
+.tab-gallery a.active{ color: $light-green; }
 
 .tab-container .panel-container { 
     background: #fff; 
@@ -166,15 +166,16 @@
 }
 
 @media (max-width: 835px) {
-    .etabs {
-        border-top: 3px solid $light-green;
-        border-bottom: 3px solid $light-green;
-    }
+    // .etabs {
+    //     border-top: 3px solid $light-green;
+    //     border-bottom: 3px solid $light-green;
+    // }
 
     .tab { display: block; }
-    .tab a { color: #767676; }
-    .tab a:hover { color: $light-green; }
-    .tab a.active {  color: $light-green; }
+    .tab a {line-height: 18px}
+    // .tab a { color: #767676; }
+    // .tab a:hover { color: $light-green; }
+    // .tab a.active {  color: $light-green; }
 }
 
 .grid { width: 100%; }
@@ -340,26 +341,41 @@
     margin: auto;
     text-align: center;
     max-width: 1200px;
+
+    @media (max-width: 767px) {
+        margin-top: 180px;
+    }
+
+    @media (max-width: 480px) {
+        margin: 50px 3% 40px 3%;
+        margin-top: 30px;
+    }
 }
 .editors-container {
     position: relative;
-    display: inline-block;
-    width: 40%;
+    min-height: 74px;
+    // display:inline-block;
+    display: block;
+    // width: 40%;
     //height: 59px;
-    margin: 120px 3% 200px 3%;
+    margin: 80px 3% 100px 3%;
 
-    // @media (max-width: 767px) {
-    //     margin: 80px 3% 80px 3%;
-
-    // }
+    @media (max-width: 767px) {
+        margin: 60px 3% 50px 3%;
+        min-height: 50px;
+    }
 
     img {
         position: absolute;
         @include transition(all 0.3s ease-in-out);
-        max-width: 350px;
+        max-width: 450px;
         left:0;
         right:0;
         margin: auto !important;
+         @media (max-width: 767px) {
+            max-width: 375px;
+
+        }       
     }
 
     .e-bottom {
@@ -378,17 +394,22 @@
 
         .img_tim {
         width: 84%; 
-        max-width: 300px; 
-        top: 3px;
-        @media (max-width: 660px) {
-            top:2px;
+        max-width: 390px; 
+        // top: 3px;
+        // @media (max-width: 660px) {
+        //     top:2px;
+
+        // }
+
+        @media (max-width: 767px) {
+            max-width: 320px;
 
         }
 
-                @media (max-width: 400px) {
-            top:1px;
+        //         @media (max-width: 400px) {
+        //     top:1px;
 
-        }
+        // }
     }
 
 }

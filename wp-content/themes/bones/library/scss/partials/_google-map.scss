@@ -5,18 +5,27 @@
         background-repeat:no-repeat;
         background-size:cover;
         background-position:50%;
+        max-width: 1200px;
     }
 
     .map {
         background-color:black;
         padding-bottom: 60%;
+        width: 80%;
+        margin: auto;
 
         @media(min-width: 600px) {
-            padding-bottom:377px;
+            // padding-bottom:377px;
+            padding-bottom: 300px;
+        }
+
+        @media(max-width: 767px) {
+            width: 100%;
         }
 
         @media(min-width: 980px) and (min-height: 800px) { 
-            padding-bottom:641.516px; 
+            // padding-bottom:641.516px; 
+            padding-bottom: 400px;
         }
     }
 

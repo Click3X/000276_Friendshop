@@ -33,6 +33,8 @@
 					<div class="content-container">
 
 						<div class="contact-left">
+
+							<div class="contact-address"><?php echo $address ?></div>
 														
 							<?php if(get_field('contact_list')): ?>
 
@@ -50,7 +52,7 @@
 										<h4><?php echo $job_title ?></h4>
 
 										<?php if($value == 'email') { ?>
-											<a href="mailto:<?php echo antispambot($sub_content); ?>" class="contact-text"><?php echo antispambot($sub_content); ?></a>
+											<a href="mailto:<?php echo antispambot($sub_content); ?>" class="contact-text" target="_blank"><?php echo antispambot($sub_content); ?></a>
 										<?php } else { ?>
 											<h4><?php echo $sub_content ?></h4>
 										<?php } ?>
@@ -63,13 +65,9 @@
 
 							<?php endif; ?>
 
-							<div class="contact-address"><?php echo $address ?></div>
+							
 
 						</div>
-
-<!-- 						<div class="contact-right">
-							<img src="<?php echo $image_url; ?>" alt="<?php echo "friendshop"; ?>" />
-						</div> -->
 
 					</div>
 
