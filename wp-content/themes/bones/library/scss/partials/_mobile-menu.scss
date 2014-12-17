@@ -76,13 +76,23 @@ nav {
 
 
 nav a {
-    @include prefix(transition, all 0.3s ease-in-out);
+    @include prefix(transition, all 0.2s ease-in-out);
 
     &:hover { color:#ffffff; }
 }
 
 #menu-main-menu .current-menu-item {
     a { color:white; }
+}
+
+.nav-contact {
+    @include prefix(transition, all 0.2s ease-in-out);
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    a {
+        margin: 2px;
+    }
 }
 
 // MAIN TOP MENU
@@ -93,9 +103,15 @@ nav a {
     }
 
     nav {
+        @include prefix(transition, all 0.2s ease-in-out);
         // display: none;
         text-align: center;
-        margin-top:50px;
+        margin-top:-170px;
+    }
+
+    .nav-contact {
+        display: block;
+        // 
     }
 }
 
@@ -116,6 +132,10 @@ nav a {
             margin-right: 0;
         }
     }
+}
+
+.menu-display {
+    margin-top: 50px;
 }
 
 // CHARLES NEW NAV STYLES
@@ -144,6 +164,17 @@ nav a {
     @include prefix(transform, translateY(0px));
     @include transition(all 0.3s ease-in-out);
 }
+
+@media (min-width: 768px) {
+    #menu-main-menu {
+        height: 48px !important;
+    }
+
+    nav {
+        margin-top: 0px !important;
+    }
+}
+
 
 @media (max-width: 767px) {
     nav[role="navigation"]:before {

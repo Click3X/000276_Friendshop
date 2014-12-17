@@ -23,7 +23,7 @@
 
 									if( $posts ): ?>
 
-    									<div class="slider-container" style="max-height: 524px; overflow-y: hidden">
+    									<div class="slider-container" style="max-height: 562px; overflow-y: hidden">
 
 											<ul id="video-bxslider">
 													    
@@ -32,23 +32,21 @@
 													$title = get_field('title'); 
 													$hover_text2 = get_field('hover_text2'); 
 													$link = get_field('embed_video_link'); 
+													$thumb = get_field('thumbnail');
 												?>
 
 													<li>
 														<div class="wrapper"> 
 		    												<div class="h_iframe"> 
 																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
+																<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
 
-																<?php if (has_post_thumbnail( $post->ID ) ) { ?>
-																	<?php $poster = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'video-large' ); 
-																	} else { 
-																	$poster[0] = '/img/FS_missing.jpg';
-																} ?>
-
-																	<!-- <div class="preloader-container"> -->
-																		<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
-																		<img class="video-poster video-large" src="<?php echo $poster[0]; ?>" data-video="<?php echo $link ?>">
-																	<!-- </div>	 -->																									
+																<?php if (!empty($thumb)) { ?>
+																	<img class="video-poster video-large" src="<?php echo $thumb['url']; ?>" data-video="<?php echo $link ?>">
+																	
+																	<?php } else { ?>
+																	<img class="video-poster video-large" src="<?php echo bloginfo('url'); ?>/img/fs_missing.jpg" data-video="<?php echo $link ?>">
+																<?php } ?>																									
 																
 																
 																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>">
@@ -146,7 +144,7 @@
 													       	$hover_text_director = get_field('hover_text_director'); 
 															$title_clean = cleanString($title);
 															$link = get_field('embed_video_link'); 
-													       	
+													       	$thumb = get_field('thumbnail');
 															?>
 
 																<!-- HOVER EFFECT -->
@@ -154,10 +152,11 @@
 																	<div class="grid">
 																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
 																		<figure class="effect-selena">
-																			<?php if ( has_post_thumbnail() ) { 
-																				the_post_thumbnail( 'video-small' ); 
+																			<?php if (!empty($thumb)) { ?>
+																				<!-- the_post_thumbnail( 'video-small' );  -->
+																				<img src="<?php echo $thumb['url']; ?>" class="video-small">
 
-																			} else { ?>
+																			<?php } else { ?>
 																				<img src="<?php echo bloginfo('url'); ?>/img/FS_missing.jpg" class="video-small">
 
 																			<?php } ?>

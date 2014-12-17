@@ -141,13 +141,13 @@ function bones_scripts_and_styles() {
 		wp_register_style( 'fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.fancybox.css', array(), '' );
 
 		// carousel style sheet
-		wp_register_style( 'carousel-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.infinite-carousel.css', array(), '' );
+		//wp_register_style( 'carousel-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.infinite-carousel.css', array(), '' );
 
 		// video carousel style sheet
 		wp_register_style( 'videoslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.bxslider.css', array(), '' );
 
 		// video carousel style sheet
-		wp_register_style( 'swipebox-stylesheet', get_stylesheet_directory_uri() . '/library/css/swipebox.min.css', array(), '' );
+		//wp_register_style( 'swipebox-stylesheet', get_stylesheet_directory_uri() . '/library/css/swipebox.min.css', array(), '' );
 
 
     // comment reply script for threaded comments
@@ -159,9 +159,9 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		//adding swipebox js
-		wp_register_script( 'jquery.swipebox.min', get_stylesheet_directory_uri() . '/library/js/libs/jquery.swipebox.min.js', array( 'jquery' ), '', true );
+		//wp_register_script( 'jquery.swipebox.min', get_stylesheet_directory_uri() . '/library/js/libs/jquery.swipebox.min.js', array( 'jquery' ), '', true );
 		// swipebox code
-		wp_register_script( 'swipebox-code', get_stylesheet_directory_uri() . '/library/js/swipebox-code.js', array( 'jquery', 'jquery.swipebox.min' ), '', true );
+		//wp_register_script( 'swipebox-code', get_stylesheet_directory_uri() . '/library/js/swipebox-code.js', array( 'jquery', 'jquery.swipebox.min' ), '', true );
 
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
@@ -169,7 +169,7 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'fancybox-code', get_stylesheet_directory_uri() . '/library/js/fancybox-code.js', array( 'jquery', 'fancybox-js' ), '', true );
 
 		//scrollto code
-		wp_register_script( 'scrollTo', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollTo.min.js', array( 'jquery'), '', true );
+		//wp_register_script( 'scrollTo', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollTo.min.js', array( 'jquery'), '', true );
 
 
 		// adding carousel js
@@ -206,7 +206,7 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
-		wp_enqueue_script( 'scrollTo' );
+		//wp_enqueue_script( 'scrollTo' );
 
 
 		// CHECK FOR GALLERY PAGE - SWIPEBOX

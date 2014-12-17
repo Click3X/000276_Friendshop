@@ -43,7 +43,15 @@
 									  
 									    <li class="thumb">
 									    	<?php //echo getOriginal($gif_url); ?>
-									    	<?php //print_r($gif)?>
+									    	<?php 
+									    	// print_r($gif);
+
+									    	$imgId = $gif['id'];
+
+									    	$img = wp_get_attachment_image_src( $imgId, 'full' );
+									    	// echo '<h1>This is img from wp att</h1>';
+									    	//helper($img[0]);
+									    	?>
 
 									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various gallery-fancy" rel="f-gallery">
 									    		<!-- CROPPED -->
@@ -55,7 +63,7 @@
 									     <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 									    	<?php //if ($gif_lightbox) { ?>
 
-									    		<img class="lb-image" src="<?php echo getOriginal($gif_url); ?>" alt="Original">	
+									    		<img class="lb-image" src="<?php echo $img[0]; ?>" alt="Original">	
 									    	<?php //} elseif (empty($gif_lightbox)) { ?>
 									    		<!-- <img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	 -->
 									    	<?php //} ?>

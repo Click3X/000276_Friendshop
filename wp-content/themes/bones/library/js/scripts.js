@@ -110,19 +110,32 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
+  var body = document.body,
+  timer;
+
+  window.addEventListener('scroll', function() {
+    clearTimeout(timer);
+    if(!body.classList.contains('disable-hover')) {
+      body.classList.add('disable-hover')
+    }
+    
+    timer = setTimeout(function(){
+      body.classList.remove('disable-hover')
+    },200);
+  }, false);
 
 // $(window).scroll(function() {
 //   var distance = $(window).scrollTop() -$(document).height() + $(window).height();
 //   console.log(distance);
 // });
 
-$(window).scroll(function() {
-        // GET WINDOW SCROLL TOP
-        scroll = $(window).scrollTop();
-        console.log('This is scroll:');
-        console.log(scroll);
+// $(window).scroll(function() {
+//         // GET WINDOW SCROLL TOP
+//         scroll = $(window).scrollTop();
+//         console.log('This is scroll:');
+//         console.log(scroll);
 
-    });
+//     });
 
 
   // AJAX BINDING
@@ -157,7 +170,8 @@ $(window).scroll(function() {
     });
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-     $('.mqplay-btn').css('opacity','1');
+     $('.mqplay-btn').css('display','none');
+     $('#video-slider-prev,#video-slider-next').css('display','none');
      $('figcaption').css('visibility','hidden');
      $('.grid').find('figure').removeClass('effect-selena');
      $('.grid').find('div').removeClass('hover-shadow');
@@ -198,7 +212,7 @@ $('.cb-inner').click(function(){
 
 // HIGHLIGHT SELECTED DIRECTOR
 $('.new-players').click(function(e){
-  //e.preventDefault();
+  e.preventDefault();
 
   // REDUCE MARGIN TOP
   $('.editors-wrapper').css('margin-top', '40px');
@@ -225,11 +239,11 @@ $('.new-players').click(function(e){
   // $("#" + director_container).fadeIn();
 
         // SCROLL TO THE CONTAINER
-      //$('body,html').animate({
-        //scrollTop: 500
+      $('body,html').animate({
+        scrollTop: 
 
-        // $("#work-ul").offset().top
-      //}, 300);
+        $("#work-ul").offset().top
+      }, 300);
   // var el = document.getElementById('#tab-container');
   //     el.scrollIntoView(true);
   //$.scrollTo('#tab-container');

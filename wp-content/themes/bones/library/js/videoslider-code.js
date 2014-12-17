@@ -2,6 +2,8 @@
   jQuery(document).ready(function($) {
   // init video slider
   $('#video-bxslider').bxSlider({
+    auto: true,
+    autoHover: true,
     video: true,
     useCSS: false,
     nextSelector: '#video-slider-next',

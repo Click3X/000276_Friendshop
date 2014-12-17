@@ -63,6 +63,11 @@
 					<div class="menu-icon">
 					  <span></span>
 					</div>
+<!-- 					<div class="nav-contact">
+						<a href="tel:2122317761"><img src="/img/icons/tel.png" alt="tel"></a>
+						<a href="mailto:mapes@friendshopedit.com"><img src="/img/icons/email.png" alt="email"></a>
+						<a href="https://www.google.com/maps/place/36+W+20th+St,+New+York,+NY+10011/@40.740339,-73.993118,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259a3150164d3:0xdf9c1269f018fb"><img src="/img/icons/map.png" alt="map"></a>
+					</div> -->
 
 					<nav role="navigation">
 						<?php 
@@ -80,6 +85,11 @@
             					'fallback_cb' => ''                             // fallback function (if there is one)
     						)); 
                         ?>
+                        <div class="nav-contact">
+							<a href="tel:2122317761"><img src="<?php echo bloginfo('url'); ?>/img/icons/tel.png" alt="tel"></a>
+							<a href="mailto:mapes@friendshopedit.com"><img src="<?php echo bloginfo('url'); ?>/img/icons/mail.png" alt="email"></a>
+							<a href="https://www.google.com/maps/place/36+W+20th+St,+New+York,+NY+10011/@40.740339,-73.993118,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259a3150164d3:0xdf9c1269f018fb"><img src="<?php echo bloginfo('url'); ?>/img/icons/map.png" target="_blank" alt="map"></a>
+						</div>
 					</nav>
 
 					<!-- ORIGINAL LOGO AS BG IMAGE -->

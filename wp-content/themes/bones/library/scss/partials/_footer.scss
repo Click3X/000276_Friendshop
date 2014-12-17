@@ -3,7 +3,7 @@
 
 html, body { 
     height: 100%; 
-    overflow-x:hidden;
+    // overflow-x:hidden;
 }
 
 // social links images
@@ -232,16 +232,16 @@ html, body {
 
 
 .footer { 
-    //position: static; 
+    position: static; 
     border-top: 1px solid #343536;
     background-color: black;
 
 }
 
 #container { 
-    //min-height: 100%;
+    min-height: 100%;
     /* equal to footer height */
-    // margin-bottom: -370px;
+    margin-bottom: -370px;
     overflow-x: hidden;
 
     &:after {
@@ -280,8 +280,8 @@ footer {
         padding: 50px 2px;
     }
 }
-//#container { margin-bottom: -250px; }
-// .footer, #container:after { height: 250px; }
+#container { margin-bottom: -250px; }
+.footer, #container:after { height: 250px; }
 
 // @media(min-width:400px) {
 //     #container { margin-bottom: -334px; }
