@@ -17,10 +17,11 @@ GENERAL STYLES
 
 html, body {
 	width:100%;
-	// overflow-y: auto;
+
+	//overflow-y: auto;
 	// overflow-x: hidden; 
-	// -webkit-overflow-scrolling: touch;
-	// overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
 }
 
 // html, 

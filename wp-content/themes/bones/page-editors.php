@@ -4,9 +4,10 @@
 */
 ?>
 
+
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="content" class="editors-main">
 
 				<div id="inner-content" class="cf">
 
@@ -44,22 +45,24 @@
 										$imgT_hover_url = $metaValueT2[0];
 									?>
 
-											
-									<div class="editors-wrapper">
-										<div class="editors-container" class="ben-wrapper">
-											<a href="#tab-container" id="dir-<?php echo $slug_Ben;?>" class="new-players">
-											    <img src="<?php echo $imgB_url; ?>" class="e-top img_ben" style="width: 100%">
-											    <img src="<?php echo $imgB_hover_url; ?>" class="e-bottom img_ben" style="width: 100%">
-											</a>
-										</div>
-										
-										<div class="editors-container" class="tim-wrapper">
-											<a href="#tab-container" id="dir-<?php echo $slug_Tim;?>" class="new-players">
-											    <img src="<?php echo $imgT_url; ?>" class="e-top img_tim">
-											    <img src="<?php echo $imgT_hover_url; ?>" class="e-bottom img_tim">
-											</a>
-										</div>
-									</div>				
+										<div class="editors-parent">
+											<div class="editors-wrapper center">
+												<div class="editors-container" class="ben-wrapper">
+													<a href="#tab-container" id="dir-<?php echo $slug_Ben;?>" class="new-players">
+													    <img src="<?php echo $imgB_url; ?>" class="e-top img_ben" style="width: 100%">
+													    <img src="<?php echo $imgB_hover_url; ?>" class="e-bottom img_ben" style="width: 100%">
+													</a>
+												</div>
+												
+												<div class="editors-container" class="tim-wrapper">
+													<a href="#tab-container" id="dir-<?php echo $slug_Tim;?>" class="new-players">
+													    <img src="<?php echo $imgT_url; ?>" class="e-top img_tim">
+													    <img src="<?php echo $imgT_hover_url; ?>" class="e-bottom img_tim">
+													</a>
+												</div>
+											</div>	
+										</div>		
+
 									
 
 									<?php } ?> 
@@ -96,7 +99,7 @@
 													       	$hover_text_director = get_field('hover_text_director'); 
 															$title_clean = cleanString($title);
 															$link = get_field('embed_video_link'); 
-													       	
+													       	$thumb = get_field('thumbnail');
 															?>
 
 																<!-- HOVER EFFECT -->
@@ -104,10 +107,13 @@
 																	<div class="grid">
 																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
 																		<figure class="effect-selena">
-																			<?php if ( has_post_thumbnail() ) { 
-																				the_post_thumbnail( 'video-small' ); 
-																			} else { ?>
+																			<?php if (!empty($thumb)) { ?>
+																				<!-- the_post_thumbnail( 'video-small' );  -->
+																				<img src="<?php echo $thumb['url']; ?>" class="video-small">
+
+																			<?php } else { ?>
 																				<img src="<?php echo bloginfo('url'); ?>/img/FS_missing.jpg" class="video-small">
+
 																			<?php } ?>
 
 																			<div class="hover-shadow"></div>
@@ -183,7 +189,7 @@
 													       	$hover_text_director = get_field('hover_text_director'); 
 															$title_clean = cleanString($title);
 															$link = get_field('embed_video_link'); 
-													       	
+													       	$thumb = get_field('thumbnail');
 															?>
 
 																<!-- HOVER EFFECT -->
@@ -191,10 +197,13 @@
 																	<div class="grid">
 																		<a href="#<?php echo $title_clean ?>-container" class="fancybox various video-hook">
 																		<figure class="effect-selena">
-																			<?php if ( has_post_thumbnail() ) { 
-																				the_post_thumbnail( 'video-small' ); 
-																			} else { ?>
+																			<?php if (!empty($thumb)) { ?>
+																				<!-- the_post_thumbnail( 'video-small' );  -->
+																				<img src="<?php echo $thumb['url']; ?>" class="video-small">
+
+																			<?php } else { ?>
 																				<img src="<?php echo bloginfo('url'); ?>/img/FS_missing.jpg" class="video-small">
+
 																			<?php } ?>
 
 																			<div class="hover-shadow"></div>

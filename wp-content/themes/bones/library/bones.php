@@ -147,7 +147,7 @@ function bones_scripts_and_styles() {
 		wp_register_style( 'videoslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.bxslider.css', array(), '' );
 
 		// video carousel style sheet
-		//wp_register_style( 'swipebox-stylesheet', get_stylesheet_directory_uri() . '/library/css/swipebox.min.css', array(), '' );
+		wp_register_style( 'imgfancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.imgfancybox.css', array(), '' );
 
 
     // comment reply script for threaded comments
@@ -158,15 +158,19 @@ function bones_scripts_and_styles() {
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
-		//adding swipebox js
-		//wp_register_script( 'jquery.swipebox.min', get_stylesheet_directory_uri() . '/library/js/libs/jquery.swipebox.min.js', array( 'jquery' ), '', true );
-		// swipebox code
-		//wp_register_script( 'swipebox-code', get_stylesheet_directory_uri() . '/library/js/swipebox-code.js', array( 'jquery', 'jquery.swipebox.min' ), '', true );
+		//adding fancybox beta js
+		wp_register_script( 'jquery.imgfancybox', get_stylesheet_directory_uri() . '/library/js/libs/jquery.imgfancybox.js', array( 'jquery' ), '', true );
+		// fancybox beta code
+		wp_register_script( 'imgfancybox-code', get_stylesheet_directory_uri() . '/library/js/imgfancybox-code.js', array( 'jquery', 'jquery.imgfancybox' ), '', true );
 
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
 		//fancybox code
 		wp_register_script( 'fancybox-code', get_stylesheet_directory_uri() . '/library/js/fancybox-code.js', array( 'jquery', 'fancybox-js' ), '', true );
+
+		// javascript player api
+		//wp_register_script( 'froogaloop-js', get_stylesheet_directory_uri() . '/library/js/libs/froogaloop.min.js', array( 'jquery' ), '', true );
+		//wp_register_script( 'playground-js', get_stylesheet_directory_uri() . '/library/js/libs/playground.js', array( 'jquery' ), '', true );
 
 		//scrollto code
 		//wp_register_script( 'scrollTo', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollTo.min.js', array( 'jquery'), '', true );
@@ -209,26 +213,36 @@ function bones_scripts_and_styles() {
 		//wp_enqueue_script( 'scrollTo' );
 
 
-		// CHECK FOR GALLERY PAGE - SWIPEBOX
-		// if(is_page(8)) {
-		// 	wp_enqueue_style( 'swipebox-stylesheet' );
-  //           wp_enqueue_script( 'jquery.swipebox.min' );  
-  //           wp_enqueue_script( 'swipebox-code' );   
-  //       }
+		// CHECK FOR GALLERY PAGE - FANCYBOX BETA
+		if(is_page(8)) {
+			wp_enqueue_style( 'imgfancybox-stylesheet' );
+            wp_enqueue_script( 'jquery.imgfancybox' );  
+            wp_enqueue_script( 'imgfancybox-code' );   
+        }
 
         // CHECK FOR WORK / EDITORS / GALLERY PAGE - FANCYBOX
-        if(is_page(4) || is_page(6) || is_page(8)) {
+        if(is_page(4) || is_page(6)) {
         	wp_enqueue_style( 'fancybox-stylesheet' );
             wp_enqueue_script( 'fancybox-js' );  
             wp_enqueue_script( 'fancybox-code' );
         }
 
+        // CHECK FOR WORK PAGE - JS PLAYER API
+        //if(is_page(4)) {
+        	
+            //wp_enqueue_script( 'froogaloop-js' );
+            //wp_enqueue_script( 'playground-js' );   
+        //}
+
         // CHECK FOR WORK / ABOUT PAGE - BX SLIDER
         if(is_page(4) || is_page(13)) {
         	wp_enqueue_style( 'videoslider-stylesheet' );
             wp_enqueue_script( 'videoslider-js' );
-            wp_enqueue_script( 'videoslider-code' );   
+            wp_enqueue_script( 'videoslider-code' );
+
         }
+
+
 
 		wp_enqueue_script( 'tab-js' );
 		//wp_enqueue_script( 'carousel-js' );

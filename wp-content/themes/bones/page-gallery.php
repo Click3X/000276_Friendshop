@@ -53,14 +53,14 @@
 									    	//helper($img[0]);
 									    	?>
 
-									    	<a href="#<?php echo $title_clean ?>-container" class="fancybox various gallery-fancy" rel="f-gallery">
+									    	<a href="<?php echo $img[0]; ?>" rel="f-gallery">
 									    		<!-- CROPPED -->
 									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
 									    	</a>
 									    </li> 
 
 									     <!-- LIGHTBOX -->
-									     <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+									     <!-- <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
 									    	<?php //if ($gif_lightbox) { ?>
 
 									    		<img class="lb-image" src="<?php echo $img[0]; ?>" alt="Original">	
@@ -68,16 +68,12 @@
 									    		<!-- <img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	 -->
 									    	<?php //} ?>
 														
-										</div>
-<!-- 									    <div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
-									    	<?php if ($gif_lightbox) { ?>
+										<!-- </div> --> 
 
-									    		<img class="lb-image" src="<?php echo $gifL_url ?>" alt="Original">	
-									    	<?php } elseif (empty($gif_lightbox)) { ?>
-									    		<img class="lb-image" src="<?php echo $gif_url ?>" alt="Original">	
-									    	<?php } ?>
-														
-										</div> -->
+
+
+
+
 
 									    <?php endwhile; ?>  
 

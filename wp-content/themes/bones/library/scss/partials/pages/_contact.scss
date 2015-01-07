@@ -24,7 +24,7 @@
         margin: 0;
 
         li { 
-            margin: 10px 10px 30px 10px;
+            margin: 10px 25px 30px 25px;
             display: inline-block;
         }
 
@@ -80,36 +80,24 @@
     
 }
 
-// .contact-left { float: left; }
-// .contact-right { float: right; }
 .inner-contact-container { 
     padding-top:0;
-
-    // @media(min-width: 768px) {
-    //     padding-top: 50px; 
-    // }
-}
-
-
-@media (max-width: 756px) {
-    .contact-right img { width: 260px; }
-}
-
-@media (max-width: 767px) {
-    .contact-right { display: none; }
 }
 
 @media (max-width: 560px) {
-    .contact-right {
-        float: none;
-        text-align: center;
-        margin-top: 50px;
+
+    .contact-address {
+        margin-bottom: 30px;
     }
 
     .contact-left {
         float: none;
         text-align: center;
 
-        p { text-align: center; }
+
+        p { 
+            text-align: center; 
+            
+        }
     }
 }

@@ -68,7 +68,7 @@ iframe {
   width:80%;
   height:100%;
   margin:0 auto;
-  background:transparent; 
+  background:black; 
   max-width: 850px; 
   position: relative;
 
@@ -78,10 +78,64 @@ iframe {
 
 
 }
-.h_iframe        {position:relative;}
-.h_iframe .ratio {display:block;width:100%;height:auto;}
-.h_iframe .video-poster {position:absolute;top:0;left:0;width:100%; height:100%;}
-.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+.h_iframe, .h_iframe_small {
+  position:relative;
+}
+.h_iframe, .h_iframe_small {
+  .ratio {
+    display:block;
+    width:100%;
+    height:auto;
+  }
+}
+
+ 
+.h_iframe, .h_iframe_small {
+  .video-poster {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%; 
+    height:100%;
+  }
+
+
+}
+.h_iframe iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%; 
+  height:100%;
+}
+
+.h_iframe_small iframe {
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    width:640px; 
+    height:360px;
+
+    @media (max-width: 815px) {
+
+        width:100%; 
+        height:100%;
+    }
+}
+
+// .h_iframe_smallH iframe {
+//     position:absolute;
+//     top:0;
+//     bottom: 0;
+//     left:0;
+//     right: 0;
+//     margin: auto;
+//     width:100%; 
+//     height:254px;
+// }
 
 
 #video-bxslider {
@@ -433,7 +487,7 @@ iframe {
   
 // }
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .bx-has-pager {
     height: 30px !important;
   }
@@ -671,10 +725,13 @@ figure.effect-selena:hover p {
   }
 }
 
-.fancybox-mobile.fancybox-opened {
-  position: fixed !important;
-}
+// .fancybox-mobile.fancybox-opened {
+//   position: fixed !important;
+// }
 
+// .fancybox-wrap {
+//   overflow-y: auto !important;
+// }
 
 // credits show/hide 
 .credit-bar {
@@ -711,7 +768,7 @@ figure.effect-selena:hover p {
 
 }
 .show {
-  opacity: 1;
+  opacity: 0.82;
   height: 60%;
   -webkit-transition: all 0.6s ease;
   -moz-transition:    all 0.6s ease;
@@ -781,7 +838,8 @@ figure.effect-selena:hover p {
 
   .hover-shadow {
     position:absolute; 
-    width: 269px; height:168px; 
+    width: 269px; 
+    height:168px; 
     top:0; 
     background-color: rgba(0,0,0,0.1);
     @include transition(all 0.2s ease-in-out);
@@ -889,11 +947,11 @@ margin-top: 7px;
 // PLACEHOLDER THUMBNAIL
 .video-small {
   width: 269px;
-  height: 168px;
+  height: 168px !important;
 
   @media (max-width: 582px) {
    width: 100%;
-  height: 100%;
+  height: 100% !important;
   }
 }
 

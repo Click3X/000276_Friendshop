@@ -127,7 +127,10 @@ nav a {
         max-width: 850px;
 
         li { 
-            width:20%; 
+            // width:20%; 
+            // HIDE ABOUT PAGE
+
+            width: 25%;
             margin-left: 0;
             margin-right: 0;
         }
@@ -157,7 +160,9 @@ nav a {
 }
 
 .menu-display > #menu-main-menu {
-    height: 245px;
+    // height: 245px;
+    // HIDE ABOUT PAGE
+    height: 205px;
     padding-bottom:10px;
         padding-top: 10px;
     // display: block;

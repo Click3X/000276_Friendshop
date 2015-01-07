@@ -26,14 +26,25 @@ jQuery(document).ready(function($) {
 
 	}); 
 
+    $.fancybox.open([{
+        helpers: {
+
+            overlay: {
+                locked: true,
+                
+            }
+        }
+        
+    }]);
+
   // init GALLERY fancybox
-  $(".gallery-fancy").fancybox({
-    tpl: {
-      next: '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span class="gallery-next">></span></a>',
-      prev: '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span class="gallery-prev"><</span></a>'
-    }
+  // $(".gallery-fancy").fancybox({
+  //   tpl: {
+  //     next: '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span class="gallery-next">></span></a>',
+  //     prev: '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span class="gallery-prev"><</span></a>'
+  //   }
 
       
-  });
+  // });
 
 }); 

@@ -21,7 +21,8 @@
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"/>
 
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
@@ -53,9 +54,9 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
 
-		<div id="container">
+            <div id="container">
 
 			<header class="header" role="banner">
 				<div id="inner-header" class="cf">
@@ -63,11 +64,6 @@
 					<div class="menu-icon">
 					  <span></span>
 					</div>
-<!-- 					<div class="nav-contact">
-						<a href="tel:2122317761"><img src="/img/icons/tel.png" alt="tel"></a>
-						<a href="mailto:mapes@friendshopedit.com"><img src="/img/icons/email.png" alt="email"></a>
-						<a href="https://www.google.com/maps/place/36+W+20th+St,+New+York,+NY+10011/@40.740339,-73.993118,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259a3150164d3:0xdf9c1269f018fb"><img src="/img/icons/map.png" alt="map"></a>
-					</div> -->
 
 					<nav role="navigation">
 						<?php 
@@ -94,10 +90,13 @@
 
 					<!-- ORIGINAL LOGO AS BG IMAGE -->
                     <div class="logo-header"></div>
-                    <!-- NEW SVG LOGO -->
+                    <!-- NEW SVG LOGO -->                   
                     <div class="logo-header-svg">
-                        <?php include('php/logo-svg.php'); ?>
+                    	<a href="<?php bloginfo('url'); ?>">
+                        	<?php include('php/logo-svg.php'); ?>
+                        </a>
                     </div>
+                    
 
 				</div>
 			</header>

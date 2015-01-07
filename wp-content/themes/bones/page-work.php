@@ -33,23 +33,41 @@
 													$hover_text2 = get_field('hover_text2'); 
 													$link = get_field('embed_video_link'); 
 													$thumb = get_field('thumbnail');
+													$title_clean = cleanString($title);
+													$if_width = get_field('width');
+													$if_height = get_field('height');
 												?>
 
 													<li>
-														<div class="wrapper"> 
-		    												<div class="h_iframe"> 
+														<div class="wrapper">
+
+														<?php if(!empty($if_width) && ($if_width < 850) )  { ?> 
+
+															<div class="h_iframe_small"> 
+
+														<?php //} elseif (!empty($if_width) && !empty($if_height) && ($if_height < 477) && ($if_width >= 850)) { ?> 	
+
+															<!-- <div class="h_iframe_smallH"> -->
+
+														<?php } else { ?> 
+															<div class="h_iframe"> 
+
+														<?php } ?> 
+
+														
+		    												
 																<img class="ratio" src="wp-content/themes/bones/library/css/mask.png"/>
 																<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
 
 																<?php if (!empty($thumb)) { ?>
-																	<img class="video-poster video-large" src="<?php echo $thumb['url']; ?>" data-video="<?php echo $link ?>">
+																	<img class="video-poster video-large" src="<?php echo $thumb['url']; ?>" data-video="<?php echo $link ?>" data-name="<?php echo $title_clean ?>">
 																	
 																	<?php } else { ?>
-																	<img class="video-poster video-large" src="<?php echo bloginfo('url'); ?>/img/fs_missing.jpg" data-video="<?php echo $link ?>">
+																	<img class="video-poster video-large" src="<?php echo bloginfo('url'); ?>/img/fs_missing.jpg" data-video="<?php echo $link ?>" data-name="<?php echo $title_clean ?>" >
 																<?php } ?>																									
 																
 																
-																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>">
+																<img class="mqplay-btn" src="img/play-btn.png" data-video="<?php echo $link ?>" data-name="<?php echo $title_clean ?>">
 																
 															</div>
 														</div>
@@ -100,8 +118,8 @@
 											<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 											<?php endif; ?>
 
-											<span id="video-slider-prev"></span>
-											<span id="video-slider-next"></span>
+											<span id="video-slider-prev" class="pause"></span>
+											<span id="video-slider-next" class="pause"></span>
 											
 
 										</div> <!-- END OF slider-container -->
@@ -173,7 +191,7 @@
 																</li>
 
 																<!-- LIGHTBOX -->
-																<div id="<?php echo $title_clean ?>-container" style="width:100%;display: none;">
+																<div id="<?php echo $title_clean ?>-container" style="width:100%; display:none;">
 																	<div class="iframe-wrapper">
 																	<div class="iframe-container">
 																		<div class="preloader-container">

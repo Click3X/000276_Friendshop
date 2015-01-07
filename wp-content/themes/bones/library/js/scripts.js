@@ -1,19 +1,7 @@
 /*
  * Bones Scripts File
- * Author: Eddie Machado
- *
- * This file should contain any js scripts you want to add to the site.
- * Instead of calling it in the header or throwing it inside wp_head()
- * this file will be called automatically in the footer so as not to
- * slow the page load.
- *
- * There are a lot of example functions and tools in here. If you don't
- * need any of it, just remove it. They are meant to be helpers and are
- * not required. It's your world baby, you can do whatever you want.
-*/
-
-
 /*
+
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
@@ -148,26 +136,7 @@ jQuery(document).ready(function($) {
   //       return false;
   // });
 
-    $('.video-poster').click(function(){
-      $(this).prev().show();
-      $(this).next('.mqplay-btn').css('display', 'none');
-        video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
-        // video = $(this).attr('data-video');
-        $(this).replaceWith(video);
-        $('iframe').on('load', function () {
-          $(this).prev().hide();
-        });
-    });
 
-    $('.mqplay-btn').click(function(){
-      $(this).prev().prev().show();
-        video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
-        $(this).prev().replaceWith(video);
-        $(this).css('display', 'none');
-        $('iframe').on('load', function () {
-          $(this).prev().hide();
-        });
-    });
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
      $('.mqplay-btn').css('display','none');
@@ -215,13 +184,15 @@ $('.new-players').click(function(e){
   e.preventDefault();
 
   // REDUCE MARGIN TOP
-  $('.editors-wrapper').css('margin-top', '40px');
+  $('.editors-wrapper').css('margin-top', '10px');
+  $('.editors-parent').css('margin-top', '0');
 
 
 
   // Display Reels tab
   if ($('.etabs').css('visibility') == 'hidden') {
     $('.etabs').css('visibility','visible');
+    $('.e-bottom').addClass('dis-ani');
 }
   $('.new-players').find('.e-bottom').removeClass("editor-active");
   $('.new-players').find('.e-top').addClass("editor-active");
@@ -264,6 +235,9 @@ $('.new-players').click(function(e){
   setInterval(function() {
      el.toggleClass('blinking');
   }, 80);
+
+  // STOP IOS ELASTIC SCROLLING
+
 
   // init carousel
   // $(function() {
