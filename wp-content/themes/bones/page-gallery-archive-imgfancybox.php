@@ -53,18 +53,10 @@
 									    	//helper($img[0]);
 									    	?>
 
-									    	<!-- FANCYBOX -->
-
-									    	<!-- <a href="<?php echo $img[0]; ?>" rel="f-gallery"> -->
+									    	<a href="<?php echo $img[0]; ?>" rel="f-gallery">
 									    		<!-- CROPPED -->
-<!-- 									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
-									    	</a> -->
-
-									    	<!-- SWIPEBOX -->
-
-									    	<a rel="f-gallery" href="<?php echo $img[0]; ?>" class="swipebox">
-												<img src="<?php echo $gif_url ?>" alt="image">
-											</a>
+									    		<img src="<?php echo $gif_url ?>" alt="<?php echo $title_clean;?> ">
+									    	</a>
 									    </li> 
 
 									     <!-- LIGHTBOX -->

@@ -52,7 +52,7 @@
 								</li> -->
 							<?php //} else { ?>
 									<li class="social">
-										<a href="<?php echo get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title ;?>" class="<?php echo $sub_title; ?>">
+										<a ontouchend="this.onclick=fix" href="<?php echo get_sub_field('link'); ?>" target="_blank" title="<?php echo $sub_title ;?>" class="<?php echo $sub_title; ?>">
 											<img src="<?php echo bloginfo('url'); ?>/img/deer.jpg" class="dr-ori">
 											<img src="<?php echo bloginfo('url'); ?>/img/deer_hover.jpg" class="dr-hov">
 										</a>

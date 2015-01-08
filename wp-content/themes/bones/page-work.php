@@ -106,7 +106,7 @@
 																	</div>
 
 														</div>
-														<div class="credit-bar" style="line-height: 1">
+														<div class="credit-bar credit-barH" style="line-height: 1">
 															<div class="credit-arrow arrow-u ca-left"></div>
 															<div class="credit-arrow arrow-u ca-right"></div>
 															<span><?php the_title(); ?></span>
@@ -163,6 +163,8 @@
 															$title_clean = cleanString($title);
 															$link = get_field('embed_video_link'); 
 													       	$thumb = get_field('thumbnail');
+													       	$if_width = get_field('width');
+															$if_height = get_field('height');
 															?>
 
 																<!-- HOVER EFFECT -->
@@ -193,7 +195,22 @@
 																<!-- LIGHTBOX -->
 																<div id="<?php echo $title_clean ?>-container" style="width:100%; display:none;">
 																	<div class="iframe-wrapper">
-																	<div class="iframe-container">
+
+
+																	<?php if(!empty($if_width) && ($if_width < 850) )  { ?> 
+
+																		<div class="iframe-container-small">
+
+																	<?php //} elseif (!empty($if_width) && !empty($if_height) && ($if_height < 477) && ($if_width >= 850)) { ?> 	
+
+																		<!-- <div class="h_iframe_smallH"> -->
+
+																	<?php } else { ?> 
+																		<div class="iframe-container">
+
+																	<?php } ?> 
+
+																	
 																		<div class="preloader-container">
 																			<img class="myLoader" src="<?php echo bloginfo('url'); ?>/img/loading.gif" width="36" height="36" alt="loading gif" style="display: none">
 																			<iframe src="" class="myFrames"></iframe>

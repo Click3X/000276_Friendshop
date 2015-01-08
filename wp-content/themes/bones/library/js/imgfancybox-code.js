@@ -5,14 +5,18 @@ jQuery(document).ready(function($) {
 			closeEffect : 'none',
 			nextEffect  : 'none',
 			prevEffect  : 'none'
+
 		});
+		
     } else {
     	$( "[rel='f-gallery']" ).fancybox({
 			openEffect  : 'elastic',
 			closeEffect : 'elastic',
 			nextEffect  : 'elastic',
 			prevEffect  : 'elastic'
+
 		});
+		
     }
 	
 });

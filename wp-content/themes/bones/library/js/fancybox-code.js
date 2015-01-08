@@ -22,6 +22,7 @@ jQuery(document).ready(function($) {
   	
 	  afterClose: function() {
 	    $('.iframe-container').find('iframe').attr('src', '');
+      $('.iframe-container-small').find('iframe').attr('src', '');
 	  }
 
 	}); 

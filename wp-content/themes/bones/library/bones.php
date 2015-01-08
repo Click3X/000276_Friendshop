@@ -140,14 +140,17 @@ function bones_scripts_and_styles() {
 		// fancybox style sheet
 		wp_register_style( 'fancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.fancybox.css', array(), '' );
 
+		// swipebox
+		wp_register_style( 'swipebox-stylesheet', get_stylesheet_directory_uri() . '/library/css/swipebox.css', array(), '' );
+
 		// carousel style sheet
 		//wp_register_style( 'carousel-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.infinite-carousel.css', array(), '' );
 
-		// video carousel style sheet
+		// video BX carousel style sheet
 		wp_register_style( 'videoslider-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.bxslider.css', array(), '' );
 
-		// video carousel style sheet
-		wp_register_style( 'imgfancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.imgfancybox.css', array(), '' );
+		// imgfancybox style sheet
+		//wp_register_style( 'imgfancybox-stylesheet', get_stylesheet_directory_uri() . '/library/css/jquery.imgfancybox.css', array(), '' );
 
 
     // comment reply script for threaded comments
@@ -159,9 +162,9 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		//adding fancybox beta js
-		wp_register_script( 'jquery.imgfancybox', get_stylesheet_directory_uri() . '/library/js/libs/jquery.imgfancybox.js', array( 'jquery' ), '', true );
+		//wp_register_script( 'jquery.imgfancybox', get_stylesheet_directory_uri() . '/library/js/libs/jquery.imgfancybox.js', array( 'jquery' ), '', true );
 		// fancybox beta code
-		wp_register_script( 'imgfancybox-code', get_stylesheet_directory_uri() . '/library/js/imgfancybox-code.js', array( 'jquery', 'jquery.imgfancybox' ), '', true );
+		//wp_register_script( 'imgfancybox-code', get_stylesheet_directory_uri() . '/library/js/imgfancybox-code.js', array( 'jquery', 'jquery.imgfancybox' ), '', true );
 
 		//adding fancybox js
 		wp_register_script( 'fancybox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.fancybox.pack.js', array( 'jquery' ), '', true );
@@ -184,9 +187,14 @@ function bones_scripts_and_styles() {
 
 		// adding video slider js
 		wp_register_script( 'videoslider-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.bxslider.min.js', array( 'jquery' ), '', true );
-		// swipebox code
+		
 		wp_register_script( 'videoslider-code', get_stylesheet_directory_uri() . '/library/js/videoslider-code.js', array( 'jquery', 'videoslider-js' ), '', true );
 		
+		// swipebox js
+		wp_register_script( 'swipebox-js', get_stylesheet_directory_uri() . '/library/js/libs/jquery.swipebox.js', array( 'jquery' ), '', true );
+
+		// swipebox code
+		wp_register_script( 'swipebox-code', get_stylesheet_directory_uri() . '/library/js/swipebox-code.js', array( 'jquery', 'swipebox-js' ), '', true );
 
 		// adding responsive carousel js
 		//wp_register_script( 'rescarousel-js', get_stylesheet_directory_uri() . '/library/js/libs/jcarousellite-responsive.js', array( 'jquery' ), '', true );
@@ -199,6 +207,7 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
+		
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
@@ -209,15 +218,20 @@ function bones_scripts_and_styles() {
 		*/
 
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'bones-js' );		
 		//wp_enqueue_script( 'scrollTo' );
 
 
 		// CHECK FOR GALLERY PAGE - FANCYBOX BETA
 		if(is_page(8)) {
-			wp_enqueue_style( 'imgfancybox-stylesheet' );
-            wp_enqueue_script( 'jquery.imgfancybox' );  
-            wp_enqueue_script( 'imgfancybox-code' );   
+			// wp_enqueue_style( 'imgfancybox-stylesheet' );
+   //          wp_enqueue_script( 'jquery.imgfancybox' );  
+   //          wp_enqueue_script( 'imgfancybox-code' );
+
+            wp_enqueue_style( 'swipebox-stylesheet' );
+            wp_enqueue_script( 'swipebox-js' );
+            wp_enqueue_script( 'swipebox-code' );
+
         }
 
         // CHECK FOR WORK / EDITORS / GALLERY PAGE - FANCYBOX
@@ -242,11 +256,9 @@ function bones_scripts_and_styles() {
 
         }
 
-
-
 		wp_enqueue_script( 'tab-js' );
-		//wp_enqueue_script( 'carousel-js' );
-		wp_enqueue_script( 'fitvids-js' );		
+		wp_enqueue_script( 'fitvids-js' );
+		//wp_enqueue_script( 'carousel-js' );				
 		// wp_enqueue_script( 'rescarousel-js' );
 
 	}

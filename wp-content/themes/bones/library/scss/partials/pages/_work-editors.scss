@@ -22,12 +22,12 @@
 }
 
 .video-thumb {
-    width: 268px; /* Set width */
+    width: 300px; /* Set width */
     height: 168px; /* Set height */
     display: inline-block;
-    margin: 6px 7px;
+    margin: 0;
 
-    @media(max-width: 582px) {
+    @media(max-width: 618px) {
         width: 100%;
         height: 100%;
   // height: 363px;
@@ -91,7 +91,7 @@
     border-bottom: 1px solid #838383;
     margin-bottom: 31px;
 
-    @media(max-width: 582px) {
+    @media(max-width: 618px) {
         margin-bottom: 0;
     }
     
@@ -428,9 +428,13 @@
 
     .e-bottom {
         -webkit-animation: dirGlow 5s infinite; /* Safari 4+ */
+        -webkit-animation-delay: 3s;
           -moz-animation:    dirGlow 5s infinite; /* Fx 5+ */
+          -moz-animation-delay: 3s;
           -o-animation:      dirGlow 5s infinite; /* Opera 12+ */
+          -o-animation-delay: 3s;
           animation:         dirGlow 5s infinite; /* IE 10+, Fx 29+ */
+          animation-delay: 3s;
     }
 
     .e-bottom {
@@ -545,22 +549,22 @@
 
 // FLASHING DIRECTOR NAMES
 @-webkit-keyframes dirGlow {
-  0%   { opacity: 1; }
-  50%   { opacity: 0; }
-  100% { opacity: 1; }
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
 }
 @-moz-keyframes dirGlow {
-  0%   { opacity: 1; }
-  50%   { opacity: 0; }
-  100% { opacity: 1; }
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
 }
 @-o-keyframes dirGlow {
-  0%   { opacity: 1; }
-  50%   { opacity: 0; }
-  100% { opacity: 1; }
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
 }
 @keyframes dirGlow {
-  0%   { opacity: 1; }
-  50%   { opacity: 0; }
-  100% { opacity: 1; }
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
 }

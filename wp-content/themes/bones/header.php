@@ -54,7 +54,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?> style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+	<body <?php body_class(); ?> style="-webkit-tap-highlight-color: rgba(0,0,0,0);" class="no-hover">
 
             <div id="container">
 

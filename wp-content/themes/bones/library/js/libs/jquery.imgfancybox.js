@@ -108,7 +108,7 @@
 			},
 
 			overlay : {
-				closeClick : true,      // if true, fancyBox will be closed when user clicks on the overlay
+				closeClick : false,      // if true, fancyBox will be closed when user clicks on the overlay
 				speedIn    : 0,         // duration of fadeIn animation
 				speedOut   : 250,       // duration of fadeOut animation
 				showEarly  : true,      // indicates if should be opened immediately or wait until the content is ready

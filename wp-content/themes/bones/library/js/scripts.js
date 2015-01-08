@@ -89,7 +89,15 @@ function loadGravatars() {
 	}
 } // end function
 
-
+// FIX STICKY HOVER EFFECT ON TOUCHSCREEN
+function fix()
+{
+    var el = this;
+    var par = el.parentNode;
+    var next = el.nextSibling;
+    par.removeChild(el);
+    setTimeout(function() {par.insertBefore(el, next);}, 0)
+}
 
 
 /*
@@ -98,6 +106,7 @@ function loadGravatars() {
 
 jQuery(document).ready(function($) {
 
+// DISABLE HOVER EFFECT ON SCROLLING
   var body = document.body,
   timer;
 
@@ -138,24 +147,24 @@ jQuery(document).ready(function($) {
 
 
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-     $('.mqplay-btn').css('display','none');
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     $('.mqplay-btn').remove();
      $('#video-slider-prev,#video-slider-next').css('display','none');
      $('figcaption').css('visibility','hidden');
      $('.grid').find('figure').removeClass('effect-selena');
      $('.grid').find('div').removeClass('hover-shadow');
-    }
 
-   $('.video-thumb').click(function() {
+  }
+
+  $('.video-thumb').click(function() {
       // ADDING PRELOADER
       $(this).next().find('.myLoader').show();
-
       video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
       $(this).next().find('iframe').replaceWith(video);
       $(this).next().find('iframe').on('load', function () {
           $(this).prev().hide();
       });
-    });
+  });
 
 
 
@@ -163,11 +172,29 @@ jQuery(document).ready(function($) {
 
 // CREDIT BAR DRAWER
 $('.credit-bar').click(function(){
-  $('.credit-bar').css('visibility', 'hidden');
-    $('.credit-content').toggleClass('hide').toggleClass('show');
-    // $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
-    return false;
+  // IF MOBILE
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // IF IFRAME EXISTS
+    if ($('#video-bxslider').find('iframe').length) {
+      //$('.credit-arrow').css('opacity', '0');
+      //$('.credit-bar:hover').css('color', 'white');
+    } else {
+      ToggleDrawer();
+    }
+  } else {
+    ToggleDrawer();
+  }
+
+
+
 });
+
+function ToggleDrawer() {
+  $('.credit-bar').css('visibility', 'hidden');
+  $('.credit-content').toggleClass('hide').toggleClass('show');
+  // $('.credit-arrow').toggleClass('arrow-d').toggleClass('arrow-u');
+  return false;
+}
 
 $('.cb-inner').click(function(){
   $('.credit-bar').css('visibility', 'visible');
@@ -209,18 +236,15 @@ $('.new-players').click(function(e){
   // $('.editors-videos').fadeOut();
   // $("#" + director_container).fadeIn();
 
-        // SCROLL TO THE CONTAINER
-      $('body,html').animate({
-        scrollTop: 
-
-        $("#work-ul").offset().top
-      }, 300);
+  // SCROLL TO THE CONTAINER
+  $('body,html').animate({
+    scrollTop: 
+    $("#work-ul").offset().top
+  }, 300);
   // var el = document.getElementById('#tab-container');
   //     el.scrollIntoView(true);
   //$.scrollTo('#tab-container');
 });
-
-
 
 
 // $("iframe").each(function(){
@@ -231,15 +255,14 @@ $('.new-players').click(function(e){
 
 
   //Blinking text
-  var el = $('.players-title');
-  setInterval(function() {
-     el.toggleClass('blinking');
-  }, 80);
-
-  // STOP IOS ELASTIC SCROLLING
+  // var el = $('.players-title');
+  // setInterval(function() {
+  //    el.toggleClass('blinking');
+  // }, 80);
 
 
-  // init carousel
+
+  // init carousel OF ORIGINAL SELECTING PLAYERS
   // $(function() {
   // if($(window).width() < 700){
           
@@ -283,11 +306,6 @@ $('.new-players').click(function(e){
 
 
 
-
-
-
-
-
   // MOBILE MENU
   var button = document.querySelector('.menu-icon');
   button.addEventListener('click', function (event) {
@@ -298,11 +316,8 @@ $('.new-players').click(function(e){
   });
 
 
-
-
   // init tabs
   $('#tab-container').easytabs();
-
 
   /*
    * Let's fire off the gravatar function
@@ -314,7 +329,6 @@ $('.new-players').click(function(e){
   // highlight selected menu item
   var url = window.location;
   $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
-
 
 
 
@@ -337,50 +351,57 @@ $('.new-players').click(function(e){
 // }
 
 
-    var _director = "";
-    var _category = "6";
 
-    function getVideos(){
-      $('#videoList').empty();
-      var data = {
-        director:_director,
-        category:_category,
-        action:'getEditorsVideos'
-      };
+
+
+// ***********************************
+// BELOW ARE THE WORKING EXAMPLE AJAX
+
+
+    // var _director = "";
+    // var _category = "6";
+
+    // function getVideos(){
+    //   $('#videoList').empty();
+    //   var data = {
+    //     director:_director,
+    //     category:_category,
+    //     action:'getEditorsVideos'
+    //   };
       
-      console.log('make the ajax call with:');
-      console.log(data);
+    //   console.log('make the ajax call with:');
+    //   console.log(data);
 
       
-      $.ajax({
-        type:'POST',
-        ajaxurl:'/wp-admin/admin-ajax.php',
-        dataType:'json',
-        data:data,
-        success:function(data){
-          console.log('success');
-        },
-        error: function(err){
-          console.log(err);
-        }
-      });
+    //   $.ajax({
+    //     type:'POST',
+    //     ajaxurl:'/wp-admin/admin-ajax.php',
+    //     dataType:'json',
+    //     data:data,
+    //     success:function(data){
+    //       console.log('success');
+    //     },
+    //     error: function(err){
+    //       console.log(err);
+    //     }
+    //   });
       
-    }
+    // }
 
-    $('.director_btn').on('click', function(e){
-      e.preventDefault();
-      _director = $(this).attr('data-director');
-      getVideos();
-    });
+    // $('.director_btn').on('click', function(e){
+    //   e.preventDefault();
+    //   _director = $(this).attr('data-director');
+    //   getVideos();
+    // });
 
 
-    $('.cat_btn').on('click', function(e){
-      e.preventDefault();
-      _category = $(this).attr('data-category');
-      getVideos();
-    });
+    // $('.cat_btn').on('click', function(e){
+    //   e.preventDefault();
+    //   _category = $(this).attr('data-category');
+    //   getVideos();
+    // });
     
-    getVideos();
+    // getVideos();
 
 
 }); /* end of as page load scripts */
