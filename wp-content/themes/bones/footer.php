@@ -22,22 +22,20 @@
 					</a>
 				</div> -->
 
-				<div class="footer-left">
+				<!-- <div class="footer-left"> -->
                 
-	                <div class="ftlogo-container-new">
-	                    <a href="<?php echo bloginfo('url'); ?>">
+	                <!-- <div class="ftlogo-container-new">
+	                    <a href="<?php echo bloginfo('url'); ?>"> -->
 	                        <!-- <img src="<?php echo $logo_url; ?>" alt="<?php echo "friendshop"; ?>" width="181" height="32" class="logo-png" /> -->
 	                        <!-- NEW SVG LOGO -->
-	                        <?php include('php/logo-svg.php'); ?>
-	                    </a>
-	                </div>
+	                        <?php //include('php/logo-svg.php'); ?>
+	                   <!--  </a>
+	                </div> -->
 
 
-					<div class="ftaddress-container">
-						<?php echo $address ?>
-					</div>
 
-				</div>
+
+				<!-- </div> -->
 
 
 				<?php if(get_field('social_media', 'option')): ?>
@@ -63,6 +61,10 @@
 						</ul>
 					</div>
 				<?php endif; ?>
+
+				<div class="ftaddress-container">
+					<?php echo $address ?>
+				</div>
 
 
 			</div>

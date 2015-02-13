@@ -48,4 +48,14 @@ jQuery(document).ready(function($) {
       
   // });
 
+
+  $(window).resize(function() {
+      if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+      //do this
+      $.fancybox.center();
+      }else{
+      //do something else
+      }
+  }); 
+
 }); 

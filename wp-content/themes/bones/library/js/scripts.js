@@ -31,53 +31,6 @@ var waitForFinalEvent = (function () {
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
 
-
-/*
- * Here's an example so you can see how we're using the above function
- *
- * This is commented out so it won't work, but you can copy it and
- * remove the comments.
- *
- *
- *
- * If we want to only do it on a certain page, we can setup checks so we do it
- * as efficient as possible.
- *
- * if( typeof is_home === "undefined" ) var is_home = $('body').hasClass('home');
- *
- * This once checks to see if you're on the home page based on the body class
- * We can then use that check to perform actions on the home page only
- *
- * When the window is resized, we perform this function
- * $(window).resize(function () {
- *
- *    // if we're on the home page, we wait the set amount (in function above) then fire the function
- *    if( is_home ) { waitForFinalEvent( function() {
- *
- *      // if we're above or equal to 768 fire this off
- *      if( viewport.width >= 768 ) {
- *        console.log('On home page and window sized to 768 width or more.');
- *      } else {
- *        // otherwise, let's do this instead
- *        console.log('Not on home page, or window sized to less than 768.');
- *      }
- *
- *    }, timeToWaitForLast, "your-function-identifier-string"); }
- * });
- *
- * Pretty cool huh? You can create functions like this to conditionally load
- * content and other stuff dependent on the viewport.
- * Remember that mobile devices and javascript aren't the best of friends.
- * Keep it light and always make sure the larger viewports are doing the heavy lifting.
- *
-*/
-
-/*
- * We're going to swap out the gravatars.
- * In the functions.php file, you can see we're not loading the gravatar
- * images on mobile to save bandwidth. Once we hit an acceptable viewport
- * then we can swap out those images since they are located in a data attribute.
-*/
 function loadGravatars() {
   // set the viewport using the function above
   viewport = updateViewportDimensions();
@@ -98,11 +51,6 @@ function fix()
     par.removeChild(el);
     setTimeout(function() {par.insertBefore(el, next);}, 0)
 }
-
-
-/*
- * Put all your regular jQuery in here.
-*/
 
 jQuery(document).ready(function($) {
 
@@ -167,25 +115,18 @@ jQuery(document).ready(function($) {
   });
 
 
-
-
-
 // CREDIT BAR DRAWER
 $('.credit-bar').click(function(){
   // IF MOBILE
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // IF IFRAME EXISTS
     if ($('#video-bxslider').find('iframe').length) {
-      //$('.credit-arrow').css('opacity', '0');
-      //$('.credit-bar:hover').css('color', 'white');
     } else {
       ToggleDrawer();
     }
   } else {
     ToggleDrawer();
   }
-
-
 
 });
 
@@ -204,46 +145,52 @@ $('.cb-inner').click(function(){
 });
 
 
-
-
 // HIGHLIGHT SELECTED DIRECTOR
 $('.new-players').click(function(e){
   e.preventDefault();
 
   // REDUCE MARGIN TOP
-  $('.editors-wrapper').css('margin-top', '10px');
-  $('.editors-parent').css('margin-top', '0');
+  // $('.editors-wrapper').css('margin-top', '10px');
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('.editors-parent').css('height', '200px');
+  } else {
+    $('.editors-parent').css('height', '20vh');
+    $('.editors-parent').css('margin-bottom', '40px');
+  }
+  
+    
 
-
+  
+  // $('.editors-wrapper').css('margin-top', '0');
+  $('.editors-container').css('margin', '30px auto');
 
   // Display Reels tab
   if ($('.etabs').css('visibility') == 'hidden') {
     $('.etabs').css('visibility','visible');
     $('.e-bottom').addClass('dis-ani');
-}
-  $('.new-players').find('.e-bottom').removeClass("editor-active");
-  $('.new-players').find('.e-top').addClass("editor-active");
-  // $(this).find('.e-top').addClass("editor-inactive");
-  $(this).find('.e-bottom').addClass('editor-active');
-  $(this).find('.e-top').addClass('editor-inactive');
+  }
+
+  // OLD IMAGE TOGGLE CODES
+  // $('.new-players').find('.e-bottom').removeClass("editor-active");
+  // $('.new-players').find('.e-top').addClass("editor-active");
+  // $(this).find('.e-bottom').addClass('editor-active');
+  // $(this).find('.e-top').addClass('editor-inactive');
+
+  // EDITORS NAME TOGGLE
+  $('.new-players').removeClass('director-active');
+  $(this).addClass('director-active');
 
   var director = this.id.slice(4);
   var director_container = director + '-container';
   $('.editors-videos').removeClass("container-active");
-  //$('.editors-videos').fadeOut();
   $("#" + director_container).addClass('container-active');
-  //$("#" + director_container).fadeIn();
-  // $('.editors-videos').fadeOut();
-  // $("#" + director_container).fadeIn();
+
 
   // SCROLL TO THE CONTAINER
   $('body,html').animate({
     scrollTop: 
     $("#work-ul").offset().top
   }, 300);
-  // var el = document.getElementById('#tab-container');
-  //     el.scrollIntoView(true);
-  //$.scrollTo('#tab-container');
 });
 
 

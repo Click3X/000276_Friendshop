@@ -45,7 +45,7 @@
 										$imgT_hover_url = $metaValueT2[0];
 									?>
 
-										<div class="editors-parent">
+<!-- 										<div class="editors-parent">
 											<div class="editors-wrapper center">
 												<div class="editors-container" class="ben-wrapper">
 													<a href="#tab-container" id="dir-<?php echo $slug_Ben;?>" class="new-players">
@@ -61,11 +61,31 @@
 													</a>
 												</div>
 											</div>	
-										</div>		
+										</div>		 -->
+
+
+									<!-- NEW EDITORS NAMES -->
+									<div class="editors-parent">
+											<div class="editors-wrapper center">
+												<div class="editors-container" class="ben-wrapper">
+													<a href="#tab-container" id="dir-<?php echo $slug_Ben;?>" class="new-players">
+													    <p>Ben Suenaga</p>
+													</a>
+												</div>
+												
+												<div class="editors-container" class="tim-wrapper">
+													<a href="#tab-container" id="dir-<?php echo $slug_Tim;?>" class="new-players">
+													    <p>Tim Wilson</p>
+													</a>
+												</div>
+											</div>	
+									</div>	
 
 									
 
 									<?php } ?> 
+
+
 																		
 										
 									<!-- TABS -->

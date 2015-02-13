@@ -3,10 +3,8 @@
 
 html, body { 
     height: 100%; 
-    // overflow-x:hidden;
 }
 
-// social links images
 #inner-footer {
     text-align:center;
     padding: 80px 0;
@@ -16,117 +14,55 @@ html, body {
     background-color:#000;
 }
 
-.social {
-    margin-right: 8px;
-    float: left;
-
-    @media(min-width: 481px) {
-        margin-right:4px;
-    }
-}
-
 .ftlogo-container {
     vertical-align: top;
-    // margin-top: 50px;
-
-    @media(min-width:481px) {
-        margin-left: 50px;
-    }
 }
 
 .ftlogo-container, .ftaddress-container, .ftsocial-container {
     text-align: left;
     display: block;
-    // float: left;
-    margin: 0 8px;
-}
-
-// .ftlogo-container {
-//     margin-right:50px;
-// }
-
-
-@media(max-width: 480px) {
-    .ftlogo-container,
-    .ftaddress-container { margin-bottom: 8px; }
-}
-
-.ftlogo-container {
-    margin-left:0;
+    margin: auto;
 }
 
 .ftaddress-container {
-    float: left;
     width:auto;
+    text-align: center;
+    p {
+        font-size: 19px;
 
-    @media(min-width: 481px) {
-        float: left;
-        width:auto;
+        @media(max-width: 480px) {
+            font-size: 16px;
+        }
     }
 }
 
-.ftsocial-container { 
-    float: right;
-    // float:left;
-    // margin-top:16px;
-    // margin-left:8px;
-    // margin-left:0;
-
-    // @media(min-width:481px) {
-    //     margin-left: 50px;
-    // }
-    // @media(min-width: 872px) {
-    //     margin-top:0;
-    // }
-    // @media(min-width:950px) {
-    //     float:right; 
-    //     margin-left: 8px;
-    // }
-}
-
-// .ftaddress-container { 
-//     margin-right:0;
-
-//     @media(min-width:481px) {
-//         margin-left: 50px;
-//     }
-// }
-
-.ftaddress-container { margin-left:10px; }
 .ftsocial-container ul { margin:0; }
 
 .social a {
     display: block;
-    // width: 72px;
-    // height: 75px;
     position: relative;
-
-    // @media(min-width: 481px) {
-    //     width: 96px;
-    //     height: 99px;
-    // }
+    margin: auto;
 }
 
 .Tumblr {
     img {
         position: absolute;
         top:0;
-        width: 150px;
-        height:150px;
+        width: 100px;
+        height:100px;
         @include transition(all 0.2s ease-in-out);
     }
 
     .dr-hov {
         opacity: 0;
     }
-    // background-image: url(../../../../../img/deer.jpg);
-    // background-size: 150px 150px;
-    width: 150px;
-    height:150px;
+
+    width: 100px;
+    height:100px;
     outline-color: transparent !important;
     @include transition(all 0.2s ease-in-out);
     &:hover {
-        // background-image: url(../../../../../img/deer_hover.jpg);
+
         .dr-hov {
             opacity: 1;
         }
@@ -136,106 +72,10 @@ html, body {
     }
 }
 
-.footer-left {
-    float: left;
-    margin-left: 50px;
-}
-
-// @media(max-width: 488px) { 
-//     .footer-left {
-//         margin-left: 0;
-//     }
-// }
-
-@media(max-width: 488px) { 
-    .footer-left, .ftsocial-container {
-        display: inline-block;
-        float: none;
-        margin-left: 16px;
-
-        .ftlogo-container-new {
-            margin-right: 0px;
-        }
-    }
-}
-
-// GRACEFUL DEGRADATION with PNGs
-// .Tumblr,
-// .Facebook,
-// .Instagram,
-// .Map,
-// .Mail {
-//     background-image: url(../../../../../img/social-new.png);
-// }
-
-// // PROGRESSIVE ENHANCEMENT with SVGs
-// .svg {
-//     .Tumblr,
-//     .Facebook,
-//     .Instagram,
-//     .Map,
-//     .Mail {
-//         background-image: url(../../../../../img/social-new.svg);
-//     }
-// }
-
-// .Tumblr {
-//     background-size:780%;
-//     background-position-x: 100.4%; 
-//     background-position: 100.4% 0;
-//     &:hover { 
-//         background-position-y: 103.2%; 
-//         background-position: 100.4% 103.2%;
-//     }
-//     @media(min-width: 481px) { 
-//         background-size: auto; 
-//         &:hover { 
-//             background-position-y: 102%;
-//             background-position: 100.4% 102%;
-//         }
-//     }
-// }
-
-// .Map { 
-//     background-size:780%;
-//     background-position-x: 28.4%;
-//     background-position: 28.4% 0;
-//     &:hover { 
-//         background-position-y: 103.2%;
-//         background-position: 28.4% 103.2%;
-//     }
-//     @media(min-width: 481px) { 
-//         background-size: auto; 
-//         &:hover { 
-//             background-position-y: 102%; 
-//             background-position: 28.4% 102%;
-//         }
-//     }
-// }
-
-// .Mail { 
-//     background-size:780%;
-//     background-position-x: 14.4%;
-//     background-position: 14.4% 0;
-//     &:hover { 
-//         background-position-y: 103.2%; 
-//         background-position: 14.4% 103.2%;
-//     }
-//     @media(min-width: 481px) { 
-//         background-size: auto; 
-//         &:hover { 
-//             background-position-y: 102%; 
-//             background-position: 14.4% 102%;
-//         }
-//     }
-// }
-
-
 .footer { 
     position: static; 
     border-top: 1px solid #343536;
     background-color: black;
-
 }
 
 #container { 
@@ -251,70 +91,19 @@ html, body {
 }
 
 .ftaddress-container {
+    margin-top: 20px;
     a {
         text-decoration: none !important;
         color: inherit !important;
     }
 }
 
-// Footer 
 footer {
-    //position: absolute; 
     width: 100%;
 }
 
-@media (max-width: 555px) {
-    // .social a {
-    //     width: 55px;
-    //     height: 55px;
-    //     background-size: 55px 55px;
-    // }
-
-    .ftaddress-container { margin-right: 0px; }
-
-}
-
 #inner-footer { 
-    padding: 50px 2px; 
-    @media(min-width:481px) {
-        padding: 50px 2px;
-    }
+    padding: 25px 2px; 
 }
 #container { margin-bottom: -250px; }
 .footer, #container:after { height: 250px; }
-
-// @media(min-width:400px) {
-//     #container { margin-bottom: -334px; }
-//     .footer, #container:after { height: 334px; }
-// }
-
-// @media(min-width:400px) {
-//     #container { margin-bottom: -350px; }
-//     .footer, #container:after { height: 350px; }
-// }
-
-// @media(min-width:556px) {
-//     #container { margin-bottom: -359px; }
-//     .footer, #container:after { height: 359px; }
-// }
-
-// @media(min-width:1040px) {
-//     #container { margin-bottom: -322px; }
-//     .footer, #container:after { height: 322px;  }
-// }
-
-// FOOTER RAINBOW
-#transition img {
-     background-position: 0 0;
-     background-size: 200% 100%;
-     background-color: red;
-     background-image: -webkit-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
-     background-image:    -moz-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b); 
-     background-image:     -ms-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
-     background-image:      -o-linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
-     background-image:         linear-gradient(left, #bb2030, #e6cf47, #8cc453, #19a486, #0c6faf, #ad0c6b);
-
-    @include prefix(transition, all 0.3s ease-out);
-}
-
-#transition img:hover { background-position: -100% 100%; }

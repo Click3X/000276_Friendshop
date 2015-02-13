@@ -1,3 +1,5 @@
 jQuery(document).ready(function($) {
-	$( '.swipebox' ).swipebox();
+	$( '.swipebox' ).swipebox({
+		loopAtEnd: true
+	});
 });
